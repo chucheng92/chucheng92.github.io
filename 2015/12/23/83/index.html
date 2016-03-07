@@ -1,0 +1,978 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Java,序列化," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="本文内容部分转载于网络，站长已阅读并测试，保证其正确性。Update:2015-11-4
+全文托管于GitHub，点击查看[dm href=’https://github.com/Lemonjing/TinyMood/blob/master/技术文章/Java序列化.md&amp;#39;]全文阅读[/dm]对于一个存在Java虚拟机中的对象来说，其内部的状态只是保存在内存中。JVM退出之后，内存资源也">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java序列化">
+<meta property="og:url" content="https://lemonjing.github.io/2015/12/23/83/index.html">
+<meta property="og:site_name" content="小情绪">
+<meta property="og:description" content="本文内容部分转载于网络，站长已阅读并测试，保证其正确性。Update:2015-11-4
+全文托管于GitHub，点击查看[dm href=’https://github.com/Lemonjing/TinyMood/blob/master/技术文章/Java序列化.md&amp;#39;]全文阅读[/dm]对于一个存在Java虚拟机中的对象来说，其内部的状态只是保存在内存中。JVM退出之后，内存资源也">
+<meta property="og:image" content="http://7xlkoc.com1.z0.glb.clouddn.com/coding2.jpg">
+<meta property="og:updated_time" content="2016-03-07T07:22:43.907Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java序列化">
+<meta name="twitter:description" content="本文内容部分转载于网络，站长已阅读并测试，保证其正确性。Update:2015-11-4
+全文托管于GitHub，点击查看[dm href=’https://github.com/Lemonjing/TinyMood/blob/master/技术文章/Java序列化.md&amp;#39;]全文阅读[/dm]对于一个存在Java虚拟机中的对象来说，其内部的状态只是保存在内存中。JVM退出之后，内存资源也">
+<meta name="twitter:image" content="http://7xlkoc.com1.z0.glb.clouddn.com/coding2.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Java序列化 | 小情绪 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?bcd31698ed3d5d1a991a862c9496a750";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">小情绪</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">写干净的文字，过简单的生活</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-heartbeat fa-fw"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Java序列化
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-23T21:29:22+08:00" content="2015-12-23">
+              2015-12-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编织未来/" itemprop="url" rel="index">
+                    <span itemprop="name">编织未来</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/23/83/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/23/83/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://7xlkoc.com1.z0.glb.clouddn.com/coding2.jpg" alt="插画"></p>
+<p><font color="red"><strong><center>本文内容部分转载于网络，站长已阅读并测试，保证其正确性。Update:2015-11-4</center></strong></font></p>
+<p><center><strong>全文托管于GitHub，点击查看</strong><br>[dm href=’<a href="https://github.com/Lemonjing/TinyMood/blob/master/技术文章/Java序列化.md&#39;]全文阅读[/dm" target="_blank" rel="external">https://github.com/Lemonjing/TinyMood/blob/master/技术文章/Java序列化.md&#39;]全文阅读[/dm</a>]</center><br>对于一个存在Java虚拟机中的对象来说，其内部的状态只是保存在内存中。JVM退出之后，内存资源也就被释放，Java对象的内部状态也就丢失了。而在很多情况下，对象内部状态是需要被持久化的，将运行中的对象状态保存下来(最直接的方式就是保存到文件系统中)，在需要的时候可以还原，即使是在Java虚拟机退出的情况下。<br>对象序列化机制是Java内建的一种对象持久化方式，可以很容易实现在JVM中的活动对象与字节数组(流)之间进行转换，使Java对象可以被存储，可以被网络传输，在网络的一端将对象序列化成字节流，经过网络传输到网络的另一端，可以从字节流重新还原为Java虚拟机中的运行状态中的对象。 </p>
+<h2 id="1-相关的接口"><a href="#1-相关的接口" class="headerlink" title="1.相关的接口"></a>1.相关的接口</h2><p>Java类中对象的序列化工作是通过ObjectOutputStream和ObjectInputStream来完成的。 </p>
+<p>Java代码</p>
+<pre class="prettyprint linenums">
+ObjectOutputStream(OutputStream out);  
+     void writeObject(Object obj);//将指定的对象的非transient，非static属性，写入ObjectOutputStream  
+ObjectInputStream(InputStream in);  
+    Object readObject();//从指定的流中读取还原对象信息 
+</pre>
+
+<p> 只能使用readObject()|writeObject()方法对对象进行读写操作。除对象之外，Java中的基本类型和数组也可以被序列化,对于基本类型，可以使用readInt(),writeInt(),<br> readDouble(),writeDouble()等类似的接口进行读写。 </p>
+<h2 id="2-Serializable接口"><a href="#2-Serializable接口" class="headerlink" title="2.Serializable接口"></a>2.Serializable接口</h2><p>对于任何需要被序列化的对象，都必须要实现接口Serializable,它只是一个标识接口，本身没有任何成员，只是用来标识说明当前的实现类的对象可以被序列化. </p>
+<h2 id="3-transient关键字"><a href="#3-transient关键字" class="headerlink" title="3.transient关键字"></a>3.transient关键字</h2><p>如果在类中的一些属性，希望在对象序列化过程中不被序列化，使用关键字transient标注修饰就可以.当对象被序列化时，标注为transient的成员属性将会自动跳过。 </p>
+<h2 id="4-Java序列化中需要注意"><a href="#4-Java序列化中需要注意" class="headerlink" title="4.Java序列化中需要注意"></a>4.Java序列化中需要注意</h2><p>(1).当一个对象被序列化时，只保存对象的非静态成员变量，不能保存任何的成员方法,静态的成员变量和transient标注的成员变量。<br>(2).如果一个对象的成员变量是一个对象，那么这个对象的数据成员也会被保存还原，而且会是递归的方式。<br>(3).如果一个可序列化的对象包含对某个不可序列化的对象的引用，那么整个序列化操作将会失败，并且会抛出一个NotSerializableException。可以将这个引用标记transient,那么对象仍然可以序列化。 </p>
+<h2 id="5-一个综合实例"><a href="#5-一个综合实例" class="headerlink" title="5.一个综合实例"></a>5.一个综合实例</h2><pre class="prettyprint linenums">
+class Student implements Serializable{  
+
+    private String name;  
+    private transient int age;  
+    private Course course;  
+
+    public void setCourse(Course course){  
+        this.course = course;  
+    }  
+
+    public Course getCourse(){  
+        return course;  
+    }  
+
+    public Student(String name, int age){  
+        this.name = name;  
+        this.age = age;  
+    }  
+
+    public String  toString(){  
+        return "Student Object name:"+this.name+" age:"+this.age;  
+    }  
+}  
+
+class Course implements Serializable{  
+
+    private static String courseName;  
+    private int credit;  
+
+    public Course(String courseName, int credit){  
+        this.courseName  = courseName;  
+        this.credit = credit;  
+    }  
+
+    public String toString(){  
+
+        return "Course Object courseName:"+courseName  
+               +" credit:"+credit;  
+    }  
+}  
+</pre>
+
+<p><strong>将对象写入文件，序列化 </strong></p>
+<pre class="prettyprint linenums">
+public class TestWriteObject{  
+
+    public static void main(String[] args) {  
+
+        String filePath = "D:/New/a.txt";  
+        ObjectOutputStream objOutput = null;  
+        Course c1 = new Course("C language", 3);  
+        Course c2 = new Course("OS", 4);  
+
+        Student s1 = new Student("king", 25);  
+        s1.setCourse(c1);  
+
+        Student s2 = new Student("jason", 23);  
+        s2.setCourse(c2);  
+
+        try {  
+            objOutput = new ObjectOutputStream(new FileOutputStream(filePath));  
+            objOutput.writeObject(s1);  
+            objOutput.writeObject(s2);  
+            objOutput.writeInt(123);  
+        } catch (FileNotFoundException e) {  
+            e.printStackTrace();  
+        } catch (IOException e) {  
+            e.printStackTrace();  
+        }finally{  
+            try {  
+                objOutput.close();  
+            } catch (IOException e) {  
+                e.printStackTrace();  
+            }  
+        }  
+
+        System.out.println("Info:对象被写入"+filePath);  
+    }  
+</pre>
+
+<p><strong>从文件中读取对象，反序列化</strong></p>
+<pre class="prettyprint linenums">
+public class TestReadObject  {  
+
+    public static void main(String[] args) {  
+
+        String filePath = "D:/New/a.txt";  
+        ObjectInputStream objInput = null;  
+        Student s1 = null,s2 = null;  
+        int intVal = 0;  
+
+        try {  
+            objInput = new ObjectInputStream(new FileInputStream(filePath));  
+            s1 = (Student)objInput.readObject();  
+            s2 = (Student)objInput.readObject();  
+            intVal = objInput.readInt();  
+
+        } catch (FileNotFoundException e) {  
+            e.printStackTrace();  
+        } catch (IOException e) {  
+            e.printStackTrace();  
+        }catch(ClassNotFoundException cnfe){  
+            cnfe.printStackTrace();  
+        }finally{  
+
+            try {  
+                objInput.close();  
+            } catch (IOException e) {  
+                e.printStackTrace();  
+            }  
+        }  
+
+        System.out.println("Info:文件"+filePath+"中读取对象");  
+        System.out.println(s1);  
+        System.out.println(s1.getCourse());  
+        System.out.println(s2);  
+        System.out.println(s2.getCourse());  
+        System.out.println(intVal);  
+    }  
+}  
+</pre>
+
+<p><strong>输出: </strong></p>
+<p>[TestWriteObject]<br> Info:对象被写入D:/New/a.txt </p>
+<p>[TestReadObjec]<br> Info:文件D:/New/a.txt中读取对象<br> Student Object name:king age:0<br> Course Object courseName:null credit:3<br> Student Object name:jason age:0<br> Course Object courseName:null credit:4<br> 123 </p>
+<p>可知Student中的age属性被标注为transient后，在序列化对象时，age属性就没有被序列化了; Course中的name属性被static后，Course的name静态属性就没有被序列化;虽然是序列化Student对象，但是Student所引用的Course对象也被初始化了。 </p>
+<p><strong>我的其他项目</strong><br>•<a href="https://github.com/Lemonjing/tinymooc" target="_blank" rel="external">TinyMooc</a><br>•<a href="https://github.com/Lemonjing/tinycoding" target="_blank" rel="external">TinyCoding</a><br>•<a href="https://github.com/Lemonjing/myjavase" target="_blank" rel="external">JavaSE工程</a><br>•<a href="https://github.com/Lemonjing/leetcode" target="_blank" rel="external">Leetcode题解</a></p>
+<p><strong>联系我</strong><br>•WebSite:<a href="http://www.tinymood.com" target="_blank" rel="external">http://www.tinymood.com</a><br>•Mail: 932191671@qq.com<br>•Linux交流群: 257265338<br>•邂逅厦大交流群:103949230</p>
+<p>作者 微博@Campanulaceae<br> 2015 年 11月 15日</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag">#Java</a>
+          
+            <a href="/tags/序列化/" rel="tag">#序列化</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/23/39/" rel="next" title="『原创』maven基础-怎么导入官方没有的jar">
+                <i class="fa fa-chevron-left"></i> 『原创』maven基础-怎么导入官方没有的jar
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/25/41/" rel="prev" title="『福利』ACG－ART 2015/12/25">
+                『福利』ACG－ART 2015/12/25 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/12/23/83/"
+           data-title="Java序列化" data-url="https://lemonjing.github.io/2015/12/23/83/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7xlkoc.com1.z0.glb.clouddn.com/saber2.JPG"
+               alt="Saber酱" />
+          <p class="site-author-name" itemprop="name">Saber酱</p>
+          <p class="site-description motion-element" itemprop="description">小情绪，写干净的文字，过简单的生活，致力于音乐，阅读资源的原创和分享。在小情绪，无论你伤心或快乐，用文字，用音乐去表达吧，这里将是你温暖的港湾。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">89</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+          
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">92</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lemonjing" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1662536394" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="" target="_blank">
+                  
+                    <i class="fa fa-twitter"></i> Twitter
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/tao-xiao-xiao-99" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> 知乎
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.mxwu.cn/" target="_blank">梦忻屋</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://acgyy.com/forum.php" target="_blank">恋次元动漫</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://hto.io" target="_blank">蔓舞寻樱</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://imjad.cn" target="_blank">AD's Blog</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-相关的接口"><span class="nav-number">1.</span> <span class="nav-text">1.相关的接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Serializable接口"><span class="nav-number">2.</span> <span class="nav-text">2.Serializable接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-transient关键字"><span class="nav-number">3.</span> <span class="nav-text">3.transient关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Java序列化中需要注意"><span class="nav-number">4.</span> <span class="nav-text">4.Java序列化中需要注意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-一个综合实例"><span class="nav-number">5.</span> <span class="nav-text">5.一个综合实例</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Saber酱</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"tiny93"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+
+</body>
+</html>
