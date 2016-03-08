@@ -11,10 +11,10 @@ var petbgm;
 function playSound(i){
     petbgm=getCookie("petbgm");
     if (petbgm==1){
-        document.getElementById("sound").src ="http://lemonjing.github.io/resources/voice/CHINO_"+ music[i];
+        document.getElementById("sound").src ="https://lemonjing.github.io/resources/voice/CHINO_"+ music[i];
     }
     else if (petbgm==""){
-        document.getElementById("sound").src ="http://lemonjing.github.io/resources/voice/CHINO_"+ music[i];
+        document.getElementById("sound").src ="https://lemonjing.github.io/resources/voice/CHINO_"+ music[i];
     }
 }
 //get cookie
@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
     $("#spig").mousedown(function (e) {
         if(e.which==3){
             playSound(5);
-        showMessage("秘密通道:<br>    <a href="\"http://lemonjing.github.io\"" title="\"首页\"">首页</a>  <a href="\"http://lemonjing.github.io/img\"" title="\"图库\"">图库</a>  <a href="\"http://lemonjing.github.io/comment\"" title="\"留言\"">留言</a> ",10000);
+        showMessage("秘密通道:<br>    <a href="\"https://lemonjing.github.io\"" title="\"首页\"">首页</a>  <a href="\"https://lemonjing.github.io/img\"" title="\"图库\"">图库</a>  <a href="\"https://lemonjing.github.io/comment\"" title="\"留言\"">留言</a> ",10000);
 }
 });
 $("#spig").bind("contextmenu", function(e) {
