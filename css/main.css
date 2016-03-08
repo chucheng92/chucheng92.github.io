@@ -865,6 +865,7 @@ pre .javascript .function {
 }
 .comments {
   margin: 60px 20px 0;
+  background: url("http://www.tinymood.com/wp-content/themes/loveloli/plbj.png") right no-repeat;
 }
 .tag-cloud {
   text-align: center;
@@ -1544,7 +1545,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff44c8;
+  background: #ffc946;
 }
 .sidebar-nav {
   margin: 0 0 20px;
