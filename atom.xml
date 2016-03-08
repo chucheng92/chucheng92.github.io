@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lemonjing.github.io/"/>
-  <updated>2016-03-08T03:33:24.514Z</updated>
+  <updated>2016-03-08T06:59:09.325Z</updated>
   <id>https://lemonjing.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://lemonjing.github.io/2016/03/07/Java-NIO%E6%A6%82%E8%BF%B0/"/>
     <id>https://lemonjing.github.io/2016/03/07/Java-NIO概述/</id>
     <published>2016-03-07T07:02:27.000Z</published>
-    <updated>2016-03-08T03:33:24.514Z</updated>
+    <updated>2016-03-08T06:59:09.325Z</updated>
     
     <content type="html">&lt;h1 id=&quot;Java-NIO：浅析I-O模型&quot;&gt;&lt;a href=&quot;#Java-NIO：浅析I-O模型&quot; class=&quot;headerlink&quot; title=&quot;Java NIO：浅析I/O模型&quot;&gt;&lt;/a&gt;Java NIO：浅析I/O模型&lt;/h1&gt;&lt;p&gt;NIO是Java 4里面提供的新的API，目的是用来解决传统IO的问题。&lt;/p&gt;
 &lt;h2 id=&quot;为什么要使用-NIO&quot;&gt;&lt;a href=&quot;#为什么要使用-NIO&quot; class=&quot;headerlink&quot; title=&quot;为什么要使用 NIO?&quot;&gt;&lt;/a&gt;为什么要使用 NIO?&lt;/h2&gt;&lt;p&gt;NIO 的创建目的是为了让 Java 程序员可以实现高速 I/O 而无需编写自定义的本机代码。NIO 将最耗时的 I/O 操作(即填充和提取缓冲区)转移回操作系统，因而可以极大地提高速度。&lt;/p&gt;
