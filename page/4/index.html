@@ -47,6 +47,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="TinyMood" type="application/atom+xml" />
+
 
 
 
@@ -59,12 +61,12 @@
 
 <meta name="description" content="小情绪，写干净的文字，过简单的生活，致力于音乐，阅读资源的原创和分享。在小情绪，无论你伤心或快乐，用文字，用音乐去表达吧，这里将是你温暖的港湾。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="小情绪">
+<meta property="og:title" content="TinyMood">
 <meta property="og:url" content="https://lemonjing.github.io/page/4/index.html">
-<meta property="og:site_name" content="小情绪">
+<meta property="og:site_name" content="TinyMood">
 <meta property="og:description" content="小情绪，写干净的文字，过简单的生活，致力于音乐，阅读资源的原创和分享。在小情绪，无论你伤心或快乐，用文字，用音乐去表达吧，这里将是你温暖的港湾。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小情绪">
+<meta name="twitter:title" content="TinyMood">
 <meta name="twitter:description" content="小情绪，写干净的文字，过简单的生活，致力于音乐，阅读资源的原创和分享。在小情绪，无论你伤心或快乐，用文字，用音乐去表达吧，这里将是你温暖的港湾。">
 
 
@@ -73,7 +75,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"always"},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -83,7 +85,7 @@
   };
 </script>
 
-  <title> 小情绪 </title>
+  <title> TinyMood </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -96,7 +98,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?bcd31698ed3d5d1a991a862c9496a750";
+      hm.src = "//hm.baidu.com/hm.js?53069916e38b5a4494caf85a63b67a19";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -124,7 +126,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">小情绪</span>
+      <span class="site-title">TinyMood</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -196,12 +198,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404.html" rel="section">
+        <li class="menu-item menu-item-comment">
+          <a href="/comment" rel="section">
             
-              <i class="menu-item-icon fa fa-heartbeat fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
             
-            公益404
+            留言
           </a>
         </li>
       
@@ -1529,6 +1531,13 @@ maven版本:maven3.3一 Eclipse配置maven1.官网下载maven并配置设
         </nav>
 
         
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
 
         <div class="links-of-author motion-element">
           
@@ -1622,6 +1631,14 @@ maven版本:maven3.3一 Eclipse配置maven1.官网下载maven并配置设
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Saber酱</span>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span><a href="https://lemonjing.github.io/sitemap.xml">Google网站地图</a>&nbsp;&nbsp;</span>
+<span>|&nbsp;&nbsp;<a href="https://lemonjing.github.io/baidusitemap.xml">百度网站地图</a></span>
+<span id="busuanzi_container_site_pv" style='display:none'> &nbsp;&nbsp;|&nbsp;&nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+<br>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257831120'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257831120%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+
 </div>
 
 <div class="powered-by">
@@ -1633,6 +1650,24 @@ maven版本:maven3.3一 Eclipse配置maven1.官网下载maven并配置设
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
+  |&nbsp;&nbsp;<SPAN id=span_dt_dt></SPAN><SCRIPT language=javascript>
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("8/15/2015 11:30:00");//这个日期是可以修改的
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=Math.floor(e_hrsold);
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=Math.floor((e_hrsold-hrsold)*60);
+seconds=Math.floor((e_minsold-minsold)*60);
+span_dt_dt.innerHTML="小情绪已萌萌哒运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}show_date_time();</SCRIPT>
 </div>
 
 
