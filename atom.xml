@@ -69,8 +69,8 @@
   
   <entry>
     <title>Stop Trying to Reinvent the Wheel</title>
-    <link href="https://lemonjing.github.io/2016/03/04/86/"/>
-    <id>https://lemonjing.github.io/2016/03/04/86/</id>
+    <link href="https://lemonjing.github.io/2016/03/04/Stop%20Trying%20to%20Reinvent%20the%20Wheel/"/>
+    <id>https://lemonjing.github.io/2016/03/04/Stop Trying to Reinvent the Wheel/</id>
     <published>2016-03-04T02:57:29.000Z</published>
     <updated>2016-03-07T07:22:43.910Z</updated>
     
@@ -120,12 +120,12 @@
   
   <entry>
     <title>浅析网格计算与云计算</title>
-    <link href="https://lemonjing.github.io/2016/03/04/63/"/>
-    <id>https://lemonjing.github.io/2016/03/04/63/</id>
+    <link href="https://lemonjing.github.io/2016/03/04/%E6%B5%85%E6%9E%90%E7%BD%91%E6%A0%BC%E8%AE%A1%E7%AE%97%E4%B8%8E%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+    <id>https://lemonjing.github.io/2016/03/04/浅析网格计算与云计算/</id>
     <published>2016-03-04T02:40:05.000Z</published>
-    <updated>2016-03-07T07:22:43.910Z</updated>
+    <updated>2016-03-08T12:07:40.779Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/03/2016030402394449.jpg&quot; alt=&quot;cloud&quot;&gt;&lt;br&gt;网格计算有了十几年的历史。网格基本形态是什么？是跨地区的，甚至跨国家的，甚至跨洲的这样一种独立管理的资源结合。资源在独立管理，并不是进行统一布置、统一安排的形态。网格这些资源都是异构的，不强调有什么统一的安排。另外网格的使用通常是让分布的用户构成虚拟组织（VO），在这样统一的网格基础平台上用虚拟组织形态从不同的自治域访问资源。此外，网格一般由所在地区、国家、国际公共组织资助的，支持的数据模型很广，从海量数据到专用数据以及到大小各异的临时数据集合，在网上传的数据，这是网格目前的基本形态。&lt;/p&gt;
+    <content type="html">&lt;p&gt;网格计算有了十几年的历史。网格基本形态是什么？是跨地区的，甚至跨国家的，甚至跨洲的这样一种独立管理的资源结合。资源在独立管理，并不是进行统一布置、统一安排的形态。网格这些资源都是异构的，不强调有什么统一的安排。另外网格的使用通常是让分布的用户构成虚拟组织（VO），在这样统一的网格基础平台上用虚拟组织形态从不同的自治域访问资源。此外，网格一般由所在地区、国家、国际公共组织资助的，支持的数据模型很广，从海量数据到专用数据以及到大小各异的临时数据集合，在网上传的数据，这是网格目前的基本形态。&lt;/p&gt;
 &lt;h2 id=&quot;云计算与网格计算区别何在&quot;&gt;&lt;a href=&quot;#云计算与网格计算区别何在&quot; class=&quot;headerlink&quot; title=&quot;云计算与网格计算区别何在&quot;&gt;&lt;/a&gt;云计算与网格计算区别何在&lt;/h2&gt;&lt;p&gt;可以看出，网格计算和云计算有相似之处，特别是计算的并行与合作的特点；但他们的区别也是明显的。主要有以下几点：&lt;/p&gt;
 &lt;p&gt;首先，网格计算的思路是聚合分布资源，支持虚拟组织，提供高层次的服务，例如分布协同科学研究等。而云计算的资源相对集中，主要以数据中心的形式提供底层资源的使用，并不强调虚拟组织（VO）的概念。&lt;/p&gt;
 &lt;p&gt;其次，网格计算用聚合资源来支持挑战性的应用，这是初衷，因为高性能计算的资源不够用，要把分散的资源聚合起来；后来到了2004年以后，逐渐强调适应普遍的信息化应用，特别在中国，做的网格跟国外不太一样，就是强调支持信息化的应用。但云计算从一开始就支持广泛企业计算、Web应用，普适性更强。&lt;/p&gt;
@@ -137,7 +137,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/03/2016030402394449.jpg&quot; alt=&quot;cloud&quot;&gt;&lt;br&gt;网格计算有了十几年的历史。网格基本形态是什么？是跨地区的，甚至跨国家的，甚至
+      &lt;p&gt;网格计算有了十几年的历史。网格基本形态是什么？是跨地区的，甚至跨国家的，甚至跨洲的这样一种独立管理的资源结合。资源在独立管理，并不是进行统一布置、统一安排的形态。网格这些资源都是异构的，不强调有什么统一的安排。另外网格的使用通常是让分布的用户构成虚拟组织（VO），在这样统一
     
     </summary>
     
@@ -152,8 +152,8 @@
   
   <entry>
     <title>『原创』计算机网络知识点连载</title>
-    <link href="https://lemonjing.github.io/2016/02/29/32/"/>
-    <id>https://lemonjing.github.io/2016/02/29/32/</id>
+    <link href="https://lemonjing.github.io/2016/02/29/%E3%80%8E%E5%8E%9F%E5%88%9B%E3%80%8F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E7%82%B9%E8%BF%9E%E8%BD%BD/"/>
+    <id>https://lemonjing.github.io/2016/02/29/『原创』计算机网络知识点连载/</id>
     <published>2016-02-29T13:53:51.000Z</published>
     <updated>2016-03-07T07:22:43.910Z</updated>
     
@@ -391,257 +391,42 @@
   
   <entry>
     <title>『原创』九种内部排序算法的Java实现及其性能测试</title>
-    <link href="https://lemonjing.github.io/2016/02/22/7/"/>
-    <id>https://lemonjing.github.io/2016/02/22/7/</id>
+    <link href="https://lemonjing.github.io/2016/02/22/%E3%80%8E%E5%8E%9F%E5%88%9B%E3%80%8F%E4%B9%9D%E7%A7%8D%E5%86%85%E9%83%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84Java%E5%AE%9E%E7%8E%B0%E5%8F%8A%E5%85%B6%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
+    <id>https://lemonjing.github.io/2016/02/22/『原创』九种内部排序算法的Java实现及其性能测试/</id>
     <published>2016-02-22T11:45:27.000Z</published>
-    <updated>2016-03-07T07:22:43.909Z</updated>
+    <updated>2016-03-08T12:11:06.002Z</updated>
     
     <content type="html">&lt;p&gt;其中第九种为java.util.Arrays.sort（改进的快速排序方法）&lt;/p&gt;
 &lt;p&gt;1. 100000的随机数据集&lt;br&gt;&lt;img src=&quot;http://7xlkoc.com1.z0.glb.clouddn.com/sort1.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;2. 200000的随机数据集&lt;br&gt;&lt;img src=&quot;http://7xlkoc.com1.z0.glb.clouddn.com/sort2.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;3. 500000的随机数据集&lt;br&gt;&lt;img src=&quot;http://7xlkoc.com1.z0.glb.clouddn.com/sort3.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;结论：归并排序和堆排序维持O(nlgn)的复杂度，速率差不多，表现优异。固定基准的快排表现很是优秀。而通过使用一个循环完成按增量分组后的直接插入的希尔排序，测试效果显著。冒泡，选择，直接插入都很慢，而冒泡效率是最低。&lt;/p&gt;
 &lt;h2 id=&quot;1-插入排序-稳定&quot;&gt;&lt;a href=&quot;#1-插入排序-稳定&quot; class=&quot;headerlink&quot; title=&quot;1.插入排序[稳定]&quot;&gt;&lt;/a&gt;1.插入排序[稳定]&lt;/h2&gt;&lt;p&gt;适用于小数组,数组已排好序或接近于排好序速度将会非常快&lt;/p&gt;
 &lt;p&gt;复杂度：O(n^2) - O(n) - O(n^2) - O(1)[平均 - 最好 - 最坏 - 空间复杂度]&lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-public void insertionSort(int[] a) {
-        if (null == a || a.length &lt; 2) {
-            return;
-        }
-        for (int i = 1; i &lt; a.length; i++) {
-            // 暂存当前值
-            int temp = a[i];
-            int j = i - 1;
-            while (j &gt;= 0 &amp;&amp; temp &lt; a[j]) {
-                // 后移
-                a[j + 1] = a[j];
-                j--;
-            }
-            // 当前值归位
-            a[j + 1] = temp;
-        }
-    }
-&lt;/pre&gt;
-
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;insertionSort&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] a)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt; == a || a.length &amp;lt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt; a.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// 暂存当前值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; temp = a[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = i - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (j &amp;gt;= &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; temp &amp;lt; a[j]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;comment&quot;&gt;// 后移&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				a[j + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = a[j];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				j--;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// 当前值归位&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			a[j + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = temp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;2-希尔排序-缩小增量排序-不稳定&quot;&gt;&lt;a href=&quot;#2-希尔排序-缩小增量排序-不稳定&quot; class=&quot;headerlink&quot; title=&quot;2.希尔排序(缩小增量排序)[不稳定]&quot;&gt;&lt;/a&gt;2.希尔排序(缩小增量排序)[不稳定]&lt;/h2&gt;&lt;p&gt;复杂度 小于O(n^2) 平均 O(nlgn) 最差O(n^s)，其中s大于1小于2 。空间复杂度O(1)&lt;/p&gt;
 &lt;p&gt;内循环通过模拟并行的方式完成分组的内部直接插入排序，而不是一个一个分组分组的排，在10w的随机数据20w的随机数据均表现优异。&lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-public void shellSort(int[] a) {
-        if (null == a || a.length &lt; 2) {
-            return;
-        }
-        for (int d = a.length/2; d &gt; 0; d/=2) {
-            // 从1B开始先和1A比较 然后2A与2B...然后再1C向前与同组的比较
-            for (int i = d; i &lt; a.length; i++) {
-                // 内部直接插入
-                int temp = a[i];
-                int j = i - d;
-                while (j &gt;=0 &amp;&amp; temp &lt; a[j]) {
-                    a[j+d] = a[j];
-                    j -= d;
-                }
-                a[j+d] = temp;
-            }
-        }
-    }
-&lt;/pre&gt;
-
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;shellSort&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] a)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt; == a || a.length &amp;lt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; d = a.length/&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;; d &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; d/=&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// 从1B开始先和1A比较 然后2A与2B...然后再1C向前与同组的比较&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = d; i &amp;lt; a.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;comment&quot;&gt;// 内部直接插入&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; temp = a[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = i - d;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (j &amp;gt;=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; temp &amp;lt; a[j]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					a[j+d] = a[j];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					j -= d;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				a[j+d] = temp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;3-冒泡排序-稳定&quot;&gt;&lt;a href=&quot;#3-冒泡排序-稳定&quot; class=&quot;headerlink&quot; title=&quot;3.冒泡排序[稳定]&quot;&gt;&lt;/a&gt;3.冒泡排序[稳定]&lt;/h2&gt;&lt;p&gt;复杂度：O(n^2) - O(n) - O(n^2) - O(1)[平均 - 最好 - 最坏 - 空间复杂度]&lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-public void bubbleSort(int[] a) {
-        if (null == a || a.length &lt; 2) {
-            return;
-        }
-        boolean flag;
-        for (int i = 0; i &lt; a.length-1; i++) {
-            flag = false;
-            for (int j = 0; j &lt; a.length-1-i; j++) {
-                if (a[j] &gt; a[j+1]) {
-                    int temp = a[j];
-                    a[j] = a[j+1];
-                    a[j+1] = temp;
-                    flag = true;
-                }
-            }
-            if (false == flag) {
-                return;
-            }
-        }
-    }
-&lt;/pre&gt;
-
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;bubbleSort&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] a)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt; == a || a.length &amp;lt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;boolean&lt;/span&gt; flag;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; a.length-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			flag = &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; a.length-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;-i; j++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (a[j] &amp;gt; a[j+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; temp = a[j];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					a[j] = a[j+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					a[j+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = temp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					flag = &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt; == flag) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;4-选择排序-不稳定&quot;&gt;&lt;a href=&quot;#4-选择排序-不稳定&quot; class=&quot;headerlink&quot; title=&quot;4.选择排序[不稳定]&quot;&gt;&lt;/a&gt;4.选择排序[不稳定]&lt;/h2&gt;&lt;p&gt;原理：每次从无序序列选取最小的&lt;/p&gt;
 &lt;p&gt;复杂度：O(n^2) - O(n^2) - O(n^2) - O(1)[平均 - 最好 - 最坏 - 空间复杂度]&lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-public void selectSort(int[] a) {
-        if (null == a || a.length &lt; 2) {
-            return;
-        }
-        for (int i = 0; i &lt; a.length; i++) {
-            int k = i;
-            for (int j = i + 1; j &lt; a.length; j++) {
-                if (a[j] &lt; a[k]) {
-                    k = j;
-                }
-            }
-            if (k!=i) {
-                int temp = a[k];
-                a[k] = a[i];
-                a[i] = temp;
-            }
-        }
-    }
-&lt;/pre&gt;
-
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;selectSort&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] a)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt; == a || a.length &amp;lt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; a.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; k = i;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = i + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; j &amp;lt; a.length; j++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (a[j] &amp;lt; a[k]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					k = j;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (k!=i) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; temp = a[k];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				a[k] = a[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				a[i] = temp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;5-归并排序-稳定&quot;&gt;&lt;a href=&quot;#5-归并排序-稳定&quot; class=&quot;headerlink&quot; title=&quot;5.归并排序[稳定]&quot;&gt;&lt;/a&gt;5.归并排序[稳定]&lt;/h2&gt;&lt;p&gt;原理：采用分治法&lt;/p&gt;
 &lt;p&gt;复杂度：O(nlogn) - O(nlgn) - O(nlgn) - O(n)[平均 - 最好 - 最坏 - 空间复杂度]&lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-// 排序
-    public void mergeSort(int[] a, int low, int high) {
-        if (null == a || a.length &lt; 2) {
-            return;
-        }
-        int mid = (low + high) / 2;
-        if (low &lt; high) {
-            // 左边排序
-            mergeSort(a, low, mid);
-            // 右边排序
-            mergeSort(a, mid + 1, high);
-            // 有序序列合并
-            merge(a, low, mid, high);
-        }
-    }
-
-    // 合并
-    private void merge(int a[], int low, int mid, int high) {
-        // 临时数组
-        int[] temp = new int[high - low + 1];
-        // 左指针
-        int i = low;
-        // 右指针
-        int j = mid + 1;
-        // 临时数组索引
-        int k = 0;
-
-        while (i &lt;= mid=&quot;&quot; &amp;&amp;=&quot;&quot; j=&quot;&quot; &lt;=&quot;high)&quot; {=&quot;&quot; if=&quot;&quot; (a[i]=&quot;&quot; a[j])=&quot;&quot; temp[k++]=&quot;a[i++];&quot; }=&quot;&quot; else=&quot;&quot; 把左边剩余的数移入数组=&quot;&quot; while=&quot;&quot; (i=&quot;&quot; 把右边剩余的数移入数组=&quot;&quot; (j=&quot;&quot; 注意这里是low=&quot;&quot; +=&quot;&quot; t=&quot;&quot; for=&quot;&quot; (int=&quot;&quot; temp.length;=&quot;&quot; t++)=&quot;&quot; a[low=&quot;&quot; t]=&quot;temp[t];&quot; pre=&quot;&quot;&gt;
-
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 排序&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;mergeSort&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] a, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; low, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; high)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt; == a || a.length &amp;lt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; mid = (low + high) / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (low &amp;lt; high) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// 左边排序&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			mergeSort(a, low, mid);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// 右边排序&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			mergeSort(a, mid + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, high);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// 有序序列合并&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			merge(a, low, mid, high);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// 合并&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a[], &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; low, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; mid, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; high)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// 临时数组&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] temp = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[high - low + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// 左指针&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = low;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// 右指针&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = mid + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// 临时数组索引&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; k = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (i &amp;lt;= mid &amp;amp;&amp;amp; j &amp;lt;= high) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (a[i] &amp;lt; a[j]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				temp[k++] = a[i++];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				temp[k++] = a[j++];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// 把左边剩余的数移入数组  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (i &amp;lt;= mid) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			temp[k++] = a[i++];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// 把右边剩余的数移入数组  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (j &amp;lt;= high) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			temp[k++] = a[j++];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// 注意这里是low + t&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; t = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; t &amp;lt; temp.length; t++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			a[low + t] = temp[t];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;6-快速排序-不稳定&quot;&gt;&lt;a href=&quot;#6-快速排序-不稳定&quot; class=&quot;headerlink&quot; title=&quot;6.快速排序[不稳定]&quot;&gt;&lt;/a&gt;6.快速排序[不稳定]&lt;/h2&gt;&lt;p&gt;原理：挖树填坑+分治&lt;/p&gt;
 &lt;p&gt;复杂度：O(nlgn) - O(nlgn) - O(n^2) - O(1)[平均 - 最好 - 最坏 - 空间复杂度]&lt;/p&gt;
 &lt;p&gt;栈空间0(lgn) - O(n)&lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-// 固定基准
-public void quickSort(int[] a, int low, int high) {
-        if (null == a || a.length &lt; 2) {
-            return;
-        }
-        if (low &lt; high) {
-            int mid = partition(a, low, high);
-            quickSort(a, low, mid-1);
-            quickSort(a, mid+1, high);
-        }
-    }
-
-    private int partition(int[] a, int low, int high) {
-        int pivot = a[low];
-
-        while (low &lt; high) {
-            // 注意等于，否则死循环
-            while (low &lt; high &amp;&amp; a[high] &gt;= pivot) {
-                high--;
-            }
-            a[low] = a[high];
-            // 注意等于，否则死循环
-            while (low &lt; high &amp;&amp; a[low] &lt;= pivot)=&quot;&quot; {=&quot;&quot; low++;=&quot;&quot; }=&quot;&quot; a[high]=&quot;a[low];&quot; a[low]=&quot;pivot;&quot; return=&quot;&quot; low;=&quot;&quot; &lt;=&quot;&quot; pre=&quot;&quot;&gt;
-
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 固定基准&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;quickSort&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] a, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; low, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; high)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt; == a || a.length &amp;lt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (low &amp;lt; high) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; mid = partition(a, low, high);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			quickSort(a, low, mid-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			quickSort(a, mid+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, high);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;partition&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] a, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; low, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; high)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; pivot = a[low];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (low &amp;lt; high) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// 注意等于，否则死循环&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (low &amp;lt; high &amp;amp;&amp;amp; a[high] &amp;gt;= pivot) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				high--;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			a[low] = a[high];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// 注意等于，否则死循环&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (low &amp;lt; high &amp;amp;&amp;amp; a[low] &amp;lt;= pivot) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				low++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			a[high] = a[low];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		a[low] = pivot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; low;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;7-堆排序-不稳定&quot;&gt;&lt;a href=&quot;#7-堆排序-不稳定&quot; class=&quot;headerlink&quot; title=&quot;7.堆排序[不稳定]&quot;&gt;&lt;/a&gt;7.堆排序[不稳定]&lt;/h2&gt;&lt;p&gt;堆一般指二叉堆。&lt;/p&gt;
 &lt;p&gt;复杂度：O(nlogn) - O(nlgn) - O(nlgn) - O(1)[平均 - 最好 - 最坏 - 空间复杂度]&lt;/p&gt;
 &lt;p&gt;大顶堆实现从小到大的升序排列，小顶堆一般用于构造优先队列&lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-public void heapSort(int[] a) {
-        if (null == a || a.length &lt; 2) {
-            return;
-        }
-
-        buildMaxHeap(a);
-
-        for (int i = a.length - 1; i &gt;= 0; i--) {
-            int temp = a[0];
-            a[0] = a[i];
-            a[i] = temp;
-
-            adjustHeap(a, i, 0);
-        }
-    }
-
-    // 建堆
-    private void buildMaxHeap(int[] a) {
-        int mid = a.length / 2;
-        for (int i = mid; i &gt;= 0; i--) {
-            adjustHeap(a, a.length, i);
-        }
-    }
-
-    // 递归调整堆
-    private void adjustHeap(int[] a, int size, int parent) {
-        int left = 2 * parent + 1;
-        int right = 2 * parent + 2;
-
-        int largest = parent;
-        if (left &lt; size &amp;&amp; a[left] &gt; a[parent]) {
-            largest = left;
-        }
-
-        if (right &lt; size &amp;&amp; a[right] &gt; a[largest]) {
-            largest = right;
-        }
-
-        if (parent != largest) {
-            int temp = a[parent];
-            a[parent] = a[largest];
-            a[largest] = temp;
-            adjustHeap(a, size, largest);
-        }
-    }
-&lt;/pre&gt;
-
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;heapSort&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] a)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt; == a || a.length &amp;lt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		buildMaxHeap(a);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = a.length - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;gt;= &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i--) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; temp = a[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			a[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;] = a[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			a[i] = temp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			adjustHeap(a, i, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// 建堆&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;buildMaxHeap&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] a)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; mid = a.length / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = mid; i &amp;gt;= &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i--) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			adjustHeap(a, a.length, i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// 递归调整堆&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;adjustHeap&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] a, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; size, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; parent)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; left = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; * parent + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; right = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; * parent + &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; largest = parent;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (left &amp;lt; size &amp;amp;&amp;amp; a[left] &amp;gt; a[parent]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			largest = left;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (right &amp;lt; size &amp;amp;&amp;amp; a[right] &amp;gt; a[largest]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			largest = right;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (parent != largest) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; temp = a[parent];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			a[parent] = a[largest];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			a[largest] = temp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			adjustHeap(a, size, largest);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;8-基数排序-稳定&quot;&gt;&lt;a href=&quot;#8-基数排序-稳定&quot; class=&quot;headerlink&quot; title=&quot;8.基数排序[稳定]&quot;&gt;&lt;/a&gt;8.基数排序[稳定]&lt;/h2&gt;&lt;p&gt;原理：分配加收集&lt;/p&gt;
 &lt;p&gt;复杂度： O(d(n+r)) r为基数d为位数 空间复杂度O(n+r)&lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-// 基数排序
-    public void radixSort(int[] a, int begin, int end, int digit) {
-        // 基数
-        final int radix = 10;
-        // 桶中的数据统计
-        int[] count = new int[radix];
-        int[] bucket = new int[end-begin+1];
-
-        // 按照从低位到高位的顺序执行排序过程
-        for (int i = 1; i &lt;= digit;=&quot;&quot; i++)=&quot;&quot; {=&quot;&quot; 清空桶中的数据统计=&quot;&quot; for=&quot;&quot; (int=&quot;&quot; j=&quot;0;&quot; &lt;=&quot;&quot; radix;=&quot;&quot; j++)=&quot;&quot; count[j]=&quot;0;&quot; }=&quot;&quot; 统计各个桶将要装入的数据个数=&quot;&quot; int=&quot;&quot; index=&quot;getDigit(a[j],&quot; i);=&quot;&quot; count[index]++;=&quot;&quot; count[i]表示第i个桶的右边界索引=&quot;&quot; +=&quot;&quot; count[j=&quot;&quot; -=&quot;&quot; 1];=&quot;&quot; 将数据依次装入桶中=&quot;&quot; 这里要从右向左扫描，保证排序稳定性=&quot;&quot;&gt;= begin; j--) {
-                int index = getDigit(a[j], i);
-                bucket[count[index] - 1] = a[j];
-                count[index]--;
-            }
-
-            // 取出，此时已是对应当前位数有序的表
-            for (int j = 0; j &lt; bucket.length; j++) {
-                a[j] = bucket[j];
-            }
-        }
-    }
-
-    // 获取x的第d位的数字，其中最低位d=1
-    private int getDigit(int x, int d) {
-        String div = &quot;1&quot;;
-        while (d &gt;= 2) {
-            div += &quot;0&quot;;
-            d--;
-        }
-        return x/Integer.parseInt(div) % 10;
-    }
-}
-&lt;/=&gt;&lt;/pre&gt;
-
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 基数排序&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;radixSort&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] a, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; begin, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; end, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; digit)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// 基数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; radix = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// 桶中的数据统计&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] count = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[radix];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] bucket = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[end-begin+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// 按照从低位到高位的顺序执行排序过程&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt;= digit; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// 清空桶中的数据统计&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; radix; j++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				count[j] = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// 统计各个桶将要装入的数据个数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = begin; j &amp;lt;= end; j++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; index = getDigit(a[j], i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				count[index]++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// count[i]表示第i个桶的右边界索引&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; j &amp;lt; radix; j++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				count[j] = count[j] + count[j - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// 将数据依次装入桶中&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;comment&quot;&gt;// 这里要从右向左扫描，保证排序稳定性 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = end; j &amp;gt;= begin; j--) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; index = getDigit(a[j], i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				bucket[count[index] - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = a[j];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				count[index]--;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// 取出，此时已是对应当前位数有序的表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; bucket.length; j++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				a[j] = bucket[j];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// 获取x的第d位的数字，其中最低位d=1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getDigit&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; x, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; d)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		String div = &lt;span class=&quot;string&quot;&gt;&quot;1&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (d &amp;gt;= &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			div += &lt;span class=&quot;string&quot;&gt;&quot;0&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			d--;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; x/Integer.parseInt(div) % &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;排序代码地址 &lt;a href=&quot;https://github.com/Lemonjing/TinyCoding/tree/master/src/main/java/com/tinymood/javase/sort&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Lemonjing/TinyCoding/tree/master/src/main/java/com/tinymood/javase/sort&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;性能测试代码地址 &lt;a href=&quot;https://github.com/Lemonjing/TinyCoding/tree/master/src/test/java/com/tinymood/javase/sort&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Lemonjing/TinyCoding/tree/master/src/test/java/com/tinymood/javase/sort&lt;/a&gt;&lt;/p&gt;
-&lt;/=&gt;&lt;/pre&gt;&lt;/=&gt;&lt;/pre&gt;</content>
+</content>
     
     <summary type="html">
     
@@ -663,8 +448,8 @@ public void heapSort(int[] a) {
   
   <entry>
     <title>深入浅出类装载器ClassLoader</title>
-    <link href="https://lemonjing.github.io/2016/02/19/65/"/>
-    <id>https://lemonjing.github.io/2016/02/19/65/</id>
+    <link href="https://lemonjing.github.io/2016/02/19/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B1%BB%E8%A3%85%E8%BD%BD%E5%99%A8ClassLoader/"/>
+    <id>https://lemonjing.github.io/2016/02/19/深入浅出类装载器ClassLoader/</id>
     <published>2016-02-19T12:50:01.000Z</published>
     <updated>2016-03-07T07:22:43.910Z</updated>
     
@@ -722,8 +507,8 @@ grandparent loader:null
   
   <entry>
     <title>深入浅出Java泛型</title>
-    <link href="https://lemonjing.github.io/2016/02/19/67/"/>
-    <id>https://lemonjing.github.io/2016/02/19/67/</id>
+    <link href="https://lemonjing.github.io/2016/02/19/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAJava%E6%B3%9B%E5%9E%8B/"/>
+    <id>https://lemonjing.github.io/2016/02/19/深入浅出Java泛型/</id>
     <published>2016-02-19T05:16:37.000Z</published>
     <updated>2016-03-07T07:22:43.909Z</updated>
     
@@ -1060,8 +845,8 @@ public class GenericTest {
   
   <entry>
     <title>深入浅出IOC概念</title>
-    <link href="https://lemonjing.github.io/2016/02/19/66/"/>
-    <id>https://lemonjing.github.io/2016/02/19/66/</id>
+    <link href="https://lemonjing.github.io/2016/02/19/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAIOC%E6%A6%82%E5%BF%B5/"/>
+    <id>https://lemonjing.github.io/2016/02/19/深入浅出IOC概念/</id>
     <published>2016-02-19T03:52:14.000Z</published>
     <updated>2016-03-07T07:22:43.908Z</updated>
     
@@ -1120,10 +905,10 @@ public class Girl {　
   
   <entry>
     <title>『原创』当我们说出故乡时它早已不存在</title>
-    <link href="https://lemonjing.github.io/2016/02/10/17/"/>
-    <id>https://lemonjing.github.io/2016/02/10/17/</id>
+    <link href="https://lemonjing.github.io/2016/02/10/%E3%80%8E%E5%8E%9F%E5%88%9B%E3%80%8F%E5%BD%93%E6%88%91%E4%BB%AC%E8%AF%B4%E5%87%BA%E6%95%85%E4%B9%A1%E6%97%B6%E5%AE%83%E6%97%A9%E5%B7%B2%E4%B8%8D%E5%AD%98%E5%9C%A8/"/>
+    <id>https://lemonjing.github.io/2016/02/10/『原创』当我们说出故乡时它早已不存在/</id>
     <published>2016-02-10T10:17:17.000Z</published>
-    <updated>2016-03-07T07:22:43.909Z</updated>
+    <updated>2016-03-08T11:31:40.858Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/2016021010035974.jpg&quot; alt=&quot;IMG_3023&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt;如果有，那一定是在10多年前家乡小河边，在炎炎夏日灼烧后我跳进小河中戏水后眼角沾着水珠在夕阳光线散射的五彩斑斓中。&lt;/span&gt;&lt;/p&gt;
@@ -1159,55 +944,38 @@ public class Girl {　
   
   <entry>
     <title>6种单例模式的实现以及double check的剖析</title>
-    <link href="https://lemonjing.github.io/2016/02/06/2/"/>
-    <id>https://lemonjing.github.io/2016/02/06/2/</id>
+    <link href="https://lemonjing.github.io/2016/02/06/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://lemonjing.github.io/2016/02/06/单例模式的实现/</id>
     <published>2016-02-06T14:40:31.000Z</published>
-    <updated>2016-03-07T07:22:43.908Z</updated>
+    <updated>2016-03-08T11:44:37.921Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/Lemonjing/TinyMood/blob/master/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/singleton.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点击阅读Github Markdown原文&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/2016022914301353.png&quot; alt=&quot;design&quot;&gt;&lt;br&gt;&lt;strong&gt;如何正确地写出单例模式&lt;/strong&gt;&lt;br&gt;单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。&lt;/p&gt;
+    <content type="html">&lt;div class=&quot;divcenter&quot;&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/2016020614503852.jpg&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;如何正确地写出单例模式&lt;/strong&gt;&lt;br&gt;单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。&lt;/p&gt;
 &lt;h2 id=&quot;1-懒加载-线程不安全&quot;&gt;&lt;a href=&quot;#1-懒加载-线程不安全&quot; class=&quot;headerlink&quot; title=&quot;1.懒加载 线程不安全&quot;&gt;&lt;/a&gt;1.懒加载 线程不安全&lt;/h2&gt;&lt;p&gt;当被问到要实现一个单例模式时，很多人的第一反应是写出如下的代码，包括教科书上也是这样教我们的。&lt;/p&gt;
-&lt;p&gt;&lt;pre class=&quot;prettyprint linenums&quot;&gt;public class Singleton {&lt;br&gt;    private static Singleton uniqueInstance;&lt;br&gt;    private Singleton (){}&lt;/pre&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public static Singleton getInstance() {
- if (uniqueInstance == null) {
-     uniqueInstance = new Singleton();
- }
- return uniqueInstance;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;}&lt;br&gt;&lt;br&gt;这段代码简单明了，而且使用了懒加载模式，但是却存在致命的问题。当有多个线程并行调用 getInstance() 的时候，就会创建多个实例。也就是说在多线程下不能正常工作。&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; Singleton uniqueInstance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; Singleton &lt;span class=&quot;title&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (uniqueInstance == &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         uniqueInstance = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Singleton();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; uniqueInstance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这段代码简单明了，而且使用了懒加载模式，但是却存在致命的问题。当有多个线程并行调用 getInstance() 的时候，就会创建多个实例。也就是说在多线程下不能正常工作。&lt;/p&gt;
 &lt;h2 id=&quot;2-懒加载-线程安全&quot;&gt;&lt;a href=&quot;#2-懒加载-线程安全&quot; class=&quot;headerlink&quot; title=&quot;2.懒加载 线程安全&quot;&gt;&lt;/a&gt;2.懒加载 线程安全&lt;/h2&gt;&lt;p&gt;为了解决上面的问题，最简单的方法是将整个 getInstance() 方法设为同步（synchronized）。&lt;/p&gt;
-&lt;p&gt;&lt;pre class=&quot;prettyprint linenums&quot;&gt;public static synchronized Singleton getInstance() {&lt;br&gt;    if (uniqueInstance == null) {&lt;br&gt;        uniqueInstance = new Singleton();&lt;br&gt;    }&lt;br&gt;    return uniqueInstance;&lt;br&gt;}&lt;br&gt;&lt;/pre&gt;&lt;br&gt;虽然做到了线程安全，并且解决了多实例的问题，但是它并不高效。因为在任何时候只能有一个线程调用 getInstance() 方法。但是同步操作只需要在第一次调用时才被需要，即第一次创建单例实例对象时。这就引出了双重检验锁。&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;synchronized&lt;/span&gt; Singleton &lt;span class=&quot;title&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (uniqueInstance == &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        uniqueInstance = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Singleton();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; uniqueInstance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;虽然做到了线程安全，并且解决了多实例的问题，但是它并不高效。因为在任何时候只能有一个线程调用 getInstance() 方法。但是同步操作只需要在第一次调用时才被需要，即第一次创建单例实例对象时。这就引出了双重检验锁。&lt;/p&gt;
 &lt;h2 id=&quot;3-双重检查加锁-线程安全&quot;&gt;&lt;a href=&quot;#3-双重检查加锁-线程安全&quot; class=&quot;headerlink&quot; title=&quot;3.双重检查加锁 线程安全&quot;&gt;&lt;/a&gt;3.双重检查加锁 线程安全&lt;/h2&gt;&lt;p&gt;双重检验加锁模式（double checked locking pattern），是一种使用同步块加锁的方法。程序员称其为双重检查锁，因为会有两次检查 uniqueInstance == null，一次是在同步块外，一次是在同步块内。为什么在同步块内还要再检验一次？因为可能会有多个线程一起进入同步块外的 if，如果在同步块内不进行二次检验的话就会生成多个实例了。&lt;/p&gt;
-&lt;p&gt;&lt;pre class=&quot;prettyprint linenums&quot;&gt;public static Singleton getSingleton() {&lt;br&gt;    if (uniqueInstance == null) {                         //Single Checked&lt;br&gt;        synchronized (Singleton.class) {&lt;br&gt;            if (uniqueInstance == null) {                 //Double Checked&lt;br&gt;                uniqueInstance = new Singleton();&lt;br&gt;            }&lt;br&gt;        }&lt;br&gt;    }&lt;br&gt;    return uniqueInstance;&lt;br&gt;}&lt;br&gt;&lt;/pre&gt;&lt;br&gt;这段代码看起来很完美，很可惜，它是有问题。主要在于uniqueInstance = new Singleton()这句，这并非是一个原子操作，事实上在 JVM 中这句话大概做了下面 3 件事情。&lt;/p&gt;
-&lt;p&gt;给 uniqueInstance 分配内存&lt;br&gt;调用 Singleton 的构造函数来初始化成员变量&lt;br&gt;将uniqueInstance对象指向分配的内存空间（执行完这步 uniqueInstance 就为非 null 了）&lt;br&gt;但是在 JVM 的即时编译器中存在指令重排序的优化。也就是说上面的第二步和第三步的顺序是不能保证的，最终的执行顺序可能是 1-2-3 也可能是 1-3-2。如果是后者，则在 3 执行完毕、2 未执行之前，被线程二抢占了，这时uniqueInstance已经是非 null 了（但却没有初始化），所以线程二会直接返回 uniqueInstance，然后使用，然后顺理成章地报错。&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; Singleton &lt;span class=&quot;title&quot;&gt;getSingleton&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (uniqueInstance == &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;) &amp;#123;                         &lt;span class=&quot;comment&quot;&gt;//Single Checked&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;synchronized&lt;/span&gt; (Singleton.class) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (uniqueInstance == &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;) &amp;#123;                 &lt;span class=&quot;comment&quot;&gt;//Double Checked&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                uniqueInstance = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Singleton();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; uniqueInstance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这段代码看起来很完美，很可惜，它是有问题。主要在于uniqueInstance = new Singleton()这句，这并非是一个原子操作，事实上在 JVM 中这句话大概做了下面 3 件事情。&lt;/p&gt;
+&lt;p&gt;1.给 uniqueInstance 分配内存&lt;br&gt;2.调用 Singleton 的构造函数来初始化成员变量&lt;br&gt;3.将uniqueInstance对象指向分配的内存空间（执行完这步 uniqueInstance 就为非 null 了）&lt;br&gt;但是在 JVM 的即时编译器中存在指令重排序的优化。也就是说上面的第二步和第三步的顺序是不能保证的，最终的执行顺序可能是 1-2-3 也可能是 1-3-2。如果是后者，则在 3 执行完毕、2 未执行之前，被线程二抢占了，这时uniqueInstance已经是非 null 了（但却没有初始化），所以线程二会直接返回 uniqueInstance，然后使用，然后顺理成章地报错。&lt;/p&gt;
 &lt;p&gt;我们只需要将 uniqueInstance 变量声明成 volatile 就可以了。&lt;/p&gt;
-&lt;p&gt;&lt;pre class=&quot;prettyprint linenums&quot;&gt;public class Singleton {&lt;br&gt;    private volatile static Singleton uniqueInstance; //声明成 volatile&lt;br&gt;    private Singleton (){}&lt;/pre&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public static Singleton getSingleton() {
-    if (uniqueInstance == null) {                         
-        synchronized (Singleton.class) {
-            if (uniqueInstance == null) {       
-                uniqueInstance = new Singleton();
-            }
-        }
-    }
-    return uniqueInstance;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;}&lt;br&gt;&lt;br&gt;有些人认为使用 volatile 的原因是可见性，也就是可以保证线程在本地不会存有 uniqueInstance 的副本，每次都是去主内存中读取。但其实是不对的。使用 volatile 的主要原因是其另一个特性：禁止指令重排序优化。也就是说，在 volatile 变量的赋值操作后面会有一个内存屏障（生成的汇编代码上），读操作不会被重排序到内存屏障之前。比如上面的例子，取操作必须在执行完 1-2-3 之后或者 1-3-2 之后，不存在执行到 1-3 然后取到值的情况。从「先行发生原则」的角度理解的话，就是对于一个 volatile 变量的写操作都先行发生于后面对这个变量的读操作（这里的“后面”是时间上的先后顺序）。&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;volatile&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; Singleton uniqueInstance; &lt;span class=&quot;comment&quot;&gt;//声明成 volatile&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; Singleton &lt;span class=&quot;title&quot;&gt;getSingleton&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (uniqueInstance == &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;) &amp;#123;                         &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;synchronized&lt;/span&gt; (Singleton.class) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (uniqueInstance == &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;) &amp;#123;       &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    uniqueInstance = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Singleton();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; uniqueInstance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;有些人认为使用 volatile 的原因是可见性，也就是可以保证线程在本地不会存有 uniqueInstance 的副本，每次都是去主内存中读取。但其实是不对的。使用 volatile 的主要原因是其另一个特性：禁止指令重排序优化。也就是说，在 volatile 变量的赋值操作后面会有一个内存屏障（生成的汇编代码上），读操作不会被重排序到内存屏障之前。比如上面的例子，取操作必须在执行完 1-2-3 之后或者 1-3-2 之后，不存在执行到 1-3 然后取到值的情况。从「先行发生原则」的角度理解的话，就是对于一个 volatile 变量的写操作都先行发生于后面对这个变量的读操作（这里的“后面”是时间上的先后顺序）。&lt;/p&gt;
 &lt;p&gt;但是特别注意在 Java 5 以前的版本使用了 volatile 的双检锁还是有问题的。其原因是 Java 5 以前的 JMM （Java 内存模型）是存在缺陷的，即时将变量声明成 volatile 也不能完全避免重排序，主要是 volatile 变量前后的代码仍然存在重排序问题。这个 volatile 屏蔽重排序的问题在 Java 5 中才得以修复，所以在这之后才可以放心使用 volatile。&lt;/p&gt;
 &lt;p&gt;相信你不会喜欢这种复杂又隐含问题的方式，当然我们有更好的实现线程安全的单例模式的办法。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/2016020614503852.jpg&quot; alt=&quot;u=3016183366,3592358855&amp;amp;fm=21&amp;amp;gp=0&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;4-急加载-static-final-field-线程安全&quot;&gt;&lt;a href=&quot;#4-急加载-static-final-field-线程安全&quot; class=&quot;headerlink&quot; title=&quot;4.急加载 static final field 线程安全&quot;&gt;&lt;/a&gt;4.急加载 static final field 线程安全&lt;/h2&gt;&lt;p&gt;这种方法非常简单，因为单例的实例被声明成 static 和 final 变量了，在第一次加载类到内存中时就会初始化，所以创建实例本身是线程安全的。&lt;/p&gt;
-&lt;p&gt;&lt;pre class=&quot;prettyprint linenums&quot;&gt;public class Singleton{&lt;br&gt;    //类加载时就初始化&lt;br&gt;    private static final Singleton uniqueInstance = new Singleton();&lt;/pre&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;private Singleton(){}
-
-public static Singleton getInstance(){
-    return uniqueInstance;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;}&lt;br&gt;&lt;br&gt;这种写法如果完美的话，就没必要在啰嗦那么多双检锁的问题了。缺点是它不是一种懒加载模式（lazy initialization），单例会在加载类后一开始就被初始化，即使客户端没有调用 getInstance()方法。饿汉式的创建方式在一些场景中将无法使用：譬如 Singleton 实例的创建是依赖参数或者配置文件的，在 getInstance() 之前必须调用某个方法设置参数给它，那样这种单例写法就无法使用了。&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//类加载时就初始化&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; Singleton uniqueInstance = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Singleton();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; Singleton &lt;span class=&quot;title&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; uniqueInstance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这种写法如果完美的话，就没必要在啰嗦那么多双检锁的问题了。缺点是它不是一种懒加载模式（lazy initialization），单例会在加载类后一开始就被初始化，即使客户端没有调用 getInstance()方法。饿汉式的创建方式在一些场景中将无法使用：譬如 Singleton 实例的创建是依赖参数或者配置文件的，在 getInstance() 之前必须调用某个方法设置参数给它，那样这种单例写法就无法使用了。&lt;/p&gt;
 &lt;h2 id=&quot;5-静态内部类-static-nested-class-线程安全&quot;&gt;&lt;a href=&quot;#5-静态内部类-static-nested-class-线程安全&quot; class=&quot;headerlink&quot; title=&quot;5.静态内部类 static nested class 线程安全&quot;&gt;&lt;/a&gt;5.静态内部类 static nested class 线程安全&lt;/h2&gt;&lt;p&gt;我比较倾向于使用静态内部类的方法，这种方法也是《Effective Java》上所推荐的。&lt;/p&gt;
-&lt;p&gt;&lt;pre class=&quot;prettyprint linenums&quot;&gt;public class Singleton {&lt;br&gt;    private static class SingletonHolder {&lt;br&gt;        private static final Singleton uniqueInstance = new Singleton();&lt;br&gt;    }&lt;br&gt;    private Singleton (){}&lt;br&gt;    public static final Singleton getInstance() {&lt;br&gt;        return SingletonHolder.uniqueInstance;&lt;br&gt;    }&lt;br&gt;}&lt;br&gt;&lt;/pre&gt;&lt;br&gt;这种写法仍然使用JVM本身机制保证了线程安全问题；由于 SingletonHolder 是私有的，除了 getInstance() 之外没有办法访问它，因此它是懒加载的；同时读取实例的时候不会进行同步，没有性能缺陷；也不依赖 JDK 版本。&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt; &lt;/span&gt;&amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SingletonHolder&lt;/span&gt; &lt;/span&gt;&amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; Singleton uniqueInstance = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Singleton();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; Singleton &lt;span class=&quot;title&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; SingletonHolder.uniqueInstance; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这种写法仍然使用JVM本身机制保证了线程安全问题；由于 SingletonHolder 是私有的，除了 getInstance() 之外没有办法访问它，因此它是懒加载的；同时读取实例的时候不会进行同步，没有性能缺陷；也不依赖 JDK 版本。&lt;/p&gt;
 &lt;h2 id=&quot;6-枚举-Enum-线程安全&quot;&gt;&lt;a href=&quot;#6-枚举-Enum-线程安全&quot; class=&quot;headerlink&quot; title=&quot;6.枚举 Enum 线程安全&quot;&gt;&lt;/a&gt;6.枚举 Enum 线程安全&lt;/h2&gt;&lt;p&gt;用枚举写单例实在太简单了！这也是它最大的优点。下面这段代码就是声明枚举实例的通常做法。&lt;/p&gt;
-&lt;p&gt;&lt;pre class=&quot;prettyprint linenums&quot;&gt;public enum EasySingleton{&lt;br&gt;    INSTANCE;&lt;br&gt;}&lt;br&gt;&lt;/pre&gt;&lt;br&gt;我们可以通过EasySingleton.INSTANCE来访问实例，这比调用getInstance()方法简单多了。创建枚举默认就是线程安全的，所以不需要担心double checked locking，而且还能防止反序列化导致重新创建新的对象。但是还是很少看到有人这样写，可能是因为不太熟悉吧。&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;enum&lt;/span&gt; EasySingleton&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    INSTANCE;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;我们可以通过EasySingleton.INSTANCE来访问实例，这比调用getInstance()方法简单多了。创建枚举默认就是线程安全的，所以不需要担心double checked locking，而且还能防止反序列化导致重新创建新的对象。但是还是很少看到有人这样写，可能是因为不太熟悉吧。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;&lt;br&gt;一般来说，单例模式有五种写法：懒加载、急加载、双重检查加锁锁、静态内部类、枚举。上述所说都是线程安全的实现，文章开头给出的第一种方法不算正确的写法。&lt;/p&gt;
 &lt;p&gt;就我个人而言，一般情况下直接使用急加载就好了，如果明确要求要懒加载（lazy initialization）会倾向于使用静态内部类，如果涉及到反序列化创建对象时会试着使用枚举的方式来实现单例。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;代码打包&lt;/strong&gt;&lt;br&gt;完整代码 &lt;a href=&quot;https://github.com/Lemonjing/designpattern/tree/master/src/com/tinymood/designpattern/singleton&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Singleton&lt;/a&gt;&lt;/p&gt;
@@ -1217,7 +985,9 @@ public static Singleton getInstance(){
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://github.com/Lemonjing/TinyMood/blob/master/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/singleton.md&quot; target=&quot;_blank&quot; rel=&quot;extern
+      &lt;div class=&quot;divcenter&quot;&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/2016020614503852.jpg&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;如何正确地写出单例模式&lt;/st
     
     </summary>
     
@@ -1234,8 +1004,8 @@ public static Singleton getInstance(){
   
   <entry>
     <title>深入理解Java注解 － 注解处理器</title>
-    <link href="https://lemonjing.github.io/2016/02/05/69/"/>
-    <id>https://lemonjing.github.io/2016/02/05/69/</id>
+    <link href="https://lemonjing.github.io/2016/02/05/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E6%B3%A8%E8%A7%A3%20%EF%BC%8D%20%E6%B3%A8%E8%A7%A3%E5%A4%84%E7%90%86%E5%99%A8/"/>
+    <id>https://lemonjing.github.io/2016/02/05/深入理解Java注解 － 注解处理器/</id>
     <published>2016-02-05T07:47:11.000Z</published>
     <updated>2016-03-07T07:22:43.908Z</updated>
     
@@ -1374,8 +1144,8 @@ public static void main(String[] args) {
   
   <entry>
     <title>Git忽略规则及.gitignore规则不生效的解决办法</title>
-    <link href="https://lemonjing.github.io/2016/01/25/80/"/>
-    <id>https://lemonjing.github.io/2016/01/25/80/</id>
+    <link href="https://lemonjing.github.io/2016/01/25/Git%E5%BF%BD%E7%95%A5%E8%A7%84%E5%88%99%E5%8F%8A.gitignore%E8%A7%84%E5%88%99%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>https://lemonjing.github.io/2016/01/25/Git忽略规则及.gitignore规则不生效的解决办法/</id>
     <published>2016-01-25T07:48:09.000Z</published>
     <updated>2016-03-07T07:22:43.908Z</updated>
     
@@ -1412,8 +1182,8 @@ git commit -m &#39;update .gitignore&#39;
   
   <entry>
     <title>SpringMVC利用Column 注解约束double类型的精度</title>
-    <link href="https://lemonjing.github.io/2016/01/23/85/"/>
-    <id>https://lemonjing.github.io/2016/01/23/85/</id>
+    <link href="https://lemonjing.github.io/2016/01/23/SpringMVC%E5%88%A9%E7%94%A8Column%20%E6%B3%A8%E8%A7%A3%E7%BA%A6%E6%9D%9Fdouble%E7%B1%BB%E5%9E%8B%E7%9A%84%E7%B2%BE%E5%BA%A6/"/>
+    <id>https://lemonjing.github.io/2016/01/23/SpringMVC利用Column 注解约束double类型的精度/</id>
     <published>2016-01-23T11:39:08.000Z</published>
     <updated>2016-03-07T07:22:43.908Z</updated>
     
@@ -1447,8 +1217,8 @@ private double grade;
   
   <entry>
     <title>『原创』青瓷易懂 情结难解</title>
-    <link href="https://lemonjing.github.io/2016/01/16/37/"/>
-    <id>https://lemonjing.github.io/2016/01/16/37/</id>
+    <link href="https://lemonjing.github.io/2016/01/16/%E3%80%8E%E5%8E%9F%E5%88%9B%E3%80%8F%E9%9D%92%E7%93%B7%E6%98%93%E6%87%82%20%E6%83%85%E7%BB%93%E9%9A%BE%E8%A7%A3/"/>
+    <id>https://lemonjing.github.io/2016/01/16/『原创』青瓷易懂 情结难解/</id>
     <published>2016-01-16T07:19:14.000Z</published>
     <updated>2016-03-07T07:22:43.907Z</updated>
     
@@ -1482,10 +1252,10 @@ private double grade;
   
   <entry>
     <title>『原创』也许，我只是想等到一个温暖的人</title>
-    <link href="https://lemonjing.github.io/2016/01/16/8/"/>
-    <id>https://lemonjing.github.io/2016/01/16/8/</id>
+    <link href="https://lemonjing.github.io/2016/01/16/%E3%80%8E%E5%8E%9F%E5%88%9B%E3%80%8F%E4%B9%9F%E8%AE%B8%EF%BC%8C%E6%88%91%E5%8F%AA%E6%98%AF%E6%83%B3%E7%AD%89%E5%88%B0%E4%B8%80%E4%B8%AA%E6%B8%A9%E6%9A%96%E7%9A%84%E4%BA%BA/"/>
+    <id>https://lemonjing.github.io/2016/01/16/『原创』也许，我只是想等到一个温暖的人/</id>
     <published>2016-01-16T01:45:03.000Z</published>
-    <updated>2016-03-07T07:22:43.907Z</updated>
+    <updated>2016-03-08T11:19:27.560Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/2016010816333980.jpg&quot; alt=&quot;u=2568299814,2994458694&amp;amp;fm=21&amp;amp;gp=0&quot;&gt;&lt;br&gt;[hermit auto=”1” loop=”1” unexpand=”1” fullheight=”0”]netease_songs#:29719651[/hermit]&lt;/p&gt;
 &lt;center&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt;也许，我只是想等到一个可以温暖自己的人&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 什么事都想告诉她&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 伤心或是难过&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 快乐或是欢愉&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 没有什么其他要求&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 也不敢再有什么要求了&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 却是已经足够了&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 小小的要求&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 或许又是最难的要求&lt;/span&gt;&lt;/center&gt;
@@ -1504,20 +1274,20 @@ private double grade;
     
       <category term="原创" scheme="https://lemonjing.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
     
-      <category term="爱情" scheme="https://lemonjing.github.io/tags/%E7%88%B1%E6%83%85/"/>
-    
       <category term="Saber" scheme="https://lemonjing.github.io/tags/Saber/"/>
     
       <category term="温暖" scheme="https://lemonjing.github.io/tags/%E6%B8%A9%E6%9A%96/"/>
+    
+      <category term="爱情" scheme="https://lemonjing.github.io/tags/%E7%88%B1%E6%83%85/"/>
     
   </entry>
   
   <entry>
     <title>『原创』常见字符集及其分类</title>
-    <link href="https://lemonjing.github.io/2016/01/15/16/"/>
-    <id>https://lemonjing.github.io/2016/01/15/16/</id>
+    <link href="https://lemonjing.github.io/2016/01/15/%E3%80%8E%E5%8E%9F%E5%88%9B%E3%80%8F%E5%B8%B8%E8%A7%81%E5%AD%97%E7%AC%A6%E9%9B%86%E5%8F%8A%E5%85%B6%E5%88%86%E7%B1%BB/"/>
+    <id>https://lemonjing.github.io/2016/01/15/『原创』常见字符集及其分类/</id>
     <published>2016-01-15T14:45:42.000Z</published>
-    <updated>2016-03-07T07:22:43.907Z</updated>
+    <updated>2016-03-08T11:31:30.023Z</updated>
     
     <content type="html">&lt;p&gt;字符集编码是指对多个字符（通常在几十到几万个不等）进行整合封装成一个文件所使用的编码，外部程序通过这种编码就可以从字符集文件中调用指定的字符。我们常见的计算机字体文件就使用了字符集编码，通过输入法输入文字或者浏览网页时都会通过指定的字符集编码从字体文件中调用字符。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2015/12/2015122914292984.jpg&quot; alt=&quot;9&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1-以下是常见的字符集：&quot;&gt;&lt;a href=&quot;#1-以下是常见的字符集：&quot; class=&quot;headerlink&quot; title=&quot;1.以下是常见的字符集：&quot;&gt;&lt;/a&gt;1.以下是常见的字符集：&lt;/h2&gt;&lt;p&gt;&lt;span style=&quot;color: #ff6600;&quot;&gt;ASCII及其扩展字符集&lt;/span&gt;&lt;br&gt;作用：表语英语及西欧语言。 位数：ASCII是用7位表示的，能表示128个字符；其扩展使用8位表示，表示256个字符。 范围：ASCII从00到7F，扩展从00到FF。&lt;/p&gt;
@@ -1562,8 +1332,8 @@ private double grade;
   
   <entry>
     <title>深入理解Java注解 － 注解入门</title>
-    <link href="https://lemonjing.github.io/2016/01/15/68/"/>
-    <id>https://lemonjing.github.io/2016/01/15/68/</id>
+    <link href="https://lemonjing.github.io/2016/01/15/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E6%B3%A8%E8%A7%A3%20%EF%BC%8D%20%E6%B3%A8%E8%A7%A3%E5%85%A5%E9%97%A8/"/>
+    <id>https://lemonjing.github.io/2016/01/15/深入理解Java注解 － 注解入门/</id>
     <published>2016-01-15T07:37:42.000Z</published>
     <updated>2016-03-07T07:22:43.908Z</updated>
     
@@ -1792,8 +1562,8 @@ public class Apple {
   
   <entry>
     <title>我只知道 如若是你 随时随地 我会如约而至</title>
-    <link href="https://lemonjing.github.io/2016/01/13/53/"/>
-    <id>https://lemonjing.github.io/2016/01/13/53/</id>
+    <link href="https://lemonjing.github.io/2016/01/13/%E6%88%91%E5%8F%AA%E7%9F%A5%E9%81%93%20%E5%A6%82%E8%8B%A5%E6%98%AF%E4%BD%A0%20%E9%9A%8F%E6%97%B6%E9%9A%8F%E5%9C%B0%20%E6%88%91%E4%BC%9A%E5%A6%82%E7%BA%A6%E8%80%8C%E8%87%B3/"/>
+    <id>https://lemonjing.github.io/2016/01/13/我只知道 如若是你 随时随地 我会如约而至/</id>
     <published>2016-01-13T15:07:46.000Z</published>
     <updated>2016-03-07T07:22:43.908Z</updated>
     
@@ -1827,37 +1597,35 @@ public class Apple {
   
   <entry>
     <title>遇见更好的人时却已用完了最好的自己</title>
-    <link href="https://lemonjing.github.io/2016/01/13/73/"/>
-    <id>https://lemonjing.github.io/2016/01/13/73/</id>
+    <link href="https://lemonjing.github.io/2016/01/13/%E9%81%87%E8%A7%81%E6%9B%B4%E5%A5%BD%E7%9A%84%E4%BA%BA%E6%97%B6%E5%8D%B4%E5%B7%B2%E7%94%A8%E5%AE%8C%E4%BA%86%E6%9C%80%E5%A5%BD%E7%9A%84%E8%87%AA%E5%B7%B1/"/>
+    <id>https://lemonjing.github.io/2016/01/13/遇见更好的人时却已用完了最好的自己/</id>
     <published>2016-01-13T14:49:38.000Z</published>
-    <updated>2016-03-07T07:22:43.907Z</updated>
+    <updated>2016-03-08T11:52:04.380Z</updated>
     
-    <content type="html">&lt;p&gt;[hermit auto=”1” loop=”1” unexpand=”1” fullheight=”0”]netease_songs#:186149[/hermit]&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-family:宋体; font-size:12pt&quot;&gt;1、我是一只瓶子，装满叫感情的液体。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_1.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;2、我救过一条奄奄一息的金鱼。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_2.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_3.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;3、但我忘了，金鱼的记忆只有七秒钟。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_4.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;4、直到放他走的那一天…&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;5、后来我遇见了小海绵。&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;6、烈日下的他被烤成紧巴巴的一团。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_5.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;7、我救了他，于是我们成了好朋友。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_6.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;8、可是我知道&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_7.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;9、朋友&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_8.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;10、绝对不是一味的索取。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_9.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;11、在我最困难的时候，是仙人球先生一直陪着我&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_10.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;12、我义无反顾的跟着他，来到他的家乡，沙漠&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_11.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;13、可是我渐渐发现&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_12.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;14、我视若生命的东西，是他不需要的&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_13.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;15、不需要，也就不重要了吧&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_14.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;16、我一直在想，如果命运早点安排冰糖先生出现该多好&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_15.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;17、和他在一起的每一天，都会是甜甜的吧？&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_16.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;18、只是，此刻的我才明白，最大的遗憾不是错过最好的人&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_17.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;19、而是，当你遇见更好的人时&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_18.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;20、已经把最好的自己用完了。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_19.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;21、感情是易耗品，只愿你，把最好的自己，留给对的人。只是我们都只是在经历了一切之后才明白这一点，常常，没能把最好的自己交给那个最对的人。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_20.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;        &lt;/span&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;span style=&quot;font-family:宋体; font-size:12pt&quot;&gt;1、我是一只瓶子，装满叫感情的液体。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_1.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;2、我救过一条奄奄一息的金鱼。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_2.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_3.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;3、但我忘了，金鱼的记忆只有七秒钟。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_4.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;4、直到放他走的那一天…&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;5、后来我遇见了小海绵。&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;6、烈日下的他被烤成紧巴巴的一团。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_5.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;7、我救了他，于是我们成了好朋友。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_6.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;8、可是我知道&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_7.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;9、朋友&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_8.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;10、绝对不是一味的索取。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_9.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;11、在我最困难的时候，是仙人球先生一直陪着我&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_10.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;12、我义无反顾的跟着他，来到他的家乡，沙漠&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_11.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;13、可是我渐渐发现&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_12.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;14、我视若生命的东西，是他不需要的&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_13.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;15、不需要，也就不重要了吧&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_14.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;16、我一直在想，如果命运早点安排冰糖先生出现该多好&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_15.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;17、和他在一起的每一天，都会是甜甜的吧？&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_16.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;18、只是，此刻的我才明白，最大的遗憾不是错过最好的人&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_17.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;19、而是，当你遇见更好的人时&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_18.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;20、已经把最好的自己用完了。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_19.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#595959&quot;&gt;21、感情是易耗品，只愿你，把最好的自己，留给对的人。只是我们都只是在经历了一切之后才明白这一点，常常，没能把最好的自己交给那个最对的人。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_1447_20.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;&lt;br&gt;        &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style=&quot;color:#59c3f9; font-family:宋体&quot;&gt;&lt;span style=&quot;font-size:13pt&quot;&gt;&lt;strong&gt;读而思&lt;/strong&gt;&lt;/span&gt;&lt;span style=&quot;font-size:15pt&quot;&gt;&lt;br&gt;            &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style=&quot;color:#59c3f9; font-family:宋体; font-size:12pt&quot;&gt;我还等得起，在还未向岁月认输之前。这世上一切孤独的等待我都等得起。因为我相信，未来的某个日子，你会摘一朵我最爱的栀子花，穿着我最喜爱的格子衬衫，帆布鞋，笑眯眯的递给我，然后温柔的说，不好意思，让你多等了。以后的日子里，我陪你走过春夏秋冬，陪你花好月圆，陪你细水长流。&lt;/span&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;[hermit auto=”1” loop=”1” unexpand=”1” fullheight=”0”]netease_songs#:186149[/hermit]&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-family:宋体; font-size:12pt&quot;&gt;
+      &lt;p&gt;&lt;span style=&quot;font-family:宋体; font-size:12pt&quot;&gt;1、我是一只瓶子，装满叫感情的液体。&lt;br&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/011316_14
     
     </summary>
     
       <category term="随笔" scheme="https://lemonjing.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="爱情" scheme="https://lemonjing.github.io/tags/%E7%88%B1%E6%83%85/"/>
-    
       <category term="画" scheme="https://lemonjing.github.io/tags/%E7%94%BB/"/>
+    
+      <category term="爱情" scheme="https://lemonjing.github.io/tags/%E7%88%B1%E6%83%85/"/>
     
   </entry>
   
   <entry>
     <title>时间太瘦，指缝太宽</title>
-    <link href="https://lemonjing.github.io/2016/01/12/79/"/>
-    <id>https://lemonjing.github.io/2016/01/12/79/</id>
+    <link href="https://lemonjing.github.io/2016/01/12/%E6%97%B6%E9%97%B4%E5%A4%AA%E7%98%A6%EF%BC%8C%E6%8C%87%E7%BC%9D%E5%A4%AA%E5%AE%BD/"/>
+    <id>https://lemonjing.github.io/2016/01/12/时间太瘦，指缝太宽/</id>
     <published>2016-01-12T13:02:54.000Z</published>
     <updated>2016-03-07T07:22:43.907Z</updated>
     
