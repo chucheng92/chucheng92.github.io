@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>TinyMood</title>
+  <title>TinyMood - 写干净的文字，过简单的生活</title>
   <subtitle>写干净的文字，过简单的生活</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -123,9 +123,10 @@
     <link href="https://lemonjing.github.io/2016/03/04/%E6%B5%85%E6%9E%90%E7%BD%91%E6%A0%BC%E8%AE%A1%E7%AE%97%E4%B8%8E%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
     <id>https://lemonjing.github.io/2016/03/04/浅析网格计算与云计算/</id>
     <published>2016-03-04T02:40:05.000Z</published>
-    <updated>2016-03-08T12:07:40.779Z</updated>
+    <updated>2016-03-08T12:26:57.315Z</updated>
     
-    <content type="html">&lt;p&gt;网格计算有了十几年的历史。网格基本形态是什么？是跨地区的，甚至跨国家的，甚至跨洲的这样一种独立管理的资源结合。资源在独立管理，并不是进行统一布置、统一安排的形态。网格这些资源都是异构的，不强调有什么统一的安排。另外网格的使用通常是让分布的用户构成虚拟组织（VO），在这样统一的网格基础平台上用虚拟组织形态从不同的自治域访问资源。此外，网格一般由所在地区、国家、国际公共组织资助的，支持的数据模型很广，从海量数据到专用数据以及到大小各异的临时数据集合，在网上传的数据，这是网格目前的基本形态。&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/03/2016030402540051.jpg&quot; alt=&quot;wheel&quot;&gt;&lt;/p&gt;
+&lt;p&gt;网格计算有了十几年的历史。网格基本形态是什么？是跨地区的，甚至跨国家的，甚至跨洲的这样一种独立管理的资源结合。资源在独立管理，并不是进行统一布置、统一安排的形态。网格这些资源都是异构的，不强调有什么统一的安排。另外网格的使用通常是让分布的用户构成虚拟组织（VO），在这样统一的网格基础平台上用虚拟组织形态从不同的自治域访问资源。此外，网格一般由所在地区、国家、国际公共组织资助的，支持的数据模型很广，从海量数据到专用数据以及到大小各异的临时数据集合，在网上传的数据，这是网格目前的基本形态。&lt;/p&gt;
 &lt;h2 id=&quot;云计算与网格计算区别何在&quot;&gt;&lt;a href=&quot;#云计算与网格计算区别何在&quot; class=&quot;headerlink&quot; title=&quot;云计算与网格计算区别何在&quot;&gt;&lt;/a&gt;云计算与网格计算区别何在&lt;/h2&gt;&lt;p&gt;可以看出，网格计算和云计算有相似之处，特别是计算的并行与合作的特点；但他们的区别也是明显的。主要有以下几点：&lt;/p&gt;
 &lt;p&gt;首先，网格计算的思路是聚合分布资源，支持虚拟组织，提供高层次的服务，例如分布协同科学研究等。而云计算的资源相对集中，主要以数据中心的形式提供底层资源的使用，并不强调虚拟组织（VO）的概念。&lt;/p&gt;
 &lt;p&gt;其次，网格计算用聚合资源来支持挑战性的应用，这是初衷，因为高性能计算的资源不够用，要把分散的资源聚合起来；后来到了2004年以后，逐渐强调适应普遍的信息化应用，特别在中国，做的网格跟国外不太一样，就是强调支持信息化的应用。但云计算从一开始就支持广泛企业计算、Web应用，普适性更强。&lt;/p&gt;
@@ -137,7 +138,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;网格计算有了十几年的历史。网格基本形态是什么？是跨地区的，甚至跨国家的，甚至跨洲的这样一种独立管理的资源结合。资源在独立管理，并不是进行统一布置、统一安排的形态。网格这些资源都是异构的，不强调有什么统一的安排。另外网格的使用通常是让分布的用户构成虚拟组织（VO），在这样统一
+      &lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/03/2016030402540051.jpg&quot; alt=&quot;wheel&quot;&gt;&lt;/p&gt;
+&lt;p&gt;网格计算有了十几年的历史。网格基本形态是什么？是跨地区的，甚至跨国家
     
     </summary>
     
@@ -908,7 +910,7 @@ public class Girl {　
     <link href="https://lemonjing.github.io/2016/02/10/%E3%80%8E%E5%8E%9F%E5%88%9B%E3%80%8F%E5%BD%93%E6%88%91%E4%BB%AC%E8%AF%B4%E5%87%BA%E6%95%85%E4%B9%A1%E6%97%B6%E5%AE%83%E6%97%A9%E5%B7%B2%E4%B8%8D%E5%AD%98%E5%9C%A8/"/>
     <id>https://lemonjing.github.io/2016/02/10/『原创』当我们说出故乡时它早已不存在/</id>
     <published>2016-02-10T10:17:17.000Z</published>
-    <updated>2016-03-08T11:31:40.858Z</updated>
+    <updated>2016-03-08T12:26:16.013Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/2016021010035974.jpg&quot; alt=&quot;IMG_3023&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt;如果有，那一定是在10多年前家乡小河边，在炎炎夏日灼烧后我跳进小河中戏水后眼角沾着水珠在夕阳光线散射的五彩斑斓中。&lt;/span&gt;&lt;/p&gt;
@@ -922,7 +924,7 @@ public class Girl {　
 &lt;p&gt;现在的我早已不是过去的我了，可现在的我还是过去的我。如果你遇到我，和我讨论故乡，其实我告诉你的已经不是事实不是真相，但是，请你记住，我告诉你的关于故乡的样子，它就是故乡本来的样子。&lt;/p&gt;
 &lt;p&gt;当我们说出远方，远方已是虚妄。&lt;br&gt;当我们说出故乡，故乡已不再存在。&lt;/p&gt;
 &lt;p&gt;不是年味越来越淡了，虽然极不愿意承认，但坦白的说，其实是因为我们－－长大了。&lt;br&gt;人如尘埃，渺渺茫茫，珍惜一切，不沉浸在逝去的过去，只要微笑就可以了。而在心里最柔软的地方，它仍旧是我的故乡所在。&lt;/p&gt;
-&lt;center&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt;心里若有了薄凉，如此，不再无病呻吟，兀自惆怅&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 欢迎来到小情绪，&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 访问tinymood.com阅读、聆听、讨论，一起相拥文字的温度…&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 新浪微博&lt;a href=&quot;http://weibo.com/u/1662536394&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@Campanulaece&lt;/a&gt;－桔梗，分享你的故事以及更多&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; ——TinyMood.COM&lt;/span&gt;&lt;/center&gt;</content>
+&lt;center&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt;心里若有了薄凉，如此，不再无病呻吟，兀自惆怅&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 欢迎来到小情绪，&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 访问tinymood.com阅读、聆听、讨论，一起相拥文字的温度…&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; 新浪微博&lt;a href=&quot;http://weibo.com/u/1662536394&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@假的世界第一王子殿下&lt;/a&gt;，分享你的故事以及更多&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt; ——TinyMood.COM&lt;/span&gt;&lt;/center&gt;</content>
     
     <summary type="html">
     
@@ -1627,9 +1629,11 @@ public class Apple {
     <link href="https://lemonjing.github.io/2016/01/12/%E6%97%B6%E9%97%B4%E5%A4%AA%E7%98%A6%EF%BC%8C%E6%8C%87%E7%BC%9D%E5%A4%AA%E5%AE%BD/"/>
     <id>https://lemonjing.github.io/2016/01/12/时间太瘦，指缝太宽/</id>
     <published>2016-01-12T13:02:54.000Z</published>
-    <updated>2016-03-07T07:22:43.907Z</updated>
+    <updated>2016-03-08T12:28:55.500Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;center&gt;🌸个人公众号小情绪xiaoqingxu 2015-05-20 收录&lt;/center&gt;&lt;br&gt;[hermit auto=”1” loop=”1” unexpand=”1” fullheight=”0”]netease_songs#:186010[/hermit]&lt;br&gt;4月4日-4月7日，4天3夜，杭州西溪湿地，阴雨两天两夜。&lt;/p&gt;
+    <content type="html">&lt;center&gt;🌸个人公众号小情绪xiaoqingxu 2015-05-20 收录&lt;/center&gt;
+
+&lt;p&gt;4月4日-4月7日，4天3夜，杭州西溪湿地，阴雨两天两夜。&lt;/p&gt;
 &lt;p&gt;带着猪先生去度假，再次约了李先生和虞小姐夫妇同行，只是这次多了小小李。&lt;/p&gt;
 &lt;p&gt;阴雨连绵，所以这三天都是以酒店、餐厅和咖啡馆为主，像极了我们4个第一次同行毛里求斯的行程。不知道是因为场景太像毛里求斯而来的怀念，还是因为多了小小李的缘故，过去几年的片段像影片一样一帧一帧地过脑重现。&lt;/p&gt;
 &lt;p&gt;这几年，我们和李先生一家一起去了毛里求斯、迪拜、丽江、重庆、台湾和韩国，他们常居魔都，我们久住帝都。我们有个微信群叫下一站去哪里，每次出发一个地方，群名就随之有个诗意的名字。&lt;/p&gt;
@@ -1648,8 +1652,9 @@ public class Apple {
 &lt;p&gt;今早和李先生虞小姐吃过早饭，就要说再见。吃饭时，李先生说，昨晚我们分开后，他去咖啡馆工作了3个小时。工作前心情烦躁的要死，工作完觉得好多了。我说，同感。看着日程表上的工作安排焦虑的坐立不安，坐下来开始着手其中某一项才能安心，开始做，就是一个分界点。&lt;/p&gt;
 &lt;p&gt;所以，做一只愉快的上班狗吧。好好吃饭，好好睡觉，文艺地生活，苦逼的工作，生活就是这样，每一个人都逃不过这一课。&lt;/p&gt;
 &lt;p&gt;时间太瘦，指缝太宽。叨逼叨是最无用的选择。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/2016011213023493.jpg&quot; alt=&quot;21321&quot;&gt;&lt;br&gt;上午在花间堂的猫的天空书店，看到了一张明信片。上面那段话我很喜欢：&lt;/p&gt;
-&lt;p&gt;[v_act]在远方 这是一种诗意的距离&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/01/2016011213023493.jpg&quot; alt=&quot;21321&quot;&gt;&lt;/p&gt;
+&lt;p&gt;上午在花间堂的猫的天空书店，看到了一张明信片。上面那段话我很喜欢：&lt;/p&gt;
+&lt;p&gt;在远方 这是一种诗意的距离&lt;/p&gt;
 &lt;p&gt;海子说“远在远方的风比远方更远”&lt;/p&gt;
 &lt;p&gt;走多远才算远方也许只有风知道&lt;/p&gt;
 &lt;p&gt;但请告诉我&lt;/p&gt;
@@ -1657,13 +1662,17 @@ public class Apple {
 &lt;p&gt;才能像稻草人坚守自己的麦田&lt;/p&gt;
 &lt;p&gt;多少坚持&lt;/p&gt;
 &lt;p&gt;能抵制红尘纷扰 不理睬的风情眉头鬓上&lt;/p&gt;
-&lt;p&gt;承诺是最远的一条路 因为有太多要逃避的路口[/v_act]&lt;/p&gt;
+&lt;p&gt;承诺是最远的一条路 因为有太多要逃避的路口&lt;/p&gt;
 &lt;p&gt;图片｜澳大利亚 Pink Lake&lt;br&gt;摄影｜N74photography Mr.Cheese&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;center&gt;🌸个人公众号小情绪xiaoqingxu 2015-05-20 收录&lt;/center&gt;&lt;br&gt;[hermit auto=”1” loop=”1” unexpand=”1” fullheight=”0”]netease_songs#:186010[/hermi
+      &lt;center&gt;🌸个人公众号小情绪xiaoqingxu 2015-05-20 收录&lt;/center&gt;
+
+&lt;p&gt;4月4日-4月7日，4天3夜，杭州西溪湿地，阴雨两天两夜。&lt;/p&gt;
+&lt;p&gt;带着猪先生去度假，再次约了李先生和虞小姐夫妇同行，只是这次多了小小李。&lt;/p&gt;
+&lt;p&gt;阴雨连绵
     
     </summary>
     
