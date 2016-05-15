@@ -63,15 +63,15 @@ permalink: /pages/about.html
 	<table class="table table-striped">
 		<tr>
 			<td>姓  名：</td>    
-			<td>钟金宝</td>
+			<td>陶哓然</td>
 		</tr>
 		<tr>
 			<td>学  历：</td>    
-			<td>本科</td>
+			<td>硕士在读</td>
 		</tr>
 		<tr>
 			<td>学  校：</td>    
-			<td>山东师范大学</td>
+			<td>厦门大学</td>
 		</tr>
 		<tr>
 			<td>专  业：</td>    
@@ -79,7 +79,7 @@ permalink: /pages/about.html
 		</tr>
 		<tr>
 			<td>时  间：</td>    
-			<td>2013年入学至今</td>
+			<td>2014年入学至今</td>
 		</tr>
 	</table>
 
@@ -92,7 +92,7 @@ permalink: /pages/about.html
 				Email：
 			</td>  
 			<td>
-				<A href="mailto:zhongjinbao1994@gmail.com ">zhongjinbao1994@gmail.com</A>			
+				<A href="mailto:initialran@gmail.com ">initialran@gmail.com</A>			
 			</td>
 		</tr>
 
@@ -101,7 +101,7 @@ permalink: /pages/about.html
 				github：
 			</td>  
 			<td>
-				<a href="{{ site.author.github }}" target="_blank">github.com/bornbeauty&天生丽质</a>
+				<a href="{{ site.author.github }}" target="_blank">github.com/lemonjing&天生丽质</a>
 			</td>  
 		</tr>
 
@@ -110,7 +110,7 @@ permalink: /pages/about.html
 				微博：
 			</td> 
 			<td>
-				<a href="{{ site.author.weibo }}" target="_blank">钟金宝1006</a>
+				<a href="{{ site.author.weibo }}" target="_blank">_NoThankYou</a>
 			</td> 
 		</tr>
 
@@ -119,7 +119,7 @@ permalink: /pages/about.html
 				知乎：
 			</td> 
 			<td>
-				<a href="{{ site.author.zhihu }}" target="_blank">钟金宝</a>
+				<a href="{{ site.author.zhihu }}" target="_blank">陶哓然</a>
 			</td> 
 		</tr>
 	</table>
@@ -130,7 +130,7 @@ permalink: /pages/about.html
 	<hr>
 	<br>
 	<p>
-	在校学生，一只码农，喜欢篮球，热爱生活。
+	在校学生，爱coding，爱生活。目前在网易实习。
 	</p>
 	<br>
 
@@ -138,7 +138,7 @@ permalink: /pages/about.html
 	<hr>
 	<br>
 	<p>
-		世界这么大 我想和你去看看		
+		绾青丝，挽情思，任风雨飘摇，人生不惧。浮生一梦醉眼看，海如波，心如昊月，雪似天赐。你自妖娆，我自伴。永不相弃！		
 	</p>
 	<br>
 	<br> 
