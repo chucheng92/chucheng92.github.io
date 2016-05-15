@@ -1,0 +1,114 @@
+---
+layout: default
+---
+
+<div>
+
+   {% for post in paginator.posts %}
+
+		<div class="postbox">
+			<div class="post-format-icon">
+                <a class="item-date pjaxlink" href="{{ post.url | prepend: site.baseurl }}"><span>{{post.category}}</span></a>
+            </div>
+			<div class="allpost">
+				<div class="title"><a class="pjaxlink" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
+				<hr>
+				<div class="info">
+					<i class="fa fa-calendar"></i>&nbsp;{{ post.date | date:"%Y-%m-%d" }}
+					{% if post.tags.size > 0 %}
+				      <i class="fa fa-tags"></i>
+					<span class="index-post-tag">
+						{% for tag in post.tags %}
+							<a class="pjaxlink" href="/pages/tags.html#{{tag}}">{{ tag}}</a>
+						{% endfor %}
+					</span>
+					{% endif %}
+				</div>
+				<div class="contentAbstract">{{ post.excerpt }}</div>				
+			</div>
+			<a href="{{ post.url | prepend: site.baseurl }}"  class="readmore pjaxlink">Read More <i class="glyphicon glyphicon-chevron-right"></i></a>
+		</div>
+
+   {% endfor %}
+
+	{% if paginator.total_pages > 1 %}
+		<div class="pagination center">
+		
+			  <a class="pjaxlink" href="/index.html"><span class="x1" style="margin-left:5px;">首页</span></a>
+			  {% if paginator.previous_page %}
+			    <a class="pjaxlink"  href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="x1" style="margin-right:5px;"><i class="glyphicon glyphicon-chevron-left"></i></span></a>
+			  {% endif %}
+			  
+			 {% assign curr_page_num = paginator.page %} 
+    			 {% if curr_page_num < 3 or curr_page_num == 3 %}
+        			{% assign startPage = 1 %}
+        			{% assign endPage = 5 %}
+      		  {% else if curr_page_num > paginator.total_pages|minus:3 or curr_page_num == paginator.total_pages|minus:3%}
+      		       {% assign startPage = paginator.total_pages|minus:4 %}
+        			{% assign endPage = paginator.total_pages %}
+      		  {% else %}
+      		       {% assign startPage = curr_page_num | minus:2 %}
+       		  	{% assign endPage = curr_page_num | plus:2 %}		  
+      		  {% endif %}
+      		  
+        		  {% if startPage < 1 %}	
+			  	{% assign startPage= 1 %} 
+			  {% endif %}     	
+			  	  
+      		  {% if endPage > paginator.total_pages %}	
+			  	{% assign endPage = paginator.total_pages %} 
+			  {% endif %} 
+			  
+			  {% for page in (startPage..endPage) %}
+				    {% if page == paginator.page %}
+				      <span class="active_page x1">{{ page }}</span>
+				    {% elsif page == 1 %}
+				      <a class="pjaxlink" href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}"><span class="x1">{{ page }}</span></a>
+				    {% else %}
+				      <a class="pjaxlink" href="/page{{page}}"><span class="x1">{{ page }}</span></a>
+				    {% endif %}
+			  {% endfor %}
+
+			  {% if paginator.next_page %}
+			   	 <a class="pjaxlink" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="x1" style="margin-left:5px;"><i class="glyphicon glyphicon-chevron-right"></i></span></a>
+			  {% endif %}
+			  <a class="pjaxlink" href="/page{{paginator.total_pages}}/"><span class="x1" style="margin-left:5px;">末页</span></a>			  
+			  <span  style="margin-left:5px;">第{{paginator.page}}页 / 共{{paginator.total_pages}}页</span>
+		</div>
+	{% endif %}
+
+<!--
+	<div class="pagination">
+	  {% if paginator.previous_page %}
+	    {% if paginator.page == 2 %}
+	      <a class="pagination-item newer" href="/">更新的博文</a>
+	    {% else %}
+	      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">更新的博文</a>
+	    {% endif %}
+	  {% else %}
+	    <span class="pagination-item newer">已经是最新的博文</span>
+	  {% endif %}
+
+	  {% if paginator.next_page %}
+	    <a class="pagination-item older" href="/page{{paginator.next_page}}">更早的博文</a>
+	  {% else %}
+	    <span class="pagination-item older">已经是最后一页</span>
+	  {% endif %}
+	</div>
+
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+--> 
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
