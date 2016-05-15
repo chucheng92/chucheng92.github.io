@@ -13,12 +13,12 @@ pygments: true
 # 作者信息
 author: 
   name: 陶哓然
-  email: zhongjinbao1994@gmail.com
-  link: http://bornbeauty.github.io/
-  weibo: http://weibo.com/u/3801921825
-  github: https://github.com/bornbeauty
-  github_username:  bornbeauty
-  zhihu: http://www.zhihu.com/people/zhong-xiao-bao-2
+  email: initialran@gmail.com
+  link: http://lemonjing.github.io/
+  weibo: http://weibo.com/u/1662536394
+  github: https://github.com/lemonjing
+  github_username:  lemonjing
+  zhihu: https://www.zhihu.com/people/tao-xiao-xiao-99
   weibo_username:  _NoThankYou
 
 # 站点信息
@@ -37,7 +37,7 @@ favicon : /assets/img/favicon.png
 
 #profile 个人信息
 
-profile_desc : 含泪奔跑<br>华丽跌倒<br>人山人海<br>边走边爱<br><br>
+profile_desc : 绾青丝<br>挽情思<br>任风雨飘摇<br>人生不惧<br><br>
 
 # 首页除了最新文章外显示分类
 cates: 
