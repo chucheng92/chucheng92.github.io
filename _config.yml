@@ -1,0 +1,50 @@
+encoding: UTF-8
+
+permalink: /:year/:month/:day/:title.html
+paginate: 5
+markdown: kramdown
+
+kramdown:
+  input: GFM
+
+highlighter: pygments
+pygments: true
+
+# 作者信息
+author: 
+  name: 陶哓然
+  email: zhongjinbao1994@gmail.com
+  link: http://bornbeauty.github.io/
+  weibo: http://weibo.com/u/3801921825
+  github: https://github.com/bornbeauty
+  github_username:  bornbeauty
+  zhihu: http://www.zhihu.com/people/zhong-xiao-bao-2
+  weibo_username:  _NoThankYou
+
+# 站点信息
+title: 绾青丝
+description: 
+ If,<br>for example,<br>you come at four o'clock in the afternoon,<br>then at three o'clock I shall begin to be happy.
+rss_url: /feed.xml
+
+# gavatar头像及Favicon
+gavatar : /assets/img/gavatar.png
+favicon : /assets/img/favicon.png
+
+# disqus 设置
+#disqus:
+#  shortname: blademastercoder
+
+#profile 个人信息
+
+profile_desc : 含泪奔跑<br>华丽跌倒<br>人山人海<br>边走边爱<br><br>
+
+# 首页除了最新文章外显示分类
+cates: 
+- Essay
+# - Python
+# - OpenStack
+
+# 中文本地化
+locals: 
+   newest : 最新文章
