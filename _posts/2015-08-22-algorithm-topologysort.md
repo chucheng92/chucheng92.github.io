@@ -10,18 +10,25 @@ date: 2015-08-22 20:45:05
 
 深度优先搜索可以实现拓扑排序
 //深度优先搜索的完成时间进行排序就是拓扑排序的逆序。
+
 输入图G
+
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/dfs.png "茶馆、岛、慵懒的猫...都是美好的时光...")
+
 G的邻接矩阵存储data.txt
 
+```bash
 6
- 0 1 0 1 0 0
- 0 0 1 0 0 0
- 0 0 0 1 0 0
- 0 1 0 0 0 0
- 0 0 1 0 0 1
- 0 0 0 0 0 0
+0 1 0 1 0 0
+0 0 1 0 0 0
+0 0 0 1 0 0
+0 1 0 0 0 0
+0 0 1 0 0 1
+0 0 0 0 0 0
+```
+
 DFS程序
+
 ```java
 /*
  * @file						DFS.cpp
@@ -110,11 +117,12 @@ int main()
 }
 ```
 
-顶点完成时间排序的一个拓扑排序 
+顶点完成时间排序的一个拓扑排序
+
 ```java
 /*
 * @file						DFS.cpp
-* @brief						implementing DFS+拓扑排序
+* @brief					implementing DFS+拓扑排序
 * @author/Univ.				taoxiaoxiao
 * @date						10-1-2014
 */
