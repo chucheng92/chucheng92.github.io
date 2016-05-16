@@ -48,13 +48,14 @@ Son s2 =(Son)f2; //出错，子类引用不能指向父类对象
 
 其中f1前面的(Son)必须加上，进行强制转换。
 
-[v_qing]一、向上转型。[/v_qing]
+### 一、向上转型
 
 通俗地讲即是将子类对象转为父类对象。此处父类对象可以是接口。
 
 1，向上转型中的方法调用。
 
 看下面代码：
+
 ```java
     package com.wensefu.others;  
     public class Animal {  
@@ -110,6 +111,7 @@ package com.wensefu.others;
         }  
     }
 ```
+
 注意这里的向上转型：
 Animal b=newBird(); //向上转型
 b.eat();
@@ -129,11 +131,12 @@ h.sleep();
 这里以父类为参数，调有时用子类作为参数，就是利用了向上转型。这样使代码变得简洁。不然的话，
 如果dosleep以子类对象为参数，则有多少个子类就需要写多少个函数。这也体现了JAVA的抽象编程思想。
 
-[v_qing]二、向下转型。[/v_qing]
+### 二、向下转型
 
 与向上转型相反，即是把父类对象转为子类对象。
 
 看下面代码：
+
 ```java
 package com.wensefu.other1;  
 
@@ -178,6 +181,7 @@ package com.wensefu.other1;
         }  
     }
 ```
+
 Girl g1=new MMGirl(); //向上转型
 g1.smile();
 MMGirl mmg=(MMGirl)g1; //向下转型,编译和运行皆不会出错
@@ -185,8 +189,11 @@ MMGirl mmg=(MMGirl)g1; //向下转型,编译和运行皆不会出错
 这里的向下转型是安全的。因为g1指向的是子类对象。
 
 而
+
+```java
 Girl g2=new Girl();
 MMGirl mmg1=(MMGirl)g2; //不安全的向下转型,编译无错但会运行会出错
+```
 
 运行出错：
 
