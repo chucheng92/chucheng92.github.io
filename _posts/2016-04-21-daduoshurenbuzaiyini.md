@@ -28,7 +28,7 @@ date: 2016-04-21 21:53:28
 
 大多数人其实并不在意你，每个人都有自己的事情要做，并没有多少时间把注意力完全集中到我们身上，无论我们是出彩还是出丑了。认清了这一点，也许你就能“放下”心中的包袱，轻松地享受生活了。
 
-![0233549yfffx2ncevslkpw](http://www.tinymood.com/wp-content/uploads/2016/04/2016042113552177.jpg)
+![0233549yfffx2ncevslkpw](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2016/04/2016042113552177.jpg)
 
 真正爱你的人，大难来临时会在你身边
 
