@@ -9,8 +9,6 @@ description: 单例模式
 
 [点击阅读Github Markdown原文](https://github.com/Lemonjing/TinyMood/blob/master/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/singleton.md)
 
-![design](http://www.tinymood.com/wp-content/uploads/2016/02/2016022914301353.png)
-
 **如何正确地写出单例模式**
 
 单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。
@@ -101,8 +99,6 @@ public class Singleton {
 但是特别注意在 Java 5 以前的版本使用了 volatile 的双检锁还是有问题的。其原因是 Java 5 以前的 JMM （Java 内存模型）是存在缺陷的，即时将变量声明成 volatile 也不能完全避免重排序，主要是 volatile 变量前后的代码仍然存在重排序问题。这个 volatile 屏蔽重排序的问题在 Java 5 中才得以修复，所以在这之后才可以放心使用 volatile。
 
 相信你不会喜欢这种复杂又隐含问题的方式，当然我们有更好的实现线程安全的单例模式的办法。
-
-![u=3016183366,3592358855&amp;fm=21&amp;gp=0](http://www.tinymood.com/wp-content/uploads/2016/02/2016020614503852.jpg)
 
 ## 4.急加载 static final field 线程安全
 

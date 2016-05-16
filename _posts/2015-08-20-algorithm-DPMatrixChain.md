@@ -61,10 +61,10 @@ void DPMatrixChain(vector<int> p)
 		{
 			j = i + c - 1;
 			m[i][j] = INF;
-			for (k = i; k &lt;= j - 1; ++k)
+			for (k = i; k <= j - 1; ++k)
 			{
 				int q = m[i][k] + m[k + 1][j] + p[i - 1] * p[k] * p[j];
-				if (q &lt; m[i][j])
+				if (q < m[i][j])
 				{
 					m[i][j] = q;
 					s[i][j] = k;
@@ -77,13 +77,13 @@ void DPMatrixChain(vector<int> p)
 void showpath(int i, int j)
 {
 	if (i == j)
-		cout &lt;&lt; &quot;A&quot; &lt;&lt; i;
+		cout <<"A"<<i;
 	else
 	{
-		cout &lt;&lt; &quot;(&quot;;
+		cout <<"(";
 		showpath(i, s[i][j]);
 		showpath(s[i][j] + 1, j);
-		cout &lt;&lt; &quot;)&quot;;
+		cout <<")";
 	}
 }
 
@@ -92,10 +92,10 @@ int main()
 	vector<int> p{ 30, 35, 15, 5, 10, 20, 25 };
 
 	DPMatrixChain(p);
-	cout &lt;&lt; &quot;最优加括号方式为：&quot;;
+	cout <<"最优加括号方式为：";
 	showpath(1, 6);
-	cout &lt;&lt; endl;
-	cout &lt;&lt; &quot;最小乘法次数：&quot; &lt;&lt; m[1][6] &lt;&lt; endl;
+	cout << endl;
+	cout << "最小乘法次数：" << m[1][6] << endl;
 
 	return 0;
 }
