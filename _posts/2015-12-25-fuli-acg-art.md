@@ -7,7 +7,7 @@ date: 2015-12-25 20:21:23
 ---
 
 <center><font color="red">单击图片可以幻灯片播放哦(☆_☆) 圣诞福利，请收好，各位大大</font></center>
-![201504](http://www.tinymood.com/wp-content/uploads/2015/12/2015122913314337.gif)
+![201504](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2015/12/2015122913314337.gif)
 
 [![150a8d15049fd1e07bf98318c4bc81fd.jpg](http://cdn2.myhloli.com/images/2015/12/08/150a8d15049fd1e07bf98318c4bc81fd.jpg)](http://cdn2.myhloli.com/images/2015/12/08/150a8d15049fd1e07bf98318c4bc81fd.jpg)
 
