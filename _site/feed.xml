@@ -1,0 +1,2801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>绾青丝</title>
+    <link></link>
+    <description>If,<br/>for example,<br/>you come at four o'clock in the afternoon,<br/>then at three o'clock I shall begin to be happy.</description>
+    
+      <item>
+        <title>近期全站将迁移至Hexo</title>
+        <link>/2016/05/07/migrate-to-hexo.html</link>
+        <guid isPermaLink="true">/2016/05/07/migrate-to-hexo.html</guid>
+        <pubDate>Sat, 07 May 2016 23:26:16 +0800</pubDate>
+        <description>&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/03/2016030707241038.jpg&quot; alt=&quot;QQ截图20160307152311&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;为什么迁移&lt;/h2&gt;
+
+&lt;p&gt;Answer: 阿里的云服务器对学生党来说太贵了，已承担不起23333&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;迁移计划&lt;/h2&gt;
+
+&lt;p&gt;文章，评论，分类，Bug修复，友情链接，fancybox遮罩&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;预计迁移完成时间&lt;/h2&gt;
+
+&lt;p&gt;2016-3-15前&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>『原创』九种内部排序算法的Java实现及其性能测试</title>
+        <link>/2016/04/23/neibupaixu.html</link>
+        <guid isPermaLink="true">/2016/04/23/neibupaixu.html</guid>
+        <pubDate>Sat, 23 Apr 2016 03:45:27 +0800</pubDate>
+        <description>&lt;p&gt;其中第九种为java.util.Arrays.sort（改进的快速排序方法）&lt;/p&gt;
+
+&lt;p&gt;1. 100000的随机数据集
+&lt;img src=&quot;http://7xlkoc.com1.z0.glb.clouddn.com/sort1.jpg&quot; alt=&quot;&quot; /&gt;
+2. 200000的随机数据集
+&lt;img src=&quot;http://7xlkoc.com1.z0.glb.clouddn.com/sort2.jpg&quot; alt=&quot;&quot; /&gt;
+3. 500000的随机数据集
+&lt;img src=&quot;http://7xlkoc.com1.z0.glb.clouddn.com/sort3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;结论：归并排序和堆排序维持O(nlgn)的复杂度，速率差不多，表现优异。固定基准的快排表现很是优秀。而通过使用一个循环完成按增量分组后的直接插入的希尔排序，测试效果显著。冒泡，选择，直接插入都很慢，而冒泡效率是最低。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;1.插入排序[稳定]&lt;/h2&gt;
+
+&lt;p&gt;适用于小数组,数组已排好序或接近于排好序速度将会非常快&lt;/p&gt;
+
+&lt;p&gt;复杂度：O(n^2) - O(n) - O(n^2) - O(1)[平均 - 最好 - 最坏 - 空间复杂度]&lt;/p&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+public void insertionSort(int[] a) {
+		if (null == a || a.length &amp;lt; 2) {
+			return;
+		}
+		for (int i = 1; i &amp;lt; a.length; i++) {
+			// 暂存当前值
+			int temp = a[i];
+			int j = i - 1;
+			while (j &amp;gt;= 0 &amp;amp;&amp;amp; temp &amp;lt; a[j]) {
+				// 后移
+				a[j + 1] = a[j];
+				j--;
+			}
+			// 当前值归位
+			a[j + 1] = temp;
+		}
+	}
+```
+
+## 2.希尔排序(缩小增量排序)[不稳定]
+
+复杂度 小于O(n^2) 平均 O(nlgn) 最差O(n^s)，其中s大于1小于2 。空间复杂度O(1)
+
+内循环通过模拟并行的方式完成分组的内部直接插入排序，而不是一个一个分组分组的排，在10w的随机数据20w的随机数据均表现优异。
+
+```java
+public void shellSort(int[] a) {
+		if (null == a || a.length &amp;lt; 2) {
+			return;
+		}
+		for (int d = a.length/2; d &amp;gt; 0; d/=2) {
+			// 从1B开始先和1A比较 然后2A与2B...然后再1C向前与同组的比较
+			for (int i = d; i &amp;lt; a.length; i++) {
+				// 内部直接插入
+				int temp = a[i];
+				int j = i - d;
+				while (j &amp;gt;=0 &amp;amp;&amp;amp; temp &amp;lt; a[j]) {
+					a[j+d] = a[j];
+					j -= d;
+				}
+				a[j+d] = temp;
+			}
+		}
+	}
+```
+
+## 3.冒泡排序[稳定]
+
+复杂度：O(n^2) - O(n) - O(n^2) - O(1)[平均 - 最好 - 最坏 - 空间复杂度]
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+public void bubbleSort(int[] a) {
+		if (null == a || a.length &amp;lt; 2) {
+			return;
+		}
+		boolean flag;
+		for (int i = 0; i &amp;lt; a.length-1; i++) {
+			flag = false;
+			for (int j = 0; j &amp;lt; a.length-1-i; j++) {
+				if (a[j] &amp;gt; a[j+1]) {
+					int temp = a[j];
+					a[j] = a[j+1];
+					a[j+1] = temp;
+					flag = true;
+				}
+			}
+			if (false == flag) {
+				return;
+			}
+		}
+	}
+```
+
+##  4.选择排序[不稳定]
+
+原理：每次从无序序列选取最小的
+
+复杂度：O(n^2) - O(n^2) - O(n^2) - O(1)[平均 - 最好 - 最坏 - 空间复杂度]
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+public void selectSort(int[] a) {
+		if (null == a || a.length &amp;lt; 2) {
+			return;
+		}
+		for (int i = 0; i &amp;lt; a.length; i++) {
+			int k = i;
+			for (int j = i + 1; j &amp;lt; a.length; j++) {
+				if (a[j] &amp;lt; a[k]) {
+					k = j;
+				}
+			}
+			if (k!=i) {
+				int temp = a[k];
+				a[k] = a[i];
+				a[i] = temp;
+			}
+		}
+	}
+```
+
+##  5.归并排序[稳定]
+
+原理：采用分治法
+
+复杂度：O(nlogn) - O(nlgn) - O(nlgn) - O(n)[平均 - 最好 - 最坏 - 空间复杂度]
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+// 排序
+	public void mergeSort(int[] a, int low, int high) {
+		if (null == a || a.length &amp;lt; 2) {
+			return;
+		}
+		int mid = (low + high) / 2;
+		if (low &amp;lt; high) {
+			// 左边排序
+			mergeSort(a, low, mid);
+			// 右边排序
+			mergeSort(a, mid + 1, high);
+			// 有序序列合并
+			merge(a, low, mid, high);
+		}
+	}
+
+	// 合并
+	private void merge(int a[], int low, int mid, int high) {
+		// 临时数组
+		int[] temp = new int[high - low + 1];
+		// 左指针
+		int i = low;
+		// 右指针
+		int j = mid + 1;
+		// 临时数组索引
+		int k = 0;
+
+		while (i &amp;lt;= mid &amp;amp;&amp;amp; j &amp;lt;= high) {
+			if (a[i] &amp;lt; a[j]) {
+				temp[k++] = a[i++];
+			} else {
+				temp[k++] = a[j++];
+			}
+		}
+
+		// 把左边剩余的数移入数组  
+		while (i &amp;lt;= mid) {
+			temp[k++] = a[i++];
+		}
+
+		// 把右边剩余的数移入数组  
+		while (j &amp;lt;= high) {
+			temp[k++] = a[j++];
+		}
+
+		// 注意这里是low + t
+		for (int t = 0; t &amp;lt; temp.length; t++) {
+			a[low + t] = temp[t];
+		}
+	}
+```
+
+##  6.快速排序[不稳定]
+
+原理：挖树填坑+分治
+
+复杂度：O(nlgn) - O(nlgn) - O(n^2) - O(1)[平均 - 最好 - 最坏 - 空间复杂度]
+
+栈空间0(lgn) - O(n)
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+// 固定基准
+public void quickSort(int[] a, int low, int high) {
+		if (null == a || a.length &amp;lt; 2) {
+			return;
+		}
+		if (low &amp;lt; high) {
+			int mid = partition(a, low, high);
+			quickSort(a, low, mid-1);
+			quickSort(a, mid+1, high);
+		}
+	}
+
+	private int partition(int[] a, int low, int high) {
+		int pivot = a[low];
+
+		while (low &amp;lt; high) {
+			// 注意等于，否则死循环
+			while (low &amp;lt; high &amp;amp;&amp;amp; a[high] &amp;gt;= pivot) {
+				high--;
+			}
+			a[low] = a[high];
+			// 注意等于，否则死循环
+			while (low &amp;lt; high &amp;amp;&amp;amp; a[low] &amp;lt;= pivot) {
+				low++;
+			}
+			a[high] = a[low];
+		}
+		a[low] = pivot;
+
+		return low;
+	}
+```
+
+##  7.堆排序[不稳定]
+
+堆一般指二叉堆。
+
+复杂度：O(nlogn) - O(nlgn) - O(nlgn) - O(1)[平均 - 最好 - 最坏 - 空间复杂度]
+
+大顶堆实现从小到大的升序排列，小顶堆一般用于构造优先队列
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+public void heapSort(int[] a) {
+		if (null == a || a.length &amp;lt; 2) {
+			return;
+		}
+
+		buildMaxHeap(a);
+
+		for (int i = a.length - 1; i &amp;gt;= 0; i--) {
+			int temp = a[0];
+			a[0] = a[i];
+			a[i] = temp;
+
+			adjustHeap(a, i, 0);
+		}
+	}
+
+	// 建堆
+	private void buildMaxHeap(int[] a) {
+		int mid = a.length / 2;
+		for (int i = mid; i &amp;gt;= 0; i--) {
+			adjustHeap(a, a.length, i);
+		}
+	}
+
+	// 递归调整堆
+	private void adjustHeap(int[] a, int size, int parent) {
+		int left = 2 * parent + 1;
+		int right = 2 * parent + 2;
+
+		int largest = parent;
+		if (left &amp;lt; size &amp;amp;&amp;amp; a[left] &amp;gt; a[parent]) {
+			largest = left;
+		}
+
+		if (right &amp;lt; size &amp;amp;&amp;amp; a[right] &amp;gt; a[largest]) {
+			largest = right;
+		}
+
+		if (parent != largest) {
+			int temp = a[parent];
+			a[parent] = a[largest];
+			a[largest] = temp;
+			adjustHeap(a, size, largest);
+		}
+	}
+```
+
+##  8.基数排序[稳定]
+
+原理：分配加收集
+
+复杂度： O(d(n+r)) r为基数d为位数 空间复杂度O(n+r)
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+// 基数排序
+	public void radixSort(int[] a, int begin, int end, int digit) {
+		// 基数
+		final int radix = 10;
+		// 桶中的数据统计
+		int[] count = new int[radix];
+		int[] bucket = new int[end-begin+1];
+
+		// 按照从低位到高位的顺序执行排序过程
+		for (int i = 1; i &amp;lt;= digit; i++) {
+			// 清空桶中的数据统计
+			for (int j = 0; j &amp;lt; radix; j++) {
+				count[j] = 0;
+			}
+
+			// 统计各个桶将要装入的数据个数
+			for (int j = begin; j &amp;lt;= end; j++) {
+				int index = getDigit(a[j], i);
+				count[index]++;
+			}
+
+			// count[i]表示第i个桶的右边界索引
+			for (int j = 1; j &amp;lt; radix; j++) {
+				count[j] = count[j] + count[j - 1]; 
+			}
+
+			// 将数据依次装入桶中
+            // 这里要从右向左扫描，保证排序稳定性 
+			for (int j = end; j &amp;gt;= begin; j--) {
+				int index = getDigit(a[j], i);
+				bucket[count[index] - 1] = a[j];
+				count[index]--;
+			}
+
+			// 取出，此时已是对应当前位数有序的表
+			for (int j = 0; j &amp;lt; bucket.length; j++) {
+				a[j] = bucket[j];
+			}
+		}
+	}
+
+	// 获取x的第d位的数字，其中最低位d=1
+	private int getDigit(int x, int d) {
+		String div = &quot;1&quot;;
+		while (d &amp;gt;= 2) {
+			div += &quot;0&quot;;
+			d--;
+		}
+		return x/Integer.parseInt(div) % 10;
+	}
+}
+```
+
+排序代码地址 https://github.com/Lemonjing/TinyCoding/tree/master/src/main/java/com/tinymood/javase/sort
+
+性能测试代码地址 https://github.com/Lemonjing/TinyCoding/tree/master/src/test/java/com/tinymood/javase/sort
+&lt;/pre&gt;&lt;/pre&gt;&lt;/pre&gt;&lt;/pre&gt;&lt;/pre&gt;&lt;/pre&gt;&lt;/pre&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>别扯了，这世上根本就没有怀才不遇</title>
+        <link>/2016/04/22/meiyouhuaicaibuyu.html</link>
+        <guid isPermaLink="true">/2016/04/22/meiyouhuaicaibuyu.html</guid>
+        <pubDate>Fri, 22 Apr 2016 06:00:40 +0800</pubDate>
+        <description>&lt;h2 id=&quot;section&quot;&gt;1&lt;/h2&gt;
+
+&lt;p&gt;多年前，我在一个文学网站写小说。&lt;/p&gt;
+
+&lt;p&gt;我自认为文笔棒、逼格高。&lt;/p&gt;
+
+&lt;p&gt;每天好纠结啊，马上就要红了怎么办啊。&lt;/p&gt;
+
+&lt;p&gt;我的才华横溢就要掩盖不住了啊。&lt;/p&gt;
+
+&lt;p&gt;然而这篇小说，总点击数才几百，收藏人数多达1个。&lt;/p&gt;
+
+&lt;p&gt;你没看错，是1个，个位数的个。&lt;/p&gt;
+
+&lt;p&gt;多半还是我亲戚。&lt;/p&gt;
+
+&lt;p&gt;我不服啊，我去问一个喜欢看网文的朋友。&lt;/p&gt;
+
+&lt;p&gt;我当时的原话就是：好伤心，网友们是瞎的吗，看不到我的才华吗。&lt;/p&gt;
+
+&lt;p&gt;朋友答：我在这家网站混了这么久，实话跟你说，你的小说没人看，只有一个原因，你写得不够好。只要你写得足够好，一定会有人看，一定会红。&lt;/p&gt;
+
+&lt;p&gt;醍醐灌顶这个词，一定是为当时的我发明的。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;2&lt;/h2&gt;
+
+&lt;p&gt;我以前写剧评写影评的时候，遇到一些烂片票房特别高，烂剧收视率特别好，我就特别愤慨：观众们是傻逼吗。&lt;/p&gt;
+
+&lt;p&gt;后来我试着拍了点儿网剧。&lt;/p&gt;
+
+&lt;p&gt;我发现，观众绝对不是傻逼。&lt;/p&gt;
+
+&lt;p&gt;因为我的网剧中的缺点，观众们一个都没放过。&lt;/p&gt;
+
+&lt;p&gt;并且他们吐槽得好有趣，好有道理！&lt;/p&gt;
+
+&lt;p&gt;这告诉我一个真理，我当时拍的，连烂片烂剧都不如。&lt;/p&gt;
+
+&lt;p&gt;然后我态度就端正了，老老实实写剧本，吭哧吭哧地重新学习。&lt;/p&gt;
+
+&lt;p&gt;正因为观众不是傻逼，更让我对这个行业充满了敬畏。&lt;/p&gt;
+
+&lt;p&gt;现在写剧本，每天都像最极端的强迫症一样，去死抠一句台词、一个笑点、一个小情节。&lt;/p&gt;
+
+&lt;p&gt;当对方拿到剧本说“挺好了不用再改”的时候，我们还会自虐式地再审视几遍，看能不能再改得更好一点。&lt;/p&gt;
+
+&lt;p&gt;哪怕多一句金句，也是多一个被观众喜欢的机会啊。&lt;/p&gt;
+
+&lt;p&gt;当我们每天只能睡四五个小时，时间不够用的时候，我们还是嗑一颗止痛药，挤出睡眠时间，去学习新的东西，学习新的技术。&lt;/p&gt;
+
+&lt;p&gt;这没有什么牛逼的，这就是这个行业应该有的态度。&lt;/p&gt;
+
+&lt;p&gt;以前我总是委屈，我写的剧本挺有意思的，为什么还没有一线影视公司来找我啊。不是说这个行业缺编剧吗？&lt;/p&gt;
+
+&lt;p&gt;当我真的努力了，真的有一点进步了，才发现，这些努力和进步，大家马上就能看见。&lt;/p&gt;
+
+&lt;p&gt;这个行业是缺编剧，但绝对不缺自以为怀才不遇的傻逼。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;3&lt;/h2&gt;
+
+&lt;p&gt;我以前带过一个实习生，文字是真好，情商是真低。&lt;/p&gt;
+
+&lt;p&gt;那时候他大四，在我们这一边实习，一边找工作。&lt;/p&gt;
+
+&lt;p&gt;他自恃才华甚高，非全球500强不进。&lt;/p&gt;
+
+&lt;p&gt;然后他在办公室接对方人力资源打来的通知面试的电话。&lt;/p&gt;
+
+&lt;p&gt;我听到他说：“喂，你哪家公司啊，我投过你们家的简历吗？我不记得了，我在招聘网上群发的简历。你先介绍一下你们公司吧。”&lt;/p&gt;
+
+&lt;p&gt;有一次他面试回来，超级不爽，说对方不重视他，跟另一个应聘者聊了半小时，只跟他聊了5分钟。他当时就放话了，不招我是你们的损失！&lt;/p&gt;
+
+&lt;p&gt;我只想说，这种情况下有哪家公司会招他，那才是日了狗了。&lt;/p&gt;
+
+&lt;p&gt;我给他提了点儿建议，让他说话不要这么拽。&lt;/p&gt;
+
+&lt;p&gt;他瞄了我一眼，说，我知道，你觉得我情商不高是吧。我跟你说，真正有才华的人，是不屑于什么狗屁情商的。&lt;/p&gt;
+
+&lt;p&gt;丫的以为自己是牛顿还是谢耳朵啊。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;情商也是才华的一部分。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;情商也是智商的一部分。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;我实在不懂，一个连话都说不好的人，有什么资格谈才华。&lt;/p&gt;
+
+&lt;p&gt;最近听说这个男生第8次跳槽了，用他的话说，迄今为止还没遇到真正有眼光的伯乐，赏识他的才华。
+&lt;span style=&quot;color: #ff0000;&quot;&gt;当你等待伯乐的时候，是不是该先搞清楚一个前提：你真的是千里马吗。&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;4&lt;/h2&gt;
+
+&lt;p&gt;我认识一个女作家。&lt;/p&gt;
+
+&lt;p&gt;我跟她见过三次面，每次都是一群人，每次她都在抢话，每次她都只说一个主题，黑另一个女作家。&lt;/p&gt;
+
+&lt;p&gt;该夸她执着以及专一么。&lt;/p&gt;
+
+&lt;p&gt;她说另一个女作家根本就不是凭实力，借着“美女作家”的幌子，成天发自拍，抛头露面，歪门邪道。&lt;/p&gt;
+
+&lt;p&gt;我想说的是，这就是个看脸的世界。&lt;/p&gt;
+
+&lt;p&gt;脸长得好看，也是一种硬实力。&lt;/p&gt;
+
+&lt;p&gt;平心而论，她吐槽的女作家长得是真美！&lt;/p&gt;
+
+&lt;p&gt;你要是不服人家长得好看，那你去变美啊。你在这说人家坏话，你皮肤就能变好，你胸部就能变大吗？&lt;/p&gt;
+
+&lt;p&gt;她说另一个女作家只会混圈子，靠认识很多圈内大咖帮她站台，所以每次出书销量才这么高。&lt;/p&gt;
+
+&lt;p&gt;我就呵呵了，你这么介意，你也去认识啊。每次聚会，在场也有大咖，你把时间花在瞎比比上，那么猥琐，能让大咖对你有好感吗。&lt;/p&gt;
+
+&lt;p&gt;她说另一个女作家只会炒作，制造话题，而且每次书名都取得特别取悦读者，所以出的书销量才那么高，不要脸。&lt;/p&gt;
+
+&lt;p&gt;哎，你这么不爽人家的书大卖，那你也学她的技术啊，你也取个读者喜欢的标题啊。你既不想取悦读者，又想销量高，那你是不是太贪心？&lt;/p&gt;
+
+&lt;p&gt;然后她的结论还是，明明她的小说文字更精美，节奏感更好，叙事更有章法，却卖不动。哎，怀才不遇，真桑心啊。&lt;/p&gt;
+
+&lt;p&gt;写作圈、影视圈都有不少这样的人，自以为站在艺术那一边，摆出高冷范儿，看不起商业，回头又不爽别人的作品畅销。&lt;/p&gt;
+
+&lt;p&gt;既要高冷，又要市场，也不是不行。&lt;/p&gt;
+
+&lt;p&gt;伍迪·艾伦挺高冷的，王家卫也挺高冷的，东野圭吾也挺高冷的。&lt;/p&gt;
+
+&lt;p&gt;你有人家那才气吗？&lt;/p&gt;
+
+&lt;p&gt;你既然才气够不到，又要选择高冷。&lt;/p&gt;
+
+&lt;p&gt;在市场上受挫，又怪老天不长眼。&lt;/p&gt;
+
+&lt;p&gt;每次听到这些人说自己怀才不遇，我都有点恶心了。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;5&lt;/h2&gt;
+
+&lt;p&gt;“怀才不遇”这四个字，听上去就有种怨妇味儿。&lt;/p&gt;
+
+&lt;p&gt;特别负能量。&lt;/p&gt;
+
+&lt;p&gt;那些说怀才不遇的人，他们真正想说的是什么呢？&lt;/p&gt;
+
+&lt;p&gt;他们想说的是：我们之所以没有成功，没有红，全是这个世界的错。&lt;/p&gt;
+
+&lt;p&gt;世界为什么不懂事点，跪舔我们？&lt;/p&gt;
+
+&lt;p&gt;为什么就不能根据我们的喜好，来修改游戏规则？&lt;/p&gt;
+
+&lt;p&gt;我们什么都好，就是外界条件不给力。&lt;/p&gt;
+
+&lt;p&gt;上司不赏识我们，同行是贱人，马云不是我爹地。&lt;/p&gt;
+
+&lt;p&gt;是的，这些理由是最容易被自己接受的。&lt;/p&gt;
+
+&lt;p&gt;我是无辜白莲花，身边全是瞎了狗眼的奸诈小人。&lt;/p&gt;
+
+&lt;p&gt;于是，一种悲壮感便油然而生了。&lt;/p&gt;
+
+&lt;p&gt;然而我必须要说，别扯了。&lt;/p&gt;
+
+&lt;p&gt;以前当记者的时候，我采访过很多很多人，最真实的感受就是：每个行业最红最顶尖的人，才华、努力、人脉、方法，至少某一项有强大的过人之处，基本没有例外。&lt;/p&gt;
+
+&lt;p&gt;越顶尖的人就是越牛逼。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;别扯了，这世上根本没有怀才不遇。&lt;/strong&gt;
+** 你不成功，只是因为你还不够牛逼。**&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>其实大多数人并不在意你</title>
+        <link>/2016/04/22/daduoshurenbuzaiyini.html</link>
+        <guid isPermaLink="true">/2016/04/22/daduoshurenbuzaiyini.html</guid>
+        <pubDate>Fri, 22 Apr 2016 05:53:28 +0800</pubDate>
+        <description>&lt;p&gt;&lt;strong&gt;有一句谚语说得好：“20岁时的人，会顾虑旁人对自己的看法；40岁时的人，已经不理会别人对自己的想法；60岁时的人，发现别人根本就没有想到过自己。”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;大多数人其实并不在意你。真正在意你的人，往往是爱你的人。而在这个世界上，真正爱你的人并不会太多。因此，你不要太在意别人的看法，你只要在意真正爱你的人对你的看法就可以了。&lt;/p&gt;
+
+&lt;p&gt;事实上，不是真正爱你的人对你说过什么，对方很快就忘记了，而你却常常记着，特别是赞美自己和批评自己的话。赞美自己的话可以带来开心，这种在意倒还有些必要。但在意批评的话，难免会给自己带来糟糕的心情，这就很不值得了。&lt;/p&gt;
+
+&lt;p&gt;有一位学生，是学校里大家公认的“歌星”，无论多么高难度的歌曲，经他的嘴一唱，总是变得轻松动听。&lt;/p&gt;
+
+&lt;p&gt;有一次，学校举办歌咏大赛，他连预选赛都没有参加，就被班主任直接保送进了决赛现场。但是，由于精神紧张，他在比赛中完全没有发挥出自己应有的水平，得了最后一名。&lt;/p&gt;
+
+&lt;p&gt;这件事已经过去了很长时间了，他还在因此而郁郁寡欢。他一遍遍地到班主任那里去解释：“我那天有点感冒了，嗓子哑了，否则，我一定能取得名次的。”&lt;/p&gt;
+
+&lt;p&gt;老师安慰他：“没有关系，我相信你！”&lt;/p&gt;
+
+&lt;p&gt;可是他仍然见了老师就提这件事情，把老师搞得恨不能远远地躲开他。&lt;/p&gt;
+
+&lt;p&gt;在生活中，很多人都太在意自己的感觉了，把自己搞得敏感兮兮的。有些人在路上不小心摔了一跤，惹得路人哈哈大笑，摔跤者在尴尬之下，还会认为全天下的人都在看着自己出丑。但是，若我们能将心比心，换位思考一下，就会发现其实这种事只是路人们生活中的一个小插曲而已，甚至于他们在哈哈一笑之后，就早已经抛诸脑后了，只有当事人还执着于心，没能放下！&lt;/p&gt;
+
+&lt;p&gt;真正爱你的人，才会把你的一举一动都放在心上，他们会为你的快乐而快乐，为你的悲伤而悲伤。但真正爱你的人，肯定不会嘲笑你的丑态，不会看不起你的缺点，他们只会鼓励和支持你！&lt;/p&gt;
+
+&lt;p&gt;大多数人其实并不在意你，每个人都有自己的事情要做，并没有多少时间把注意力完全集中到我们身上，无论我们是出彩还是出丑了。认清了这一点，也许你就能“放下”心中的包袱，轻松地享受生活了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/04/2016042113552177.jpg&quot; alt=&quot;0233549yfffx2ncevslkpw&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;真正爱你的人，大难来临时会在你身边&lt;/p&gt;
+
+&lt;p&gt;真正爱你的人，除了你的父母兄弟姐妹，还有你的爱人。但并非只要是你的亲人，就一定是真正爱你的人；也不是跟你非亲非故的人，就不会是真正爱你的人。那些在你遭遇悲伤时，能和你一起痛苦、陪在你身边安慰的人，必定是真正在意你的人。&lt;/p&gt;
+
+&lt;p&gt;有一个丰神俊朗的才子，少年得志，凭借出色的文章和畅销的着作名满天下，有车有房有事业有地位，并且英俊不凡。很多女子爱着他，而他，却分不清楚什么是爱，什么是喜欢。于是他打算想恋一辈子的爱，而绝不作茧自缚，走进围城。他认为自己这么优秀，是断不肯与一个女子厮守到老的。&lt;/p&gt;
+
+&lt;p&gt;快到而立之年时，他遭遇了人生两件大事。第一件事情，就是认识了其貌不扬的她。她不懂诗歌，不懂文学，却默默爱着他。她很平凡，和他分居两个城市，关心他的方式，只是长途电话，或者手机短信。一句普通的叮咛，一句普通的问候，对于他来说，实在是微不足道的关怀。他知道她爱着自己，但是却以一种轻佻对待她，从来不许任何承诺。&lt;/p&gt;
+
+&lt;p&gt;另外一件事情，发生在一个雪夜，他最爱的人，他的母亲，在故乡悄然病逝。得知这个消息后，他不顾外面的风雪，甚至来不及为自己加衣，便衣着单薄地连夜赶往了故乡。一路上，他泪水横流，想着自己来不及反哺，却忽然失去了母亲。他为母亲守灵的夜晚，接到她的长途电话。他只说了一句 “我母亲，走了”，然后，长声痛哭。她久久沉默之后，才挂了电话。&lt;/p&gt;
+
+&lt;p&gt;第二天的傍晚，雪越下越大，村里积满了厚厚的雪，行人一不小心就会滑倒。这时，有人告诉他，有个陌生女孩在村口打听他。他迎接了出去，远远的就看到了一个女子，正是他曾经最轻慢的她。此刻她满身的雪花，脸冻得红红的，手不停地撮着取暖。他大步走上去，猛然抱住了她，那一刻，他流着泪望天，知道这是天堂里的母亲送给他最后的礼物。&lt;/p&gt;
+
+&lt;p&gt;那几天，他其实接到了无数女子的电话，听到了各种各样华丽语言的安慰，却没有人如她那样，肯夜行千里来到一个从来不曾来过的贫瘠的山村，在大难来临的时候，陪在他身边，用自己最纯洁的举动，给他最温柔细致的关怀。她是真正爱他的人。&lt;/p&gt;
+
+&lt;p&gt;真正爱你的人，也许不会说任何华丽的语言；真正爱你的人，也许说不出什么甜言蜜语海誓山盟；真正爱你的人，也许给不了你金钱和美色，但真正爱你的人，一定是在你大难来临时，在你最悲伤的时候，陪着你的那个人。&lt;/p&gt;
+
+&lt;p&gt;转自&lt;a href=&quot;http://mxwu.cn&quot;&gt;梦忻屋&lt;/a&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>世纪之巅，2009年日本TV动画销量总榜单</title>
+        <link>/2016/04/22/japan-2009-comic-sale.html</link>
+        <guid isPermaLink="true">/2016/04/22/japan-2009-comic-sale.html</guid>
+        <pubDate>Fri, 22 Apr 2016 05:14:27 +0800</pubDate>
+        <description>&lt;p&gt;2009年日本TV动画销量总榜单&lt;/p&gt;
+
+&lt;p&gt;B站搬运，燃起来。&lt;/p&gt;
+
+&lt;iframe style=&quot;width: 800px; height: 500px;&quot; src=&quot;http://static.hdslb.com/miniloader.swf?aid=4169257&amp;amp;page=1&quot; width=&quot;300&quot; height=&quot;150&quot; frameborder=&quot;no&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>jni使用详解</title>
+        <link>/2016/04/05/jni.html</link>
+        <guid isPermaLink="true">/2016/04/05/jni.html</guid>
+        <pubDate>Tue, 05 Apr 2016 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;开发中难免要使用jni，现在系统的学习总结一下使用的方法&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;jni&quot;&gt;1 jni概述&lt;/h5&gt;
+
+&lt;p&gt;jni是Java Native Interface的缩写，中文译为“java本地方法接口”。通俗的说，jni是一种技术，通过jni你可以：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;java程序中的函数可以调用Native语言写的函数，Native一般是指C/C++编写的代码。&lt;/li&gt;
+  &lt;li&gt;Native程序中的函数可以调用Java层的函数，也就是说在C/C++程序中可以调用java的函数。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;jnijni&quot;&gt;2 加载jni库以及注册jni函数&lt;/h5&gt;
+
+&lt;p&gt;加载jni库非常简单，只需要在调用Native函数之前使用&lt;code&gt;System.loadLibrary(&quot;your_libray_name&quot;)&lt;/code&gt;即可。我们的通常做法是在class中的静态块中加载，比如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;package com.jimbo.jni;
+
+public class JNIInterface {
+
+  static {
+    System.loadLibrary(&quot;your_libray_name&quot;);
+  }
+
+  //这里可以定义你的Native函数
+  public static native final void native_say_hello();
+
+  int a;
+  int b;
+  public int calc() {
+    return a+b;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;知道了&lt;code&gt;java&lt;/code&gt;代码编写的方法，那么问题来了，Native代码怎么编写呢？java函数怎么找到对应的Native函数呢？all right,让我们来看一下注册jni的两种方法。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;静态方法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;借助java的工具程序&lt;code&gt;javah&lt;/code&gt;来实现这一过程。答题流程是这样的：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;编写java代码，然后编译生成&lt;code&gt;.class&lt;/code&gt;文件。&lt;/li&gt;
+  &lt;li&gt;使用javah，例如&lt;code&gt;javah -o output packname.classname&lt;/code&gt;来生成一个叫做&lt;code&gt;output.h&lt;/code&gt;的头文件。&lt;/li&gt;
+  &lt;li&gt;在jni层实现这些函数。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;上面的&lt;code&gt;JNIInterface&lt;/code&gt;类经过上述操作后会得到这样的头文件：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;jni.h&amp;gt;
+//...省略
+//注：如果java的函数中已经有了“_”，则&quot;_&quot;将会被替换成&quot;_l&quot;
+JNIEXPORT void JNICALL Java_com_jimbo_jni_JNIInterface_native_lsay_lhello(JNIEnv *, jclass);
+
+//...省略
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;可以看出，这个Native函数的名字就是包名+函数名，只是因为“.”在c中有特殊的含义，所以被替换成了”_“。这个过程是这样的：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;当java层调用native_say_hello()函数时，他会从对应的JNI库中寻找Java_com_jimbo_jni_JNIInterface_native_lsay_lhello()函数，如果没有就会报错。如果找的到，则会为这个native_say_hello()和Java_com_jimbo_jni_JNIInterface_native_lsay_lhello()建立一个关联关系，其实就是保存jni层函数的函数指针。以后再调用native_say_hello()函数时，直接使用这个函数指针就可以了。当然这个过程是虚拟机来完成的，不需要我们操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;动态注册&lt;/p&gt;
+
+    &lt;p&gt;既然java函数和native函数时一一对应的，那么是不是有一种结构来保存这些数据信息呢？答案是肯定的。在jni技术中，用一个&lt;code&gt;JNINativeMethod&lt;/code&gt;来保存，结构定义如下：&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;typedef struct {
+  //java函数名 不用携带包名，待会会有其他方式提供包名，
+  //这样查找起来效率就会更高
+  const char *name;
+  //函数签名信息，包括函数的参数以及函数的返回值等信息
+  const char *signature;
+  //函数指针，类型为void*
+  void* fnptr;
+} JNINativeMethod;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;那么，这些对应数据什么时候会被加载出来了呢？其实在调用&lt;code&gt;System.loadLibrary(&quot;your_libray_name&quot;);&lt;/code&gt;之后，紧接着会查看该库中一个叫做&lt;code&gt;JNI_OnLoad()&lt;/code&gt;的函数，如果有就会调用它，动态注册就需要在这里完成。那么究竟如何实现这一个过程呢？需要调用两个函数就可以了：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;jclass clazz = (*env) -&amp;gt; FindClass(env, className);
+
+(*env) -&amp;gt; RegisterNatives(env, clazz, gMethods, numMethods);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;具体注册过程可以这样写：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;jni.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;  
+#include &amp;lt;string.h&amp;gt;  
+#include &amp;lt;stdio.h&amp;gt;  
+#include &amp;lt;assert.h&amp;gt;
+
+//这个函数是对应java函数的
+jstring native_say_hello(JNIEnv *env, jobject thiz) {
+  return (*env) -&amp;gt; NewStringUTF(env, &quot;hello, i am from jni~&quot;);
+}
+
+//这个函数提供方法的对应信息，通过创建JNINativeMethod结构体来实现
+//至于那么参数什么意思 待会具体说
+static JNINativeMethod gMethods[] = {
+  {&quot;native_say_hello&quot;, &quot;()Ljava/lang/String&quot;, (void)*native_say_hello},
+}
+
+//为类的某一个方法注册
+static int registerNativeMethod(JNIEnv *env, const char* className, JNINativeMethod *gMethods, int numbers) {
+  jclass  clazz = (*env) -&amp;gt; FindClass(env, className);
+  if (null == clazz) {
+    return JNI_FALSE;
+  }
+  if ((*env)-&amp;gt;RegisterNatives(env, clazz, gMethods, numMethods) &amp;lt; 0) {  
+        return JNI_FALSE;  
+  }
+  return JNI_TURE;
+}
+
+//为所有类的方法注册
+static int registerNatives(JNIEnv* env) {  
+    const char* kClassName = &quot;com/jimbo/jni/JNIInterface&quot;;//指定要注册的类  
+    return registerNativeMethods(env, kClassName, gMethods,  
+            sizeof(gMethods) / sizeof(gMethods[0]));
+}
+
+//如果成功返回JNI版本, 失败返回-1
+JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved) {  
+    JNIEnv* env = NULL;  
+
+    if ((*vm)-&amp;gt;GetEnv(vm, (void**) &amp;amp;env, JNI_VERSION_1_4) != JNI_OK) {  
+        return -1;  
+    }  
+    assert(env != NULL);  
+
+    if (!registerNatives(env)) {//注册  
+        return -1;  
+    }  
+    //成功  
+    return JNI_VERSION_1_4;  
+}  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;通过上面的方法我们就可以将jni函数和java的函数注册在一起了。但是上面代码似乎还是有点麻烦的，
+其实jni的AndroidRunTime类提供了一个&lt;code&gt;registerNativeMethods()&lt;/code&gt;方法，可以更加简单的实现这
+一过程。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;jni.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;  
+#include &amp;lt;string.h&amp;gt;  
+#include &amp;lt;stdio.h&amp;gt;  
+#include &amp;lt;assert.h&amp;gt;
+
+jstring native_say_hello(JNIEnv *env, jobject thiz) {
+  return (*env) -&amp;gt; NewStringUTF(env, &quot;hello, i am from jni~&quot;);
+}
+
+static JNINativeMethod gMethods[] = {
+  {&quot;native_say_hello&quot;, &quot;()Ljava/lang/String;&quot;, (void)*native_say_hello},
+}
+//以上代码和前面是一样的
+
+//如果成功返回JNI版本, 失败返回-1
+JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved) {  
+    JNIEnv* env = NULL;   
+
+    if ((*vm)-&amp;gt;GetEnv(vm, (void**) &amp;amp;env, JNI_VERSION_1_4) != JNI_OK) {  
+        return -1;  
+    }  
+    assert(env != NULL);  
+
+    if (AndroidRunTime::registerNativeMethods(env, &quot;com/jimbo/jni/JNIInterface&quot;, gMethods, sizeof(gMethods) / sizeof(gMethods[0])) &amp;lt; 0) {//注册  
+        return -1;  
+    }  
+    //成功  
+    return JNI_VERSION_1_4;  
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;代码比较好理解，但是JNINativeMethod中的signature可能会存在疑问。例如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;&quot;()V&quot;
+&quot;()I&quot;
+&quot;(II)Ljava/lang/String&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;实际上这些是与函数参数以及返回值一一对对应的。&lt;code&gt;()&lt;/code&gt;里面表示参数，&lt;code&gt;()&lt;/code&gt;外表示的函数的返回值。
+比如&lt;code&gt;(II)Ljava/lang/String&lt;/code&gt;就对应这个函数&lt;code&gt;jstring functionName(int ,int)&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;具体的对应关系如下:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;字符&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;java类型&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;c类型&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;V&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;void&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;void&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Z&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;boolean&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jboolean&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;I&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;int&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jint&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;J&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;long&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jlong&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;D&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;double&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jdouble&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;F&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;float&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jfloat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;B&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;byte&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jbyte&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;C&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;char&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jchar&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;S&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;short&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jshort&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;[I&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;int[]&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jintarray&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;[F&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;float[]&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jshortarray&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;[B&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;byte[]&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jbytearray&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;[C&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;char[]&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jchararray&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;[S&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;short[]&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jshortarray&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;[D&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;double[]&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jdoublearray&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;[j&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;long[]&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jlongarray&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;[z&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;boolean[]&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;jbooleanarray&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;以上是关于基本类型和基本类型的数组，那么类是如何表示的呢？&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;如果Java函数的参数是class，则以”L”开头，以”;”结尾中间是用”/” 隔开的包及类名。而其对应的C函数名的参数则为jobject. 一个例外是String类，其对应的类为jstring
+Ljava/lang/String; String jstring
+Ljava/net/Socket; Socket jobject&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;jnienv&quot;&gt;3 JNIEnv介绍&lt;/h5&gt;
+
+&lt;p&gt;JNIEnv，即JNIEnvironment，字面意思就是jni环境。其实他就是一个与线程相关的jni环境结构体。
+JNIEnv提供了一些jni系统函数，通过这些函数我们可以做：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;调用java函数&lt;/li&gt;
+  &lt;li&gt;操作jobject对象&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;jnienvjobject&quot;&gt;4 通过JNIEnv操作jobject&lt;/h5&gt;
+
+&lt;p&gt;我们都知道，类都是由方法和成员变量组成的，在jni的规则中，使用jfirldID和jMethod来表示java的
+成员变量和方法，可通过jni下面的两个函数得到：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;jfieldId GetFieldID(jclass clazz, const char *name, const char *sig);
+jMethod GetMethodID(jclass clazz, const char *name, const char *sig);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+  &lt;li&gt;jclass代表的java中的类，对应&lt;code&gt;java.lang.Class&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;第二个参数就是类的名称&lt;/li&gt;
+  &lt;li&gt;第三个参数是函数签名，和前面介绍的一样&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;得到jfieldId和jMethod后依然无法调用java函数。那到底该怎么做呢？
+不着急，我们看下面的代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;jint native_calc(JNIEnv *env, jobject thiz) {
+
+  jclass clazz = env -&amp;gt; FindClass(&quot;com/jimbo/jni/JNIInterface&quot;);
+  jmethodID java_calc_id = env -&amp;gt; GetMethodID(clazz, &quot;native_calc&quot;, &quot;()I&quot;);
+  jfieldId a_id = env -&amp;gt; GetFieldID(clazz, &quot;a&quot;, &quot;I&quot;);
+  jfieldId b_id = env -&amp;gt; GetFieldID(clazz, &quot;b&quot;, &quot;I&quot;);
+  jint a = env -&amp;gt; GetIntField(clazz, thiz, a_id);
+  jint b = env -&amp;gt; GetIntField(clazz, thiz, b_id);
+  return env -&amp;gt; CallIntMethod(env, thiz, java_calc_id, a, b);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;通过这段代码我们知道jni是通过&lt;code&gt;CallIntMethod()&lt;/code&gt;函数来调用了java的函数。&lt;/p&gt;
+
+&lt;p&gt;实际上，jni有一系列类似的函数，形式如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;//调用函数
+//最后参数是调用函数的参数
+NativeType Call&amp;lt;Type&amp;gt;Method(JNIEnv *env, jobject thiz, jmethodID methodID, ...);
+
+//获取成员变量的值
+NativeType Get&amp;lt;Type&amp;gt;Field(JNIEnv *env, jobject thiz, jfieldId fieldID);
+//或者是
+void Set&amp;lt;Typr&amp;gt;FieldID(JNIEnv *env, jobject thiz, jfieldId fieldID, NativeType value);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;常用的还用如下函数:&lt;/p&gt;
+
+&lt;p&gt;GetObjectField(),GetIntField(),GetShortField(),GetCharField()等等。&lt;/p&gt;
+
+&lt;h5 id=&quot;jni-1&quot;&gt;5 jni的垃圾回收以及异常处理&lt;/h5&gt;
+
+&lt;p&gt;在jni中，有三种类型的引用，包括：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Local Reference：包括函数调用是传入的参数，在函数内创建的jobject。Local Reference
+最大的特点就是，一旦jni函数结束，就会被回收。&lt;/li&gt;
+  &lt;li&gt;Global Reference：全局引用，这种对象不主动释放永远都不会被回收。&lt;/li&gt;
+  &lt;li&gt;Weak Reference：弱全局引用，在运行过程中可能被回收。所以在使用前要调用IsSameObject()
+来判断他是否已经被回收了。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;我们在使用完变量后也可以通过&lt;code&gt;env -&amp;gt; Delete&amp;lt;ReferenceType&amp;gt;Ref&lt;/code&gt;来主动释放内存。例如DeleteLocalRef();&lt;/p&gt;
+
+&lt;p&gt;在jni中，提供了三个函数来截获和处理异常：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ExceptionOccured(),用来判断时候发生了异常。&lt;/li&gt;
+  &lt;li&gt;ExceptionClear(),用来清理jni层发生的异常。&lt;/li&gt;
+  &lt;li&gt;ThrowNew(),用来向java层抛出异常。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;本文参考了&lt;a href=&quot;https://book.douban.com/subject/6802440/&quot;&gt;邓凡平的深入理解Android 卷1&lt;/a&gt;以及&lt;a href=&quot;http://blog.csdn.net/chenfeng0104/article/details/7088600&quot;&gt;chenfeng0104的专栏-动态注册JNI&lt;/a&gt;。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>『原创』外婆桥</title>
+        <link>/2016/04/04/waipoqiao.html</link>
+        <guid isPermaLink="true">/2016/04/04/waipoqiao.html</guid>
+        <pubDate>Mon, 04 Apr 2016 19:58:35 +0800</pubDate>
+        <description>&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/04/2016040403592920.jpg&quot; alt=&quot;0gnb&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;那天和妈妈一起上街，妈妈在一家店给爸爸买袜子，我站在门口一边吃章鱼烧，一边看着这条街，正值冬日午后，阳光暖暖的洒在小街，看到一个老奶奶坐在小巷子口的石凳上晒太阳，她看着街上来来往往的人，我看着她。忽然，有一个卖小飞鸟玩具的人路过，一边演示着怎么玩这个玩具一边吆喝。路人的目光都被吸引了去，老奶奶也站起来远远的看。看了会儿，她对巷口旁那家店的女老板(应该是她女儿或者儿媳)怯怯说:“我想买一个那个……”女老板说“买那玩意儿弄啥？”老奶奶说:“过几天不是小羔儿带他儿来这儿吗，我给他儿买一个……”女老板说:“等他来再说吧，不知道啥时候来呢，买这放家里占空。”然后老奶奶就不说话了，又坐了下来，可眼睛还是看着那个卖玩具的人走远的方向。也许老奶奶只是想看到孩子们的笑脸，是她晚年最期盼的一点甜。&lt;/p&gt;
+
+&lt;p&gt;[hermit auto=”1” loop=”1” unexpand=”1” fullheight=”1”]netease_songs#:31654408[/hermit]&lt;/p&gt;
+
+&lt;p&gt;想起以前住在我老家对面巷子里，有一个已经快100岁的老奶奶，每天都搬个凳子出来坐在门口，冬天也是。听大人说，这奶奶的几个儿子女儿都在外地，一年也没空回来几次。那次路过，听到居委会路阿姨问这个老奶奶:“冬天这么冷，进屋里开暖气看电视多暖和，还每天都出来坐呦。”老奶奶说:“晚上天黑再看，我每天出来坐坐，别回来万一我死了都没人知道，死屋里就坏了。”心里一阵心酸，老奶奶每天都出来坐的原因，竟是害怕自己死了都没人发现。
+如今已经开放了二胎政策，虽然我前段时间也在微博说自己是限量珍藏版上下五千年唯一一代独生子女，可这些笑谈调侃背后，确实是一个纠结的事实，父母只有我一个孩子，如果我以后去了另一个城市上学工作甚至定居，我的父母要怎么办。独生子女政策已是过去式，可当初独生子女政策下的我们已经长大了，我们生活在现在。这未知的充满挑战的未来，这个政策下带来的一系列社会和家庭问题，真真实实的落在了我们这代人的肩膀上。万千宠爱于一身，万千责任在一体，这是最好的时代，也是最坏的时代。&lt;/p&gt;
+
+&lt;p&gt;我在文章开始写到的两个老人，她们儿孙满堂，还尚且期盼孩子回家看看自己，害怕自己死去没人发现。当我们这代独生子女的父母老去，又会是怎样的未来。&lt;/p&gt;
+
+&lt;center&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt;乌篷点纱灯 岩上青石悄着新纹&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 喃喃细雨时 归来燕子他不等人&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 五指方扣桨 蓑衣翁正系桥下绳&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 春雨轻敛去 绣花鞋落起唢呐声&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 爆竹燃暗淡月弯弯&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 锣鼓转踏醒路长长&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 烛火晃斑驳儿时廊旁谁家白墙&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 照湿谁家闺女脸庞&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 摇啊摇 十五摇过春分就是外婆桥&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 盼啊盼 阿嬷阿嬷地甜甜叫&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 吵啊吵 米花糖挂嘴角 总是吃不饱&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 美啊美 小脚桥上翘啊翘&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 步儿缓 踩的泪潸潸&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 穿弄堂 望去忆满满&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 石阶上 转身零落多少银铃啷啷&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 收起了多少晨与晚&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 摇啊摇 十五摇过秋分就是外婆桥&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 乐啊乐 阿嬷阿嬷地紧紧抱&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 跳啊跳 牛郎织女遥遥总是够不着&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 眨啊眨 对着它们笑啊笑&lt;/span&gt;&lt;/center&gt;
+&lt;p&gt;作者： dyon小白鼠&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>校招季 - 我的网易游戏面试</title>
+        <link>/2016/04/04/netease-games-it-interview.html</link>
+        <guid isPermaLink="true">/2016/04/04/netease-games-it-interview.html</guid>
+        <pubDate>Mon, 04 Apr 2016 19:00:08 +0800</pubDate>
+        <description>&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/04/201604020606048.png&quot; alt=&quot;offer&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;互娱一面&lt;/h2&gt;
+
+&lt;p&gt;楼主Java方向，投的互娱游戏测试工程师。因为研发要求太高了，而且不是目标院校，听学长学姐还有知乎上说很难的样子。而游戏测试对语言要求相对没有研发那么高。截图在下方。
+2:00杭州电话到现在正好1个小时左右，即使是游戏测试仍然是实际类型的算法题，分享一下吧。&lt;/p&gt;
+
+&lt;p&gt;0，自我介绍&lt;/p&gt;
+
+&lt;p&gt;1，内存2M，有一文件记录了职工的年龄，文件25M，请排序年龄。&lt;/p&gt;
+
+&lt;p&gt;2，给定年龄0-120，在上述限定条件下换一个方法重新排&lt;/p&gt;
+
+&lt;p&gt;3，空间中有任意点对两两相邻，点与点的连线颜色可能为黑或者红，已知第i个点红色线段数为a[i],求该空间中颜色一致的三角形数。&lt;/p&gt;
+
+&lt;p&gt;4，找出无序数组中两个数的最大差值，要求i小于j&lt;/p&gt;
+
+&lt;p&gt;5，有没有过测试经历或使用过测试工具&lt;/p&gt;
+
+&lt;p&gt;6，说说你最喜爱的一个游戏以及为什么喜欢，优点在哪？&lt;/p&gt;
+
+&lt;p&gt;7，给你一个镜子，除了日常的打扮之用外，还能干嘛&lt;/p&gt;
+
+&lt;p&gt;8，可以实习的地点和时间&lt;/p&gt;
+
+&lt;p&gt;9，你有什么想问的&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;互娱二面&lt;/h2&gt;
+
+&lt;p&gt;1、m＊n的方格  矩形数目&lt;/p&gt;
+
+&lt;p&gt;2、给定初始成语和终止成语和成语库寻找最快完成成语接龙的方法&lt;/p&gt;
+
+&lt;p&gt;3、Java的异常体系（问的很细）&lt;/p&gt;
+
+&lt;p&gt;4、10个囚犯随机编号 最后一个可以看到前9个人的编号 倒数第二个看到前8个，类推。。如何报数使存活的人最多（囚犯报的数和自己的编号相同可以存活，否则杀死）&lt;/p&gt;
+
+&lt;p&gt;5、找出有序数组中只出现一次的数字，其他都出现2次（异或是O（n））&lt;/p&gt;
+
+&lt;p&gt;6、DOTA中船长大的测试&lt;/p&gt;
+
+&lt;p&gt;7、你的游戏经历&lt;/p&gt;
+
+&lt;p&gt;8、关于网易游戏你有什么想问的&lt;/p&gt;
+
+&lt;p&gt;最近更新：答得不是很好，在等通知。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>校招季 - 我的蘑菇街面试</title>
+        <link>/2016/04/02/mogujie-it-interview.html</link>
+        <guid isPermaLink="true">/2016/04/02/mogujie-it-interview.html</guid>
+        <pubDate>Sat, 02 Apr 2016 22:07:23 +0800</pubDate>
+        <description>&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/04/201604020606048.png&quot; alt=&quot;offer&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;蘑菇街1面&lt;/h2&gt;
+
+&lt;p&gt;蘑菇街1面结束 求人品明天阿里三面
+先说蘑菇街，首先感谢牛客内推，啦啦啦~~~
+话说楼主刚刚正在敲着AVL，6:40左右，电话响起，杭州的，第一反应阿里(o゜▽゜)o☆，不过阿里收到三面通知是明天啊，难道面试官反悔么23333。然后就接了，结果是蘑菇街，盼天盼地，小而美的蘑菇街终于来啦，小生等的好是辛苦。ok，开场，能不能现在面试，那还用说，时刻准备着。blabla就开始了，下面说一下问我的题吧，还没开始面试的小伙伴，下面才是干货！
+1、Q:介绍一下你的开源MVC框架，相比SpringMVC，SSH的优势在哪里，区别在哪里
+A：我怎么敢和SpringMVC比，我只敢仰望那些高大上的程序员写的那些牛逼哄哄的框架啊。我还是说一下区别吧，blabla。。。。省略15分钟&lt;/p&gt;
+
+&lt;p&gt;2、Q：说说你在项目中遇到的问题，怎么解决的？ 
+A：遇到了XXX问题，然后采用笨或绕的方法躲过去了，这个感觉答得不好。&lt;/p&gt;
+
+&lt;p&gt;3、Q：GC
+ A：深入理解Java虚拟机已经刻在脑海了，这些问题简直就是小白菜23333&lt;/p&gt;
+
+&lt;p&gt;4、Q：JMM内存模型 
+A：Easy，撸过~~~&lt;/p&gt;
+
+&lt;p&gt;5、职业规划&lt;/p&gt;
+
+&lt;p&gt;6、要问的问题
+我问了3个&lt;/p&gt;
+
+&lt;p&gt;7、讨论Github
+差不多就这样。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;蘑菇街2面&lt;/h2&gt;
+
+&lt;p&gt;1，自我介绍&lt;/p&gt;
+
+&lt;p&gt;2，SpringMVC原理&lt;/p&gt;
+
+&lt;p&gt;3，SpringMVC加载过程&lt;/p&gt;
+
+&lt;p&gt;4，不使用SpringMVC自己写MVC框架时，不使用配置文件如何做到请求和视图层如jsp页面的一一对应。&lt;/p&gt;
+
+&lt;p&gt;5，XML文件解析的多种方法和区别&lt;/p&gt;
+
+&lt;p&gt;6，数据库表的映射关系以及持久层框架介绍&lt;/p&gt;
+
+&lt;p&gt;7，AIO，BIO，NIO原理和介绍&lt;/p&gt;
+
+&lt;p&gt;8，TCP/IP协议，&lt;/p&gt;
+
+&lt;p&gt;9，使用TCP/IP和BIO去实现通信方式，具体到BIO的哪些类和哪些方法，伪代码实现（这个直接挂了）&lt;/p&gt;
+
+&lt;p&gt;10，缓存框架有用过吗，说说看&lt;/p&gt;
+
+&lt;p&gt;11，垃圾回收算法&lt;/p&gt;
+
+&lt;p&gt;12，JVM调优策略和常用工具&lt;/p&gt;
+
+&lt;p&gt;13，服务器负载问题分析和解决（这个感觉也答的不好）&lt;/p&gt;
+
+&lt;p&gt;14，排序算法介绍原理和分析&lt;/p&gt;
+
+&lt;p&gt;好像还有几个，想不起来了，楼主今天咳嗽，嗓子好疼，将近2小时的面试，好累。。想起来了再补充吧。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;蘑菇街3面&lt;/h2&gt;
+
+&lt;p&gt;视频面试，线程安全的单例。项目。Java基础。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;蘑菇街4面&lt;/h2&gt;
+
+&lt;p&gt;视频面，聊天为主。&lt;/p&gt;
+
+&lt;p&gt;以上。加油！&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>二叉树的分层遍历</title>
+        <link>/2016/03/14/suanfa-erchashufencengbianli.html</link>
+        <guid isPermaLink="true">/2016/03/14/suanfa-erchashufencengbianli.html</guid>
+        <pubDate>Mon, 14 Mar 2016 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;二叉树的分层遍历&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;题目要求：给定一个二叉树的root结点，然后按照每层从左到右的顺序将二叉树结点的值储存在一个二维数组中，每一层一个数组，每一个数组的元素是按照从左到右的顺序进行存储的。&lt;/p&gt;
+
+&lt;p&gt;思路：二叉树的分层打印类似于图的广度优先遍历算法，我们可以借助一个队列实现这个过程。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;初始化队列 将root结点加入到队列之中&lt;/li&gt;
+  &lt;li&gt;判断当前队列是否为空
+    &lt;ul&gt;
+      &lt;li&gt;不为空，则出队队列的首元素 并且将不为空的结点入队列&lt;/li&gt;
+      &lt;li&gt;为空则表示遍历完成&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;经过上述操作之后就可以得到二叉树分层遍历的顺序了。但是我们并不能得到每一个层都有什么元素这样的信息，我们还需要在遍历的过程中使用变量记录这一个过程。&lt;/p&gt;
+
+&lt;p&gt;一个&lt;code&gt;last&lt;/code&gt;变量记录当前打印行的最右结点&lt;/p&gt;
+
+&lt;p&gt;一个&lt;code&gt;nLast&lt;/code&gt;变量记录加入队列的最近一个元素&lt;/p&gt;
+
+&lt;p&gt;在元素弹出的时候判断一下是否和&lt;code&gt;last&lt;/code&gt;元素相等，相等则表示要换行了，这时候要更新&lt;code&gt;last&lt;/code&gt;的值，就是将&lt;code&gt;nLast&lt;/code&gt;赋值给&lt;code&gt;last&lt;/code&gt;即可，这样就实现了这个功能。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;
+import java.util.*;
+
+public class Java {
+
+	public static void main(String[] args) {
+		TreeNode one = new TreeNode(1);
+		TreeNode two = new TreeNode(2);
+		TreeNode three =new TreeNode(3);
+		TreeNode four = new TreeNode(4);
+		TreeNode five = new TreeNode(5);
+		TreeNode six = new TreeNode(6);
+		TreeNode seven = new TreeNode(7);
+		TreeNode eight = new TreeNode(8);
+		TreeNode nine = new TreeNode(9);
+		TreeNode ten = new TreeNode(10);
+		TreeNode n11 = new TreeNode(11);
+		TreeNode n12 = new TreeNode(12);
+		TreeNode n13 = new TreeNode(13);
+		TreeNode n14 = new TreeNode(14);
+
+		one.left = two;
+		one.right = three;
+		//two.left = four;
+		two.right = five;
+		three.left = six;
+		three.right = seven;
+		four.left = eight;
+		//four.right = nine;
+		//five.left = ten;
+		five.right = n11;
+		six.left = n12;
+		six.right = n13;
+
+		n13.right = n14;
+
+		TreePrinter p = new TreePrinter();
+		int[][] result = p.printTree(one);
+		for (int i = 0; i &amp;lt; result.length; i++) {
+			for (int j = 0; j &amp;lt; result[i].length; j++) {
+				System.out.print(result[i][j]);
+			}
+			System.out.println(&quot;&quot;);
+		}
+	}
+
+}
+
+class TreePrinter {
+    public int[][] printTree(TreeNode root) {
+        // write code here
+    	if (null == root) {
+    		return null;
+    	}
+
+    	if (null == root.left &amp;amp;&amp;amp; null == root.right) {
+    		int[][] result = ;
+    		return result;
+    	}
+
+    	int[][] result = new int[10][];
+
+    	Queue&amp;lt;TreeNode&amp;gt; queue = new LinkedList&amp;lt;TreeNode&amp;gt;();	
+    	TreeNode last = root;
+    	TreeNode nLast = root.right == null ? root.left : root.right;
+
+    	int i = 0;
+    	int j = 0;
+
+    	int numOfLine[] = new int[10];
+
+    	result[i] = new int[1];
+
+    	queue.add(root);
+
+    	while(!queue.isEmpty()) {
+
+    		TreeNode tree = queue.poll();
+    		result[i][j++] = tree.val;
+    		numOfLine[i]++;
+
+    		if (tree.left != null) {
+    			queue.add(tree.left);
+    			nLast = tree.left;
+    		}
+    		if (tree.right != null) {
+    			queue.add(tree.right);
+    			nLast = tree.right;
+    		}
+
+    		if (last == tree) {
+    			j = 0;
+    			i++;
+    			result[i] = new int[(int)(Math.pow((double)2, (double)i))];
+    			last = nLast;
+    		}
+
+    		
+    	}
+
+    	int[][] r = new int[i][];
+    	//System.out.println(i+&quot;&quot;);
+    	for (int g = 0; g &amp;lt; i; g++) {
+    		r[g] = new int[numOfLine[g]];
+    		for (int h = 0; h &amp;lt; numOfLine[g]; h++) {
+    			r[g][h] = result[g][h];
+    		}
+    	}
+    	result = null;
+    	return r;
+    }
+}
+
+class TreeNode {
+    public int val = 0;
+    public TreeNode left = null;
+    public TreeNode right = null;
+    public TreeNode(int val) {
+        this.val = val;
+    }
+}
+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>Stop Trying to Reinvent the Wheel</title>
+        <link>/2016/03/04/Stop-Trying-to-Reinvent-the-Wheel.html</link>
+        <guid isPermaLink="true">/2016/03/04/Stop-Trying-to-Reinvent-the-Wheel.html</guid>
+        <pubDate>Fri, 04 Mar 2016 18:57:29 +0800</pubDate>
+        <description>&lt;p&gt;“不要重复造轮子 Stop Trying to Reinvent the Wheel”， 可能是每个程序员入行被告知的第一条准则。我自己也会对新人反复灌输这个概念，写程序其实是一个最能“偷懒”的工作：你现在费力实现的每一个功能，可能早已经有极好的解决方法贡献在开源社区，如果可以直接用现成的，那节省下来的时间是不是可以用来偷懒呢？极端的说法，哪怕是那位把所有开发外包给沈阳一家公司的哥们，如果撇开道德以及商业安全，只要能贡献优质的代码和健壮的功能，对于一个项目来说，这样做其实没任何问题。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;找轮子存在的问题&lt;/h2&gt;
+
+&lt;p&gt;虽然不要重复造轮子的准则被反复提到，但是以我个人的经验，这个准则实践起来其实很有难度，因为：&lt;/p&gt;
+
+&lt;p&gt;1.“不要重复造轮子”意味着首先需要找到一个可以用的轮子，而且我们一般希望是能最好的轮子才可以一劳永逸。这就对个人的信息检索能力有非常高的要求。&lt;/p&gt;
+
+&lt;p&gt;2.找到了一个轮子，但这个轮子好不好用，需要时间来论证。能一眼判断一个项目的质量以及易用性，这其实需要大量项目经验的积累。&lt;/p&gt;
+
+&lt;p&gt;3.好轮子不是你想用，想用就能用的。要想将一个开源项目整合到自己的项目中，需要对这个项目有比较深的了解。开源项目的文档质量参差不齐，当使用轮子时，只看文档往往是不够的，还需要阅读源代码甚至深度修改定制。更不要说大部分开源项目根本没有中文文档。&lt;/p&gt;
+
+&lt;p&gt;所以现实情况往往是：新人不懂得检索方法，找不到轮子；好不容易找到一个轮子，学了半天不会用；好不容易能运行，很多地方与需求不一致，但是又不会改；一来二去，最后还是变成自己写轮子，同时还得出一个结论：别人的轮子都不好用，还是要坚持自己造轮子。&lt;/p&gt;
+
+&lt;p&gt;这种情况的最佳体现，就是曾经有一段时间遍地开花的PHP框架。每一个写框架的人都认为自己写的框架才是最好的轮子，甚至是很多PHP新人，对几个成熟框架浅尝辄止后，也纷纷投身写框架的行列。成品大部分看过去却是大同小异，只是语法层面更符合作者本人的习惯，而缺乏大量的测试以及文档社区，最终的结果就是一个半成品然后无疾而终。&lt;/p&gt;
+
+&lt;p&gt;这个例子可能有马后炮之嫌，毕竟PHP的造框架运动是由当时的背景和多方面的因素造成的，目前因为有了PHP-FIG制订的规范，PHP的框架的资源已经慢慢集中在Zend Framework、Symfony、CakePHP、Yii、CodeIgniter这样少数几个成熟框架之下了。更多的符合PSR规范的模块类库在取代新框架不断涌现，这对整个PHP社区都是好事情。&lt;/p&gt;
+
+&lt;p&gt;话题稍微扯的有点远，不过核心的意思还是为了说明，找轮子本身其实是一件不容易的事情。而我对上面问题的解决方法是：找轮子的任务不要交给新人，而是要由经验丰富，信息检索能力强的编程人员负责，最好是项目的构架人员。团队成员找到的轮子最好也由构架人员拍板，用还是不用。对于团队新人，最重要的任务还是编程基本功、文档阅读能力以及如何用好已经拍板的轮子。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;怎样才算是好轮子？&lt;/h2&gt;
+
+&lt;p&gt;个人认为好轮子应该具备以下的特征：&lt;/p&gt;
+
+&lt;p&gt;1.开源，并且License宽松。&lt;/p&gt;
+
+&lt;p&gt;2.有文档，代码规范，接口友好，最好有实际用例。&lt;/p&gt;
+
+&lt;p&gt;3.社区相对活跃。&lt;/p&gt;
+
+&lt;p&gt;4.松耦合，定制容易。&lt;/p&gt;
+
+&lt;p&gt;至于同时找到好几个轮子需要选择的情况，可能要根据项目的实际情况进行取舍：有些轮子侧重于大而全，希望解决大部分问题，但是细节上处理不够细致；有些轮子小而精，专注解决一个问题，但是不具备好的通用性。但只要合适好用，都是一个好轮子。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;如何找到好轮子&lt;/h2&gt;
+
+&lt;p&gt;如何找到好轮子其实在上面问题中已经很清楚了，你应当具备：&lt;/p&gt;
+
+&lt;p&gt;1.信息检索能力&lt;/p&gt;
+
+&lt;p&gt;2.外文资料阅读能力&lt;/p&gt;
+
+&lt;p&gt;3.代码阅读能力以及平时的积累&lt;/p&gt;
+
+&lt;p&gt;对于第一条，个人的信息检索能力是无法一蹴而就的，不过如果是还在等待我对此再说出一二三而不是去自己检索寻找方法的朋友，基本上已经没救了。&lt;/p&gt;
+
+&lt;p&gt;这里唯一需要说的是，如果想用百度那货去找技术资料的还是省省吧。&lt;/p&gt;
+
+&lt;p&gt;外文资料阅读能力也非一日之功，不过个人倒是有个小窍门，如果想要获得一些项目的HelloWorld入门教程或者服务器的配置，可以将检索语言限定为日语，因为日文用户的教程往往秉承了日本细致入微的精神，包括项目背景、需要的环境安装等等一些对初学者才有用的知识，在日文的技术资料中往往也会写的很清楚。&lt;/p&gt;
+
+&lt;p&gt;至于平时的积累，可能程序员都知道Github、SourceForge、Google Code这些优秀的项目托管网站。但是积累的意思并不是说有时间上去看两眼或者随便收藏一下这么简单。&lt;/p&gt;
+
+&lt;p&gt;比如我自己侧重PHP方面的项目，我的一个做法是找到Github下所有Follower大于300的PHP项目（其实一共不到200个其中很多还是php框架），然后一个一个像扫货一样，对其进行了解以及记录。&lt;/p&gt;
+
+&lt;p&gt;我的另一个做法是查看知名PHP框架，看看他们用了哪些轮子，比如在在Symfony Reference中，你就能淘到Assetic、monolog 这样的好货。&lt;/p&gt;
+
+&lt;p&gt;最后一个办法是在Github上Follow一些活跃的作者，比如我的Following中就会显示我的Stars和Forks，里面自然也是我认为值得收藏关注的项目。&lt;/p&gt;
+
+&lt;p&gt;本文章系转载，如有疑问请联系站长。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>浅析网格计算与云计算</title>
+        <link>/2016/03/04/cloud-and-network-computation.html</link>
+        <guid isPermaLink="true">/2016/03/04/cloud-and-network-computation.html</guid>
+        <pubDate>Fri, 04 Mar 2016 18:40:05 +0800</pubDate>
+        <description>&lt;p&gt;网格计算有了十几年的历史。网格基本形态是什么？是跨地区的，甚至跨国家的，甚至跨洲的这样一种独立管理的资源结合。资源在独立管理，并不是进行统一布置、统一安排的形态。网格这些资源都是异构的，不强调有什么统一的安排。另外网格的使用通常是让分布的用户构成虚拟组织（VO），在这样统一的网格基础平台上用虚拟组织形态从不同的自治域访问资源。此外，网格一般由所在地区、国家、国际公共组织资助的，支持的数据模型很广，从海量数据到专用数据以及到大小各异的临时数据集合，在网上传的数据，这是网格目前的基本形态。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;云计算与网格计算区别何在&lt;/h2&gt;
+
+&lt;p&gt;可以看出，网格计算和云计算有相似之处，特别是计算的并行与合作的特点；但他们的区别也是明显的。主要有以下几点：&lt;/p&gt;
+
+&lt;p&gt;首先，网格计算的思路是聚合分布资源，支持虚拟组织，提供高层次的服务，例如分布协同科学研究等。而云计算的资源相对集中，主要以数据中心的形式提供底层资源的使用，并不强调虚拟组织（VO）的概念。&lt;/p&gt;
+
+&lt;p&gt;其次，网格计算用聚合资源来支持挑战性的应用，这是初衷，因为高性能计算的资源不够用，要把分散的资源聚合起来；后来到了2004年以后，逐渐强调适应普遍的信息化应用，特别在中国，做的网格跟国外不太一样，就是强调支持信息化的应用。但云计算从一开始就支持广泛企业计算、Web应用，普适性更强。&lt;/p&gt;
+
+&lt;p&gt;第三，在对待异构性方面，二者理念上有所不同。网格计算用中间件屏蔽异构系统，力图使用户面向同样的环境，把困难留在中间件，让中间件完成任务。而云计算实际上承认异构，用镜像执行，或者提供服务的机制来解决异构性的问题。当然不同的云计算系统还不太一样，像Google一般用比较专用的自己的内部的平台来支持。&lt;/p&gt;
+
+&lt;p&gt;第四，网格计算用执行作业形式使用，在一个阶段内完成作用产生数据。而云计算支持持久服务，用户可以利用云计算作为其部分IT基础设施，实现业务的托管和外包。&lt;/p&gt;
+
+&lt;p&gt;第五，网格计算更多地面向科研应用，商业模型不清晰。而云计算从诞生开始就是针对企业商业应用，商业模型比较清晰。&lt;/p&gt;
+
+&lt;p&gt;总之，云计算是以相对集中的资源，运行分散的应用（大量分散的应用在若干大的中心执行）；而网格计算则是聚合分散的资源，支持大型集中式应用（一个大的应用分到多处执行）。但从根本上来说，从应对Internet的应用的特征特点来说，他们是一致的，为了完成在Internet情况下支持应用，解决异构性、资源共享等等问题。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>android资料整理</title>
+        <link>/2016/03/04/android-blogs.html</link>
+        <guid isPermaLink="true">/2016/03/04/android-blogs.html</guid>
+        <pubDate>Fri, 04 Mar 2016 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;一些优秀android博客或者学习资源 有时间会分门别类整理一下 现在先收集一下&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://gityuan.com/&quot;&gt;优秀资源-深入学习android&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.jianshu.com/p/af2de05aadff&quot;&gt;安卓学习资源集合&lt;/a&gt;
+面试必看博客&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/9097463&quot;&gt;view事件分发1&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/11952435&quot;&gt;service详解&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/27163593/answer/42703123?utm_source=weibo&amp;amp;utm_medium=weibo_share&amp;amp;utm_content=share_answer&amp;amp;utm_campaign=share_button&quot;&gt;项目结构&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.uml.org.cn/sjms/201211023.asp#1&quot;&gt;设计模式六大原则&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.jianshu.com/p/69141aa52f34&quot;&gt;问题集合&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/luoshengyang/article/details/6685853&quot;&gt;activity启动过程&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.codeceo.com/article/git-version-control-workflow.html&quot;&gt;git的使用&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.codeceo.com/article/i-like-ask-for-programmer.html&quot;&gt;面经&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.jianshu.com/p/c8cbeb7ea43a&quot;&gt;android新UI特性&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/zhaokaiqiang1992/article/details/45419023&quot;&gt;屏幕适配&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_ad991b1601018mjc.html&quot;&gt;面试技巧&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://gank.io/post/560e15be2dca930e00da1083&quot;&gt;RxJava&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://my.oschina.net/beenlee/blog/182866&quot;&gt;android技术体系&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/listening_music/article/details/6927988&quot;&gt;android中Service的使用&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://seniorzhai.github.io/2015/02/05/AndroidStudio%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%B1%87%E6%80%BB/&quot;&gt;android studio快捷键大全&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.codeceo.com/article/android-code-style-guide.html&quot;&gt;android编码规范&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.nowcoder.com/discuss/3043?type=2&amp;amp;order=0&amp;amp;pos=5&amp;amp;page=2&quot;&gt;牛客面经1&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.nowcoder.com/discuss/3066&quot;&gt;牛客面经2&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/xiaanming/article/details/26810303&quot;&gt;ImageLoader使用详解与源码解析&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://a.codekk.com/&quot;&gt;Android开源库源码分析&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/gdutliuyun827/article/details/17264259&quot;&gt;浅谈Http以及HttpGet和HttpPost&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://ncstatic.oss-cn-hangzhou.aliyuncs.com/pdf/%E8%AE%B2%E5%BA%A7ppt.pdf&quot;&gt;牛客左程云-关于面试&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5MTE1NjQzMQ==&amp;amp;mid=402557402&amp;amp;idx=1&amp;amp;sn=237247226ba99c93e0993a35468bb347&amp;amp;scene=20#wechat_redirect&quot;&gt;Git命令&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.codeceo.com/article/android-context.html&quot;&gt;Context详解&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000002570753&quot;&gt;sublime快捷键&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/zhangerqing/article/details/8193118&quot;&gt;HashMap的实现原理&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/zhaokaiqiang1992/article/details/45419023&quot;&gt;屏幕适配方案&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>『原创』计算机网络知识点连载</title>
+        <link>/2016/03/01/network-note.html</link>
+        <guid isPermaLink="true">/2016/03/01/network-note.html</guid>
+        <pubDate>Tue, 01 Mar 2016 05:53:51 +0800</pubDate>
+        <description>&lt;h2 id=&quot;section&quot;&gt;基本知识点&lt;/h2&gt;
+
+&lt;p&gt;1.OSI参考模型（七层体系结构）&lt;/p&gt;
+
+&lt;p&gt;物理层 - 数据链路层 - 网络层 - 运输层 - 会话层 - 表示层 - 应用层&lt;/p&gt;
+
+&lt;p&gt;2.TCP/IP体系结构（四层体系结构）&lt;/p&gt;
+
+&lt;p&gt;网络接口层 - 网际层IP - 运输层(TCP/UDP) - 应用层(FTP/SMTP/HTTP/TELNET…)&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;物理层&lt;/h2&gt;
+
+&lt;p&gt;1.奈氏准则&lt;/p&gt;
+
+&lt;p&gt;理想低通信道最高码元传输速率 = 2W Baud（即每赫兹理想低通信道最高码元传输速率每秒2个码元）&lt;/p&gt;
+
+&lt;p&gt;2.香农定理&lt;/p&gt;
+
+&lt;p&gt;信道的极限传输速率C = Wlog2(1+S/N)，W为带宽，S为平均功率，N为高斯噪声功率，S/N也称为信噪比&lt;/p&gt;
+
+&lt;p&gt;3.物理层之下的传输媒体&lt;/p&gt;
+
+&lt;p&gt;双绞线 同轴电缆 光缆&lt;/p&gt;
+
+&lt;p&gt;4.调制器和解调器&lt;/p&gt;
+
+&lt;p&gt;调制器：基带数字信号波形转为模拟信号的波形&lt;/p&gt;
+
+&lt;p&gt;解调器：将经过调制器变换的模拟信号恢复成原来的数字信号&lt;/p&gt;
+
+&lt;p&gt;5.采样定理&lt;/p&gt;
+
+&lt;p&gt;只要采样频率不低于电话信号最高频率的2倍，就可以从采样脉冲信号无失真地恢复出原来的电话信号。&lt;/p&gt;
+
+&lt;p&gt;6.信道复用技术&lt;/p&gt;
+
+&lt;p&gt;频分复用FDM 时分复用TDM&lt;/p&gt;
+
+&lt;p&gt;码分多址CDMA：每个用户可以在同样的时间使用同样的频带进行通信。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff6600;&quot;&gt;7.单工 半双工 全双工&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;8.基带和宽带&lt;/p&gt;
+
+&lt;p&gt;基带信号指将数字0,1直接用两种不同电压来表示，然后运到线路上传输。宽带信号指将基带信号调制后形成频分复用模拟信号。&lt;/p&gt;
+
+&lt;p&gt;9.基带信号 - 曼彻斯特编码信号 - 差分曼彻斯特编码&lt;/p&gt;
+
+&lt;p&gt;曼彻斯特编码：一个码元拆2个，码元1前高后低，码元0相反&lt;/p&gt;
+
+&lt;p&gt;差分曼彻斯特编码：一个码元拆2个，码元1前半个与上一个码元的后半个一样，码元0相反。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;数据链路层&lt;/h2&gt;
+
+&lt;p&gt;1.链路和数据链路（除了一条物理链路外还需要加一些通信协议控制数据的传输）&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff6600;&quot;&gt;2.数据链路层3个基本问题 帧定界 透明传输 差错检测&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;3.帧定界&lt;/p&gt;
+
+&lt;p&gt;帧的数据部分的上限 &amp;lt;= MTU（最大传输单元），SOH（0x01）和EOT(0x04)分别指示帧的开始和结束。&lt;/p&gt;
+
+&lt;p&gt;4.透明传输（数据的比特组合必须是不受限制的）&lt;/p&gt;
+
+&lt;p&gt;方法1：字节插入&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/2016022913455935.jpg&quot; alt=&quot;net1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;方法2：比特插入&lt;/p&gt;
+
+&lt;p&gt;5.差错检测&lt;/p&gt;
+
+&lt;p&gt;误码率：传输错误的比特与传输总比特数的比率&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CRC(Cyclic Redundancy Check)：循环冗余检验&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;CRC是检错方法并不能纠错，FCS（Frame Check Sequence）是冗余码。&lt;/p&gt;
+
+&lt;p&gt;计算冗余码（余数R）的方法：先补0（n个）再对生成多项式取模。&lt;/p&gt;
+
+&lt;p&gt;CRC只能表示以接近1的概率认为它没有差错。但不能做到可靠传输。可靠传输还需要确认和重传机制。&lt;/p&gt;
+
+&lt;p&gt;生成多项式P(X)：CRC-16，CRC-CCITT，CRC-32&lt;/p&gt;
+
+&lt;p&gt;6.停止等待协议：解决死锁使用超时计时器。对重复帧的处理：丢弃，再次发送确认帧。向上面的网络层提供了可靠传输。是一种ARQ的差错检测方法。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7.发送窗口大于1的ARQ：连续ARQ和选择重传ARQ&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;连续ARQ又称Go-back-N ARQ，意思是出现差错必须重传时，要回走n个帧，即使是已经传送正确的数据帧也要重传。（仅因这些正确帧那面有一个错误）&lt;/p&gt;
+
+&lt;p&gt;滑动窗口：（解决连续ARQ中一旦某个帧出错要重传之后许多帧，浪费时间，增大开销，因此我们对发出去但未被确认的帧的数目加以限制）包括发送窗口和接收窗口。为了减少开销，连续ARQ还执行捎带确认的机制。发送窗口Wt&amp;lt;= 2^n-1(n代表用几比特编号)，接收窗口Wr=1。&lt;/p&gt;
+
+&lt;p&gt;选择重传ARQ：需要缓存空间，一般不使用。&lt;/p&gt;
+
+&lt;p&gt;接收窗口Wr&amp;lt;=2^n/2 当接收窗口Wr为最大值时 Wt=Wr=2^n/2
+这种收发两端窗口按规律向前移动，也称为滑动窗口协议。（连续ARQ，选择重传ARQ，停止等待都是）&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6.PPP协议&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;ppp帧格式&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/201602291346279.jpg&quot; alt=&quot;net2&quot; /&gt;
+注：当协议字段为0x0021时，信息字段为IP数据报，不超过1500字节&lt;/p&gt;
+
+&lt;p&gt;字节填充：转义符为0x7D&lt;/p&gt;
+
+&lt;p&gt;0比特填充：5个连续的1插入1个0&lt;/p&gt;
+
+&lt;p&gt;7.HDLC协议：可以实现可靠传输&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;局域网&lt;/h2&gt;
+
+&lt;p&gt;1.按网络拓扑结构分：星形网、环形网（令牌环形网）、总线网、树形网。&lt;/p&gt;
+
+&lt;p&gt;2.以太网&lt;/p&gt;
+
+&lt;p&gt;DIX EthernetV2以太网标准成为主流&lt;/p&gt;
+
+&lt;p&gt;802的数据链路层划分：逻辑链路控制LLC子层 + 媒体接入控制MAC子层&lt;/p&gt;
+
+&lt;p&gt;以太网提供的服务是不可靠的交付，即尽最大努力交付。因为采用无连接，数据帧不编号，也不要求对方确认。对有差错的帧的重传有高层来决定。&lt;/p&gt;
+
+&lt;p&gt;CSMA/CD协议(Carrier Sense Multiple Access with Collision Detection)：载波监听多点接入/碰撞检测&lt;/p&gt;
+
+&lt;p&gt;用于协调同一时间只能允许一台计算机发送信息，否则就会相互干扰的问题。&lt;/p&gt;
+
+&lt;p&gt;电磁波在1km电缆的传播时延约5us。使用CSMA/CD协议，一个站不能同时发送和接收，因此不能实现全双工。&lt;/p&gt;
+
+&lt;p&gt;争用期：2τ 51.2us 最短有效帧长为64字节&lt;/p&gt;
+
+&lt;p&gt;截断二进制指数退避算法：基本退避时间了2τ k=min{重传次数，10} r=random(0~2^k-1) 重传所需时延为r倍的基本退避时间&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.MAC帧格式（以太网V2）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/2016022913470267.jpg&quot; alt=&quot;net3&quot; /&gt;
+4.VLAN&lt;/p&gt;
+
+&lt;p&gt;局域网网段构成的与物理位置无关的逻辑组。克服了广播风暴&lt;/p&gt;
+
+&lt;p&gt;5.快速以太网参数a=τC/L。a为总线的单程传播时延和帧的发送时延之比 C为数据率 L为帧长，a远小于1，信道利用率越高&lt;/p&gt;
+
+&lt;p&gt;6.无线网CSMA/CA&lt;/p&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;城域网&lt;/h2&gt;
+
+&lt;p&gt;网络层提供的服务：无连接的数据报和面向连接的虚电路&lt;/p&gt;
+
+&lt;p&gt;数据报优点：128字节作为一个分组，迅速经济。主机承担端到端的差错控制和流量控制。&lt;/p&gt;
+
+&lt;p&gt;虚电路：每个分组无需携带完整的目的地址，分组按顺序交付，网络负责差错控制和流量控制。&lt;/p&gt;
+
+&lt;p&gt;使用默认路由简化转发表。&lt;/p&gt;
+
+&lt;p&gt;拥塞：Σ对资源的需求 &amp;gt; 可用资源&lt;/p&gt;
+
+&lt;p&gt;拥塞控制是一个全局性的过程，涉及到所有主机路由器。 流量控制往往指端到端之间点对点通信量的控制。&lt;/p&gt;
+
+&lt;p&gt;拥塞过程：轻度拥塞 - 拥塞 - 死锁（直接死锁，重装死锁：因为路由器缓存引起的拥塞）&lt;/p&gt;
+
+&lt;p&gt;ATM（异步传递方式）：建立在电路交换和分组交换的基础上一种面向连接的快速分组交换技术。&lt;/p&gt;
+
+&lt;h2 id=&quot;ip&quot;&gt;网络层（IP层）&lt;/h2&gt;
+
+&lt;p&gt;1.中继（中间设备）：&lt;/p&gt;
+
+&lt;p&gt;物理层中继系统：转发器 数据链路层中继系统：网桥或桥接器 网络层中继系统：路由器 网络层以上的中继系统：网关。由于历史原因，TCP/IP的文献中将路由器称为网关。&lt;/p&gt;
+
+&lt;p&gt;2.协议：IP协议及与之配套的4个协议&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ARP（Address Resolution Protocol）地址解析协议：IP地址 -&amp;gt; MAC地址 RARP（Reverse Address Resolution Protocol）逆地址解析协议：MAC地址 -&amp;gt; IP地址 ICMP（Internet Control Message Protocol）因特网控制报文协议 IGMP（Internet Group Management Protocol）因特网组管理协议&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;3.IP地址分类：1.基本分类的IP地址（两级） 2.子网的划分（三级） 3.无分类编址（构造超网）&lt;/p&gt;
+
+&lt;p&gt;4.IP地址使用范围：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/2016022913473653.jpg&quot; alt=&quot;net4&quot; /&gt;
+注：1.主机数减2的原因是因为主机号全0代表该IP地址是本主机所连接到的单个网络地址；主机号全1代表本网络上的所有主机。 注：2.A类地址网络数-2的原因是：第一，网络号全0是个保留地址代表本网络；第二，网络号为127（01111111）保留为本地软件环回测试。&lt;/p&gt;
+
+&lt;p&gt;注1：D类IP地址网络号固定位为1110 用于多播；E类IP地址网络号固定位为11110，为保留地址。&lt;/p&gt;
+
+&lt;p&gt;5.IP地址和硬件地址&lt;/p&gt;
+
+&lt;p&gt;网络层的IP数据报交给数据链路层被封装成MAC帧，MAC帧的源地址和目的地址变为硬件地址&lt;/p&gt;
+
+&lt;p&gt;6.ARP（IP地址 -&amp;gt; MAC地址）&lt;/p&gt;
+
+&lt;p&gt;使用IP地址并不能直接用来通信，因为IP地址只是主机在抽象的网络层中的地址。最终要传到数据链路层封装成MAC帧才能发送到实际的网络。 因此不管使用什么协议最终需要的还是硬件地址。&lt;/p&gt;
+
+&lt;p&gt;每个主机拥有一个ARP高速缓存（存放所在局域网内主机和路由器的IP地址到硬件地址的映射表）&lt;/p&gt;
+
+&lt;p&gt;举例：A发送B (1).A在ARP Cache中查到B的MAC地址，写入MAC帧发往此B&lt;/p&gt;
+
+&lt;p&gt;(2).没查到，A向本局域网广播ARP请求分组，内容包括自己的地址映射和B的IP地址&lt;/p&gt;
+
+&lt;p&gt;(3).B发送ARP响应分组并写入A的映射（单播的方式）&lt;/p&gt;
+
+&lt;p&gt;ARP Cache映射项目具有一个生存时间。&lt;/p&gt;
+
+&lt;p&gt;7.IP数据报格式&lt;/p&gt;
+
+&lt;p&gt;固定部分 20字节&lt;/p&gt;
+
+&lt;p&gt;版本 - 首部长度 - 服务类型 - 总长度 - 标识 - 标志 - 片偏移 - 生存时间 - 协议 - 首部检验和 - 源地址4B - 目的地址4B - 可变部分4B&lt;/p&gt;
+
+&lt;p&gt;标识：一个计数器，用来产生数据报的标识。&lt;/p&gt;
+
+&lt;p&gt;标志字段：3位 MF=1后面还有分片 DF=0允许分片&lt;/p&gt;
+
+&lt;p&gt;IP分片 MF DF 片偏移&lt;/p&gt;
+
+&lt;p&gt;协议：占1个字节&lt;/p&gt;
+
+&lt;p&gt;首部检验和：反码算数运算，不采用CRC&lt;/p&gt;
+
+&lt;p&gt;8.划分子网：IP地址：网络号 - &amp;lt;子网号 - 主机号&amp;gt;（子网号是在两级分类编址中的主机号中划出的）&lt;/p&gt;
+
+&lt;p&gt;子网掩码：网络号子网号置1(相当于CIDR中的网络前缀)主机号置0，这样子网掩码与IP地址相与即可算出网络地址。&lt;/p&gt;
+
+&lt;p&gt;划分子网下的路由器转发算法：&lt;/p&gt;
+
+&lt;p&gt;（1）从收到的数据报的首部提取目的IP地址D&lt;/p&gt;
+
+&lt;p&gt;（2）先判断是否为直接交付。对与路由器相邻的子网进行检查。用各网络子网掩码与D相与，查看是否匹配。若是，直接交付（D 转化为物理地址，数据报封装成帧发送出去。）转发结束。若否，为间接交付，执行（3）&lt;/p&gt;
+
+&lt;p&gt;（3）若路由表中有目的地址D的特定主机路由，则将数据报传给该路由，否则，执行（4）&lt;/p&gt;
+
+&lt;p&gt;（4）对路由表的每一行（目的网络地址、子网掩码、下一跳地址），将其中的子网掩码与D相与，结果为N。若N与该行目的网络地址匹配，则 将该数据报传给该行指明的下一跳路由器，否则，执行（5）&lt;/p&gt;
+
+&lt;p&gt;（5）若路由表中有一个默认路由，则传给默认路由，否则，执行（6）&lt;/p&gt;
+
+&lt;p&gt;（6）报告分组转发出错&lt;/p&gt;
+
+&lt;p&gt;9.无分类编址CIDR（CLassless Inter-Domain Routing 无分类域间路由选择）&lt;/p&gt;
+
+&lt;p&gt;无分类的两级编址：格式 &amp;lt;网络前缀 - 主机号&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;路由聚合也称为构造超网因为一个CIDR地址块可以表示很多地址。&lt;/p&gt;
+
+&lt;p&gt;最长前缀匹配：从匹配结果中选择具有最长网络前缀的路由&lt;/p&gt;
+
+&lt;p&gt;10.ICMP（Internet Control Message Protocol）因特网控制报文协议&lt;/p&gt;
+
+&lt;p&gt;包括ICMP差错报文和ICMP询问报文&lt;/p&gt;
+
+&lt;p&gt;ICMP差错报文的类型：终点不可达 源点抑制 时间超过 参数问题 改变路由&lt;/p&gt;
+
+&lt;p&gt;ICMP询问报文的类型：回送请求和回答 时间戳请求和回答 掩码地址请求和回答 路由器询问或通告&lt;/p&gt;
+
+&lt;p&gt;应用层服务Ping使用了ICMP回送请求和回答报文，是应用层直接使用网络层ICMP的例子。没有通过运输层的TCP或UDP&lt;/p&gt;
+
+&lt;p&gt;11.路由选择协议&lt;/p&gt;
+
+&lt;p&gt;自治系统AS：自治系统有权自主地决定在本系统类采用何种路由选择协议。&lt;/p&gt;
+
+&lt;p&gt;路由选择协议分为两类：&lt;strong&gt;内部网关协议IGP（Interior Gateway Protocol）主要有RIP和OSPF&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;外部网关协议EGP（External Gateway Protocol）主要是BGP-4&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;RIP（Routing Information Protocol）：分布式的基于距离向量的路由选择协议&lt;/p&gt;
+
+&lt;p&gt;RIP的距离也称为跳数，RIP允许一条路径上最多包含15个路由器，因此距离为16相当于不可达。&lt;/p&gt;
+
+&lt;p&gt;RIP仅和相邻路由交换信息，交换的是当前路由器知道的全部信息，即自己的路由表。按固定的时间间隔交换。&lt;/p&gt;
+
+&lt;p&gt;RIP协议是收敛的，所谓收敛指自治系统中的所有结点都得到正确的路由选择信息的过程。最终使得每一个路由器到 每一个目的网络的路由都是最短的。&lt;/p&gt;
+
+&lt;p&gt;优点：实习Ian简单，开销简单。缺点：“好消息传得快，坏消息传得慢”。&lt;/p&gt;
+
+&lt;p&gt;RIP使用运输层UDP（520端口）进行传送，因此RIP的位置在应用层。但转发用户数据报的过程在网络层完成的。&lt;/p&gt;
+
+&lt;p&gt;OSPF（Open Shortest Path First开放最短路径优先）：分布式的基于链路状态协议&lt;/p&gt;
+
+&lt;p&gt;1.使用洪范法向本自治系统内所有路由器发送信息。&lt;/p&gt;
+
+&lt;p&gt;2.发送的信息是与本路由器相邻的所有路由器的链路状态。&lt;/p&gt;
+
+&lt;p&gt;3.只有链路状态发生变化时，路由器才使用洪泛法向所有路由器发送信息（而RIP是不管网络拓扑有无变化，路由器间都要定期交换路由表信息）&lt;/p&gt;
+
+&lt;p&gt;由于频繁交换链路状态信息，因此所有路由器最终都能建立一个链路状态数据库，这个数据库实际上就是全网的拓扑结构图，在全网范围内是一致的。&lt;/p&gt;
+
+&lt;p&gt;OSPF更新过程收敛的快。&lt;/p&gt;
+
+&lt;p&gt;OSPF不用UDP而直接用IP数据报发送。可见OSPF的位置在网络层。&lt;/p&gt;
+
+&lt;p&gt;负载均衡：在代价相同的路径上分配通信量，这叫多路径间的负载均衡。&lt;/p&gt;
+
+&lt;p&gt;外部网关协议BGP（Border Gateway Protocol:边界网关协议）：基于路径向量路由选择协议。&lt;/p&gt;
+
+&lt;p&gt;目标：力求选择一条比较好的路由。并非寻找最佳。&lt;/p&gt;
+
+&lt;p&gt;BGP发言人需要建立TCP连接（端口179），然后在此连接上交换报文以建立BGP会话。&lt;/p&gt;
+
+&lt;p&gt;BGP发言人需要同时运行BGP协议和内部网关协议&lt;/p&gt;
+
+&lt;p&gt;BGP解决了基于距离向量路由选择算法中的“好消息传得快，坏消息传得慢”这一问题。&lt;/p&gt;
+
+&lt;p&gt;BGP-4一共4种报文：打开包文 更新报文 保活报文 通知报文&lt;/p&gt;
+
+&lt;p&gt;12.IGMP（因特网组管理协议）&lt;/p&gt;
+
+&lt;p&gt;13.虚拟专用网&lt;/p&gt;
+
+&lt;p&gt;专用地址&lt;/p&gt;
+
+&lt;p&gt;10.0.0.0 - 10.255.255.255
+172.16.0.0 - 172.31.255.255
+192.168.0.0 - 192.168.255.255&lt;/p&gt;
+
+&lt;p&gt;这些IP地址在本机构内部使用，也叫可重用地址。&lt;/p&gt;
+
+&lt;p&gt;隧道技术实现虚拟专用网VPN（Virtual Private Network）&lt;/p&gt;
+
+&lt;p&gt;分类:内联网VPN 外联网VPN&lt;/p&gt;
+
+&lt;p&gt;内联网外联网都采用TCP/IP&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;14.NAT（Network Address Translation）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;使用本地地址的主机在和外界通信时都要在NAT路由器上将本地地址转换成全球地址。&lt;/p&gt;
+
+&lt;p&gt;15.解决IP地址耗尽的方法&lt;/p&gt;
+
+&lt;p&gt;（1）采用无分类编址CIDR，使IP地址分类更合理
+（2）采用NAT转换
+（3）IPv6
+16.在网络层，IP数据报的首部检验和字段只检验首部是否出差错而不检验数据部分。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-5&quot;&gt;运输层&lt;/h2&gt;
+
+&lt;p&gt;运输层提供应用进程间的逻辑通信。它使应用进程看见的就好像是在两个运输层实体间一条端到端的逻辑通信信道。&lt;/p&gt;
+
+&lt;p&gt;当运输层采用TCP时，尽管下面的网络是不可靠的，但这种逻辑通信信道相当于一条全双工的可靠信道。可以做到报文的无差错、 按序、无丢失、无重复。&lt;/p&gt;
+
+&lt;p&gt;单单面向连接只是可靠的必要条件，不充分。还需要其他措施，如确认重传，按序接收，无丢失无重复。&lt;/p&gt;
+
+&lt;p&gt;熟知端口：&lt;/p&gt;
+
+&lt;p&gt;20 FTP数据连接
+21 FTP控制连接
+22 SSH
+23 TELNET
+25 SMTP
+53 DNS
+69 TFTP
+80 HTTP
+161 SNMP&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;UDP重要&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;UDP的优点：&lt;/p&gt;
+
+&lt;p&gt;1.发送之前无需建立连接，减小了开销和发送数据的时延&lt;/p&gt;
+
+&lt;p&gt;2.UDP不使用拥塞控制，不使用可靠交付，因此主机不需要维护复杂的参数表、连接状态表&lt;/p&gt;
+
+&lt;p&gt;3.UDP用户数据报只有8个字节的首部开销，而TCP要20字节。&lt;/p&gt;
+
+&lt;p&gt;4.由于没有拥塞控制，因此网络出现拥塞不会使源主机的发送速率降低（IP电话等实时应用要求源主机以恒定的速率发送数据）&lt;/p&gt;
+
+&lt;p&gt;Table，使用TCP和UDP的应用&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/2016022913481796.jpg&quot; alt=&quot;net5&quot; /&gt;
+注：TFTP：Trivial File Transfer Protocol&lt;/p&gt;
+
+&lt;p&gt;UDP的过程：&lt;/p&gt;
+
+&lt;p&gt;1.服务器进程运行着，等待TFTP客户进程的服务请求。客户端TFTP进程启动时，向操作系统申请一个临时端口号，然后操作系统为该进程创建2个队列， 入队列和出队列。只要进程在执行，2个队列一直存在。&lt;/p&gt;
+
+&lt;p&gt;2.客户进程将报文发送到出队列中。UDP按报文在队列的先后顺序发送。在传送到IP层前给报文加上UDP首部，其中目的端口后为69。然后发给IP层。 出队列若溢出，则操作系统通知应用层TFTP客户进程暂停发送。&lt;/p&gt;
+
+&lt;p&gt;3.客户端收到来自IP层的报文时，UDP检查报文中目的端口号是否正确，若正确，放入入队列队尾，客户进程按先后顺序一一取走。若不正确，UDP丢弃该报文，并请ICMP发送”端口不可达“差错报文给服务器端。入队列可能会溢出，若溢出，UDP丢弃该报文，不通知对方。&lt;/p&gt;
+
+&lt;p&gt;服务器端类似。&lt;/p&gt;
+
+&lt;p&gt;UDP首部：源端口 - 目的端口 - 长度 - 检验和，每个字段22字节。&lt;/p&gt;
+
+&lt;p&gt;IP数据报检验和只检验IP数据报的首部，而UDP的检验和将首部和数据部分一起都检验。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;TCP重要&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;TCP报文段是面向字节的数据流。&lt;/p&gt;
+
+&lt;p&gt;TCP首部：20字节固定首部&lt;/p&gt;
+
+&lt;p&gt;确认比特ACK，ACK=1 确认号字段才有效；同步比特SYN：SYN=1 ACK=0表示一个连接请求报文段；终止比特FIN，FIN=1时要求释放连接。&lt;/p&gt;
+
+&lt;p&gt;窗口：A根据TCP缓存空间的大小确定自己的接收窗口大小。A发送给B的窗口字段写入该值。作为B的发送窗口的上限。&lt;/p&gt;
+
+&lt;p&gt;选项：最大报文段长度MSS，MSS告诉对方TCP：我的缓存所能接收的报文段的数据字段的最大长度是MSS个字节。若主机未填写，默认为536字节。&lt;/p&gt;
+
+&lt;p&gt;TCP的可靠是使用了序号和确认。存放副本。&lt;/p&gt;
+
+&lt;p&gt;TCP报文段的发送时机：1.维持一个变量等于MSS，缓存达到就发送 2.发送端应用进程指明要发送，即TCP支持的PUSH操作。3.设定计时器&lt;/p&gt;
+
+&lt;p&gt;接收端根据自身资源情况控制发送端发送窗口的大小。&lt;/p&gt;
+
+&lt;p&gt;接收端窗口rwnd（receiver window）：接收端根据目前接收缓存大小设置的窗口值，是来自接收端的流量控制&lt;/p&gt;
+
+&lt;p&gt;拥塞窗口cwnd（congestion window）：是发送端根据自己估计的网络拥塞程度设置的窗口值，是来自发送端的流量控制&lt;/p&gt;
+
+&lt;p&gt;发送端的窗口=Min(rwnd, cwnd)&lt;/p&gt;
+
+&lt;p&gt;慢开始算法：cwnd设置为1个MSS，每收到一个确认，将cwnd+1，逐步增大cwnd，使分组注入网络的速率更加合理。&lt;/p&gt;
+
+&lt;p&gt;慢开始门限：ssthresh，当cwnd &amp;lt; ssthresh,执行慢开始算法；cwnd &amp;gt; ssthresh，改用拥塞避免算法。 cwnd = ssthresh时，都可以。&lt;/p&gt;
+
+&lt;p&gt;拥塞避免算法使发送端的拥塞窗口每经过一个RTT增加一个MSS（而不管在此期间收到多少ACK），这样，拥塞窗口cwnd按线性规律增长，比 慢开始算法拥塞窗口增长速率缓慢很多。（加法增大）&lt;/p&gt;
+
+&lt;p&gt;无论是慢开始还是拥塞避免，只要发送端发现网络出现拥塞（根据是没有按时收到ACK或者收到重复ACK），就开始将慢开始门限ssthresh设置为 出现拥塞时拥塞窗口值的一半。拥塞窗口cwnd置为1，执行慢开始算法。(乘法减小)&lt;/p&gt;
+
+&lt;p&gt;上述TCP确认都是通过捎带确认执行的。&lt;/p&gt;
+
+&lt;p&gt;快重传：发送端一连收到三个重复的ACK,即可断定分组丢失，不必等待重传计数器，立即重传丢失的报文。&lt;/p&gt;
+
+&lt;p&gt;快恢复：当发送端收到3个重复的ACK时，乘法减小，ssthresh变为一半。但是cwnd不是置为1，而是ssthresh+3MSS。若收到的重复ACK 为n(n &amp;gt; 3)，则cwnd=ssthresh+nMSS.在使用快恢复算法时，慢开始算法只在TCP连接建立时使用。若收到了确认新的报文段的ACK，就将&lt;/p&gt;
+
+&lt;p&gt;TCP的重传机制&lt;/p&gt;
+
+&lt;p&gt;每发送一个报文段，就对这个报文段设置一次计时器。新的重传时间=γ*旧的重传时间。&lt;/p&gt;
+
+&lt;p&gt;TCP连接建立和释放的过程&lt;/p&gt;
+
+&lt;p&gt;SYN置1和FIN的报文段要消耗一个序号。&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: #ff6600;&quot;&gt;客户端连接状态变迁：CLOSED -&amp;gt; 主动打开,发送SYN=1 -&amp;gt; SYN_SENT -&amp;gt; 收到服务器的SYN=1和ACK时,发送三次握手的最后一个ACK -&amp;gt; ESTABLISHED -&amp;gt; 数据传送 -&amp;gt; 主动关闭 -&amp;gt; 发送FIN=1,等待确认ACK的到达 -&amp;gt; FIN_WAIT_1 -&amp;gt; 收到确认ACK后时，一向连接关闭 -&amp;gt; FIN_WAIT_2 -&amp;gt;收到服务器发送的FIN=1报文，响应，发送四次挥手的的最后一个确认ACK -&amp;gt; 这时另一条连接也关闭了，进入TIME_WAIT状态 -&amp;gt; 经过2倍报文寿命，TCP删除连接记录 -&amp;gt; 回到CLOSED状态&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: #ff6600;&quot;&gt;服务器端连接状态变迁：CLOSED -&amp;gt; 被动打开 -&amp;gt; LISTEN -&amp;gt; 收到SYN=1的报文，发送SYN=1和确认ACK -&amp;gt; 进入SYN_RCVD -&amp;gt; 收到三次握手 的最后一个确认ACK -&amp;gt; ESTABLISHED -&amp;gt; 数据传送 -&amp;gt; 数据传送完毕，收到FIN=1 -&amp;gt; 发送确认ACK并进入CLOSED_WAIT -&amp;gt; 发送FIN=1给客户端 -&amp;gt; LAST_ACK -&amp;gt; 收到客户端的ACK -&amp;gt; 删除连接记录 -&amp;gt; 回到CLOSED状态&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;应用层&lt;/p&gt;
+
+&lt;p&gt;1.DNS&lt;/p&gt;
+
+&lt;p&gt;2.电子邮件：用户代理，邮件服务器，协议 其中SMTP用于发送邮件，POP3用于接收邮件。&lt;/p&gt;
+
+&lt;p&gt;3.HTTP请求报文和响应报文：开始行 首部行 实体主体&lt;/p&gt;
+
+&lt;p&gt;4.BOOTP和DHCP：Dynamic Host Configuration动态主机配置协议。需要IP地址的主机向DHCP服务器广播，源IP全0 目的主机IP全1，DHCP查找配置信息，若找到，返回，若找不到，从服务器IP地址池取一个地址分配给该计算机。&lt;/p&gt;
+
+&lt;p&gt;5.SNMP 简单网络管理协议&lt;/p&gt;
+
+&lt;p&gt;网络安全&lt;/p&gt;
+
+&lt;p&gt;常规密钥密码体制：加密密钥和解密密钥是相同的密码体制，又称对称密钥体制。DES（Data Encryption Standard）和IDEA（International Data Encryption Algorithm）。&lt;/p&gt;
+
+&lt;p&gt;公开密钥密码体制：为了解决常规密钥体制的密钥分配问题和对数字签名的需求。&lt;/p&gt;
+
+&lt;p&gt;RSA公开密钥密码体制&lt;/p&gt;
+
+&lt;p&gt;原理：根据数论，寻求两个大素数比较简单，而把两个大素数的乘积分解及其困难。&lt;/p&gt;
+
+&lt;p&gt;数字签名：需要保证一下三点&lt;/p&gt;
+
+&lt;p&gt;（1）接受者能够核实发送者对报文的签名 （2）发送者事后不能抵赖对报文的签名 （3）接收者不能伪造对报文的签名&lt;/p&gt;
+
+&lt;p&gt;防火墙：是由软件硬件构成的系统，用来在两个网络之间实施接入控制策略。&lt;/p&gt;
+
+&lt;p&gt;完，作者：Campanulaceae &lt;a href=&quot;http://weibo.com/u/1662536394&quot;&gt;微博&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To Be Continued…&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>定义Activity启动模式的两种方式</title>
+        <link>/2016/03/01/android-launchermode.html</link>
+        <guid isPermaLink="true">/2016/03/01/android-launchermode.html</guid>
+        <pubDate>Tue, 01 Mar 2016 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;关于activity启动模式定义的两种方式&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;关于activity的生命周期和启动模式可以查看博客: &lt;a href=&quot;http://bornbeauty.github.io/2015/11/11/androidLifecycleAndlauncherMode.html&quot;&gt;activity生命周期和启动模式深入理解&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;一 定义启动模式的方式&lt;/h2&gt;
+
+&lt;p&gt;有两种方式：&lt;/p&gt;
+
+&lt;p&gt;1、通过manifest文件定义
+2、在Intent中通过设置flag的方式&lt;/p&gt;
+
+&lt;p&gt;如果一个activity启动模式通过这两个方式都有定义，以Intent设置flag的方式为准，也就是说方式2的优先级高于方式1.&lt;/p&gt;
+
+&lt;h2 id=&quot;manifest&quot;&gt;二 使用manifest文件&lt;/h2&gt;
+
+&lt;p&gt;通过设置activity的launchMode来设置启动模式：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;standard-标准启动模式&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;这是默认的启动模式。无论当前任务栈中是否已经存在改activity的实例，都将会重新new一个activity，并将改activity放置到当前任务栈的栈顶。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;singleTop-栈顶复用模式&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;如果任务栈中已经存在改activity的实例，并且该实例位于栈顶，那么该activity将被复用，不会重新启动一个activity，而是调用activity的onNewIntent().&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;singleTask-栈内复用模式&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;一个任务栈中只会存在一个改启动模式的activity。当activity已经存在的时候，会直接复用，调用它的onNewIntent()方法。同时，singleTask具有clearTop的效果，位于它上方的activity都会被出栈。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;singleInstance-单例模式&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;一个栈内只存在一个改启动模式的activity。&lt;/p&gt;
+
+&lt;h2 id=&quot;intentflag&quot;&gt;三 使用Intent的flag&lt;/h2&gt;
+
+&lt;p&gt;FLAG_ACTIVITY_NEW_TASK&lt;/p&gt;
+
+&lt;p&gt;设置了这个flag，新启动Activity就会被放置到一个新的任务当中(与”singleTask”有点类似，但不完全一样)，当然这里讨论的仍然还是启动其它程序中的Activity。这个flag的作用通常是模拟一种Launcher的行为，即列出一推可以启动的东西，但启动的每一个Activity都是在运行在自己独立的任务当中的。&lt;/p&gt;
+
+&lt;p&gt;FLAG_ACTIVITY_SINGLE_TOP&lt;/p&gt;
+
+&lt;p&gt;设置了这个flag，如果要启动的Activity在当前任务中已经存在了，并且还处于栈顶的位置，那么就不会再次创建这个Activity的实例，而是直接调用它的onNewIntent()方法。这种flag和在launchMode中指定”singleTop”模式所实现的效果是一样的。&lt;/p&gt;
+
+&lt;p&gt;FLAG_ACTIVITY_CLEAR_TOP&lt;/p&gt;
+
+&lt;p&gt;设置了这个flag，如果要启动的Activity在当前任务中已经存在了，就不会再次创建这个Activity的实例，而是会把这个Activity之上的所有Activity全部关闭掉。比如说，一个任务当中有A、B、C、D四个Activity，然后D调用了startActivity()方法来启动B，并将flag指定成FLAG_ACTIVITY_CLEAR_TOP，那么此时C和D就会被关闭掉，现在返回栈中就只剩下A和B了。
+那么此时Activity B会接收到这个启动它的Intent，你可以决定是让Activity B调用onNewIntent()方法(不会创建新的实例)，还是将ActivityB销毁掉并重新创建实例。如果ActivityB没有在manifest中指定任何启动模式(也就是”standard”模式)，并且Intent中也没有加入一个FLAG_ACTIVITY_SINGLE_TOP flag，那么此时ActivityB就会销毁掉，然后重新创建实例。而如果Activity B在manifest中指定了任何一种启动模式，或者是在Intent中加入了一个FLAG_ACTIVITY_SINGLE_TOPflag，那么就会调用ActivityB的onNewIntent()方法。
+FLAG_ACTIVITY_CLEAR_TOP和FLAG_ACTIVITY_NEW_TASK结合在一起使用也会有比较好的效果，比如可以将一个后台运行的任务切换到前台，并把目标Activity之上的其它Activity全部关闭掉。这个功能在某些情况下非常有用，比如说从通知栏启动Activity的时候。&lt;/p&gt;
+
+&lt;p&gt;处理affinity&lt;/p&gt;
+
+&lt;p&gt;affinity可以用于指定一个Activity更加愿意依附于哪一个任务，在默认情况下，同一个应用程序中的所有Activity都具有相同的affinity，所以，这些Activity都更加倾向于运行在相同的任务当中。当然了，你也可以去改变每个Activity的affinity值，通过&lt;activity&gt;元素的taskAffinity属性就可以实现了。
+taskAffinity属性接收一个字符串参数，你可以指定成任意的值(经我测试字符串中至少要包含一个.)，但必须不能和应用程序的包名相同，因为系统会使用包名来作为默认的affinity值。&lt;/activity&gt;&lt;/p&gt;
+
+&lt;p&gt;affinity主要有以下两种应用场景：
+当调用startActivity()方法来启动一个Activity时，默认是将它放入到当前的任务当中。但是，如果在Intent中加入了一个FLAG_ACTIVITY_NEW_TASK flag的话(或者该Activity在manifest文件中声明的启动模式是”singleTask”)，系统就会尝试为这个Activity单独创建一个任务。但是规则并不是只有这么简单，系统会去检测要启动的这个Activity的affinity和当前任务的affinity是否相同，如果相同的话就会把它放入到现有任务当中，如果不同则会去创建一个新的任务。而同一个程序中所有Activity的affinity默认都是相同的，这也是前面为什么说，同一个应用程序中即使声明成”singleTask”，也不会为这个Activity再去创建一个新的任务了。
+当把Activity的allowTaskReparenting属性设置成true时，Activity就拥有了一个转移所在任务的能力。具体点来说，就是一个Activity现在是处于某个任务当中的，但是它与另外一个任务具有相同的affinity值，那么当另外这个任务切换到前台的时候，该Activity就可以转移到现在的这个任务当中。
+那还是举一个形象点的例子吧，比如有一个天气预报程序，它有一个Activity是专门用于显示天气信息的，这个Activity和该天气预报程序的所有其它Activity具体相同的affinity值，并且还将allowTaskReparenting属性设置成true了。这个时候，你自己的应用程序通过Intent去启动了这个用于显示天气信息的Activity，那么此时这个Activity应该是和你的应用程序是在同一个任务当中的。但是当把天气预报程序切换到前台的时候，这个Activity又会被转移到天气预报程序的任务当中，并显示出来，因为它们拥有相同的affinity值，并且将allowTaskReparenting属性设置成了true。&lt;/p&gt;
+
+&lt;p&gt;清空返回栈&lt;/p&gt;
+
+&lt;p&gt;如何用户将任务切换到后台之后过了很长一段时间，系统会将这个任务中除了最底层的那个Activity之外的其它所有Activity全部清除掉。当用户重新回到这个任务的时候，最底层的那个Activity将得到恢复。这个是系统默认的行为，因为既然过了这么长的一段时间，用户很有可能早就忘记了当时正在做什么，那么重新回到这个任务的时候，基本上应该是要去做点新的事情了。
+当然，既然说是默认的行为，那就说明我们肯定是有办法来改变的，在&lt;activity&gt;元素中设置以下几种属性就可以改变系统这一默认行为：
+alwaysRetainTaskState
+如果将最底层的那个Activity的这个属性设置为true，那么上面所描述的默认行为就将不会发生，任务中所有的Activity即使过了很长一段时间之后仍然会被继续保留。&lt;/activity&gt;&lt;/p&gt;
+
+&lt;p&gt;clearTaskOnLaunch&lt;/p&gt;
+
+&lt;p&gt;如果将最底层的那个Activity的这个属性设置为true，那么只要用户离开了当前任务，再次返回的时候就会将最底层Activity之上的所有其它Activity全部清除掉。简单来讲，就是一种和alwaysRetainTaskState完全相反的工作模式，它保证每次返回任务的时候都会是一种初始化状态，即使用户仅仅离开了很短的一段时间。&lt;/p&gt;
+
+&lt;p&gt;finishOnTaskLaunch&lt;/p&gt;
+
+&lt;p&gt;这个属性和clearTaskOnLaunch是比较类似的，不过它不是作用于整个任务上的，而是作用于单个Activity上。如果某个Activity将这个属性设置成true，那么用户一旦离开了当前任务，再次返回时这个Activity就会被清除掉。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>深入浅出类装载器ClassLoader</title>
+        <link>/2016/02/20/shenruqianchu-java-classloader.html</link>
+        <guid isPermaLink="true">/2016/02/20/shenruqianchu-java-classloader.html</guid>
+        <pubDate>Sat, 20 Feb 2016 04:50:01 +0800</pubDate>
+        <description>&lt;h2 id=&quot;section&quot;&gt;类装载器工作机制&lt;/h2&gt;
+
+&lt;p&gt;类装载器就是寻找类的节码文件并构造出类在JVM内部表示对象的组件。在Java中，类装载器把一个类装入JVM中，要经过以下步骤：&lt;/p&gt;
+
+&lt;p&gt;[1.] &lt;strong&gt;装载&lt;/strong&gt;：查找和导入Class文件； 
+[2.] &lt;strong&gt;链接&lt;/strong&gt;：执行校验、准备和解析步骤，其中解析步骤是可以选择的： 
+    [2.1] 校验：检查载入Class文件数据的正确性； 
+    [2.2] 准备：给类的静态变量分配存储空间； 
+    [2.3] 解析：将符号引用转成直接引用； 
+[3.] &lt;strong&gt;初始化&lt;/strong&gt;：对类的静态变量、静态代码块执行初始化工作。&lt;/p&gt;
+
+&lt;p&gt;类装载工作由ClassLoader及其子类负责，ClassLoader是一个重要的Java运行时系统组件，它负责在运行时查找和装入Class字节码文件。JVM在运行时会产生三个ClassLoader：&lt;strong&gt;根装载器&lt;/strong&gt;、ExtClassLoader（&lt;strong&gt;扩展类装载器&lt;/strong&gt;）和AppClassLoader（&lt;strong&gt;系统类装载器&lt;/strong&gt;）。其中，根装载器不是ClassLoader的子类，它使用C++编写，因此我们在Java中看不到它，根装载器负责装载JRE的核心类库，如JRE目标下的rt.jar、charsets.jar等。ExtClassLoader和AppClassLoader都是ClassLoader的子类。其中ExtClassLoader负责装载JRE扩展目录ext中的JAR类包；AppClassLoader负责装载Classpath路径下的类包。&lt;/p&gt;
+
+&lt;p&gt;这三个类装载器之间存在父子层级关系，即根装载器是ExtClassLoader的父装载器，ExtClassLoader是AppClassLoader的父装载器。默认情况下，使用AppClassLoader装载应用程序的类，我们可以做一个实验：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;public class ClassLoaderTest {
+	public static void main(String[] args) {
+		ClassLoader loader = Thread.currentThread().getContextClassLoader();
+		System.out.println(&quot;current loader:&quot;+loader);
+		System.out.println(&quot;parent loader:&quot;+loader.getParent());
+		System.out.println(&quot;grandparent loader:&quot;+loader.getParent(). getParent());
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;运行以上代码，在控制台上将打出以下信息：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;current loader:sun.misc.Launcher$AppClassLoader@131f71a 
+parent loader:sun.misc.Launcher$ExtClassLoader@15601ea 
+//①根装载器在Java中访问不到，所以返回null 
+grandparent loader:null
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;通过以上的输出信息，我们知道当前的ClassLoader是AppClassLoader，父ClassLoader是ExtClassLoader，祖父ClassLoader是根类装载器，因为在Java中无法获得它的句柄，所以仅返回null。&lt;/p&gt;
+
+&lt;p&gt;JVM装载类时使用“全盘负责双亲委托机制”，“全盘负责”是指当一个ClassLoader装载一个类的时，除非显式地使用另一个ClassLoader，该类所依赖及引用的类也由这个ClassLoader载入；“双亲委托机制”是指先委托父装载器寻找目标类，只有在找不到的情况下才从自己的类路径中查找并装载目标类。这一点是从安全角度考虑的，试想如果有人编写了一个恶意的基础类（如java.lang.String）并装载到JVM中将会引起多么可怕的后果。但是由于有了“全盘负责委托机制”，java.lang.String永远是由根装载器来装载的，这样就避免了上述事件的发生。&lt;/p&gt;
+
+&lt;h2 id=&quot;classloader&quot;&gt;ClassLoader重要方法&lt;/h2&gt;
+
+&lt;p&gt;在Java中，ClassLoader是一个抽象类，位于java.lang包中。下面对该类的一些重要接口方法进行介绍：&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Class loadClass(String name)&lt;/strong&gt; &lt;br /&gt;
+name参数指定类装载器需要装载类的名字，必须使用全限定类名，如com.baobaotao. beans.Car。该方法有一个重载方法loadClass(String name ,boolean resolve)，resolve参数告诉类装载器是否需要解析该类。在初始化类之前，应考虑进行类解析的工作，但并不是所有的类都需要解析，如果JVM只需要知道该类是否存在或找出该类的超类，那么就不需要进行解析。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Class defineClass(String name, byte[] b, int off, int len)&lt;/strong&gt;
+将类文件的字节数组转换成JVM内部的java.lang.Class对象。字节数组可以从本地文件系统、远程网络获取。name为字节数组对应的全限定类名。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Class findSystemClass(String name)&lt;/strong&gt;
+   从本地文件系统载入Class文件，如果本地文件系统不存在该Class文件，将抛出ClassNotFoundException异常。该方法是JVM默认使用的装载机制。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Class findLoadedClass(String name)&lt;/strong&gt;
+  调用该方法来查看ClassLoader是否已装入某个类。如果已装入，那么返回java.lang.Class对象，否则返回null。如果强行装载已存在的类，将会抛出链接错误。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ClassLoader getParent()&lt;/strong&gt;
+   获取类装载器的父装载器，除根装载器外，所有的类装载器都有且仅有一个父装载器，ExtClassLoader的父装载器是根装载器，因为根装载器非Java编写，所以无法获得，将返回null。&lt;/p&gt;
+
+&lt;p&gt;除JVM默认的三个ClassLoader以外，可以编写自己的第三方类装载器，以实现一些特殊的需求。类文件被装载并解析后，在JVM内将拥有一个对应的java.lang.Class类描述对象，该类的实例都拥有指向这个类描述对象的引用，而类描述对象又拥有指向关联ClassLoader的引用，如图所示。 
+&lt;a href=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/201602191302195.png&quot;&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/201602191302195.png&quot; alt=&quot;6874747&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;每一个类在JVM中都拥有一个对应的java.lang.Class对象，它提供了类结构信息的描述。数组、枚举、注解以及基本Java类型（如int、double等），甚至void都拥有对应的Class对象。Class没有public的构造方法。Class对象是在装载类时由JVM通过调用类装载器中的defineClass()方法自动构造的。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;类的初始化&lt;/h2&gt;
+
+&lt;p&gt;类什么时候才被初始化：
+1）创建类的实例，也就是new一个对象
+2）访问某个类或接口的静态变量，或者对该静态变量赋值
+3）调用类的静态方法
+4）反射（Class.forName(“com.lyj.load”)）
+5）初始化一个类的子类（会首先初始化子类的父类）
+6）JVM启动时标明的启动类，即文件名和类名相同的那个类&lt;/p&gt;
+
+&lt;p&gt;只有这6中情况才会导致类的类的初始化。&lt;/p&gt;
+
+&lt;p&gt;类的初始化步骤：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;如果这个类还没有被加载和链接，那先进行加载和链接&lt;/li&gt;
+  &lt;li&gt;假如这个类存在直接父类，并且这个类还没有被初始化（注意：在一个类加载器中，类只能初始化一次），那就初始化直接的父类（不适用于接口）&lt;/li&gt;
+  &lt;li&gt;加入类中存在初始化语句（如static变量和static块），那就依次执行这些初始化语句。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>深入浅出Java泛型</title>
+        <link>/2016/02/19/shenruqianchu-java-generic.html</link>
+        <guid isPermaLink="true">/2016/02/19/shenruqianchu-java-generic.html</guid>
+        <pubDate>Fri, 19 Feb 2016 21:16:37 +0800</pubDate>
+        <description>&lt;h2 id=&quot;section&quot;&gt;泛型概念的提出（为什么需要泛型）？&lt;/h2&gt;
+
+&lt;p&gt;首先，我们看下下面这段简短的代码:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;public class GenericTest {
+
+    public static void main(String[] args) {
+        List list = new ArrayList();
+        list.add(&quot;qqyumidi&quot;);
+        list.add(&quot;corn&quot;);
+        list.add(100);
+
+        for (int i = 0; i &amp;lt; list.size(); i++) {
+            String name = (String) list.get(i); // 1
+            System.out.println(&quot;name:&quot; + name);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;定义了一个List类型的集合，先向其中加入了两个字符串类型的值，随后加入一个Integer类型的值。这是完全允许的，因为此时list默认的类型为Object类型。在之后的循环中，由于忘记了之前在list中也加入了Integer类型的值或其他编码原因，很容易出现类似于//1中的错误。因为编译阶段正常，而运行时会出现“java.lang.ClassCastException”异常。因此，导致此类错误编码过程中不易发现。&lt;/p&gt;
+
+&lt;p&gt;在如上的编码过程中，我们发现主要存在两个问题：&lt;/p&gt;
+
+&lt;p&gt;1.当我们将一个对象放入集合中，集合不会记住此对象的类型，当再次从集合中取出此对象时，改对象的编译类型变成了Object类型，但其运行时类型任然为其本身类型。&lt;/p&gt;
+
+&lt;p&gt;2.因此，//1处取出集合元素时需要人为的强制类型转化到具体的目标类型，且很容易出现“java.lang.ClassCastException”异常。&lt;/p&gt;
+
+&lt;p&gt;那么有没有什么办法可以使集合能够记住集合内元素各类型，且能够达到只要编译时不出现问题，运行时就不会出现“java.lang.ClassCastException”异常呢？答案就是使用泛型。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;什么是泛型？&lt;/h2&gt;
+
+&lt;p&gt;泛型，即“参数化类型”。一提到参数，最熟悉的就是定义方法时有形参，然后调用此方法时传递实参。那么参数化类型怎么理解呢？顾名思义，就是将类型由原来的具体的类型参数化，类似于方法中的变量参数，此时类型也定义成参数形式（可以称之为类型形参），然后在使用/调用时传入具体的类型（类型实参）。&lt;/p&gt;
+
+&lt;p&gt;看着好像有点复杂，首先我们看下上面那个例子采用泛型的写法。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;public class GenericTest {
+
+    public static void main(String[] args) {
+        /*
+        List list = new ArrayList();
+        list.add(&quot;qqyumidi&quot;);
+        list.add(&quot;corn&quot;);
+        list.add(100);
+        */
+
+        List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;();
+        list.add(&quot;qqyumidi&quot;);
+        list.add(&quot;corn&quot;);
+        //list.add(100);   // 1  提示编译错误
+
+        for (int i = 0; i &amp;lt; list.size(); i++) {
+            String name = list.get(i); // 2
+            System.out.println(&quot;name:&quot; + name);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;采用泛型写法后，在//1处想加入一个Integer类型的对象时会出现编译错误，通过List&lt;String&gt;，直接限定了list集合中只能含有String类型的元素，从而在//2处无须进行强制类型转换，因为此时，集合能够记住元素的类型信息，编译器已经能够确认它是String类型了。&lt;/String&gt;&lt;/p&gt;
+
+&lt;p&gt;结合上面的泛型定义，我们知道在List&lt;String&gt;中，String是类型实参，也就是说，相应的List接口中肯定含有类型形参。且get()方法的返回结果也直接是此形参类型（也就是对应的传入的类型实参）。下面就来看看List接口的的具体定义：&lt;/String&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;public interface List&amp;lt;E&amp;gt; extends Collection&amp;lt;E&amp;gt; {
+
+    int size();
+
+    boolean isEmpty();
+
+    boolean contains(Object o);
+
+    Iterator&amp;lt;E&amp;gt; iterator();
+
+    Object[] toArray();
+
+    &amp;lt;T&amp;gt; T[] toArray(T[] a);
+
+    boolean add(E e);
+
+    boolean remove(Object o);
+
+    boolean containsAll(Collection&amp;lt;?&amp;gt; c);
+
+    boolean addAll(Collection&amp;lt;? extends E&amp;gt; c);
+
+    boolean addAll(int index, Collection&amp;lt;? extends E&amp;gt; c);
+
+    boolean removeAll(Collection&amp;lt;?&amp;gt; c);
+
+    boolean retainAll(Collection&amp;lt;?&amp;gt; c);
+
+    void clear();
+
+    boolean equals(Object o);
+
+    int hashCode();
+
+    E get(int index);
+
+    E set(int index, E element);
+
+    void add(int index, E element);
+
+    E remove(int index);
+
+    int indexOf(Object o);
+
+    int lastIndexOf(Object o);
+
+    ListIterator&amp;lt;E&amp;gt; listIterator();
+
+    ListIterator&amp;lt;E&amp;gt; listIterator(int index);
+
+    List&amp;lt;E&amp;gt; subList(int fromIndex, int toIndex);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我们可以看到，在List接口中采用泛型化定义之后，&lt;E&gt;中的E表示类型形参，可以接收具体的类型实参，并且此接口定义中，凡是出现E的地方均表示相同的接受自外部的类型实参。
+自然的，ArrayList作为List接口的实现类，其定义形式是：&lt;/E&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;public class ArrayList&amp;lt;E&amp;gt; extends AbstractList&amp;lt;E&amp;gt; 
+        implements List&amp;lt;E&amp;gt;, RandomAccess, Cloneable, java.io.Serializable {
+
+    public boolean add(E e) {
+        ensureCapacityInternal(size + 1);  // Increments modCount!!
+        elementData[size++] = e;
+        return true;
+    }
+
+    public E get(int index) {
+        rangeCheck(index);
+        checkForComodification();
+        return ArrayList.this.elementData(offset + index);
+    }
+
+    //...省略掉其他具体的定义过程
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;由此，我们从源代码角度明白了为什么//1处加入Integer类型对象编译错误，且//2处get()到的类型直接就是String类型了。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;自定义泛型接口、泛型类和泛型方法&lt;/h2&gt;
+
+&lt;p&gt;从上面的内容中，大家已经明白了泛型的具体运作过程。也知道了接口、类和方法也都可以使用泛型去定义，以及相应的使用。是的，在具体使用时，可以分为泛型接口、泛型类和泛型方法。&lt;/p&gt;
+
+&lt;p&gt;自定义泛型接口、泛型类和泛型方法与上述Java源码中的List、ArrayList类似。如下，我们看一个最简单的泛型类和方法定义：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;public class GenericTest {
+
+    public static void main(String[] args) {
+
+        Box&amp;lt;String&amp;gt; name = new Box&amp;lt;String&amp;gt;(&quot;corn&quot;);
+        System.out.println(&quot;name:&quot; + name.getData());
+    }
+
+}
+
+class Box&amp;lt;T&amp;gt; {
+
+    private T data;
+
+    public Box() {
+
+    }
+
+    public Box(T data) {
+        this.data = data;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在泛型接口、泛型类和泛型方法的定义过程中，我们常见的如T、E、K、V等形式的参数常用于表示泛型形参，由于接收来自外部使用时候传入的类型实参。那么对于不同传入的类型实参，生成的相应对象实例的类型是不是一样的呢？&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;public class GenericTest {
+
+    public static void main(String[] args) {
+
+        Box&amp;lt;String&amp;gt; name = new Box&amp;lt;String&amp;gt;(&quot;corn&quot;);
+        Box&amp;lt;Integer&amp;gt; age = new Box&amp;lt;Integer&amp;gt;(712);
+
+        System.out.println(&quot;name class:&quot; + name.getClass());      // com.qqyumidi.Box
+        System.out.println(&quot;age class:&quot; + age.getClass());        // com.qqyumidi.Box
+        System.out.println(name.getClass() == age.getClass());    // true
+
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;由此，我们发现，在使用泛型类时，虽然传入了不同的泛型实参，但并没有真正意义上生成不同的类型，传入不同泛型实参的泛型类在内存上只有一个，即还是原来的最基本的类型（本实例中为Box），当然，在逻辑上我们可以理解成多个不同的泛型类型。&lt;/p&gt;
+
+&lt;p&gt;究其原因，在于Java中的泛型这一概念提出的目的，导致其只是作用于代码编译阶段，在编译过程中，对于正确检验泛型结果后，会将泛型的相关信息擦出，也就是说，成功编译过后的class文件中是不包含任何泛型信息的。泛型信息不会进入到运行时阶段。&lt;/p&gt;
+
+&lt;p&gt;对此总结成一句话：泛型类型在逻辑上看以看成是多个不同的类型，实际上都是相同的基本类型。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;类型通配符&lt;/h2&gt;
+
+&lt;p&gt;接着上面的结论，我们知道，Box&lt;Number&gt;和Box&lt;Integer&gt;实际上都是Box类型，现在需要继续探讨一个问题，那么在逻辑上，类似于Box&lt;Number&gt;和Box&lt;Integer&gt;是否可以看成具有父子关系的泛型类型呢？&lt;/Integer&gt;&lt;/Number&gt;&lt;/Integer&gt;&lt;/Number&gt;&lt;/p&gt;
+
+&lt;p&gt;为了弄清这个问题，我们继续看下下面这个例子:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;public class GenericTest {
+
+    public static void main(String[] args) {
+
+        Box&amp;lt;Number&amp;gt; name = new Box&amp;lt;Number&amp;gt;(99);
+        Box&amp;lt;Integer&amp;gt; age = new Box&amp;lt;Integer&amp;gt;(712);
+
+        getData(name);
+
+        //The method getData(Box&amp;lt;Number&amp;gt;) in the type GenericTest is 
+        //not applicable for the arguments (Box&amp;lt;Integer&amp;gt;)
+        getData(age);   // 1
+
+    }
+
+    public static void getData(Box&amp;lt;Number&amp;gt; data){
+        System.out.println(&quot;data :&quot; + data.getData());
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我们发现，在代码//1处出现了错误提示信息：The method getData(Box&lt;Number&gt;) in the t ype GenericTest is not applicable for the arguments (Box&lt;Integer&gt;)。显然，通过提示信息，我们知道Box&lt;Number&gt;在逻辑上不能视为Box&lt;Integer&gt;的父类。那么，原因何在呢？&lt;/Integer&gt;&lt;/Number&gt;&lt;/Integer&gt;&lt;/Number&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;public class GenericTest {
+
+    public static void main(String[] args) {
+
+        Box&amp;lt;Integer&amp;gt; a = new Box&amp;lt;Integer&amp;gt;(712);
+        Box&amp;lt;Number&amp;gt; b = a;  // 1
+        Box&amp;lt;Float&amp;gt; f = new Box&amp;lt;Float&amp;gt;(3.14f);
+        b.setData(f);        // 2
+
+    }
+
+    public static void getData(Box&amp;lt;Number&amp;gt; data) {
+        System.out.println(&quot;data :&quot; + data.getData());
+    }
+
+}
+
+class Box&amp;lt;T&amp;gt; {
+
+    private T data;
+
+    public Box() {
+
+    }
+
+    public Box(T data) {
+        setData(data);
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这个例子中，显然//1和//2处肯定会出现错误提示的。在此我们可以使用反证法来进行说明。&lt;/p&gt;
+
+&lt;p&gt;假设Box&lt;Number&gt;在逻辑上可以视为Box&lt;Integer&gt;的父类，那么//1和//2处将不会有错误提示了，那么问题就出来了，通过getData()方法取出数据时到底是什么类型呢？Integer? Float? 还是Number？且由于在编程过程中的顺序不可控性，导致在必要的时候必须要进行类型判断，且进行强制类型转换。显然，这与泛型的理念矛盾，因此，在逻辑上Box&lt;Number&gt;不能视为Box&lt;Integer&gt;的父类。&lt;/Integer&gt;&lt;/Number&gt;&lt;/Integer&gt;&lt;/Number&gt;&lt;/p&gt;
+
+&lt;p&gt;好，那我们回过头来继续看“类型通配符”中的第一个例子，我们知道其具体的错误提示的深层次原因了。那么如何解决呢？总部能再定义一个新的函数吧。这和Java中的多态理念显然是违背的，因此，我们需要一个在逻辑上可以用来表示同时是Box&lt;Integer&gt;和Box&lt;Number&gt;的父类的一个引用类型，由此，类型通配符应运而生。&lt;/Number&gt;&lt;/Integer&gt;&lt;/p&gt;
+
+&lt;p&gt;类型通配符一般是使用 ? 代替具体的类型实参。注意了，此处是类型实参，而不是类型形参！且Box&amp;lt;?&amp;gt;在逻辑上是Box&lt;Integer&gt;、Box&lt;Number&gt;...等所有Box&lt;具体类型实参&gt;的父类。由此，我们依然可以定义泛型方法，来完成此类需求。&lt;/具体类型实参&gt;&lt;/Number&gt;&lt;/Integer&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;public class GenericTest {
+
+    public static void main(String[] args) {
+
+        Box&amp;lt;String&amp;gt; name = new Box&amp;lt;String&amp;gt;(&quot;corn&quot;);
+        Box&amp;lt;Integer&amp;gt; age = new Box&amp;lt;Integer&amp;gt;(712);
+        Box&amp;lt;Number&amp;gt; number = new Box&amp;lt;Number&amp;gt;(314);
+
+        getData(name);
+        getData(age);
+        getData(number);
+    }
+
+    public static void getData(Box&amp;lt;?&amp;gt; data) {
+        System.out.println(&quot;data :&quot; + data.getData());
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;有时候，我们还可能听到类型通配符上限和类型通配符下限。具体有是怎么样的呢？&lt;/p&gt;
+
+&lt;p&gt;在上面的例子中，如果需要定义一个功能类似于getData()的方法，但对类型实参又有进一步的限制：只能是Number类及其子类。此时，需要用到类型通配符上限。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;public class GenericTest {
+
+    public static void main(String[] args) {
+
+        Box&amp;lt;String&amp;gt; name = new Box&amp;lt;String&amp;gt;(&quot;corn&quot;);
+        Box&amp;lt;Integer&amp;gt; age = new Box&amp;lt;Integer&amp;gt;(712);
+        Box&amp;lt;Number&amp;gt; number = new Box&amp;lt;Number&amp;gt;(314);
+
+        getData(name);
+        getData(age);
+        getData(number);
+
+        //getUpperNumberData(name); // 1
+        getUpperNumberData(age);    // 2
+        getUpperNumberData(number); // 3
+    }
+
+    public static void getData(Box&amp;lt;?&amp;gt; data) {
+        System.out.println(&quot;data :&quot; + data.getData());
+    }
+
+    public static void getUpperNumberData(Box&amp;lt;? extends Number&amp;gt; data){
+        System.out.println(&quot;data :&quot; + data.getData());
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;此时，显然，在代码//1处调用将出现错误提示，而//2 //3处调用正常。&lt;/p&gt;
+
+&lt;p&gt;类型通配符上限通过形如Box&amp;lt;? extends Number&amp;gt;形式定义，相对应的，类型通配符下限为Box&amp;lt;? super Number&amp;gt;形式，其含义与类型通配符上限正好相反，在此不作过多阐述了。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;话外篇&lt;/h2&gt;
+
+&lt;p&gt;本文中的例子主要是为了阐述泛型中的一些思想而简单举出的，并不一定有着实际的可用性。另外，一提到泛型，相信大家用到最多的就是在集合中，其实，在实际的编程过程中，自己可以使用泛型去简化开发，且能很好的保证代码质量。并且还要注意的一点是，Java中没有所谓的泛型数组一说。&lt;/p&gt;
+
+&lt;p&gt;对于泛型，最主要的还是需要理解其背后的思想和目的。&lt;/p&gt;
+
+&lt;p&gt;注：本文转载于 http://www.cnblogs.com/lwbqqyumidi/p/3837629.html&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>深入浅出IOC</title>
+        <link>/2016/02/19/shenruqianchu-ioc.html</link>
+        <guid isPermaLink="true">/2016/02/19/shenruqianchu-ioc.html</guid>
+        <pubDate>Fri, 19 Feb 2016 19:52:14 +0800</pubDate>
+        <description>&lt;p&gt;&lt;strong&gt;什么是IOC？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;IoC(Inversion of Control)，意为控制反转，不是什么技术，而是一种设计思想。Ioc意味着将你设计好的对象交给容器控制，而不是传统的在你的对象内部直接控制。&lt;/p&gt;
+
+&lt;p&gt;如何理解好Ioc呢？理解好Ioc的关键是要明确“谁控制谁，控制什么，为何是反转（有反转就应该有正转了），哪些方面反转了”，那我们来深入分析一下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;谁控制谁，控制什么：传统Java SE程序设计，我们直接在对象内部通过new进行创建对象，是程序主动去创建依赖对象；而IoC是有专门一个容器来创建这些对象，即由Ioc容器来控制对 象的创建；谁控制谁？当然是IoC 容器控制了对象；控制什么？那就是主要控制了外部资源获取（不只是对象包括比如文件等）。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;为何是反转，哪些方面反转了：有反转就有正转，传统应用程序是由我们自己在对象中主动控制去直接获取依赖对象，也就是正转；而反转则是由容器来帮忙创建及注入依赖对象；为何是反转？因为由容器帮我们查找及注入依赖对象，对象只是被动的接受依赖对象，所以是反转；哪些方面反转了？依赖对象的获取被反转了。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;下面举个例子说明说明是IOC：&lt;/p&gt;
+
+&lt;p&gt;假设我们要设计一个Girl和一个Boy类，其中Girl有kiss方法，即Girl想要Kiss一个Boy。那么，我们的问题是，Girl如何能够认识这个Boy？&lt;/p&gt;
+
+&lt;p&gt;在我们中国，常见的ＭＭ与GG的认识方式有以下几种:
+1.青梅竹马
+2.亲友介绍
+3.父母包办&lt;/p&gt;
+
+&lt;p&gt;那么哪一种才是最好呢？
+ 　　 
+1.青梅竹马：Girl从小就知道自己的Boy。
+&lt;code&gt;java
+public class Girl {　
+    void kiss(){ 
+　　　 Boy boy = new Boy(); 
+　　} 
+} 
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;然而从开始就创建的Boy缺点就是无法在更换。并且要负责Boy的整个生命周期。如果我们的Girl想要换一个怎么办？（笔者严重不支持Girl经常更换Boy）&lt;/p&gt;
+
+&lt;p&gt;2.亲友介绍：由中间人负责提供Boy来见面
+&lt;code&gt;java
+public class Girl { 
+　 void kiss(){ 
+　　　 Boy boy = BoyFactory.createBoy();　　　
+　 } 
+}
+&lt;/code&gt;
+亲友介绍，固然是好。如果不满意，尽管另外换一个好了。但是，亲友BoyFactory经常是以Singleton的形式出现，不然就是，存在于Globals，无处不在，无处不能。实在是太繁琐了一点，不够灵活。我为什么一定要这个亲友掺和进来呢？为什么一定要付给她介绍费呢？万一最好的朋友爱上了我的男朋友呢？&lt;/p&gt;
+
+&lt;p&gt;3.父母包办：一切交给父母，自己不用费吹灰之力，只需要等着Kiss就好了。
+&lt;code&gt;java
+public class Girl { 
+　  void kiss(Boy boy){ 
+　　　 // kiss boy　
+　　　boy.kiss(); 
+　　} 
+}
+&lt;/code&gt;
+Well，这是对Girl最好的方法，只要想办法贿赂了Girl的父母，并把Boy交给他。那么我们就可以轻松的和Girl来Kiss了。看来几千年传统的父母之命还真是有用哦。至少Boy和Girl不用自己瞎忙乎了。&lt;/p&gt;
+
+&lt;p&gt;这就是IOC，将对象的创建和获取提取到外部。由外部容器提供需要的组件。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IoC能做什么&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;IoC 不是一种技术，只是一种思想，一个重要的面向对象编程的法则，它能指导我们如何设计出松耦合、更优良的程序。传统应用程序都是由我们在类内部主动创建依赖对象，从而导致类与类之间高耦合，难于测试；有了IoC容器后，把创建和查找依赖对象的控制权交给了容器，由容器进行注入组合对象，所以对象与对象之间是 松散耦合，这样也方便测试，利于功能复用，更重要的是使得程序的整个体系结构变得非常灵活。&lt;/p&gt;
+
+&lt;p&gt;其实IoC对编程带来的最大改变不是从代码上，而是从思想上，发生了“主从换位”的变化。应用程序原本是老大，要获取什么资源都是主动出击，但是在IoC/DI思想中，应用程序就变成被动的了，被动的等待IoC容器来创建并注入它所需要的资源了。&lt;/p&gt;
+
+&lt;p&gt;IoC很好的体现了面向对象设计法则之一—— 好莱坞法则：“别找我们，我们找你”；即由IoC容器帮对象找相应的依赖对象并注入，而不是由对象主动去找。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IoC和DI&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;DI—Dependency Injection，即“依赖注入”：组件之间依赖关系由容器在运行期决定，形象的说，即由容器动态的将某个依赖关系注入到组件之中。依赖注入的目的并非为软件系统带来更多功能，而是为了提升组件重用的频率，并为系统搭建一个灵活、可扩展的平台。通过依赖注入机制，我们只需要通过简单的配置，而无需任何代码就可指定目标需要的资源，完成自身的业务逻辑，而不需要关心具体的资源来自何处，由谁实现。&lt;/p&gt;
+
+&lt;p&gt;理解DI的关键是：“谁依赖谁，为什么需要依赖，谁注入谁，注入了什么”，那我们来深入分析一下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;谁依赖于谁：当然是应用程序依赖于IoC容器；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;为什么需要依赖：应用程序需要IoC容器来提供对象需要的外部资源；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;谁注入谁：很明显是IoC容器注入应用程序某个对象，应用程序依赖的对象；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;注入了什么：就是注入某个对象所需要的外部资源（包括对象、资源、常量数据）。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;IoC和DI由什么关系呢？其实它们是同一个概念的不同角度描述，由于控制反转概念比较含糊（可能只是理解为容器控制对象这一个层面，很难让人想到谁来维护对象关系），所以2004年大师级人物Martin Fowler又给出了一个新的名字：“依赖注入”，相对IoC 而言，“依赖注入”明确描述了“被注入对象依赖IoC容器配置依赖对象”。&lt;/p&gt;
+
+&lt;p&gt;对于Spring Ioc这个核心概念，我相信每一个学习Spring的人都会有自己的理解。这种概念上的理解没有绝对的标准答案，仁者见仁智者见智。 理解了IoC和DI的概念后，一切都将变得简单明了，剩下的工作只是在框架中堆积木而已。&lt;/p&gt;
+
+&lt;p&gt;注：转载于 https://github.com/biezhi/java-bible/blob/master/ioc/1.concept.md&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>『原创』当我们说出故乡时它早已不存在</title>
+        <link>/2016/02/11/guxiang.html</link>
+        <guid isPermaLink="true">/2016/02/11/guxiang.html</guid>
+        <pubDate>Thu, 11 Feb 2016 02:17:17 +0800</pubDate>
+        <description>&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/2016021010035974-e1461559129995.jpg&quot; alt=&quot;IMG_3023&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt;如果有，那一定是在10多年前家乡小河边，在炎炎夏日灼烧后我跳进小河中戏水后眼角沾着水珠在夕阳光线散射的五彩斑斓中。&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;1&lt;/p&gt;
+
+&lt;p&gt;年前1月16号就已经放假了，当然可以回家，当然想回家。但是内心又觉得回家去干嘛呢，姐姐早已结婚，上班。母亲，上班。父亲，上班。家乡人家的屋子随着城镇化进程早已被拆的七零八落。于是乎，在学校又坚持做了2个星期的工作，然后带着一点点希许踏上回家漫漫路。回家后才发现记忆中的一切都被摧毁，如果说还剩下什么，大概只有儿时种下的几株树还是挺拔地屹立着，其中一棵记忆中一直很弱小，小时候的我每每担心它会死掉而不愿将秋千系在它身上的小小树，如今却也长成了几十米高，当我看到后却是有一种惊讶而又欣慰的感情，无法言说。老一辈的孩子王已经长大结婚，曾经一起玩弹珠，跳皮筋，丢沙包，打雪仗，下河捉虾，掏螃蟹洞，上树掏鸟窝的小伙伴们你们又在哪里？我分外想念，但却又不想去见你们。我怕我无法融入到你们的话题中。你们说“你有女朋友了吗？你女朋宇哪里人？你现在在做什么工作？打算什么时候结婚？啊，你还在读书啊？读这么多有什么用啊？告诉你，前年东头的王牙子生了个大胖娃哦……”你们所热衷的话题，我却是无法参与其中。我想去试着感受你们的快乐，却是无法成功。一闭眼就能想到自己未来10年，20年，30年，甚至更多时间的以后的生活的样子，太可怕了，我不敢去想。都说人生如戏，可是精彩的戏不应当是步步惊心，充满变数，吊足观众胃口却又让观众猜不到结局的么？难道不是吗？可现在呢，你们这哪里是戏，或者说即使是戏，也是部坏戏，是一部从头到尾的烂戏，因为看到了开头就早已知道结尾，平淡的没有一丝涟漪。早早结婚生子，担心孩子的小学，初中，高中，大学，孩子结婚，生子，担心……人生如戏，这戏不应该这么平淡呀。曾经的好男儿啊，岁月竟如此可怕，将你们的棱角磨的这般平滑。更让我伤心的是，不知何时，咱们早已没有后辈去继承我们的“光辉历史”了，他们都在补习在舞蹈班都在pad在电脑，再也没人给我们的小兔子喂菜，踢几脚还在睡懒觉的小刺猬，或是守在高压线下等着傻乎乎的野鸡触电，然后饱餐一顿烧烤大餐。真的，我们是最后的一代，在田地里长大的最后一代。真是令人唏嘘不已。&lt;/p&gt;
+
+&lt;p&gt;2&lt;/p&gt;
+
+&lt;p&gt;原本，说起故乡应当是令人感到宽慰而感动，无需表演，不用伪装，一片真心，心的归属之地。可是我回到家都是如此情形。“TR，你以后去哪找工作啊？”“我想去大城市，工作机会多，而且我们专业在WH没什么公司，不好找的。”“什么？WH怎么可能没你的工作！我看你就是眼光高，读书怎么了，我们厂里大学生挣的还没我们多”“TR，我跟你讲现在的女孩子都特别傲气，现在不找就找不到了”，“你带回来的这个还蛮好看的，是真的吗？下次能再多带些嘛”，“你们现在读书都把脑子读坏了吧，这个东西都不会”，诸如此类，很多很多。不是特别亲的亲戚，但都是认识的，我听完都不知如何去接话，只是呵呵一笑了之。她们真的不是坏心，但说出来的话却让我气不知从何出，只能抑着。孩提时我所认为的好伯伯们好阿姨们啊，虽然不是你们的错，却让我认清了回忆和现状的巨大差别。夏虫不可语于冰，井蛙不可语于海。古人诚不欺于我。&lt;/p&gt;
+
+&lt;p&gt;3&lt;/p&gt;
+
+&lt;p&gt;小时候在村里长大，在田里地里播种，河里捉鱼摸虾，掏鸟窝，逮兔子，捉野鸡，都是如此稀松平常，可这个画面注定只能封存在记忆中了，不愉快却又很无力。为了发展，为了经济，我不知这种破坏或是拆迁的举措是否真的值得。但现实是。真的这样做了。至于我，希望人生这部戏能够精彩，能够耐人寻味，能够引人入胜，而不是猜中开头即是结局这般。而对于穷苦家的孩子来说，也只有去读书了。所以，踏上求学之路，曾经做上30多个小时的绿皮火车，那滋味我至今难忘；在火车站熬夜，辗转多地，更换多种交通方式；一个人在陌生的城市问路；一个人在冬天的冷风中拖着行李瑟瑟发抖；太多太多。求学真的如此容易么？求学并不容易啊。我的一些天高地远的小伙伴们回家，求学的经历简直就是一部励志电影，每每让我打心里佩服，愿意竖起10个大拇指加脚趾的那种。至于现在，因为一个人所经历的事情带来的影响，很多事都不再怕了，什么都不介意了，微微笑就可以了，好事或事坏事，寂寞或是孤单。一个人在奶茶店认真的写作，一个人在图书馆读着被你们说做少女心的简爱，一个人在午夜时间的实验室霹雳吧啦的敲代码，在海边沙滩上不顾他人眼光用树枝写下新年祝福，买了2张票去邀请人看电影被拒后一个人做着两个座位欣赏电影也是怡然自得，然后一个人打着麻药就做了人生的第一次手术，找一天时间躲在宿舍看一天感人电影然后哭得稀里哗啦第二天和别人聊天说自己看什么电影都不哭，一个人去到陌生城市请教陌生的人…….你问我，你怕么？我怕，我怕极了，我怕我考虑的多了，就错过机会了，我怕时间不等人，我怕若是自己一时的不如意而落下心结。我怕极了所有的一切。可是，正因为怕我才要去做，去克服去战胜自己，这种经历简直美妙。你试试就知道了。&lt;/p&gt;
+
+&lt;p&gt;4&lt;/p&gt;
+
+&lt;p&gt;现在的我早已不是过去的我了，可现在的我还是过去的我。如果你遇到我，和我讨论故乡，其实我告诉你的已经不是事实不是真相，但是，请你记住，我告诉你的关于故乡的样子，它就是故乡本来的样子。&lt;/p&gt;
+
+&lt;p&gt;当我们说出远方，远方已是虚妄。
+当我们说出故乡，故乡已不再存在。&lt;/p&gt;
+
+&lt;p&gt;不是年味越来越淡了，虽然极不愿意承认，但坦白的说，其实是因为我们－－长大了。
+人如尘埃，渺渺茫茫，珍惜一切，不沉浸在逝去的过去，只要微笑就可以了。而在心里最柔软的地方，它仍旧是我的故乡所在。&lt;/p&gt;
+
+&lt;center&gt;&lt;span style=&quot;color: #00ccff;&quot;&gt;心里若有了薄凉，如此，不再无病呻吟，兀自惆怅&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 欢迎来到小情绪，&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 访问tinymood.com阅读、聆听、讨论，一起相拥文字的温度...&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; 新浪微博[@_NoThankYou](http://weibo.com/u/1662536394)，分享你的故事以及更多&lt;/span&gt;
+&lt;span style=&quot;color: #00ccff;&quot;&gt; ——TinyMood.COM&lt;/span&gt;&lt;/center&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>6种单例模式的实现以及double check的剖析</title>
+        <link>/2016/02/07/singleton-comparasion.html</link>
+        <guid isPermaLink="true">/2016/02/07/singleton-comparasion.html</guid>
+        <pubDate>Sun, 07 Feb 2016 06:40:31 +0800</pubDate>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/Lemonjing/TinyMood/blob/master/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/singleton.md&quot;&gt;点击阅读Github Markdown原文&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.tinymood.com/wp-content/uploads/2016/02/2016022914301353.png&quot; alt=&quot;design&quot; /&gt;
+&lt;strong&gt;如何正确地写出单例模式&lt;/strong&gt;
+单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;1.懒加载 线程不安全&lt;/h2&gt;
+
+&lt;p&gt;当被问到要实现一个单例模式时，很多人的第一反应是写出如下的代码，包括教科书上也是这样教我们的。&lt;/p&gt;
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;public class Singleton {
+    private static Singleton uniqueInstance;
+    private Singleton (){}
+
+    public static Singleton getInstance() {
+     if (uniqueInstance == null) {
+         uniqueInstance = new Singleton();
+     }
+     return uniqueInstance;
+    }
+}
+```
+这段代码简单明了，而且使用了懒加载模式，但是却存在致命的问题。当有多个线程并行调用 getInstance() 的时候，就会创建多个实例。也就是说在多线程下不能正常工作。
+
+## 2.懒加载 线程安全
+
+为了解决上面的问题，最简单的方法是将整个 getInstance() 方法设为同步（synchronized）。
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;public static synchronized Singleton getInstance() {
+    if (uniqueInstance == null) {
+        uniqueInstance = new Singleton();
+    }
+    return uniqueInstance;
+}
+```
+虽然做到了线程安全，并且解决了多实例的问题，但是它并不高效。因为在任何时候只能有一个线程调用 getInstance() 方法。但是同步操作只需要在第一次调用时才被需要，即第一次创建单例实例对象时。这就引出了双重检验锁。
+
+## 3.双重检查加锁 线程安全
+
+双重检验加锁模式（double checked locking pattern），是一种使用同步块加锁的方法。程序员称其为双重检查锁，因为会有两次检查 uniqueInstance == null，一次是在同步块外，一次是在同步块内。为什么在同步块内还要再检验一次？因为可能会有多个线程一起进入同步块外的 if，如果在同步块内不进行二次检验的话就会生成多个实例了。
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;public static Singleton getSingleton() {
+    if (uniqueInstance == null) {                         //Single Checked
+        synchronized (Singleton.class) {
+            if (uniqueInstance == null) {                 //Double Checked
+                uniqueInstance = new Singleton();
+            }
+        }
+    }
+    return uniqueInstance;
+}
+```
+这段代码看起来很完美，很可惜，它是有问题。主要在于uniqueInstance = new Singleton()这句，这并非是一个原子操作，事实上在 JVM 中这句话大概做了下面 3 件事情。
+
+给 uniqueInstance 分配内存
+调用 Singleton 的构造函数来初始化成员变量
+将uniqueInstance对象指向分配的内存空间（执行完这步 uniqueInstance 就为非 null 了）
+但是在 JVM 的即时编译器中存在指令重排序的优化。也就是说上面的第二步和第三步的顺序是不能保证的，最终的执行顺序可能是 1-2-3 也可能是 1-3-2。如果是后者，则在 3 执行完毕、2 未执行之前，被线程二抢占了，这时uniqueInstance已经是非 null 了（但却没有初始化），所以线程二会直接返回 uniqueInstance，然后使用，然后顺理成章地报错。
+
+我们只需要将 uniqueInstance 变量声明成 volatile 就可以了。
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;public class Singleton {
+    private volatile static Singleton uniqueInstance; //声明成 volatile
+    private Singleton (){}
+
+    public static Singleton getSingleton() {
+        if (uniqueInstance == null) {                         
+            synchronized (Singleton.class) {
+                if (uniqueInstance == null) {       
+                    uniqueInstance = new Singleton();
+                }
+            }
+        }
+        return uniqueInstance;
+    }
+}
+```
+有些人认为使用 volatile 的原因是可见性，也就是可以保证线程在本地不会存有 uniqueInstance 的副本，每次都是去主内存中读取。但其实是不对的。使用 volatile 的主要原因是其另一个特性：禁止指令重排序优化。也就是说，在 volatile 变量的赋值操作后面会有一个内存屏障（生成的汇编代码上），读操作不会被重排序到内存屏障之前。比如上面的例子，取操作必须在执行完 1-2-3 之后或者 1-3-2 之后，不存在执行到 1-3 然后取到值的情况。从「先行发生原则」的角度理解的话，就是对于一个 volatile 变量的写操作都先行发生于后面对这个变量的读操作（这里的“后面”是时间上的先后顺序）。
+
+但是特别注意在 Java 5 以前的版本使用了 volatile 的双检锁还是有问题的。其原因是 Java 5 以前的 JMM （Java 内存模型）是存在缺陷的，即时将变量声明成 volatile 也不能完全避免重排序，主要是 volatile 变量前后的代码仍然存在重排序问题。这个 volatile 屏蔽重排序的问题在 Java 5 中才得以修复，所以在这之后才可以放心使用 volatile。
+
+相信你不会喜欢这种复杂又隐含问题的方式，当然我们有更好的实现线程安全的单例模式的办法。
+
+![u=3016183366,3592358855&amp;amp;fm=21&amp;amp;gp=0](http://www.tinymood.com/wp-content/uploads/2016/02/2016020614503852.jpg)
+
+## 4.急加载 static final field 线程安全
+
+这种方法非常简单，因为单例的实例被声明成 static 和 final 变量了，在第一次加载类到内存中时就会初始化，所以创建实例本身是线程安全的。
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;public class Singleton{
+    //类加载时就初始化
+    private static final Singleton uniqueInstance = new Singleton();
+
+    private Singleton(){}
+
+    public static Singleton getInstance(){
+        return uniqueInstance;
+    }
+}
+```
+这种写法如果完美的话，就没必要在啰嗦那么多双检锁的问题了。缺点是它不是一种懒加载模式（lazy initialization），单例会在加载类后一开始就被初始化，即使客户端没有调用 getInstance()方法。饿汉式的创建方式在一些场景中将无法使用：譬如 Singleton 实例的创建是依赖参数或者配置文件的，在 getInstance() 之前必须调用某个方法设置参数给它，那样这种单例写法就无法使用了。
+
+## 5.静态内部类 static nested class 线程安全
+
+我比较倾向于使用静态内部类的方法，这种方法也是《Effective Java》上所推荐的。
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;public class Singleton {  
+    private static class SingletonHolder {  
+        private static final Singleton uniqueInstance = new Singleton();  
+    }  
+    private Singleton (){}  
+    public static final Singleton getInstance() {  
+        return SingletonHolder.uniqueInstance; 
+    }  
+}
+```
+这种写法仍然使用JVM本身机制保证了线程安全问题；由于 SingletonHolder 是私有的，除了 getInstance() 之外没有办法访问它，因此它是懒加载的；同时读取实例的时候不会进行同步，没有性能缺陷；也不依赖 JDK 版本。
+
+## 6.枚举 Enum 线程安全
+
+用枚举写单例实在太简单了！这也是它最大的优点。下面这段代码就是声明枚举实例的通常做法。
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;public enum EasySingleton{
+    INSTANCE;
+}
+```
+我们可以通过EasySingleton.INSTANCE来访问实例，这比调用getInstance()方法简单多了。创建枚举默认就是线程安全的，所以不需要担心double checked locking，而且还能防止反序列化导致重新创建新的对象。但是还是很少看到有人这样写，可能是因为不太熟悉吧。
+
+**总结**
+一般来说，单例模式有五种写法：懒加载、急加载、双重检查加锁锁、静态内部类、枚举。上述所说都是线程安全的实现，文章开头给出的第一种方法不算正确的写法。
+
+就我个人而言，一般情况下直接使用急加载就好了，如果明确要求要懒加载（lazy initialization）会倾向于使用静态内部类，如果涉及到反序列化创建对象时会试着使用枚举的方式来实现单例。
+
+**代码打包**
+完整代码 [Singleton](https://github.com/Lemonjing/designpattern/tree/master/src/com/tinymood/designpattern/singleton)
+
+**Read More**
+
+[Double Checked Locking on Singleton Class in Java](http://javarevisited.blogspot.sg/2014/05/double-checked-locking-on-singleton-in-java.html)
+[http://javarevisited.blogspot.sg/2012/07/why-enum-singleton-are-better-in-java.html](http://javarevisited.blogspot.sg/2012/07/why-enum-singleton-are-better-in-java.html)
+[How to create thread safe Singleton in Java](http://javarevisited.blogspot.com/2012/12/how-to-create-thread-safe-singleton-in-java-example.html)
+[10 Singleton Pattern Interview questions in Java](http://javarevisited.blogspot.com/2011/03/10-interview-questions-on-singleton.html)
+&lt;/pre&gt;&lt;/pre&gt;&lt;/pre&gt;&lt;/pre&gt;&lt;/pre&gt;&lt;/pre&gt;&lt;/pre&gt;
+</description>
+      </item>
+    
+  </channel>
+</rss>
