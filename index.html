@@ -39,7 +39,8 @@ layout: default
 			    <a class="pjaxlink"  href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="x1" style="margin-right:5px;"><i class="glyphicon glyphicon-chevron-left"></i></span></a>
 			  {% endif %}
 			  
-    		  {% if curr_page_num < 3 or curr_page_num == 3 %}
+			 {% assign curr_page_num = paginator.page %} 
+    			 {% if curr_page_num < 3 or curr_page_num == 3 %}
         			{% assign startPage = 1 %}
         			{% assign endPage = 5 %}
       		  {% else if curr_page_num > paginator.total_pages|minus:3 or curr_page_num == paginator.total_pages|minus:3%}
