@@ -6,7 +6,7 @@ category: 技术
 date: 2016-04-02 14:07:23
 ---
 
-![offer](http://www.tinymood.com/wp-content/uploads/2016/04/201604020606048.png)
+![offer](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2016/04/201604020606048.png)
 
 ## 蘑菇街1面
 

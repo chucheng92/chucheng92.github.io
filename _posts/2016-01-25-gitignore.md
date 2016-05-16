@@ -7,7 +7,8 @@ date: 2016-01-25 15:48:09
 ---
 
 <center><span style="color: red;">本文转载于梧桐树下http://www.pfeng.org/archives/840，站长已测试该解决办法。</span></center>
-![github1](http://www.tinymood.com/wp-content/uploads/2016/01/2016022914353610.png)
+
+![github1](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2016/01/2016022914353610.png)
 
 在git中如果想忽略掉某个文件，不让这个文件提交到版本库中，可以使用修改根目录中 .gitignore 文件的方法（如无，则需自己手工建立此文件）。这个文件每一行保存了一个匹配的规则例如：
 
