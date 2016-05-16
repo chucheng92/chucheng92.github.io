@@ -8,14 +8,12 @@ date: 2015-08-17 20:55:27
 
 ## 广度优先搜索（BFS）+路径打印 
 
-利用队列实现深度优先搜索 。
-考察顶点2作为源点s的深度优先搜索。
+利用队列实现深度优先搜索 。考察顶点2作为源点s的深度优先搜索。
 
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/bfs1.png "茶馆、岛、慵懒的猫...都是美好的时光...")
 
-输入data.txt 邻接矩阵存储
+输入data.txt 邻接矩阵存储gaph G
 
-gaph G
 ```bash
 0 1 0 0 0 0 0 0
 1 0 1 0 0 0 0 0
@@ -28,6 +26,7 @@ gaph G
 ```
 
 程序：
+
 ```java
 /*
  * @file				BFS.cpp
@@ -134,5 +133,6 @@ int main()
 	return 0;
 }
 ```
+
 **程序输出结果：**
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/bfs2.png "茶馆、岛、慵懒的猫...都是美好的时光...")
