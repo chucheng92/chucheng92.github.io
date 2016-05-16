@@ -6,8 +6,8 @@ category: 算法
 date: 2015-08-12 21:34:56
 ---
 
-![](http://7xlkoc.com1.z0.glb.clouddn.com/alrorithm.jpg "茶馆、岛、慵懒的猫...都是美好的时光...")
 **问题描述：0-1背包问题**
+
 ```java
 /*
  * @file				DPKnapsack.cpp

@@ -6,8 +6,6 @@ category: 技术
 date: 2016-02-19 13:16:37
 ---
 
-![](http://7xlkoc.com1.z0.glb.clouddn.com/java2.jpg)
-
 ## 泛型概念的提出（为什么需要泛型）？
 
 首先，我们看下下面这段简短的代码:

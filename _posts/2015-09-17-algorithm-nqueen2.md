@@ -7,7 +7,7 @@ date: 2015-09-17 21:30:11
 ---
 
 **问题描述：经典N皇后问题**
-![](http://7xlkoc.com1.z0.glb.clouddn.com/coding3.jpg "茶馆、岛、慵懒的猫...都是美好的时光...")
+
 ```java
 /*
 * @file				IterativeBacktrackNqueens.cpp

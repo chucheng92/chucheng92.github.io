@@ -17,4 +17,3 @@ date: 2015-09-13 19:10:11
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/9-13-09.jpg "茶馆、岛、慵懒的猫...都是美好的时光...")
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/9-13-10.jpg "茶馆、岛、慵懒的猫...都是美好的时光...")
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/9-13-11.jpg "茶馆、岛、慵懒的猫...都是美好的时光...")
-![](http://7xlkoc.com1.z0.glb.clouddn.com/9-13-qrcode.jpg "茶馆、岛、慵懒的猫...都是美好的时光...")

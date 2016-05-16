@@ -7,8 +7,9 @@ date: 2015-08-12 21:14:42
 ---
 
 **求解：(部分背包 物品可分) **
-![](http://7xlkoc.com1.z0.glb.clouddn.com/coding6.jpg "茶馆、岛、慵懒的猫...都是美好的时光...")
+
 **策略1：** 每次取最大价值的
+
 ```java
 /**
 * @file				Greedy1Knapsack.cpp

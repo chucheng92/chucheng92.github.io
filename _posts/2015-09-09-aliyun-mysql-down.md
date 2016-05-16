@@ -6,10 +6,9 @@ category: 技术
 date: 2015-09-09 21:06:21
 ---
 
-![数据库](http://7xlkoc.com1.z0.glb.clouddn.com/database.png) 
 <font color="red">**<center>本文部分内容转载于网络，站长已阅读并测试，保证其正确性。Update:2015-9-14</center>**</font>
 
-##  解决方法
+## 解决方法
 
 **1、降低数据库 InnoDB 引擎的缓冲区大小**
 

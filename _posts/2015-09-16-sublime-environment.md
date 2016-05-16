@@ -8,7 +8,6 @@ date: 2015-09-16 16:21:35
 
 Sublime Text3 是一款非常优秀的跨平台编辑器，在此简单记录下我的Sublime Text3的配置。
 
-![](http://7xlkoc.com1.z0.glb.clouddn.com/java.jpg "茶馆、岛、慵懒的猫...都是美好的时光...")
 **安装**
 
 首先打开SublimeText官网！http://www.sublimetext.com 
