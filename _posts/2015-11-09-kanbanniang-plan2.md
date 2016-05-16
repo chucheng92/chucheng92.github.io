@@ -9,6 +9,7 @@ date: 2015-11-09 15:12:49
 **转载自萝莉社www.myhloli.com**
 
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/hitokoto.jpg "茶馆、岛、慵懒的猫...都是美好的时光...")
+
 浮动小人这个小挂件，可以说叫博客宠物，时间久了，就越来越喜欢，每次吐槽都是同一句话，即使再喜欢，也终究会腻的。
 从lwl的博客看到一款有趣的api-一言api，感觉很有意思，于是想着怎么把一言的api加到小人无聊的吐槽中去。<span style="color: #3366ff;">效果见本站浮动小人，可以播报天气哦~</span>
 **[一言api介绍](http://hitokoto.us/api.html)**
@@ -38,7 +39,7 @@ date: 2015-11-09 15:12:49
 
 至于为什么失败，看下面两张图大家应该就懂了
 
-![110915_0710_2a2.png](http://www.tinymood.com/wp-content/uploads/2015/11/110915_0710_2a2.png)
+![110915_0710_2a2.png](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2015/11/110915_0710_2a2.png)
 
 因为iframe框架的宽高提前设定好了，如果字少的话没什么，字如果多了的话会超出框架 囧
 
@@ -62,7 +63,7 @@ date: 2015-11-09 15:12:49
 
 因为字号调小了，所以在浮动小人上看起来效果还过得去，这一版也是我感到比较满意的一个版本。
 
-![110915_0710_2a3.png](http://www.tinymood.com/wp-content/uploads/2015/11/110915_0710_2a3.png)
+![110915_0710_2a3.png](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2015/11/110915_0710_2a3.png)
 
 从上图看的话，字超过两行的情况还是比较美观的，字数在一行左右会比较尴尬，留白太多。于是便有了第五次尝试
 
@@ -84,6 +85,7 @@ http://blog.lwl12.com/read/hitokoto-api.html
 其实我当时把排行榜前面两页的网站源码都看了个遍，可用性高的代码还真没找到，能看到fmoe也是缘分未尽。
 
 我把获取一言和输出一言的代码贴一下：
+
 ```java
 <script>// <![CDATA[
             //初始化一言
@@ -114,11 +116,15 @@ http://blog.lwl12.com/read/hitokoto-api.html
 然后再在小人的js文件中加入输出语句，以实现小人自动刷新输出的一言。
 
 js中输出语句
+
 ```java    
 msgs = [$("#hitokoto").text()];
 ```
+
 想到这里我心中暗喜。于是马上去做了，做完以后感觉效果出乎意料的好，能够达到我最初的要求了。
-![110915_0710_2a6.png](http://www.tinymood.com/wp-content/uploads/2015/11/110915_0710_2a6.png)
+
+![110915_0710_2a6.png](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2015/11/110915_0710_2a6.png)
+
 从上面图里可以看出，当字数较少，适中与过多时都可以正确显示，且气泡大小可以适配文本长度。
 从原理上来看，要想实现每次小人输出新的一言时文本不同，只需在上述函数中将获取的间隔改到比小人刷新输出的间隔更短即可。
 虽然可能会有多余的请求，不过在通常意义上来说效果能达到就好。优化效率是以后再做的事情。
@@ -134,7 +140,9 @@ msgs = [$("#hitokoto").text()];
 最终修改效果见本博客。并提供修改过的js下载，包含天气api与一言api和移动，点击，刷新间隔的修改，原代码几乎没有删除，只是注释
 
 掉了，如果有不喜欢我修改的效果的，可以自行恢复。
+
 [spig.js下载](http://cdn.myhloli.com/wp-content/uploads/2015/02/spig.js)
+
 (单击直接打开的话可以右键另存为 :redface: )
 
 ## 最后的最后

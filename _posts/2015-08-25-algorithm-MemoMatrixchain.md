@@ -6,9 +6,9 @@ category: 算法
 date: 2015-08-25 21:01:13
 ---
 
-## 矩阵连乘 备忘录法
+### 矩阵连乘 备忘录法
 
- ![](http://7xlkoc.com1.z0.glb.clouddn.com/matrix.png "茶馆、岛、慵懒的猫...都是美好的时光...")
+![](http://7xlkoc.com1.z0.glb.clouddn.com/matrix.png "茶馆、岛、慵懒的猫...都是美好的时光...")
 
 **矩阵连乘**
 

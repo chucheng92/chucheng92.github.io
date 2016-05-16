@@ -6,8 +6,6 @@ category: 诗
 date: 2015-09-13 19:26:25
 ---
 
-**<center>收录 2015-05-28 仓央嘉措 小情绪</center>**
-
 <center>前世，
 
 我为青莲，你为梵音，
@@ -133,4 +131,7 @@ date: 2015-09-13 19:26:25
 这，何尝不是一种深深的缘？
 
 ......</center>
-![imgdes](http://www.tinymood.com/wp-content/uploads/2015/09/20150913095917100.jpg)
+
+![imgdes](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2015/09/20150913095917100.jpg)
+
+--仓央嘉措
