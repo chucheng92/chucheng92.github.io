@@ -7,7 +7,8 @@ date: 2015-11-26 23:08:20
 description: JavaWeb
 ---
 
-<font color="red">**<center>本文部分内容转载于网络，站长已阅读并测试，保证其正确性。Update:2015-11-4</center>**</font>
+<font color="red"><center>本文部分内容转载于网络，站长已阅读并测试，保证其正确性。Update:2015-11-4</center></font>
+
 <span style="color:red;">**一 步骤**</span>
 1、启动一个WEB项目的时候，WEB容器会去读取它的配置文件web.xml，读取```java<context-param></context-param>和<listener></listener>```两个结点。
 
