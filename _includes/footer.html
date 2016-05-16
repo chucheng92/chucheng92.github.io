@@ -32,7 +32,7 @@
         <p class="text">{{ site.description }}</p>
       </div>
     </div>
-    <div><SPAN id=span_dt_dt></SPAN></div>
+    <div style="margin:0 auto"><SPAN id=span_dt_dt></SPAN></div>
     <div class="center sitedesc">
     	Powered by <a href ="http://jekyllrb.com/">Jekyll</a>  |  © 2016 Saber  |  Hosted on <a href="https://github.com/{{ site.author.github_username }}/{{ site.author.github_username }}.github.io"> Github</a>
     </div>
@@ -55,7 +55,7 @@ hrsold=Math.floor(e_hrsold);
 e_minsold=(e_hrsold-hrsold)*60;
 minsold=Math.floor((e_hrsold-hrsold)*60);
 seconds=Math.floor((e_minsold-minsold)*60);
-span_dt_dt.innerHTML="本站已萌萌哒运行<br/>"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+span_dt_dt.innerHTML="本站已萌萌哒运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
 }show_date_time();</SCRIPT>
 
   <script type="text/javascript">
