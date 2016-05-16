@@ -21,13 +21,17 @@ IoC(Inversion of Control)，意为控制反转，不是什么技术，而是一�
 假设我们要设计一个Girl和一个Boy类，其中Girl有kiss方法，即Girl想要Kiss一个Boy。那么，我们的问题是，Girl如何能够认识这个Boy？
 
 在我们中国，常见的ＭＭ与GG的认识方式有以下几种:
+
+```sh
 1.青梅竹马
 2.亲友介绍
 3.父母包办
+```
 
 那么哪一种才是最好呢？
  　　 
 1.青梅竹马：Girl从小就知道自己的Boy。
+
 ```java
 public class Girl {　
     void kiss(){ 
@@ -39,6 +43,7 @@ public class Girl {　
 然而从开始就创建的Boy缺点就是无法在更换。并且要负责Boy的整个生命周期。如果我们的Girl想要换一个怎么办？（笔者严重不支持Girl经常更换Boy）
 
 2.亲友介绍：由中间人负责提供Boy来见面
+
 ```java
 public class Girl { 
 　 void kiss(){ 
@@ -46,9 +51,11 @@ public class Girl {
 　 } 
 }
 ```
+
 亲友介绍，固然是好。如果不满意，尽管另外换一个好了。但是，亲友BoyFactory经常是以Singleton的形式出现，不然就是，存在于Globals，无处不在，无处不能。实在是太繁琐了一点，不够灵活。我为什么一定要这个亲友掺和进来呢？为什么一定要付给她介绍费呢？万一最好的朋友爱上了我的男朋友呢？ 
 
 3.父母包办：一切交给父母，自己不用费吹灰之力，只需要等着Kiss就好了。
+
 ```java
 public class Girl { 
 　  void kiss(Boy boy){ 
@@ -57,6 +64,7 @@ public class Girl {
 　　} 
 }
 ```
+
 Well，这是对Girl最好的方法，只要想办法贿赂了Girl的父母，并把Boy交给他。那么我们就可以轻松的和Girl来Kiss了。看来几千年传统的父母之命还真是有用哦。至少Boy和Girl不用自己瞎忙乎了。 
 
 这就是IOC，将对象的创建和获取提取到外部。由外部容器提供需要的组件。 
