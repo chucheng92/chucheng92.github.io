@@ -7,7 +7,6 @@ date: 2015-12-28 18:24:48
 ---
 
 <center>**<font color="red">转载至名作之壁吧</font>**</center>
-![acgrank](http://7xlkoc.com1.z0.glb.clouddn.com/acgrank.png)
 
 ## 注意
 
