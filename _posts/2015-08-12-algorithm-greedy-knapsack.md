@@ -93,6 +93,7 @@ int main()
 ```
 
 **策略2：** 每次取单位重量价值最大的
+
 ```java
 /**
 * @file				Greedy2Knapsack.cpp
