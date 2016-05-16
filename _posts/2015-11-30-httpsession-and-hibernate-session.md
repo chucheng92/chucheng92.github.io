@@ -6,8 +6,7 @@ category: 技术
 date: 2015-11-30 16:04:17
 ---
 
-<font color="red">**<center>本文部分内容转载于网络，站长已阅读并测试，保证其正确性。Update:2015-11-4</center>**</font>
-![javaee1](http://www.tinymood.com/wp-content/uploads/2015/11/2015112614261434.jpg)
+<font color="red"><center>本文部分内容转载于网络，站长已阅读并测试，保证其正确性。Update:2015-11-4</center></font>
 
 ## 一、javax.servlet.http.HttpSession是一个抽象接口
 

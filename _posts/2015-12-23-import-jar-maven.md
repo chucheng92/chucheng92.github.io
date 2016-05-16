@@ -6,12 +6,10 @@ category: 技术
 date: 2015-12-23 15:22:05
 ---
 
-![maven](http://7xlkoc.com1.z0.glb.clouddn.com/apache-maven-logo.jpg "maven")
-
 ## Maven基础[1]
 
-<center>**全文托管于GitHub，点击查看**
-[dm href='https://github.com/Lemonjing/TinyMood/blob/master/技术文章/Maven基础.md']全文阅读[/dm]</center>
+<center>全文托管于GitHub，点击查看[全文阅读](https://github.com/Lemonjing/TinyMood/blob/master/技术文章/Maven基础.md)</center>
+
 **1.什么是maven?**
 
 Maven:基于项目对象模型pom的项目管理工具

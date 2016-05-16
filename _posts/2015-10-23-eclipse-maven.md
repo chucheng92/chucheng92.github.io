@@ -6,8 +6,9 @@ category: 技术
 date: 2015-10-23 20:34:26
 ---
 
-<center>**<font color="red">原创 2015年10月测试运行通过。</font>**</center>
-![maven](http://7xlkoc.com1.z0.glb.clouddn.com/apache-maven-logo.jpg "maven")
+<center><font color="red">原创 2015年10月测试运行通过。</font></center>
+
+```bash
 > 系统和环境:
 > 
 > Eclipse luna4.4.2(luna和最新的mars已经集成maven插件，无需安装m2eclipse插件)
@@ -17,6 +18,8 @@ date: 2015-10-23 20:34:26
 > OS:win10
 > 
 > maven版本:maven3.3
+```
+
 **一 Eclipse配置maven**
 1.官网下载maven并配置
 设置环境变量M2_HOME 路径为你的maven目录

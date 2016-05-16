@@ -7,7 +7,6 @@ date: 2015-10-16 16:36:01
 ---
 
 **来源：Leetcode #Problem1**
-![](http://7xlkoc.com1.z0.glb.clouddn.com/coding2.jpg)
 
 **题目描述：**
 Given an array of integers, find two numbers such that they add up to a specific target number.
