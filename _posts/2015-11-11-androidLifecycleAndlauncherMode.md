@@ -8,7 +8,7 @@ description: double eleven happy to me
 
 >Activity的生命周期和启动模式的深入理解
 
-参考书籍： [android开发艺术](http://bornbeauty.github.io/2015/11/06/book-list-of-2015.html#Android开发艺术探索)
+参考书籍： [android开发艺术](http://lemonjing.github.io/2015/11/06/book-list-of-2015.html#Android开发艺术探索)
 参考博客： [楚云之南-android的task任务栈](http://www.cnblogs.com/CSU-PL/p/3794280.html)
 　　　　　 [Activity的task相关](http://blog.csdn.net/liuhe688/article/details/6761337)
 　　　　　 [Activity的四种launchMode ](http://blog.csdn.net/liuhe688/article/details/6754323)

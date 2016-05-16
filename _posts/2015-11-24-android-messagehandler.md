@@ -10,7 +10,7 @@ description: Android的消息机制是怎样的呢?我们今天一起来看一�
 
 >Android的消息机制是怎样的呢?我们今天一起来看一下
 
-参考书籍: [Android开发艺术探索](http://bornbeauty.github.io/2015/11/06/book-list-of-2015.html#Android开发艺术探索)
+参考书籍: [Android开发艺术探索](http://lemonjing.github.io/2015/11/06/book-list-of-2015.html#Android开发艺术探索)
 
 今天学了一下android的消息机制,在开头我想先说下Android Studio 2.0!
 今天在被窝里就看到了来自各个媒体有关Android Studio2.0的新闻,我也存在同样的疑问:不是刚刚才升级到1.5么?看到新闻上说速度提高了许多,自己也迫不及待的试了一下,果然快了好多好多!真是爽~这样的速度开发简直就是享受啊~

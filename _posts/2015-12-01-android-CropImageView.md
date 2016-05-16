@@ -39,7 +39,7 @@ description: 算是自己造的第一个轮子吧 以前总是拿过别人开源
 
 # 五 项目地址
 
-[bornbeauty-CropImageView:不规则四边形裁剪](https://github.com/bornbeauty/CropImageView)
+[lemonjing-CropImageView:不规则四边形裁剪](https://github.com/lemonjing/CropImageView)
 
 
 

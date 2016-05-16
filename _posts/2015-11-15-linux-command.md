@@ -47,7 +47,7 @@ description: linux命令随记
 
 	//写一个shell放在目录下 就不会每次都add commit psuh了 一个命令同步博客 咩哈哈 爽~
 	/**
-	cd /home/jimbo/bornbeauty.github.io
+	cd /home/jimbo/lemonjing.github.io
 	git add -A
 	git commit -m "addOrchange"
 	git push
@@ -69,7 +69,7 @@ description: linux命令随记
 
 所以就很简单了，我们就用$n来获取参数
 
-	cd /home/jimbo/bornbeauty.github.io
+	cd /home/jimbo/lemonjing.github.io
 	git add -A
 	git commit -m $1
 	git push
@@ -91,7 +91,7 @@ description: linux命令随记
 [shell怎么判断是否为空](http://w55554.blog.51cto.com/947626/1223870)
 
 	//最后代码变成了这个样子 试了试～ 挺好 开心
-	cd /home/jimbo/bornbeauty.github.io
+	cd /home/jimbo/lemonjing.github.io
 	git add -A
 	if [ $1 ]
 		then

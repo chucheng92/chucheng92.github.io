@@ -1992,7 +1992,7 @@ class TreeNode {
   &lt;p&gt;关于activity启动模式定义的两种方式&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;关于activity的生命周期和启动模式可以查看博客: &lt;a href=&quot;http://bornbeauty.github.io/2015/11/11/androidLifecycleAndlauncherMode.html&quot;&gt;activity生命周期和启动模式深入理解&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;关于activity的生命周期和启动模式可以查看博客: &lt;a href=&quot;http://lemonjing.github.io/2015/11/11/androidLifecycleAndlauncherMode.html&quot;&gt;activity生命周期和启动模式深入理解&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;一 定义启动模式的方式&lt;/h2&gt;
 

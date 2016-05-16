@@ -10,7 +10,7 @@ description: 关于Activity启动模式定义的两种方法
 
 > 关于activity启动模式定义的两种方式
 
-关于activity的生命周期和启动模式可以查看博客: [activity生命周期和启动模式深入理解](http://bornbeauty.github.io/2015/11/11/androidLifecycleAndlauncherMode.html)
+关于activity的生命周期和启动模式可以查看博客: [activity生命周期和启动模式深入理解](http://lemonjing.github.io/2015/11/11/androidLifecycleAndlauncherMode.html)
 
 ## 一 定义启动模式的方式
 

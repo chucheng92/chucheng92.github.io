@@ -10,7 +10,7 @@ description: 有关View事件的分发机制
 
 > 有关View事件的分发机制
 
-参考书籍:参考书籍： [android开发艺术](http://bornbeauty.github.io/2015/11/06/book-list-of-2015.html#Android开发艺术探索)
+参考书籍:参考书籍： [android开发艺术](http://lemonjing.github.io/2015/11/06/book-list-of-2015.html#Android开发艺术探索)
 
 参考博客: [郭霖的专栏-Android事件分发机制完全解析，带你从源码的角度彻底理解(上)](http://blog.csdn.net/guolin_blog/article/details/9097463)
 
@@ -74,7 +74,7 @@ description: 有关View事件的分发机制
 
 当你没有给任何控件设置相应事件的时候(也就是都会返回false),那么你就会看到Activity的onTouchEvent被调用了.
 
-在[android开发艺术](http://bornbeauty.github.io/2015/11/06/book-list-of-2015.html#Android开发艺术探索)这本书中提到了几个结论:
+在[android开发艺术](http://lemonjing.github.io/2015/11/06/book-list-of-2015.html#Android开发艺术探索)这本书中提到了几个结论:
 
 >1.同一个事件序列是指手指接触屏幕那一刻起,到手指离开屏幕那一刻结束,在这个过程中所有产生的事件都属于这一个事件序列.包括一个ACTION_DOWN,一个ACTION_UP和n个ACTION_MOVE;
 
