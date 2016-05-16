@@ -6,7 +6,7 @@ category: 技术
 date: 2015-12-23 15:22:05
 ---
 
-## Maven基础[1]
+### Maven基础[1]
 
 全文托管于GitHub，[全文阅读](https://github.com/Lemonjing/TinyMood/blob/master/技术文章/Maven基础.md)
 

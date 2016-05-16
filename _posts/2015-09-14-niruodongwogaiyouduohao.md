@@ -6,9 +6,8 @@ category: 生活
 date: 2015-09-14 19:31:20
 ---
 
-**<center>2015-5-7 文/莫言   编辑/Saber酱  小情绪</center>**
+![imgdes](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2015/09/20150913095917100.jpg)
 
-![imgdes](http://www.tinymood.com/wp-content/uploads/2015/09/20150913095917100.jpg)
 **编辑按：懂是属于知己般的理解，体会。懂你的让人需要他的人生阅历，以及环境，眼界等素养跟你达到同等或者高于你的境界。懂你的人不一定爱你，爱你的人不一定就懂你。**
 
 每个人都有一个死角，自己走不出来，别人也闯不进去。
