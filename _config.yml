@@ -24,7 +24,7 @@ author:
 # 站点信息
 title: 绾青丝
 description: 
- If,<br>for example,<br>you come at four o'clock in the afternoon,<br>then at three o'clock I shall begin to be happy.
+ If,<br/>for example,<br/>you come at four o'clock in the afternoon,<br/>then at three o'clock I shall begin to be happy.
 rss_url: /feed.xml
 
 # gavatar头像及Favicon
