@@ -72,7 +72,7 @@ date: 2016-02-29 21:53:51
 
 方法1：字节插入
 
-![net1](http://www.tinymood.com/wp-content/uploads/2016/02/2016022913455935.jpg)
+![net1](http://7xlkoc.com1.z0.glb.clouddn.com/2016022913455935.jpg)
 
 方法2：比特插入
 
@@ -107,7 +107,7 @@ CRC只能表示以接近1的概率认为它没有差错。但不能做到可靠�
 
 ppp帧格式
 
-![net2](http://www.tinymood.com/wp-content/uploads/2016/02/201602291346279.jpg)
+![net2](http://7xlkoc.com1.z0.glb.clouddn.com/201602291346279.jpg)
 注：当协议字段为0x0021时，信息字段为IP数据报，不超过1500字节
 
 字节填充：转义符为0x7D
@@ -140,7 +140,7 @@ CSMA/CD协议(Carrier Sense Multiple Access with Collision Detection)：载波�
 
 **3.MAC帧格式（以太网V2）**
 
-![net3](http://www.tinymood.com/wp-content/uploads/2016/02/2016022913470267.jpg)
+![net3](http://7xlkoc.com1.z0.glb.clouddn.com/2016022913470267.jpg)
 4.VLAN
 
 局域网网段构成的与物理位置无关的逻辑组。克服了广播风暴
@@ -181,7 +181,8 @@ ATM（异步传递方式）：建立在电路交换和分组交换的基础上�
 
 4.IP地址使用范围：
 
-![net4](http://www.tinymood.com/wp-content/uploads/2016/02/2016022913473653.jpg)
+![net4](http://7xlkoc.com1.z0.glb.clouddn.com/2016022913473653.jpg)
+
 注：1.主机数减2的原因是因为主机号全0代表该IP地址是本主机所连接到的单个网络地址；主机号全1代表本网络上的所有主机。 注：2.A类地址网络数-2的原因是：第一，网络号全0是个保留地址代表本网络；第二，网络号为127（01111111）保留为本地软件环回测试。
 
 注1：D类IP地址网络号固定位为1110 用于多播；E类IP地址网络号固定位为11110，为保留地址。
@@ -220,7 +221,7 @@ IP分片 MF DF 片偏移
 
 首部检验和：反码算数运算，不采用CRC
 
-8.划分子网：IP地址：网络号 - &lt;子网号 - 主机号&gt;（子网号是在两级分类编址中的主机号中划出的）
+8.划分子网：IP地址：网络号 - 子网号 - 主机号;（子网号是在两级分类编址中的主机号中划出的）
 
 子网掩码：网络号子网号置1(相当于CIDR中的网络前缀)主机号置0，这样子网掩码与IP地址相与即可算出网络地址。
 
@@ -240,7 +241,7 @@ IP分片 MF DF 片偏移
 
 9.无分类编址CIDR（CLassless Inter-Domain Routing 无分类域间路由选择）
 
-无分类的两级编址：格式 &lt;网络前缀 - 主机号&gt;
+无分类的两级编址：格式:网络前缀 - 主机号
 
 路由聚合也称为构造超网因为一个CIDR地址块可以表示很多地址。
 
@@ -310,9 +311,11 @@ BGP-4一共4种报文：打开包文 更新报文 保活报文 通知报文
 
 专用地址
 
+```sh
 10.0.0.0 - 10.255.255.255
 172.16.0.0 - 172.31.255.255
 192.168.0.0 - 192.168.255.255
+```
 
 这些IP地址在本机构内部使用，也叫可重用地址。
 
@@ -343,6 +346,7 @@ BGP-4一共4种报文：打开包文 更新报文 保活报文 通知报文
 
 熟知端口：
 
+```sh
 20 FTP数据连接
 21 FTP控制连接
 22 SSH
@@ -352,6 +356,7 @@ BGP-4一共4种报文：打开包文 更新报文 保活报文 通知报文
 69 TFTP
 80 HTTP
 161 SNMP
+```
 
 **<span style="color: #ff0000;">UDP重要</span>**
 
@@ -367,7 +372,7 @@ UDP的优点：
 
 Table，使用TCP和UDP的应用
 
-![net5](http://www.tinymood.com/wp-content/uploads/2016/02/2016022913481796.jpg)
+![net5](http://7xlkoc.com1.z0.glb.clouddn.com/2016022913481796.jpg)
 注：TFTP：Trivial File Transfer Protocol
 
 UDP的过程：
@@ -410,7 +415,7 @@ TCP报文段的发送时机：1.维持一个变量等于MSS，缓存达到就发
 
 慢开始算法：cwnd设置为1个MSS，每收到一个确认，将cwnd+1，逐步增大cwnd，使分组注入网络的速率更加合理。
 
-慢开始门限：ssthresh，当cwnd &lt; ssthresh,执行慢开始算法；cwnd &gt; ssthresh，改用拥塞避免算法。 cwnd = ssthresh时，都可以。
+慢开始门限：ssthresh，当cwnd < ssthresh,执行慢开始算法；cwnd > ssthresh，改用拥塞避免算法。 cwnd = ssthresh时，都可以。
 
 拥塞避免算法使发送端的拥塞窗口每经过一个RTT增加一个MSS（而不管在此期间收到多少ACK），这样，拥塞窗口cwnd按线性规律增长，比 慢开始算法拥塞窗口增长速率缓慢很多。（加法增大）
 
@@ -420,7 +425,7 @@ TCP报文段的发送时机：1.维持一个变量等于MSS，缓存达到就发
 
 快重传：发送端一连收到三个重复的ACK,即可断定分组丢失，不必等待重传计数器，立即重传丢失的报文。
 
-快恢复：当发送端收到3个重复的ACK时，乘法减小，ssthresh变为一半。但是cwnd不是置为1，而是ssthresh+3MSS。若收到的重复ACK 为n(n &gt; 3)，则cwnd=ssthresh+nMSS.在使用快恢复算法时，慢开始算法只在TCP连接建立时使用。若收到了确认新的报文段的ACK，就将
+快恢复：当发送端收到3个重复的ACK时，乘法减小，ssthresh变为一半。但是cwnd不是置为1，而是ssthresh+3MSS。若收到的重复ACK 为n(n > 3)，则cwnd=ssthresh+n*MSS.在使用快恢复算法时，慢开始算法只在TCP连接建立时使用。若收到了确认新的报文段的ACK，就将
 
 TCP的重传机制
 
