@@ -373,6 +373,7 @@ UDP的优点：
 Table，使用TCP和UDP的应用
 
 ![net5](http://7xlkoc.com1.z0.glb.clouddn.com/2016022913481796.jpg)
+
 注：TFTP：Trivial File Transfer Protocol
 
 UDP的过程：
