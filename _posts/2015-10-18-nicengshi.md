@@ -7,9 +7,6 @@ date: 2015-10-18 15:34:21
 description: 童年回忆
 ---
 
-![](http://7xlkoc.com1.z0.glb.clouddn.com/wucai.jpeg "茶馆、岛、慵懒的猫...都是美好的时光...")
-
-
 **家乡的小河**
 
 <span style="color: #00ccff;">春天 水声潺潺 岸边的柳芽正在抽枝</span>
