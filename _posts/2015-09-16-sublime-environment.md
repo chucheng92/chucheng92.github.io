@@ -19,14 +19,17 @@ Sublime Text3 是一款非常优秀的跨平台编辑器，在此简单记录下
 
 安装packagecontrol
 ctrl+~（Esc下面那个键）同时按住，弹出一个输入框，粘贴下面代码，回车。我使用的版本是sublime text3.
- ```java
+
+```java
 import urllib.request,os; pf = 'Package Control.sublime-package'; ipp =sublime.installed_packages_path(); urllib.request.install_opener(urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp,pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
  ```
+
 再贴一个sublime text2的备忘：
 
- ```java
+```java
 import urllib2,os; pf='Package Control.sublime-package'; ipp =sublime.installed_packages_path(); os.makedirs( ipp ) if notos.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join(ipp, pf), 'wb' ).write( urllib2.urlopen( 'http://sublime.wbond.net/' +pf.replace( ' ','%20' )).read());print( 'Please restartSublime Text to finish installation')
  ```
+
 安装好之后，Preferences菜单下看到Package Settings和Package Control两个菜单了，点击Package Control，install package ，输入相应关键字，就能开始安装插件了。
 
 Emmet
@@ -53,7 +56,8 @@ sublime Text不支持中文显示的，不知道这算不算一种歧视
 Java
 
 新建一个runJava.bat,放在JAVA_HOME的bin内 内容如下：
- ```java
+
+```bash
 @ECHO OFF 
 
 cd %~dp1 
@@ -75,9 +79,11 @@ ECHO ———OUTPUT———
 java %~n1 
 
 )
- ```
+```
+
 用winrar打开sublime text的安装目录下的Java.sublime-package定位到JavaC.sublime-build修改内容为(修改方法：新建一个文件输入以下内容并保存为JavaC.sublime-build覆盖掉压缩包即可)
 
+```bash
 {
 
  "shell_cmd": "runJava.bat \"$file\"",
@@ -87,5 +93,6 @@ java %~n1
  "selector": "source.java",
 
 }
+```
 
 可以用来学习java基础语法。要做工程的话还是用eclipse。
