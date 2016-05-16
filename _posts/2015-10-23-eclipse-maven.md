@@ -21,6 +21,7 @@ date: 2015-10-23 20:34:26
 ```
 
 **一 Eclipse配置maven**
+
 1.官网下载maven并配置
 设置环境变量M2_HOME 路径为你的maven目录
 设置path:%M2_HOME%\bin
