@@ -40,11 +40,13 @@ layout: default
 			  {% endif %}
 			  
 			 {% assign curr_page_num = paginator.page %} 
-    			 {% if curr_page_num < 3 or curr_page_num == 3 %}
+			 {% assign startPage = curr_page_num}
+			 {% assign endPage = curr_page_num + 5}
+    			 <!-- {% if curr_page_num < 3 or curr_page_num == 3 %}
         			{% assign startPage = 1 %}
         			{% assign endPage = 5 %}
       		  {% else if curr_page_num > paginator.total_pages|minus:3 or curr_page_num == paginator.total_pages|minus:3%}
-      		       {% assign startPage = paginator.total_pages|minus:4 % - 1}
+      		       {% assign startPage = paginator.total_pages|minus:4 %}
         			{% assign endPage = paginator.total_pages %}
       		  {% else %}
       		       {% assign startPage = curr_page_num | minus:2 %}
@@ -57,7 +59,7 @@ layout: default
 			  	  
       		  {% if endPage > paginator.total_pages %}	
 			  	{% assign endPage = paginator.total_pages %} 
-			  {% endif %} 
+			  {% endif %}  -->
 			  
 			  {% for page in (startPage..endPage) %}
 				    {% if page == paginator.page %}
