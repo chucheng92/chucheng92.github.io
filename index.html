@@ -39,10 +39,7 @@ layout: default
 			    <a class="pjaxlink"  href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="x1" style="margin-right:5px;"><i class="glyphicon glyphicon-chevron-left"></i></span></a>
 			  {% endif %}
 			  
-			 {% assign curr_page_num = paginator.page %} 
-			 {% assign startPage = curr_page_num}
-			 {% assign endPage = curr_page_num + 5}
-    			 <!-- {% if curr_page_num < 3 or curr_page_num == 3 %}
+    		  {% if curr_page_num < 3 or curr_page_num == 3 %}
         			{% assign startPage = 1 %}
         			{% assign endPage = 5 %}
       		  {% else if curr_page_num > paginator.total_pages|minus:3 or curr_page_num == paginator.total_pages|minus:3%}
@@ -59,7 +56,7 @@ layout: default
 			  	  
       		  {% if endPage > paginator.total_pages %}	
 			  	{% assign endPage = paginator.total_pages %} 
-			  {% endif %}  -->
+			  {% endif %} 
 			  
 			  {% for page in (startPage..endPage) %}
 				    {% if page == paginator.page %}
