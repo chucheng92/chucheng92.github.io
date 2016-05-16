@@ -65,7 +65,7 @@ name参数指定类装载器需要装载类的名字，必须使用全限定类�
    获取类装载器的父装载器，除根装载器外，所有的类装载器都有且仅有一个父装载器，ExtClassLoader的父装载器是根装载器，因为根装载器非Java编写，所以无法获得，将返回null。 
 
 除JVM默认的三个ClassLoader以外，可以编写自己的第三方类装载器，以实现一些特殊的需求。类文件被装载并解析后，在JVM内将拥有一个对应的java.lang.Class类描述对象，该类的实例都拥有指向这个类描述对象的引用，而类描述对象又拥有指向关联ClassLoader的引用，如图所示。 
-[![6874747](http://www.tinymood.com/wp-content/uploads/2016/02/201602191302195.png)](http://www.tinymood.com/wp-content/uploads/2016/02/201602191302195.png)
+[![6874747](http://112.74.15.218/wp-content/uploads/2016/02/201602191302195.png)](http://112.74.15.218/wp-content/uploads/2016/02/201602191302195.png)
 
 每一个类在JVM中都拥有一个对应的java.lang.Class对象，它提供了类结构信息的描述。数组、枚举、注解以及基本Java类型（如int、double等），甚至void都拥有对应的Class对象。Class没有public的构造方法。Class对象是在装载类时由JVM通过调用类装载器中的defineClass()方法自动构造的。 
 
