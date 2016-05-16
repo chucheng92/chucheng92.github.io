@@ -9,11 +9,16 @@ description: 内部排序算法的Java实现及其性能测试
 
 其中第九种为java.util.Arrays.sort（改进的快速排序方法）
 
-1\. 100000的随机数据集
+1.100000的随机数据集
+
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/sort1.jpg)
-2\. 200000的随机数据集
+
+2.200000的随机数据集
+
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/sort2.jpg)
-3\. 500000的随机数据集
+
+3.500000的随机数据集
+
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/sort3.jpg)
 
 结论：归并排序和堆排序维持O(nlgn)的复杂度，速率差不多，表现优异。固定基准的快排表现很是优秀。而通过使用一个循环完成按增量分组后的直接插入的希尔排序，测试效果显著。冒泡，选择，直接插入都很慢，而冒泡效率是最低。
@@ -24,7 +29,7 @@ description: 内部排序算法的Java实现及其性能测试
 
 复杂度：O(n^2) - O(n) - O(n^2) - O(1)[平均 - 最好 - 最坏 - 空间复杂度]
 
-<pre class="prettyprint linenums">
+```java
 public void insertionSort(int[] a) {
 		if (null == a || a.length < 2) {
 			return;
@@ -75,7 +80,7 @@ public void shellSort(int[] a) {
 
 复杂度：O(n^2) - O(n) - O(n^2) - O(1)[平均 - 最好 - 最坏 - 空间复杂度]
 
-<pre class="prettyprint linenums">
+```java
 public void bubbleSort(int[] a) {
 		if (null == a || a.length < 2) {
 			return;
@@ -104,7 +109,7 @@ public void bubbleSort(int[] a) {
 
 复杂度：O(n^2) - O(n^2) - O(n^2) - O(1)[平均 - 最好 - 最坏 - 空间复杂度]
 
-<pre class="prettyprint linenums">
+```java
 public void selectSort(int[] a) {
 		if (null == a || a.length < 2) {
 			return;
@@ -131,7 +136,7 @@ public void selectSort(int[] a) {
 
 复杂度：O(nlogn) - O(nlgn) - O(nlgn) - O(n)[平均 - 最好 - 最坏 - 空间复杂度]
 
-<pre class="prettyprint linenums">
+```java
 // 排序
 	public void mergeSort(int[] a, int low, int high) {
 		if (null == a || a.length < 2) {
@@ -192,7 +197,7 @@ public void selectSort(int[] a) {
 
 栈空间0(lgn) - O(n)
 
-<pre class="prettyprint linenums">
+```java
 // 固定基准
 public void quickSort(int[] a, int low, int high) {
 		if (null == a || a.length < 2) {
@@ -234,7 +239,7 @@ public void quickSort(int[] a, int low, int high) {
 
 大顶堆实现从小到大的升序排列，小顶堆一般用于构造优先队列
 
-<pre class="prettyprint linenums">
+```java
 public void heapSort(int[] a) {
 		if (null == a || a.length < 2) {
 			return;
@@ -288,7 +293,7 @@ public void heapSort(int[] a) {
 
 复杂度： O(d(n+r)) r为基数d为位数 空间复杂度O(n+r)
 
-<pre class="prettyprint linenums">
+```java
 // 基数排序
 	public void radixSort(int[] a, int begin, int end, int digit) {
 		// 基数

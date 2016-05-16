@@ -16,7 +16,8 @@ description: 单例模式
 ## 1.懒加载 线程不安全
 
 当被问到要实现一个单例模式时，很多人的第一反应是写出如下的代码，包括教科书上也是这样教我们的。
-<pre class="prettyprint linenums">public class Singleton {
+```java
+public class Singleton {
     private static Singleton uniqueInstance;
     private Singleton (){}
 
@@ -33,7 +34,8 @@ description: 单例模式
 ## 2.懒加载 线程安全
 
 为了解决上面的问题，最简单的方法是将整个 getInstance() 方法设为同步（synchronized）。
-<pre class="prettyprint linenums">public static synchronized Singleton getInstance() {
+```java
+public static synchronized Singleton getInstance() {
     if (uniqueInstance == null) {
         uniqueInstance = new Singleton();
     }
@@ -45,7 +47,8 @@ description: 单例模式
 ## 3.双重检查加锁 线程安全
 
 双重检验加锁模式（double checked locking pattern），是一种使用同步块加锁的方法。程序员称其为双重检查锁，因为会有两次检查 uniqueInstance == null，一次是在同步块外，一次是在同步块内。为什么在同步块内还要再检验一次？因为可能会有多个线程一起进入同步块外的 if，如果在同步块内不进行二次检验的话就会生成多个实例了。
-<pre class="prettyprint linenums">public static Singleton getSingleton() {
+```java
+public static Singleton getSingleton() {
     if (uniqueInstance == null) {                         //Single Checked
         synchronized (Singleton.class) {
             if (uniqueInstance == null) {                 //Double Checked
@@ -64,7 +67,8 @@ description: 单例模式
 但是在 JVM 的即时编译器中存在指令重排序的优化。也就是说上面的第二步和第三步的顺序是不能保证的，最终的执行顺序可能是 1-2-3 也可能是 1-3-2。如果是后者，则在 3 执行完毕、2 未执行之前，被线程二抢占了，这时uniqueInstance已经是非 null 了（但却没有初始化），所以线程二会直接返回 uniqueInstance，然后使用，然后顺理成章地报错。
 
 我们只需要将 uniqueInstance 变量声明成 volatile 就可以了。
-<pre class="prettyprint linenums">public class Singleton {
+```java
+public class Singleton {
     private volatile static Singleton uniqueInstance; //声明成 volatile
     private Singleton (){}
 
@@ -91,7 +95,8 @@ description: 单例模式
 ## 4.急加载 static final field 线程安全
 
 这种方法非常简单，因为单例的实例被声明成 static 和 final 变量了，在第一次加载类到内存中时就会初始化，所以创建实例本身是线程安全的。
-<pre class="prettyprint linenums">public class Singleton{
+```java
+public class Singleton{
     //类加载时就初始化
     private static final Singleton uniqueInstance = new Singleton();
 
@@ -107,7 +112,8 @@ description: 单例模式
 ## 5.静态内部类 static nested class 线程安全
 
 我比较倾向于使用静态内部类的方法，这种方法也是《Effective Java》上所推荐的。
-<pre class="prettyprint linenums">public class Singleton {  
+```java
+public class Singleton {  
     private static class SingletonHolder {  
         private static final Singleton uniqueInstance = new Singleton();  
     }  
@@ -122,7 +128,8 @@ description: 单例模式
 ## 6.枚举 Enum 线程安全
 
 用枚举写单例实在太简单了！这也是它最大的优点。下面这段代码就是声明枚举实例的通常做法。
-<pre class="prettyprint linenums">public enum EasySingleton{
+```java
+public enum EasySingleton{
     INSTANCE;
 }
 ```
