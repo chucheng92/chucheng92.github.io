@@ -29,7 +29,7 @@ rss_url: /feed.xml
 
 # gavatar头像及Favicon
 gavatar : /assets/img/gavatar.png
-favicon : /assets/img/favicon.png
+favicon : /assets/img/favicon.ico
 
 # disqus 设置
 #disqus:
