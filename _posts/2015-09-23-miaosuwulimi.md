@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 如果可以 我宁愿不要知道樱花下落的速度
-tags: 原创 秒速五厘米
+tags: 原创 二次元
 category: 二次元
 date: 2015-09-23 23:08:27
 ---

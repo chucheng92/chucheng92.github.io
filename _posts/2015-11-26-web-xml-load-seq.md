@@ -2,7 +2,7 @@
 layout: post
 title: web.xml 中的listener、 filter、servlet 加载顺序及其详解
 category: 技术
-tags: javaee web.xml
+tags: web
 date: 2015-11-26 23:08:20
 description: JavaWeb
 ---

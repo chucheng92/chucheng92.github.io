@@ -2,7 +2,7 @@
 layout: post
 title: hello world
 category: 生活
-tags: life
+tags: 生活
 description: 开博第一篇
 ---
 

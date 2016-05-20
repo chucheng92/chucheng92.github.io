@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 时间太瘦，指缝太宽
-tags: 时间 爱情
+tags: 爱情
 category: 随笔
 date: 2016-01-12 21:02:54
 ---
