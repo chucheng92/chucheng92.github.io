@@ -31,6 +31,6 @@ permalink: /pages/read.html
 				{% endif %}
 		{% endfor %}
 	</div>
-	多挣钱 物质自由 多读书 精神自由
 	<div class="clear"></div>
 </div>
+<p align="left">多挣钱 物质自由 多读书 精神自由</p>
