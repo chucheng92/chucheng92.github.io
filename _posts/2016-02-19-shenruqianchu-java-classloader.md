@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 深入浅出类装载器ClassLoader
-tags: Java 类加载器
+tags: Java
 category: 技术
 date: 2016-02-19 20:50:01
 ---

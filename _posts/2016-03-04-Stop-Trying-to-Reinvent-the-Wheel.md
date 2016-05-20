@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stop Trying to Reinvent the Wheel
-tags: 造轮子
+tags: 技术
 category: 技术
 date: 2016-03-04 10:57:29
 ---

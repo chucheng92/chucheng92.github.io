@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 『原创』计算机网络知识点连载
-tags: 笔记 计算机网络
+tags: 网络
 category: 技术
 date: 2016-02-29 21:53:51
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 『原创』算法#13 回溯法实现0-1背包
-tags: 0-1背包
+tags: 背包
 category: 算法
 date: 2015-08-14 21:37:38
 ---

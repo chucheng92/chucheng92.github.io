@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 『搬运』2015日本TV动画销量榜
-tags: 二次元 动画
+tags: 二次元
 category: 二次元
 date: 2015-12-28 18:24:48
 ---

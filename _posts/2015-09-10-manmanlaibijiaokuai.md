@@ -2,7 +2,7 @@
 layout: post
 title: 慢慢来，会比较快-特立独行的猫
 category: 生活
-tags: life
+tags: 
 date: 2015-09-10 22:34:40
 description: 生活
 ---

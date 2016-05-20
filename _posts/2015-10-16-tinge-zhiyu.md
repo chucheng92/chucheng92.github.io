@@ -2,7 +2,7 @@
 layout: post
 title: 『原创』一边听歌 一边治愈
 category: 生活
-tags: 原创 心情
+tags: 原创
 date: 2015-10-16 23:09:02
 description: 音乐的力量
 ---

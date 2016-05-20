@@ -33,3 +33,4 @@ permalink: /pages/read.html
 	</div>
 	<div class="clear"></div>
 </div>
+<h2>多挣钱 物质自由 多读书 精神自由</h2>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 如今最好，别说来日方长
-tags: 故事
+tags: 随笔
 category: 随笔
 date: 2015-11-01 12:56:57
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 『原创』这就是恶作剧之吻
-tags: 偶像剧 原创 恶作剧之吻
+tags: 原创 恶作剧之吻
 category: 生活
 date: 2015-09-24 10:05:25
 ---

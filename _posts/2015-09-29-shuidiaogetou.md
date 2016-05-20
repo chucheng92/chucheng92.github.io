@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 『原创』水调歌头 乙未中秋
-tags: 中秋 原创
+tags: 原创
 category: 生活
 date: 2015-09-29 21:38:58
 ---
