@@ -4,6 +4,7 @@ title: 归档
 permalink: /pages/archive.html
 ---
 <div class="home">
+	<p>纵使寂寞开成海 我会一直在 即便风景都尘埃 我会一直爱</p><br/><br/>
 	{% for post in site.posts  %}
 	    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 	    {% capture this_month %}{{ post.date | date: "%m" }}{% endcapture %}
