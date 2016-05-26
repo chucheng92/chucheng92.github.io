@@ -17,6 +17,14 @@
 
 
 
+  /2016/05/27/yujian-ni.html
+
+  /2016/05/26/wuyue-sinian.html
+
+  /2016/05/23/spring-annotation.html
+
+  /2016/05/20/book-list-of-2016.html
+
   /2016/05/07/migrate-to-hexo.html
 
   /2016/04/23/neibupaixu.html
@@ -141,8 +149,6 @@
 
   /2015/11/08/java-hello.html
 
-  /2015/11/06/book-list-of-2015.html
-
   /2015/11/01/rujinzuihao.html
 
   /2015/10/24/eclipse-maven.html
@@ -244,5 +250,3 @@
   /2015/08/06/qingchunleizhenyu.html
 
   /2015/08/03/algorithm-backtrack-tsp.html
-
-  /2015/04/22/hello-world.html
