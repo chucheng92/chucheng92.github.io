@@ -2,7 +2,7 @@
 layout: post
 title: 『原创』也许，我只是想等到一个温暖的人
 tags: 原创 爱情
-category: 生活
+category: 随笔
 date: 2016-01-16 09:45:03
 description: 我只是想等到一个温暖的人
 ---

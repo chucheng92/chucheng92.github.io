@@ -2,7 +2,7 @@
 layout: post
 title: 『原创』静静地就好
 tags: 原创 随笔
-category: 生活
+category: 随笔
 date: 2016-01-02 20:56:08
 ---
 

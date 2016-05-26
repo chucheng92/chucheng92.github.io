@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 多一点宽容给这个世界
-category: 生活
-tags: life
+category: 随笔
+tags: 随笔
 description: 看到垃圾人定律这个定律 我终于有了不装强势的理由了 
 
 ---

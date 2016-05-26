@@ -2,7 +2,7 @@
 layout: post
 title: 『原创』这就是恶作剧之吻
 tags: 原创 恶作剧之吻
-category: 生活
+category: 随笔
 date: 2015-09-24 10:05:25
 ---
 

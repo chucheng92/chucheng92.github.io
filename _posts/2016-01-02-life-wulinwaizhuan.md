@@ -2,8 +2,8 @@
 
 layout: post
 title: 武林外传 百看不厌
-category: 生活
-tags: 其他
+category: 随笔
+tags: 随笔
 description:  
 
 ---

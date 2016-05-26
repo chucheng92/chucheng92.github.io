@@ -4,7 +4,7 @@ title: 分类
 permalink: /pages/class.html
 ---
 <div class="home">
-
+<p>纵使寂寞开成海 我会一直在 即便风景都尘埃 我会一直爱</p><br/><br/>
 	{% for category in site.categories %} 
 	      		<div class="panel panel-primary">
 	        			<div class="panel-heading center" id="{{ category[0] }}" name="{{ category[0] }}">{{ category[0] }}</div>

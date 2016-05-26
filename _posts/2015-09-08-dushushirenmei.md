@@ -2,7 +2,7 @@
 layout: post
 title: 读书使人优美
 tags: 读书
-category: 生活
+category: 随笔
 date: 2015-09-08 02:54:02
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: 『原创』借东西的小人阿莉埃蒂
 tags: 原创 宫崎骏
-category: 生活
+category: 随笔
 date: 2015-10-16 19:31:10
 description: 宫崎骏动漫，温馨治愈
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: 『福利』ACG－ART 2015/12/25
 tags: acg
-category: 生活
+category: 二次元
 date: 2015-12-25 20:21:23
 ---
 
