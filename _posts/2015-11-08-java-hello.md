@@ -1,7 +1,7 @@
 ---
 layout: post
 title: hello world
-category: 生活
+category: 随笔
 tags: 技术
 description: 开博第一篇
 ---
