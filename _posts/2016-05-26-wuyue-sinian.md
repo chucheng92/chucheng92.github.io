@@ -1,11 +1,8 @@
 ---
-
 layout: post
 title: 穿过五月的思念，几多温暖
 tags: 爱情
 category: 爱情
-date: 2016-05-26 08:13:57
-
 ---
 
 转载地址: http://www.weiyanweiyu.cn
