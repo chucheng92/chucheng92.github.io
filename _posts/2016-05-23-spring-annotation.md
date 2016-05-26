@@ -1,9 +1,11 @@
 ---
+
 layout: post
 title: Spring注解Resource和Autowired区别对比
 tags: spring
 category: 技术
-date: 2016-5-23 11:13:57
+date: 2016-05-23 11:13:57
+
 ---
 
 ### Spring注解@Resource和@Autowired区别对比
