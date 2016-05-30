@@ -36,3 +36,7 @@ permalink: /pages/archive.html
 	    {% endif %}
 	{% endfor %}
 </div>
+
+<div>
+{% include duoshuo.html %}
+</div>

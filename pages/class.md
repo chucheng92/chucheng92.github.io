@@ -18,3 +18,7 @@ permalink: /pages/class.html
 	{% endfor %}
 	
 </div>
+
+<div>
+{% include duoshuo.html %}
+</div>
