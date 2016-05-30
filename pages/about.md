@@ -150,4 +150,3 @@ permalink: /pages/about.html
 <div>
 {% include duoshuo.html %}
 </div>
-
