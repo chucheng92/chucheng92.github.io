@@ -17,6 +17,8 @@
 
 
 
+  /2016/05/31/java-object-getclass.html
+
   /2016/05/30/git-memo.html
 
   /2016/05/26/yujian-ni.html
