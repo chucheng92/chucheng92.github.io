@@ -17,7 +17,9 @@
 
 
 
-  /2016/05/27/yujian-ni.html
+  /2016/05/30/git-memo.html
+
+  /2016/05/26/yujian-ni.html
 
   /2016/05/26/wuyue-sinian.html
 
