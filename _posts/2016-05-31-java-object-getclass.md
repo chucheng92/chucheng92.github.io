@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Git常用命令备忘
-tags: Git
+title: Object中getClass方法详解
+tags: Java
 category: 技术
 ---
 
