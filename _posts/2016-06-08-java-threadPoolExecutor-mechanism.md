@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JAVA进阶----ThreadPoolExecutor机制
+title: JAVA进阶--ThreadPoolExecutor机制
 tags: Java
 category: 技术
 ---
@@ -8,10 +8,12 @@ category: 技术
 ### 一、概述 
 
 1、ThreadPoolExecutor作为java.util.concurrent包对外提供基础实现，以内部线程池的形式对外提供管理任务执行，线程调度，线程池管理等等服务； 
+
 2、Executors方法提供的线程服务，都是通过参数设置来实现不同的线程池机制。 
+
 3、先来了解其线程池管理的机制，有助于正确使用，避免错误使用导致严重故障。同时可以根据自己的需求实现自己的线程池 
 
-###二、核心构造方法讲解
+### 二、核心构造方法讲解
 
 下面是ThreadPoolExecutor最核心的构造方法
 
@@ -63,7 +65,7 @@ RejectedExecutionHandler	当提交任务数超过maxmumPoolSize+workQueue之和�
 5.当线程池中超过corePoolSize线程，空闲时间达到keepAliveTime时，关闭空闲线程 
 6.当设置allowCoreThreadTimeOut(true)时，线程池中corePoolSize线程空闲时间达到keepAliveTime也将关闭 
 
-**线程管理机制图示： **
+**线程管理机制图示：**
 
 ![](http://dl2.iteye.com/upload/attachment/0105/9641/92ad4409-2ab4-388b-9fb1-9fc4e0d832cd.jpg)
 
@@ -196,8 +198,6 @@ public class CustomThreadPoolExecutor {
 		}
 	}
 	
-	
-	
 	// 测试构造的线程池
 	public static void main(String[] args) {
 		CustomThreadPoolExecutor exec = new CustomThreadPoolExecutor();
@@ -219,8 +219,6 @@ public class CustomThreadPoolExecutor {
 				}
 			});
 		}
-		
-		
 		
 		// 2.销毁----此处不能销毁,因为任务没有提交执行完,如果销毁线程池,任务也就无法执行了
 		// exec.destory();
@@ -364,8 +362,6 @@ public class CustomThreadPoolExecutor {
         }  
     }  
       
-      
-      
     // 测试构造的线程池  
     public static void main(String[] args) {  
     	
@@ -388,8 +384,7 @@ public class CustomThreadPoolExecutor {
                 }  
             });  
         }  
-          
-          
+              
         // 2.销毁----此处不能销毁,因为任务没有提交执行完,如果销毁线程池,任务也就无法执行了  
         // exec.destory();  
           
@@ -430,8 +425,12 @@ public void execute(Runnable command) {
 
 ### 总结： 
 
-1、用ThreadPoolExecutor自定义线程池，看线程是的用途，如果任务量不大，可以用无界队列，如果任务量非常大，要用有界队列，防止OOM 
-2、如果任务量很大，还要求每个任务都处理成功，要对提交的任务进行阻塞提交，重写拒绝机制，改为阻塞提交。保证不抛弃一个任务 
-3、最大线程数一般设为2N+1最好，N是CPU核数 
-4、核心线程数，看应用，如果是任务，一天跑一次，设置为0，合适，因为跑完就停掉了，如果是常用线程池，看任务量，是保留一个核心还是几个核心线程数 
-5、如果要获取任务执行结果，用CompletionService，但是注意，获取任务的结果的要重新开一个线程获取，如果在主线程获取，就要等任务都提交后才获取，就会阻塞大量任务结果，队列过大OOM，所以最好异步开个线程获取结果
+1、用ThreadPoolExecutor自定义线程池，看线程是的用途，如果任务量不大，可以用无界队列，如果任务量非常大，要用有界队列，防止OOM。
+
+2、如果任务量很大，还要求每个任务都处理成功，要对提交的任务进行阻塞提交，重写拒绝机制，改为阻塞提交。保证不抛弃一个任务。
+
+3、最大线程数一般设为2N+1最好，N是CPU核数。
+
+4、核心线程数，看应用，如果是任务，一天跑一次，设置为0，合适，因为跑完就停掉了，如果是常用线程池，看任务量，是保留一个核心还是几个核心线程数。
+ 
+5、如果要获取任务执行结果，用CompletionService，但是注意，获取任务的结果的要重新开一个线程获取，如果在主线程获取，就要等任务都提交后才获取，就会阻塞大量任务结果，队列过大OOM，所以最好异步开个线程获取结果。
