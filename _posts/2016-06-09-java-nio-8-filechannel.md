@@ -99,4 +99,4 @@ force()方法有一个boolean类型的参数，指明是否同时将文件元数
 ```channel.force(true);```
 
 
-Next: [Java-NIO-9-SocketChannel](http://tinymood.com/2016/06/09/2016-06-09-java-nio-9-socketchannel.html)
+Next: [Java-NIO-9-SocketChannel](http://tinymood.com/2016/06/09/java-nio-9-socketchannel.html)

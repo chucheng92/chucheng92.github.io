@@ -127,3 +127,5 @@ NIO可让您只使用一个（或几个）单线程管理多个通道（网络�
 **Java IO: 一个典型的IO服务器设计- 一个连接通过一个线程处理.**
 
 ![](http://tutorials.jenkov.com/images/java-nio/nio-vs-io-4.png)
+
+完

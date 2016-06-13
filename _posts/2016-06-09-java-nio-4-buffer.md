@@ -216,4 +216,4 @@ compareTo()方法比较两个Buffer的剩余元素(byte、char等)，如果满�
 
 （译注：剩余元素是从 position到limit之间的元素）
 
-Next: [Java-NIO-5-Scatter-Gather](http://tinymood.com/2016/06/09/2016-06-09-java-nio-scatter-gather.html)
+Next: [Java-NIO-5-Scatter-Gather](http://tinymood.com/2016/06/09/java-nio-5-scatter-gather.html)

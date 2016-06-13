@@ -229,4 +229,4 @@ while(true) {
 }
 ```
 
-Next: [Java-NIO-8-FileChannel](http://tinymood.com/2016/06/09/2016-06-09-java-nio-8-filechannel.html)
+Next: [Java-NIO-8-FileChannel](http://tinymood.com/2016/06/09/java-nio-8-filechannel.html)

@@ -62,4 +62,4 @@ int bytesRead = channel.read(buf);
 int bytesWritten = channel.write(buf);
 ```
 
-Next: [Java-NIO-12-pipe](http://tinymood.com/2016/06/09/2016-06-09-java-nio-12-pipe.html)
+Next: [Java-NIO-12-pipe](http://tinymood.com/2016/06/09/java-nio-12-pipe.html)
