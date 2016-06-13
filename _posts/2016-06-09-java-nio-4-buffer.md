@@ -11,18 +11,18 @@ Java NIO中的Buffer用于和NIO通道进行交互。如你所知，数据是从
 
 下面是NIO Buffer相关的列表：
 
-- [1.Buffer的基本用法](#Buffer的基本用法)
-- [2.Buffer的capacity,position和limit]
-- [3.Buffer的类型]
-- [4.Buffer的分配]
-- [5.向Buffer中写数据]
-- [6.flip()方法]
-- [7.从Buffer中读取数据]
-- [8.clear()与compact()方法]
-- [9.mark()与reset()方法]
-- [10.equals()与compareTo()方法]
+- [1.Buffer的基本用法](#1)
+- [2.Buffer的capacity,position和limit](#2)
+- [3.Buffer的类型](#3)
+- [4.Buffer的分配](#4)
+- [5.向Buffer中写数据](#5)
+- [6.flip()方法](#6)
+- [7.从Buffer中读取数据](#7)
+- [8.clear()与compact()方法](#8)
+- [9.mark()与reset()方法](#9)
+- [10.equals()与compareTo()方法](#10)
 
-### Buffer的基本用法
+### 1. Buffer的基本用法
 
 使用Buffer读写数据一般遵循以下四个步骤：
 
@@ -59,7 +59,7 @@ while (bytesRead != -1) {
 aFile.close();
 ```
 
-### Buffer的capacity,position和limit
+### 2. Buffer的capacity,position和limit
 
 缓冲区本质上是一块可以写入数据，然后可以从中读取数据的内存。这块内存被包装成NIO Buffer对象，并提供了一组方法，用来方便的访问该块内存。
 
@@ -91,7 +91,7 @@ position和limit的含义取决于Buffer处在读模式还是写模式。不管B
 
 当切换Buffer到读模式时， limit表示你最多能读到多少数据。因此，当切换Buffer到读模式时，limit会被设置成写模式下的position值。换句话说，你能读到之前写入的所有数据（limit被设置成已写数据的数量，这个值在写模式下就是position）
 
-### Buffer的类型
+### 3. Buffer的类型
 
 Java NIO 有以下Buffer类型
 
@@ -110,7 +110,7 @@ ShortBuffer
 
 MappedByteBuffer 有些特别，在涉及它的专门章节中再讲。
 
-### Buffer的分配
+### 4. Buffer的分配
 
 要想获得一个Buffer对象首先要进行分配。 每一个Buffer类都有一个allocate方法。下面是一个分配48字节capacity的ByteBuffer的例子。
 
@@ -133,17 +133,19 @@ MappedByteBuffer 有些特别，在涉及它的专门章节中再讲。
 
 通过put方法写Buffer的例子：
 
-```buf.put(127);```
+```sh
+buf.put(127);
+```
 
 put方法有很多版本，允许你以不同的方式把数据写入到Buffer中。例如， 写到一个指定的位置，或者把一个字节数组写入到Buffer。 更多Buffer实现的细节参考JavaDoc。
 
-**flip()方法**
+### 6. flip()方法
 
 flip方法将Buffer从写模式切换到读模式。调用flip()方法会将position设回0，并将limit设置成之前position的值。
 
 换句话说，position现在用于标记读的位置，limit表示之前写进了多少个byte、char等 —— 现在能读取多少个byte、char等。
 
-### 从Buffer中读取数据
+### 7. 从Buffer中读取数据
 
 从Buffer中读取数据有两种方式：
 
@@ -159,7 +161,9 @@ int bytesWritten = inChannel.write(buf);
 
 使用get()方法从Buffer中读取数据的例子
 
-```byte aByte = buf.get();```
+```sh
+byte aByte = buf.get();
+```
 
 get方法有很多版本，允许你以不同的方式从Buffer中读取数据。例如，从指定position读取，或者从Buffer中读取数据到字节数组。更多Buffer实现的细节参考JavaDoc。
 
@@ -167,7 +171,7 @@ get方法有很多版本，允许你以不同的方式从Buffer中读取数据�
 
 Buffer.rewind()将position设回0，所以你可以重读Buffer中的所有数据。limit保持不变，仍然表示能从Buffer中读取多少个元素（byte、char等）。
 
-**clear()与compact()方法**
+### 8. clear()与compact()方法
 
 一旦读完Buffer中的数据，需要让Buffer准备好再次被写入。可以通过clear()或compact()方法来完成。
 
@@ -179,7 +183,7 @@ Buffer.rewind()将position设回0，所以你可以重读Buffer中的所有数�
 
 compact()方法将所有未读的数据拷贝到Buffer起始处。然后将position设到最后一个未读元素正后面。limit属性依然像clear()方法一样，设置成capacity。现在Buffer准备好写数据了，但是不会覆盖未读的数据。
 
-**mark()与reset()方法**
+### 9. mark()与reset()方法
 
 通过调用Buffer.mark()方法，可以标记Buffer中的一个特定position。之后可以通过调用Buffer.reset()方法恢复到这个position。例如：
 
@@ -189,7 +193,7 @@ buffer.mark();
 buffer.reset();  //set position back to mark.
 ```
 
-**equals()与compareTo()方法**
+### 10. equals()与compareTo()方法
 
 可以使用equals()和compareTo()方法比较两个Buffer。
 

@@ -55,7 +55,9 @@ while(buf.hasRemaining()) {
 
 用完FileChannel后必须将其关闭。如：
 
-```channel.close();```
+```sh
+channel.close();
+```
 
 **FileChannel的position方法**
 

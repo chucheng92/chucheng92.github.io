@@ -26,7 +26,9 @@ while(true){
 
 通过调用 ServerSocketChannel.open() 方法来打开ServerSocketChannel.如：
 
-```ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();```
+```sh
+ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
+```
 
 **关闭 ServerSocketChannel**
 
@@ -35,7 +37,6 @@ while(true){
 ```sh
 serverSocketChannel.close();
 ```
-
 
 **监听新进来的连接**
 

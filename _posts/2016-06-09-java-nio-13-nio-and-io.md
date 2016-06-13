@@ -15,12 +15,11 @@ category: 技术
 
 下表总结了Java NIO和IO之间的主要差别，我会更详细地描述表中每部分的差异。
 
-```
-IO					NIO
-Stream oriented		Buffer oriented
-Blocking IO			Non blocking IO
- 	            	Selectors
-```
+| IO				|  NIO            |     
+| :---:             |  :---:          |
+| Stream oriented	| Buffer oriented |
+| Blocking IO		| Non blocking IO |
+|					| Selectors       |
 
 ### 面向流与面向缓冲
 

@@ -9,14 +9,14 @@ Selector（选择器）是Java NIO中能够检测一到多个NIO通道，并能�
 
 下面是本文所涉及到的主题列表：
 
-1. [为什么使用Selector?](http://tinymood.com/2016/06/09/2016-06-09-java-nio-8-filechannel.html#1)
-2. [Selector的创建]
-3. [向Selector注册通道]
-4. [SelectionKey]
-5. [通过Selector选择通道]
-6. [wakeUp()]
-7. [close()]
-8. [完整的示例]
+1. [为什么使用Selector?](#1)
+2. [Selector的创建](#2)
+3. [向Selector注册通道](#3)
+4. [SelectionKey](#4)
+5. [通过Selector选择通道](#5)
+6. [wakeUp()](#6)
+7. [close()](#7)
+8. [完整的示例](#7)
 
 ### 1. 为什么使用Selector?
 
