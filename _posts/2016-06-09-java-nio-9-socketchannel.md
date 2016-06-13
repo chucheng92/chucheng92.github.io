@@ -23,7 +23,9 @@ socketChannel.connect(new InetSocketAddress("http://jenkov.com", 80));
 
 当用完SocketChannel之后调用SocketChannel.close()关闭SocketChannel：
 
-```socketChannel.close();```
+```bash
+socketChannel.close();
+```
 
 ### 从 SocketChannel 读取数据
 

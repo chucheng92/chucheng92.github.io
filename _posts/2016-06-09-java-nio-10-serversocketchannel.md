@@ -32,7 +32,10 @@ while(true){
 
 通过调用ServerSocketChannel.close() 方法来关闭ServerSocketChannel. 如：
 
-```serverSocketChannel.close();```
+```sh
+serverSocketChannel.close();
+```
+
 
 **监听新进来的连接**
 
