@@ -26,13 +26,13 @@
 				</div>
 				
 				<div class="tag-cloud-text">
-					<a href="http://lemonjing.github.io/pages/tags.html" title="标签" class="pjaxlink"><p class="center">标签</p></a>
+					<a href="http://lemonjing.github.io/pages/tags.html" title="标签" class="pjaxlink"><p class="center">标签【点我】</p></a>
 				</div>
 				<div class="tag-cloud ">	
 					<hr>
 					<div class="page-tag">
 							{% for tag in site.tags %}
-								{% if tag[1].size > 5 %}
+								{% if tag[1].size > 3 %}
 								<a href="http://lemonjing.github.io/pages/tags.html#{{tag[0]}}" name="{{tag[0]}}" class="pjaxlink"><i class="fa fa-tags"></i>{{ tag[0] }}({{tag[1].size}})</a>
 								{% endif %}
 							{% endfor %}
