@@ -32,7 +32,7 @@
 					<hr>
 					<div class="page-tag">
 							{% for tag in site.tags %}
-								{% if tag[1].size > 10 %}
+								{% if tag[1].size > 5 %}
 								<a href="http://lemonjing.github.io/pages/tags.html#{{tag[0]}}" name="{{tag[0]}}" class="pjaxlink"><i class="fa fa-tags"></i>{{ tag[0] }}({{tag[1].size}})</a>
 								{% endif %}
 							{% endfor %}
