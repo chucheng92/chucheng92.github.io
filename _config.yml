@@ -28,7 +28,7 @@ description:
 rss_url: /feed.xml
 
 # gavatar头像及Favicon
-gavatar : /assets/img/gravatar.jpg
+gavatar : /assets/img/gravatar.png
 favicon : /assets/img/favicon.ico
 
 # disqus 设置
@@ -37,7 +37,7 @@ favicon : /assets/img/favicon.ico
 
 #profile 个人信息
 
-profile_desc : 技术<br>生活<br>和爱情<br>此刻与你分享<br><br>
+profile_desc : 技术<br>生活<br>和爱情<br>此刻与你分享<br>
 
 # 首页除了最新文章外显示分类
 cates: 
