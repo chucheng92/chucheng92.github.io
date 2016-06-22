@@ -47,8 +47,8 @@ layout: default
       		       {% assign startPage = paginator.total_pages|minus:4 %}
         			{% assign endPage = paginator.total_pages %}
       		  {% else %}
-      		       {% assign startPage = curr_page_num | minus:2 %}
-       		  	{% assign endPage = curr_page_num | plus:2 %}		  
+      		       {% assign startPage = curr_page_num|minus:2 %}
+       		  	{% assign endPage = curr_page_num|plus:2 %}		  
       		  {% endif %}
       		  
         		  {% if startPage < 1 %}	
@@ -74,6 +74,8 @@ layout: default
 			  {% endif %}
 			  <a class="pjaxlink" href="/page{{paginator.total_pages}}/"><span class="x1" style="margin-left:5px;">末页</span></a>			  
 			  <span  style="margin-left:5px;">第{{paginator.page}}页 / 共{{paginator.total_pages}}页</span>
+
+			  <span>测试{startPage} {endPage} {curr_page_num|plus:2} ** {curr_page_num|minus:2}</span>
 		</div>
 	{% endif %}
 
