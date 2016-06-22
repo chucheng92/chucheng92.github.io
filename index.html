@@ -43,7 +43,7 @@ layout: default
     			{% if curr_page_num < 3 or curr_page_num == 3 %}
         			{% assign startPage = 1 %}
         			{% assign endPage = 5 %}
-      		  	{% elsif curr_page_num > paginator.total_pages|minus:3 or curr_page_num == paginator.total_pages|minus:3%}
+      		  	{% elsif curr_page_num > paginator.total_pages|minus:2 or curr_page_num == paginator.total_pages|minus:2%}
       		        {% assign startPage = paginator.total_pages|minus:4 %}
         			{% assign endPage = paginator.total_pages %}
       		  	{% else %}
