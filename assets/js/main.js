@@ -142,7 +142,7 @@ function pjax_loadChart(){
 				    legend: {
 				        orient : 'vertical',
 				        x : 'left',
-				        data:['java','android','linux','android studio','c','git']
+				        data:['java','maven','linux','sql','设计模式','git','redis','netty','TCP/IP','websocket']
 				    },
 				    toolbox: {
 				        show : false,
@@ -174,11 +174,15 @@ function pjax_loadChart(){
 				            center: ['50%', '60%'],
 				            data:[
 				                {value:50, name:'java'},
-				                {value:80, name:'android'},
+				                {value:80, name:'maven'},
 				                {value:40, name:'linux'},
-				                {value:60, name:'android studio'},
-				                {value:50, name:'c'},
-						{value:50, name:'git'}
+				                {value:60, name:'sql'},
+				                {value:60, name:'设计模式'},
+				                {value:60, name:'git'},
+				                {value:50, name:'redis'},
+								{value:50, name:'netty'},
+								{value:50, name:'TCP/IP'},
+								{value:50, name:'websocket'}
 				            ]
 				        }
 				    ]
