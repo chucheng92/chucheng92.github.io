@@ -5,7 +5,7 @@ tags: Java
 category: 技术
 ---
 
-> 原文出处： [jtraining](http://www.jtraining.com/component/content/article/35-jtraining-blog/98.html)   译文出处：[Lixiang](http://www.leexiang.com/cache-algorithm) 更新:[Saber](tinymood.com/cache-and-cache-algorithm.html)
+> 原文出处： [jtraining](http://www.jtraining.com/component/content/article/35-jtraining-blog/98.html)   译文出处：[Lixiang](http://www.leexiang.com/cache-algorithm) 更新:[Saber](http://tinymood.com/2016/06/16/cache-and-cache-algorithm.html)
 
 **引言**
 
@@ -59,7 +59,7 @@ programmer one 离开之后，他想要知道这个面试者说的问题和答�
 
 正如开篇所讲，缓存是“存贮数据（使用频繁的数据）的临时地方，因为取原始数据的代价太大了，所以我可以取得快一些。”
 
-缓存可以认为是数据的池，这些数据是从数据库里的真实数据复制出来的，并且为了能别取回，被标上了标签（键 ID）。太棒了
+缓存可以认为是数据的池，这些数据是从数据库里的真实数据复制出来的，并且为了能正确取回，被标上了标签（键 ID）。太棒了
 
 programmer one 已经知道这点了，但是他还不知道下面的缓存术语。
 
@@ -137,7 +137,7 @@ programmer one 突然醒了，他被吓到了，浑身是汗，他开始环顾�
 
 **Least Recently Used 2（LRU2）：**
 
-我是 Least Recently Used 2，有人叫我最近最少使用 twice，我更喜欢这个叫法。我会把被两次访问过的对象放入缓存池，当缓存池满了之后，我会把有两次最少使用的缓存对象踢走。因为需要跟踪对象2次，访问负载就会随着缓存池的增加而增加。如果把我用在大容量的缓存池中，就会有问题。另外，我还需要跟踪那么不在缓存的对象，因为他们还没有被第二次读取。我比LRU好，而且是 adoptive to access 模式 。
+我是 Least Recently Used 2，有人叫我最近最少使用 twice，我更喜欢这个叫法。我会把被两次访问过的对象放入缓存池，当缓存池满了之后，我会把有两次最少使用的缓存对象踢走。因为需要跟踪对象2次，访问负载就会随着缓存池的增加而增加。如果把我用在大容量的缓存池中，就会有问题。另外，我还需要跟踪那些不再缓存的对象，因为他们还没有被第二次读取。我比LRU好，而且是 adoptive to access 模式 。
 
 **Two Queues（2Q）：**
 
@@ -163,7 +163,7 @@ programmer one 突然醒了，他被吓到了，浑身是汗，他开始环顾�
 
 **Second Chance：**
 
-大家好，我是 second chance，我是通过 FIFO 修改而来的，被大家叫做 second chance 缓存算法，我比 FIFO 好的地方是我改善了 FIFO 的成本。我是 FIFO 一样也是在观察队列的前端，但是很FIFO的立刻踢出不同，我会检查即将要被踢出的对象有没有之前被使用过的标志（1一个 bit 表示），没有没有被使用过，我就把他踢出；否则，我会把这个标志位清除，然后把这个缓存对象当做新增缓存对象加入队列。你可以想象就这就像一个环队列。当我再一次在队头碰到这个对象时，由于他已经没有这个标志位了，所以我立刻就把他踢开了。我在速度上比 FIFO 快。
+大家好，我是 second chance，我是通过 FIFO 修改而来的，被大家叫做 second chance 缓存算法，我比 FIFO 好的地方是我改善了 FIFO 的成本。我是 FIFO 一样也是在观察队列的前端，但是很FIFO的立刻踢出不同，我会检查即将要被踢出的对象有没有之前被使用过的标志（1一个 bit 表示），没有被使用过，我就把他踢出；否则，我会把这个标志位清除，然后把这个缓存对象当做新增缓存对象加入队列。你可以想象就这就像一个环队列。当我再一次在队头碰到这个对象时，由于他已经没有这个标志位了，所以我立刻就把他踢开了。我在速度上比 FIFO 快。
 
 **CLock：**
 
