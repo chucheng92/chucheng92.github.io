@@ -142,7 +142,7 @@ function pjax_loadChart(){
 				    legend: {
 				        orient : 'vertical',
 				        x : 'left',
-				        data:['java','maven','linux','sql','设计模式','git','redis','netty','TCP/IP','websocket']
+				        data:['java','maven','linux','sql','设计模式','git/svn','redis','netty','TCP/IP','websocket']
 				    },
 				    toolbox: {
 				        show : false,
@@ -178,7 +178,7 @@ function pjax_loadChart(){
 				                {value:40, name:'linux'},
 				                {value:60, name:'sql'},
 				                {value:60, name:'设计模式'},
-				                {value:60, name:'git'},
+				                {value:60, name:'git/svn'},
 				                {value:50, name:'redis'},
 								{value:50, name:'netty'},
 								{value:50, name:'TCP/IP'},
