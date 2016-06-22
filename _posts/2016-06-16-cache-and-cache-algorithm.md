@@ -63,7 +63,7 @@ programmer one 离开之后，他想要知道这个面试者说的问题和答�
 
 programmer one 已经知道这点了，但是他还不知道下面的缓存术语。
 
-![](http://jbcdn2.b0.upaiyun.com/2012/12/caching.jpg)
+![cache访问流程](http://jbcdn2.b0.upaiyun.com/2012/12/caching.jpg)
 
 **命中：**
 
