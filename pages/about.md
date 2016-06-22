@@ -12,7 +12,7 @@ permalink: /pages/about.html
 	<p>
 	博客用<a href="http://jekyllrb.com/"><code>jekyll</code></a>（可将纯文本转化为静态网站和博客的语言）,<code>html</code>,<code>css</code>等构建。博客部署在<code>github</code>服务器上，前端采用<code>bootstrap</code>栅格式布局，可自适应移动端浏览器。
 	</p>
-	<p>写干净的文字，过简单的生活。</p>
+	<p>写干净的文字，过简单的生活。欢迎勾搭 ︿(￣︶￣)︿</p>
 	<br>
 	
 	<h3><i class="fa fa-laptop"></i>&nbsp;IT技能</h3>

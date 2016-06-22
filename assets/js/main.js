@@ -173,15 +173,16 @@ function pjax_loadChart(){
 				            radius : '55%',
 				            center: ['50%', '60%'],
 				            data:[
-				                {value:50, name:'java'},
-				                {value:80, name:'maven'},
+				                {value:40, name:'maven'},
+				                {value:80, name:'java'},
+				                {value:50, name:'spring'},
 				                {value:40, name:'linux'},
+				                {value:50, name:'TCP/IP'},
 				                {value:60, name:'sql'},
 				                {value:60, name:'设计模式'},
 				                {value:60, name:'git/svn'},
 				                {value:50, name:'redis'},
 								{value:50, name:'netty'},
-								{value:50, name:'TCP/IP'},
 								{value:50, name:'websocket'}
 				            ]
 				        }
