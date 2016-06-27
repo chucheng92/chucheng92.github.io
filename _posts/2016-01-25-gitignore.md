@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git忽略规则及.gitignore规则不生效的解决办法
-tags: git
+tags: Git
 category: 技术
 date: 2016-01-25 15:48:09
 ---
