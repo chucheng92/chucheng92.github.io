@@ -5,7 +5,7 @@ tags: Git
 category: 技术
 ---
 
-文章在少年的博客已经同步更新，传送门http://tinymood.com
+文章在少年的博客已经同步更新，传送门 http://tinymood.com/2016/06/22/myholy-git-instructions.html
 
 ## 写作初衷
 
@@ -67,26 +67,35 @@ Git（我们的主角）是由 Linux（一种电脑操作系统）之父 Linus T
 
 **git clone**
 
+小提示：git clone命令用来将服务器的仓库（包括其内容）复制一份到本地（即你的电脑）并且关联起来。使得以后你在自己电脑的所有修改都可以写回到服务器上，保持状态的同步。
+
 这时候，我们定位到刚才clone的地址，会找到menghuishaonian的文件夹，这时候我们就可以愉快的开始写小说啦。比如说我写了第一章，文件名为梦回少年-1.txt。内容为第一章 记忆。写完后你会发现，客户端已经追踪到了。提示我们修改未提交。
+
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/github-11.png)
 
 这时候我们点击commit将刚刚的操作提交。这样就做成了一个版本。
 
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/github-12.png)
-这时候点击右上角的publish/sync就可以同步到服务器了。试试看。点击以后，访问https://github.com/Lemonjing/menghuishaonian,看到了吗，我们的文章已经同步到服务器啦，真是令人激动的一刻。
+
+这时候点击右上角的publish/sync就可以同步到服务器了。试试看。点击以后，访问 https://github.com/Lemonjing/menghuishaonian, 看到了吗，我们的文章已经同步到服务器啦，真是令人激动的一刻。
+
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/github-13.png)
 
-为了熟悉一下提交，我们再第一章中多写点字。
+为了熟悉一下提交，我们在第一章中多写点字把。
 
-![](http://7xlkoc.com1.z0.glb.clouddn.com/github-14.png)然后点击左下角提交加入本地管理，如果想同步到服务器，再点击右上角sync就可以了。
+![](http://7xlkoc.com1.z0.glb.clouddn.com/github-14.png)
 
-话说，今天我突然觉得昨天的那句话“年纪渐渐大了，忽然之间，想起曾经的我，那是怎样的一个过去啊。”写的不好，想回退到第一章 记忆那里，只需要点击revert就可以了啊。
+然后点击左下角提交加入本地管理，如果想同步到服务器，再点击右上角sync就可以了。
+
+话说，今天我突然觉得昨天的那句话“年纪渐渐大了，忽然之间，想起曾经的我，那是怎样的一个过去啊。”写的不好，想回退到第一章 记忆那里，只需要点击revert就可以了啊。（随时回退，这个功能真赞！）
 
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/github-15.png)
 
 话说今天lemon写了一章华丽无比的番外，你要更新本地的小说和他写的保持一致怎么办？
 
 **git pull**
+
+小提示：git pull命令用来从服务器拉取更新到本地。使你的电脑上的仓库内容也保持最新。
 
 ![](https://pic2.zhimg.com/f5c5c0b43d1f9f7ab27267fbcc16d9fd_b.png)
 
