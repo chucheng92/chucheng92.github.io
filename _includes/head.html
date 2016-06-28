@@ -61,10 +61,9 @@ $(function(){
   $(".qrcode").hover(function(){
     panel.css("width","0px").show();
     panel.animate({"width" : w + "px"},2000);
+  },function(){
+    panel.animate({"width" : "0px"},5000);
   });
-  // },function(){
-  //   panel.animate({"width" : "0px"},000);
-  // });
   
 });
 </script>
