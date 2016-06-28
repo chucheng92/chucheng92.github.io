@@ -97,7 +97,7 @@ Git（我们的主角）是由 Linux（一种电脑操作系统）之父 Linus T
 
 小提示：git pull命令用来从服务器拉取更新到本地。使你的电脑上的仓库内容也保持最新。
 
-![](https://pic2.zhimg.com/f5c5c0b43d1f9f7ab27267fbcc16d9fd_b.png)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/f5c5c0b43d1f9f7ab27267fbcc16d9fd_b.png)
 
 好了，知道这些基本操作入门应该够了，我们来回顾一下（不要嫌弃我的画工啊喂！）
 
