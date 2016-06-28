@@ -37,14 +37,13 @@
 #floatPanel .ctrolPanel .qrcode{height:40px;display:block;margin:2px auto;}
 #floatPanel .ctrolPanel .qrcode span{display:none;}
 
-.popPanel{width:205px;height:214px; position:fixed;right:90px;top:300px;z-index:10000;overflow:hidden;display:none;_position:absolute; /* for IE6 */_top:expression(documentElement.scrollTop + 300); }
+.popPanel{width:205px;height:214px; position:fixed;right:90px;top:300px;z-index:10000;overflow:hidden;display:none;_position:absolute;}
 .popPanel-inner{width:205px;height:220px;position:relative;overflow:hidden;}
-.arrowPanel{width:10px;height:210px;position:absolute;right:1px;top:102px;}
+/*.arrowPanel{width:10px;height:210px;position:absolute;right:1px;top:102px;}
 .arrowPanel .arrow01{width:0;height:0;font-size:0;line-height:0;border-top:10px solid transparent;_border-top:10px solid black;_filter:chroma(color=black);border-right:10px solid transparent;_border-right:10px solid black;_filter:chroma(color=black);border-bottom:10px solid transparent;_border-bottom:10px solid black;_filter:chroma(color=black);border-left:10px solid #ddd;position:absolute;bottom:0;position:absolute;left:2px;top:0;}
 .arrowPanel .arrow02{width:0;height:0;font-size:0;line-height:0;border-top:10px solid transparent;_border-top:10px solid black;_filter:chroma(color=black);border-right:10px solid transparent;_border-right:10px solid black;_filter:chroma(color=black);border-bottom:10px solid transparent;_border-bottom:10px solid black;_filter:chroma(color=black);border-left:10px solid #fff;position:absolute;bottom:0;position:absolute;left:0;top:0;}
 .qrcodePanel{width:194px; height:212px; background:#fff;text-align:center;border:solid 1px #ddd;position:absolute;left:0;top:0;overflow:hidden;}
 .qrcodePanel img{width:174px;height:174px;border:none;padding:5px 5px 0px 5px;}
-.qrcodePanel p{font-size:12px;color:#666;line-height:20px;letter-spacing:1px;}
   /**/
   </style>
   <script type="text/javascript" src="http://libs.useso.com/js/jquery/1.7.2/jquery.min.js"></script>
@@ -65,9 +64,9 @@ $(function(){
   
   $(".qrcode").hover(function(){
     panel.css("width","0px").show();
-    panel.animate({"width" : w + "px"},800);
+    panel.animate({"width" : w + "px"},1000);
   },function(){
-    panel.animate({"width" : "0px"},800);
+    panel.animate({"width" : "0px"},1000);
   });
   
 });
