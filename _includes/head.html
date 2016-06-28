@@ -24,9 +24,8 @@
   <script type="text/javascript" src="/assets/js/ua-parser.js"></script>
   <script>var duoshuoQuery = {short_name:"saber92"};</script>
   <style type="text/css">
-  /*.qrcode{width:180px;height:180px;background:#fff url(/assets/img/qrcode.png) no-repeat left top;border:solid 1px #ddd;position:fixed;right:15px;top:200px;overflow:hidden;z-index:10000;}*/
-  /**/
-  #floatPanel .ctrolPanel{width:36px;height:166px;background:#fff url(/assets/img/panel_bg.gif) no-repeat left top;border:solid 1px #ddd;position:fixed;right:25px;top:300px;overflow:hidden;z-index:10000; _position:absolute; /* for IE6 */_top:expression(documentElement.scrollTop + 300);}
+  
+#floatPanel .ctrolPanel{width:36px;height:166px;background:#fff url(/assets/img/panel_bg.gif) no-repeat left top;border:solid 1px #ddd;position:fixed;right:25px;top:300px;overflow:hidden;z-index:10000;}
 #floatPanel .ctrolPanel a{width:34px;font-size:12px;color:#ff6600;letter-spacing:1px;text-align:center;overflow:hidden;}
 #floatPanel .ctrolPanel .arrow{height:29px;line-height:28px;display:block;margin:1px auto;}
 #floatPanel .ctrolPanel .arrow span{display:none;}
@@ -39,12 +38,9 @@
 
 .popPanel{width:205px;height:214px; position:fixed;right:90px;top:300px;z-index:10000;overflow:hidden;display:none;_position:absolute;}
 .popPanel-inner{width:205px;height:220px;position:relative;overflow:hidden;}
-/*.arrowPanel{width:10px;height:210px;position:absolute;right:1px;top:102px;}
-.arrowPanel .arrow01{width:0;height:0;font-size:0;line-height:0;border-top:10px solid transparent;_border-top:10px solid black;_filter:chroma(color=black);border-right:10px solid transparent;_border-right:10px solid black;_filter:chroma(color=black);border-bottom:10px solid transparent;_border-bottom:10px solid black;_filter:chroma(color=black);border-left:10px solid #ddd;position:absolute;bottom:0;position:absolute;left:2px;top:0;}
-.arrowPanel .arrow02{width:0;height:0;font-size:0;line-height:0;border-top:10px solid transparent;_border-top:10px solid black;_filter:chroma(color=black);border-right:10px solid transparent;_border-right:10px solid black;_filter:chroma(color=black);border-bottom:10px solid transparent;_border-bottom:10px solid black;_filter:chroma(color=black);border-left:10px solid #fff;position:absolute;bottom:0;position:absolute;left:0;top:0;}
 .qrcodePanel{width:194px; height:212px; background:#fff;text-align:center;border:solid 1px #ddd;position:absolute;left:0;top:0;overflow:hidden;}
 .qrcodePanel img{width:174px;height:174px;border:none;padding:5px 5px 0px 5px;}
-  /**/
+  
   </style>
   <script type="text/javascript" src="http://libs.useso.com/js/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript">
@@ -64,9 +60,9 @@ $(function(){
   
   $(".qrcode").hover(function(){
     panel.css("width","0px").show();
-    panel.animate({"width" : w + "px"},1000);
+    panel.animate({"width" : w + "px"},5000);
   },function(){
-    panel.animate({"width" : "0px"},1000);
+    panel.animate({"width" : "0px"},5000);
   });
   
 });
