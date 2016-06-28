@@ -24,5 +24,30 @@
   <script type="text/javascript" src="/assets/js/ua-parser.js"></script>
   <script>var duoshuoQuery = {short_name:"saber92"};</script>
   <style type="text/css">
-  </style>
+  <script type="text/javascript" src="http://libs.useso.com/js/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  // 页面浮动面板
+  $("#floatPanel a.arrow").eq(0).click(function(){
+    $("html,body").animate({scrollTop :0}, 300);
+    return false;
+  });
+  $("#floatPanel a.arrow").eq(1).click(function(){
+    $("html,body").animate({scrollTop : $(document).height()}, 300);
+    return false;
+  });
+
+  var panel = $(".popPanel"); 
+  var w = panel.outerWidth();
+  
+  $(".qrcode").onClick(function(){
+    panel.css("width","0px").show();
+    panel.animate({"width" : w + "px"},2000);
+  },function(){
+    panel.animate({"width" : "0px"},2000);
+  });
+  
+});
+</script>
+</style>
 </head>
