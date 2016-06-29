@@ -75,7 +75,7 @@ Git（我们的主角）是由 Linux（一种电脑操作系统）之父 Linus T
 
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/github-12.png)
 
-这时候点击右上角的publish/sync就可以同步到服务器了。试试看。点击以后，访问 https://github.com/Lemonjing/menghuishaonian, 看到了吗，我们的文章已经同步到服务器啦，真是令人激动的一刻。
+这时候点击右上角的publish/sync就可以同步到服务器了。试试看。点击以后，访问 [https://github.com/Lemonjing/menghuishaonian](https://github.com/Lemonjing/menghuishaonian), 看到了吗，我们的文章已经同步到服务器啦，真是令人激动的一刻。
 
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/github-13.png)
 
