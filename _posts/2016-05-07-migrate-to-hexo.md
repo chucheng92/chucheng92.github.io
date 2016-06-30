@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 近期全站将迁移至Hexo
+title: 『原创』近期全站将迁移至Hexo
 tags: Hexo
 category: 技术
 date: 2016-05-07 11:31:09

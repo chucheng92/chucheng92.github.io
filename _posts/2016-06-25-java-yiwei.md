@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JAVA移位运算符简介
+title: 『原创』JAVA移位运算符简介
 tags: Java
 category: 技术
 ---

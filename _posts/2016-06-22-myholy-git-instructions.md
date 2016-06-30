@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 写给非IT专业同学的Git入门全攻略
+title: 『原创』写给非IT专业同学的Git入门全攻略
 tags: Git
 category: 技术
 ---

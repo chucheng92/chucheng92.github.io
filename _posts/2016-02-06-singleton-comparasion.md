@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 6种单例模式的实现以及double check的剖析
+title: 『原创』6种单例模式的实现以及double check的剖析
 category: 技术
 tags: Java 单例 设计模式
 date: 2016-02-06 22:40:31

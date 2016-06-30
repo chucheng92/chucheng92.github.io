@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 深入理解Java注解 － 注解入门
+title: 『原创』深入理解Java注解 － 注解入门
 tags: Java 注解
 category: 技术
 date: 2016-01-15 15:37:42
