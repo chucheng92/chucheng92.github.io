@@ -61,6 +61,9 @@ nginx的进程模型，可以由下图来表示：
 
 ![](http://img.blog.csdn.net/20160401103647146)
 
+注：本文转自 http://blog.csdn.net/hguisu/article/details/8930668
+
+
 ### 联系我
 
 - 邮箱: xmusaber@163.com
