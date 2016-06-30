@@ -1,9 +1,8 @@
 ---
 layout: post
 title: 『原创』九种内部排序算法的Java实现及其性能测试
-tags: Java 排序
+tags: Java
 category: 算法
-date: 2016-04-22 19:45:27
 description: 内部排序算法的Java实现及其性能测试
 ---
 
@@ -347,6 +346,6 @@ public void heapSort(int[] a) {
 }
 ```
 
-排序代码地址 https://github.com/Lemonjing/TinyCoding/tree/master/src/main/java/com/tinymood/javase/sort
+排序代码地址 https://github.com/Lemonjing/TinyCoding/tree/master/src/main/java/com/tinymood/sort
 
-性能测试代码地址 https://github.com/Lemonjing/TinyCoding/tree/master/src/test/java/com/tinymood/javase/sort
+性能测试代码地址 https://github.com/Lemonjing/TinyCoding/tree/master/src/test/java/com/tinymood/sort
