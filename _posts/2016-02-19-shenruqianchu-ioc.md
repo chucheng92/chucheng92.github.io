@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 『原创』深入浅出IOC
-tags: ioc Java spring
+tags: ioc Java Spring
 category: 技术
 date: 2016-02-19 11:52:14
 ---

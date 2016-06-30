@@ -2,7 +2,7 @@
 layout: post
 title: 计算nextDay的实现
 category: 技术
-tags: java
+tags: Java
 description: 实现nextDay算法
 ---
 

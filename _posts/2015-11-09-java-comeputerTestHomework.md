@@ -2,8 +2,7 @@
 layout: post
 title: 简单的括号检查程序
 category: 技术
-tags: java
-description: 
+tags: Java
 ---
 
 >一个很简单的括号语法检查器

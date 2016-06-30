@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spring事务管理（详解+实例)
-tags: Java
+tags: Java Spring
 category: 技术
 ---
 
