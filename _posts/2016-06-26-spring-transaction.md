@@ -25,7 +25,7 @@ category: 技术
 
 - 持久性（Durability）：一旦事务完成，无论发生什么系统错误，它的结果都不应该受到影响，这样就能从任何系统崩溃中恢复过来。通常情况下，事务的结果被写到持久化存储器中。
 
-** Spring中的事务管理**
+**Spring中的事务管理**
 
 作为企业级应用程序框架，Spring在不同的事务管理API之上定义了一个抽象层。而应用程序开发人员不必了解底层的事务管理API，就可以使用Spring的事务管理机制。
 
@@ -43,26 +43,26 @@ Spring事务管理涉及的接口的联系如下：
 
 ![](http://img.blog.csdn.net/20160324011156424)
 
-2.1 事务管理器
+**2.1 事务管理器**
 
 Spring并不直接管理事务，而是提供了多种事务管理器，他们将事务管理的职责委托给Hibernate或者JTA等持久化机制所提供的相关平台框架的事务来实现。 
 
 Spring事务管理器的接口是org.springframework.transaction.PlatformTransactionManager，通过这个接口，Spring为各个平台如JDBC、Hibernate等都提供了对应的事务管理器，但是具体的实现就是各个平台自己负责。此接口的内容如下：
 
 ```java
-Public interface PlatformTransactionManager()...{  
+public interface PlatformTransactionManager {  
     // 由TransactionDefinition得到TransactionStatus对象
     TransactionStatus getTransaction(TransactionDefinition definition) throws TransactionException; 
     // 提交
     Void commit(TransactionStatus status) throws TransactionException;  
     // 回滚
     Void rollback(TransactionStatus status) throws TransactionException;  
-    } 
+} 
 ```
 
 从这里可知具体的具体的事务管理机制对Spring来说是透明的，它并不关心那些，那些是对应各个平台需要关心的，所以Spring事务管理的一个优点就是为不同的事务API提供一致的编程模型，如JTA、JDBC、Hibernate、JPA。下面分别介绍各个平台框架实现事务管理的机制。
 
-2.1.1 JDBC事务
+**2.1.1 JDBC事务**
 
 如果应用程序中直接使用JDBC来进行持久化，DataSourceTransactionManager会为你处理事务边界。为了使用DataSourceTransactionManager，你需要使用如下的XML将其装配到应用程序的上下文定义中：
 
@@ -110,7 +110,7 @@ JpaTransactionManager只需要装配一个JPA实体管理工厂（javax.persiste
 
 JtaTransactionManager将事务管理的责任委托给javax.transaction.UserTransaction和javax.transaction.TransactionManager对象，其中事务成功完成通过UserTransaction.commit()方法提交，事务失败通过UserTransaction.rollback()方法回滚。
 
-2.2 基本事务属性的定义
+**2.2 基本事务属性的定义**
 
 上面讲到的事务管理器接口PlatformTransactionManager通过getTransaction(TransactionDefinition definition)方法来得到事务，这个方法里面的参数是TransactionDefinition类，这个类就定义了一些基本的事务属性。 
 那么什么是事务属性呢？事务属性可以理解成事务的一些基本配置，描述了事务策略如何应用到方法上。事务属性包含了5个方面，如图所示：
@@ -321,6 +321,7 @@ methodB(){
 
 如果单独调用methodB方法，则按REQUIRED属性执行。如果调用methodA方法，相当于下面的效果：
 
+```sh
 main(){
     Connection con = null;
     Savepoint savepoint = null;
@@ -344,11 +345,15 @@ main(){
         //释放资源
     }
 }
+```
+
 当methodB方法调用之前，调用setSavepoint方法，保存当前的状态到savepoint。如果methodB方法调用失败，则恢复到之前保存的状态。但是需要注意的是，这时的事务并没有进行提交，如果后续的代码(doSomeThingB()方法)调用失败，则回滚包括methodB方法的所有操作。
 
 嵌套事务一个非常重要的概念就是内层事务依赖于外层事务。外层事务失败时，会回滚内层事务所做的动作。而内层事务操作失败并不会引起外层事务的回滚。
 
-PROPAGATION_NESTED 与PROPAGATION_REQUIRES_NEW的区别:它们非常类似,都像一个嵌套事务，如果不存在一个活动的事务，都会开启一个新的事务。使用 PROPAGATION_REQUIRES_NEW时，内层事务与外层事务就像两个独立的事务一样，一旦内层事务进行了提交后，外层事务不能对其进行回滚。两个事务互不影响。两个事务不是一个真正的嵌套事务。同时它需要JTA事务管理器的支持。
+**PROPAGATION_NESTED 与PROPAGATION_REQUIRES_NEW的区别:**
+
+它们非常类似,都像一个嵌套事务，如果不存在一个活动的事务，都会开启一个新的事务。使用 PROPAGATION_REQUIRES_NEW时，内层事务与外层事务就像两个独立的事务一样，一旦内层事务进行了提交后，外层事务不能对其进行回滚。两个事务互不影响。两个事务不是一个真正的嵌套事务。同时它需要JTA事务管理器的支持。
 
 使用PROPAGATION_NESTED时，外层事务的回滚可以引起内层事务的回滚。而内层事务的异常并不会导致外层事务的回滚，它是一个真正的嵌套事务。DataSourceTransactionManager使用savepoint支持PROPAGATION_NESTED时，需要JDBC 3.0以上驱动及1.4以上的JDK版本支持。其它的JTA TrasactionManager实现可能有不同的支持方式。
 
@@ -356,7 +361,7 @@ PROPAGATION_REQUIRES_NEW 启动一个新的, 不依赖于环境的 “内部” 
 
 另一方面, PROPAGATION_NESTED 开始一个 “嵌套的” 事务, 它是已经存在事务的一个真正的子事务. 嵌套事务开始执行时, 它将取得一个 savepoint. 如果这个嵌套事务失败, 我们将回滚到此 savepoint. 潜套事务是外部事务的一部分, 只有外部事务结束后它才会被提交。
 
-由此可见, PROPAGATION_REQUIRES_NEW 和 PROPAGATION_NESTED 的最大区别在于, PROPAGATION_REQUIRES_NEW 完全是一个新的事务, 而 PROPAGATION_NESTED 则是外部事务的子事务, 如果外部事务 commit, 嵌套事务也会被 commit, 这个规则同样适用于 roll back.
+由此可见, PROPAGATION_REQUIRES_NEW 和 PROPAGATION_NESTED 的最大区别在于, PROPAGATION_REQUIRES_NEW 完全是一个新的事务, 而 PROPAGATION_NESTED 则是外部事务的子事务, 如果外部事务 commit, 嵌套事务也会被 commit, 这个规则同样适用于 roll back。**
 
 PROPAGATION_REQUIRED应该是我们首先的事务传播行为。它能够满足我们大多数的事务需求。
 
@@ -452,7 +457,7 @@ PROPAGATION_REQUIRED应该是我们首先的事务传播行为。它能够满足
 事务五边形的最后一个方面是一组规则，这些规则定义了哪些异常会导致事务回滚而哪些不会。默认情况下，事务只有遇到运行期异常时才会回滚，而在遇到检查型异常时不会回滚（这一行为与EJB的回滚行为是一致的） 
 但是你可以声明事务在遇到特定的检查型异常时像遇到运行期异常那样回滚。同样，你还可以声明事务遇到特定的异常不回滚，即使这些异常是运行期异常。
 
-2.3 事务状态
+**2.3 事务状态**
 
 上面讲到的调用PlatformTransactionManager接口的getTransaction()的方法得到的是TransactionStatus接口的一个实现，这个接口的内容如下：
 
@@ -468,14 +473,14 @@ public interface TransactionStatus{
 
 可以发现这个接口描述的是一些处理事务提供简单的控制事务执行和查询事务状态的方法，在回滚或提交的时候需要应用对应的事务状态。
 
-3 编程式事务
+### 3、编程式事务
 
-3.1 编程式和声明式事务的区别
+**3.1 编程式和声明式事务的区别**
 
 Spring提供了对编程式事务和声明式事务的支持，编程式事务允许用户在代码中精确定义事务的边界，而声明式事务（基于AOP）有助于用户将操作与事务规则进行解耦。 
 简单地说，编程式事务侵入到了业务代码里面，但是提供了更加详细的事务管理；而声明式事务由于基于AOP，所以既能起到事务管理的作用，又可以不影响业务代码的具体实现。
 
-3.2 如何实现编程式事务？
+**3.2 如何实现编程式事务？**
 
 Spring提供两种方式的编程式事务管理，分别是：使用TransactionTemplate和直接使用PlatformTransactionManager。
 
@@ -514,9 +519,9 @@ TransactionTemplate tt = new TransactionTemplate(); // 新建一个TransactionTe
     }
 ```
 
-4 声明式事务
+### 4、声明式事务
 
-4.1 配置方式
+**4.1 配置方式**
 
 注：以下配置代码参考自Spring事务配置的五种方式
 
@@ -782,7 +787,7 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 }
 ```
 
-4.2 一个声明式事务的实例
+**4.2 一个声明式事务的实例**
 
 注：该实例参考自Spring中的事务管理实例详解
 
