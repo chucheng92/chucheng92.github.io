@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring中ApplicationContext和beanfactory区别
+title: Spring中ApplicationContext和Beanfactory区别
 tags: Spring
 category: 技术
 ---
