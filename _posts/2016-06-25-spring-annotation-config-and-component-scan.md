@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring`<context:annotation-config>`和`<context:component-scan>`诠释及区别
+title: Spring的context:annotation-config和context:component-scan诠释及区别
 tags: Spring
 category: 技术
 ---
