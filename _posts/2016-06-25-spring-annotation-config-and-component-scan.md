@@ -5,7 +5,7 @@ tags: Spring
 category: 技术
 ---
 
-**<context:annotation-config> 和 <context:component-scan>的区别**
+**`<context:annotation-config>` 和 `<context:component-scan>`的区别**
 
 1\. `<context:annotation-config>`是用于激活那些已经在spring容器里注册过的bean（无论是通过xml的方式还是通过package sanning的方式）上面的注解。
 
@@ -237,7 +237,7 @@ creating bean C: com.xxx.C@80d1ff
  
 这是什么原因呢？
 
-是因为我们仅仅扫描了com.xxx包及其子包的类，而class A是在com.yyy包下，所以就扫描不到了
+**`是因为我们仅仅扫描了com.xxx包及其子包的类，而class A是在com.yyy包下，所以就扫描不到了`**
 
 下面我们在applicationContext.xml中把com.yyy也加入进来：
 
