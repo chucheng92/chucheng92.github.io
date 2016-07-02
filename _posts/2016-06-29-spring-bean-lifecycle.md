@@ -303,39 +303,37 @@ public class BeanLifeCycle {
 
 我们来看一下结果：
 
-> 现在开始初始化容器 2014-5-18 15:46:20<br/>
-> org.springframework.context.support.AbstractApplicationContext<br/>
-> prepareRefresh 信息: Refreshing<br/>
-> org.springframework.context.support.ClassPathXmlApplicationContext@19a0c7c:<br/>
-> startup date [Sun May 18 15:46:20 CST 2014]; root of context hierarchy<br/>
-> 2014-5-18 15:46:20<br/>
-> org.springframework.beans.factory.xml.XmlBeanDefinitionReader<br/>
-> loadBeanDefinitions 信息: Loading XML bean definitions from class path<br/>
-> resource [springBeanTest/beans.xml] 这是BeanFactoryPostProcessor实现类构造器！！<br/>
-> BeanFactoryPostProcessor调用postProcessBeanFactory方法<br/>
-> 这是BeanPostProcessor实现类构造器！！<br/>
-> 这是InstantiationAwareBeanPostProcessorAdapter实现类构造器！！ 2014-5-18<br/>
-> 15:46:20<br/>
-> org.springframework.beans.factory.support.DefaultListableBeanFactory<br/>
-> preInstantiateSingletons 信息: Pre-instantiating singletons in<br/>
-> org.springframework.beans.factory.support.DefaultListableBeanFactory@9934d4:<br/>
-> defining beans<br/>
-> [beanPostProcessor,instantiationAwareBeanPostProcessor,beanFactoryPostProcessor,person];<br/>
-> root of factory hierarchy<br/>
-> InstantiationAwareBeanPostProcessor调用postProcessBeforeInstantiation方法<br/>
-> 【构造器】调用Person的构造器实例化<br/>
-> InstantiationAwareBeanPostProcessor调用postProcessPropertyValues方法<br/>
-> 【注入属性】注入属性address 【注入属性】注入属性name 【注入属性】注入属性phone<br/>
-> 【BeanNameAware接口】调用BeanNameAware.setBeanName()<br/>
-> 【BeanFactoryAware接口】调用BeanFactoryAware.setBeanFactory()<br/>
-> BeanPostProcessor接口方法postProcessBeforeInitialization对属性进行更改！<br/>
-> 【InitializingBean接口】调用InitializingBean.afterPropertiesSet()<br/>
-> 【init-method】调用<bean>的init-method属性指定的初始化方法<br/>
-> BeanPostProcessor接口方法postProcessAfterInitialization对属性进行更改！<br/>
-> InstantiationAwareBeanPostProcessor调用postProcessAfterInitialization方法<br/>
-> 容器初始化成功 Person [address=广州, name=张三, phone=110] 现在开始关闭容器！<br/>
-> 【DiposibleBean接口】调用DiposibleBean.destory()<br/>
-> 【destroy-method】调用<bean>的destroy-method属性指定的初始化方法<br/>
+---
+
+现在开始初始化容器 <br>
+2014-5-18 15:46:20 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@19a0c7c: startup date [Sun May 18 15:46:20 CST 2014]; root of context hierarchy<br>
+2014-5-18 15:46:20 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions<br>
+信息: Loading XML bean definitions from class path resource [springBeanTest/beans.xml]<br>
+这是BeanFactoryPostProcessor实现类构造器！！<br>
+BeanFactoryPostProcessor调用postProcessBeanFactory方法<br>
+这是BeanPostProcessor实现类构造器！！<br>
+这是InstantiationAwareBeanPostProcessorAdapter实现类构造器！！<br>
+2014-5-18 15:46:20 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons<br>
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@9934d4: defining beans [beanPostProcessor,instantiationAwareBeanPostProcessor,beanFactoryPostProcessor,person]; root of factory hierarchy<br>
+InstantiationAwareBeanPostProcessor调用postProcessBeforeInstantiation方法<br>
+【构造器】调用Person的构造器实例化<br>
+InstantiationAwareBeanPostProcessor调用postProcessPropertyValues方法<br>
+【注入属性】注入属性address<br>
+【注入属性】注入属性name<br>
+【注入属性】注入属性phone<br>
+【BeanNameAware接口】调用BeanNameAware.setBeanName()<br>
+【BeanFactoryAware接口】调用BeanFactoryAware.setBeanFactory()<br>
+BeanPostProcessor接口方法postProcessBeforeInitialization对属性进行更改！<br><br>
+【InitializingBean接口】调用InitializingBean.afterPropertiesSet()<br>
+【init-method】调用<bean>的init-method属性指定的初始化方法<br>
+BeanPostProcessor接口方法postProcessAfterInitialization对属性进行更改！<br><br>
+InstantiationAwareBeanPostProcessor调用postProcessAfterInitialization方法<br>
+容器初始化成功<br>
+Person [address=广州, name=张三, phone=110]<br>
+现在开始关闭容器！<br>
+【DiposibleBean接口】调用DiposibleBean.destory()<br>
+【destroy-method】调用<bean>的destroy-method属性指定的初始化方法<br>
 
 转自 http://www.cnblogs.com/zrtqsk/p/3735273.html
 
