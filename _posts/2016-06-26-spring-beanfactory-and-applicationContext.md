@@ -33,16 +33,17 @@ Spring提供了部分内置事件，主要有以下几种：
 
 虽然，spring提供了许多内置事件，但用户也可根据自己需要来扩展spriong中的事物。注意，要扩展的事件都要实现ApplicationEvent接口。  
 
-3\.底层资源的访问  
-  ApplicationContext扩展了ResourceLoader(资源加载器)接口，从而可以用来加载多个Resource，而BeanFactory是没有扩展ResourceLoader 
+3\.底层资源的访问
 
-4\.对Web应用的支持  
-  与BeanFactory通常以编程的方式被创建不同的是，ApplicationContext能以声明的方式创建，如使用ContextLoader。当然你也可以使用ApplicationContext的实现之一来以编程的方式创建ApplicationContext实例 。 
+ApplicationContext扩展了ResourceLoader(资源加载器)接口，从而可以用来加载多个Resource，而BeanFactory是没有扩展ResourceLoader 
+
+4\.对Web应用的支持
+
+与BeanFactory通常以编程的方式被创建不同的是，ApplicationContext能以声明的方式创建，如使用ContextLoader。当然你也可以使用ApplicationContext的实现之一来以编程的方式创建ApplicationContext实例 。 
  
 ContextLoader有两个实现：`ContextLoaderListener`和`ContextLoaderServlet`。它们两个有着同样的功能，除了listener不能在Servlet 2.2兼容的容器中使用。自从Servelt 2.4规范，listener被要求在web应用启动后初始化。很多2.3兼容的容器已经实现了这个特性。使用哪一个取决于你自己，但是如果所有的条件都一样，你大概会更喜欢`ContextLoaderListener`。关于兼容方面的更多信息可以参照ContextLoaderServlet的JavaDoc。
 
 这个listener需要检查contextConfigLocation参数。如果不存在的话，它将默认使用/WEB-INF/applicationContext.xml。如果它存在，它就会用预先定义的分隔符（逗号，分号和空格）分开分割字符串，并将这些值作为应用上下文将要搜索的位置。ContextLoaderServlet可以用来替换ContextLoaderListener。这个servlet像listener那样使用contextConfigLocation参数。
-
 
 5\.其它区别  
 

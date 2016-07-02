@@ -5,7 +5,7 @@ tags: Spring
 category: 技术
 ---
 
-**`<context:annotation-config>` 和 `<context:component-scan>`的区别**
+**<context:annotation-config> 和 <context:component-scan>的区别**
 
 1\. `<context:annotation-config>`是用于激活那些已经在spring容器里注册过的bean（无论是通过xml的方式还是通过package sanning的方式）上面的注解。
 
