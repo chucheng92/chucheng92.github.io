@@ -11,6 +11,7 @@ Spring作为当前Java最流行、最强大的轻量级框架，受到了程序�
 
 Spring Bean的完整生命周期从创建Spring容器开始，直到最终Spring容器销毁Bean，这其中包含了一系列关键点。
 
+![](http://images.cnitblog.com/i/580631/201405/181453414212066.png)
 ![](http://images.cnitblog.com/i/580631/201405/181454040628981.png)
 
 若容器注册了以上各种接口，程序那么将会按照以上的流程进行。下面将仔细讲解各接口作用。
@@ -302,7 +303,7 @@ public class BeanLifeCycle {
 
 我们来看一下结果：
 
-```sh
+```
 现在开始初始化容器
 2014-5-18 15:46:20 org.springframework.context.support.AbstractApplicationContext prepareRefresh
 信息: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@19a0c7c: startup date [Sun May 18 15:46:20 CST 2014]; root of context hierarchy
