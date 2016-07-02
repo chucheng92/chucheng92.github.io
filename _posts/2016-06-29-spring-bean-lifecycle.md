@@ -303,7 +303,7 @@ public class BeanLifeCycle {
 
 我们来看一下结果：
 
-```html
+```
 现在开始初始化容器
 2014-5-18 15:46:20 org.springframework.context.support.AbstractApplicationContext prepareRefresh
 信息: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@19a0c7c: startup date [Sun May 18 15:46:20 CST 2014]; root of context hierarchy
