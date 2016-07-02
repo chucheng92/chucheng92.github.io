@@ -303,7 +303,7 @@ public class BeanLifeCycle {
 
 我们来看一下结果：
 
-```
+<code>
 现在开始初始化容器
 2014-5-18 15:46:20 org.springframework.context.support.AbstractApplicationContext prepareRefresh
 信息: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@19a0c7c: startup date [Sun May 18 15:46:20 CST 2014]; root of context hierarchy
@@ -333,7 +333,7 @@ Person [address=广州, name=张三, phone=110]
 现在开始关闭容器！
 【DiposibleBean接口】调用DiposibleBean.destory()
 【destroy-method】调用<bean>的destroy-method属性指定的初始化方法
-```
+</code>
 
 转自 http://www.cnblogs.com/zrtqsk/p/3735273.html
 
