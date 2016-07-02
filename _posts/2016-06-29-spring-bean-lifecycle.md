@@ -306,7 +306,7 @@ public class BeanLifeCycle {
 ---
 
 现在开始初始化容器 <br>
-2014-5-18 15:46:20 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+2014-5-18 15:46:20 org.springframework.context.support.AbstractApplicationContext prepareRefresh<br>
 信息: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@19a0c7c: startup date [Sun May 18 15:46:20 CST 2014]; root of context hierarchy<br>
 2014-5-18 15:46:20 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions<br>
 信息: Loading XML bean definitions from class path resource [springBeanTest/beans.xml]<br>
@@ -324,16 +324,16 @@ InstantiationAwareBeanPostProcessor调用postProcessPropertyValues方法<br>
 【注入属性】注入属性phone<br>
 【BeanNameAware接口】调用BeanNameAware.setBeanName()<br>
 【BeanFactoryAware接口】调用BeanFactoryAware.setBeanFactory()<br>
-BeanPostProcessor接口方法postProcessBeforeInitialization对属性进行更改！<br><br>
+BeanPostProcessor接口方法postProcessBeforeInitialization对属性进行更改！<br>
 【InitializingBean接口】调用InitializingBean.afterPropertiesSet()<br>
-【init-method】调用<bean>的init-method属性指定的初始化方法<br>
-BeanPostProcessor接口方法postProcessAfterInitialization对属性进行更改！<br><br>
+【init-method】调用`<bean>`的init-method属性指定的初始化方法<br>
+BeanPostProcessor接口方法postProcessAfterInitialization对属性进行更改！<br>
 InstantiationAwareBeanPostProcessor调用postProcessAfterInitialization方法<br>
 容器初始化成功<br>
 Person [address=广州, name=张三, phone=110]<br>
 现在开始关闭容器！<br>
 【DiposibleBean接口】调用DiposibleBean.destory()<br>
-【destroy-method】调用<bean>的destroy-method属性指定的初始化方法<br>
+【destroy-method】调用`<bean>`的destroy-method属性指定的初始化方法<br>
 
 转自 http://www.cnblogs.com/zrtqsk/p/3735273.html
 
