@@ -63,7 +63,7 @@ permalink: /pages/about.html
 	<table class="table table-striped">
 		<tr>
 			<td>姓  名：</td>    
-			<td>陶哓然</td>
+			<td>梦回少年</td>
 		</tr>
 		<tr>
 			<td>学  历：</td>    
