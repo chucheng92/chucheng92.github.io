@@ -327,14 +327,6 @@ setting A.bbb with com.xxx.B@157aa53
 setting A.ccc with com.xxx.C@ec4a87
 ```
 
-最后附上SpringMVC运行流程图
-
-![](http://www.admin10000.com/UploadFiles/Document/201506/22/20150622201744945974.PNG)
-
-拦截器执行次序
-
-![](http://www.admin10000.com/UploadFiles/Document/201506/22/20150622201744725335.PNG)
-
 ### 联系我
 
 - 邮箱: xmusaber@163.com
