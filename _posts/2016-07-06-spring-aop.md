@@ -5,8 +5,6 @@ tags: Java Spring
 category: 技术
 ---
 
-## Spring本质系列之AOP
-
 ### 问题来源
 
 我们在做系统设计的时候，一个非常重要的工作就是把一个大系统做分解， 按业务功能分解成一个个低耦合、高内聚的模块，就像这样：
@@ -131,3 +129,13 @@ Java 是一门静态的强类型语言， 代码一旦写好， 编译成java cl
 Spring采用的就是(1) +(2) 的方式，限于篇幅，这里不再展开各种技术了， 不管使用哪一种方式， 在运行时，真正干活的“业务类”其实已经不是原来单纯的业务类了， 它们被AOP了 ！
 
 本文转载自“码农翻身”公众号
+
+### 联系我
+
+- 邮箱: xmusaber@163.com
+- QQ: 932191671
+- [网易云音乐](http://music.163.com/#/user/home?id=63589002)
+- [微博](http://weibo.com/u/1662536394)
+- [片刻](http://pianke.me/profile/1924980/)
+- [知乎](https://www.zhihu.com/people/tao-xiao-xiao-99)
+- [牛客](http://www.nowcoder.com/profile/213475)

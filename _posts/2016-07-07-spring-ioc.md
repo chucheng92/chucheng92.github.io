@@ -5,8 +5,6 @@ tags: Java Spring
 category: 技术
 ---
 
-## Spring的本质系列之依赖注入
-
 前言： Spring 这个轻量级的框架已经成为Web开发事实上的标准，阅读本篇文章之前希望你对OO,设计模式，单元测试，XML，反射等技术有一定了解。
 
 ## 概念：什么是IOC？
@@ -164,3 +162,13 @@ DI—Dependency Injection，即“依赖注入”：组件之间依赖关系由�
 IoC和DI由什么关系呢？其实它们是同一个概念的不同角度描述，由于控制反转概念比较含糊（可能只是理解为容器控制对象这一个层面，很难让人想到谁来维护对象关系），所以2004年大师级人物Martin Fowler又给出了一个新的名字：“依赖注入”，相对IoC 而言，“依赖注入”明确描述了“被注入对象依赖IoC容器配置依赖对象”。
 
 对于Spring Ioc这个核心概念，我相信每一个学习Spring的人都会有自己的理解。这种概念上的理解没有绝对的标准答案，仁者见仁智者见智。理解了IoC和DI的概念后，一切都将变得简单明了，剩下的工作只是在框架中堆积木而已。
+
+### 联系我
+
+- 邮箱: xmusaber@163.com
+- QQ: 932191671
+- [网易云音乐](http://music.163.com/#/user/home?id=63589002)
+- [微博](http://weibo.com/u/1662536394)
+- [片刻](http://pianke.me/profile/1924980/)
+- [知乎](https://www.zhihu.com/people/tao-xiao-xiao-99)
+- [牛客](http://www.nowcoder.com/profile/213475)
