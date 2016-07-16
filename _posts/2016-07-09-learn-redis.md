@@ -208,8 +208,8 @@ zcard
 zcount
 zrem
 zincrby
-zscore
-zrange
+zscore 返回score值
+zrange 递增
 zrank
 ```
 
@@ -224,7 +224,7 @@ zremrangebyscore
 3\.
 
 ```sh
-zrevrange
+zrevrange 递减
 zrevrangebyscore
 zrevrank
 ```
