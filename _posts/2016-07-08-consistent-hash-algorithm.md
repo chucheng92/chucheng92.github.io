@@ -47,7 +47,7 @@ O(1) < O(log2N) < O(n) < O(N * logN) < O(N^2) < O(N^3) < 2^N < 3^N < N!
 
 但是如果考虑到之前的排序，我在网上找了张图，提供了各种排序算法的时间复杂度：
 
-![排序算法复杂度](http://jbcdn2.b0.upaiyun.com/2016/03/571ced55f98a690865562a6c2e199963.jpg)
+![排序算法复杂度](http://7xlkoc.com1.z0.glb.clouddn.com/sort-complex.jpg)
 
 **2、解决方案二：遍历+List**
 
