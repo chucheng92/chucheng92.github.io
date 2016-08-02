@@ -9,7 +9,7 @@ category: 技术
 
 我们在做系统设计的时候，一个非常重要的工作就是把一个大系统做分解， 按业务功能分解成一个个低耦合、高内聚的模块，就像这样：
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULZa5xYnbCfBfOJSbTaBouH6HyhEOAO3QdfCXZ1HCMb4vOlch7P2yYGoOltv9LqRA4ibrH9QC5ibxUw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/aop1.jpg)
 
 但是分解以后就会发现有些很有趣的东西， 这些东西是通用的，或者是跨越多个模块的：
 
@@ -23,11 +23,11 @@ category: 技术
 
 最简单的办法就是把这些通用模块的接口写好， 让程序员在实现业务模块的时候去调用就可以了，码农嘛，辛苦一下也没什么。
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULZa5xYnbCfBfOJSbTaBouHkibk59GI7hNpzb4ZAWQn8NK3kVvMaM0ycQoPLiaw9XXnJ4UJvxwHgicSQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/aop2.jpg)
 
 这样做看起来没问题， 只是会产生类似这样的代码：
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULZa5xYnbCfBfOJSbTaBouHjGpR6CRuCerJx6KZJGfs355xXIf4eErVfnjgHWe2nKK0O1OuPUMnwA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/aop3.jpg)
 
 这样的代码也实现了功能，但是看起来非常的不爽， 那就是日志，性能，事务 相关的代码几乎要把真正的业务代码给淹没了。
 
@@ -39,7 +39,7 @@ category: 技术
 
 用设计模式在某些情况下可以部分解决上面的问题，例如著名的模板方法：
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULZa5xYnbCfBfOJSbTaBouHwJHO3hL1CEcUNxoLUCicvbK7gdm5DMhzDUh582SYD7CUflzOV1LJxicg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/aop5.jpg)
 
 在父类（BaseCommand）中已经把那些“乱七八糟“的非功能代码都写好了， 只是留了一个口子（抽象方法doBusiness()）让子类去实现。
 
@@ -57,7 +57,8 @@ cmd.execute();
 
 如果利用装饰者模式， 针对上面的问题，可以带来更大的灵活性：
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULZa5xYnbCfBfOJSbTaBouH3LeZ2K6tDxLU5zCOpMG5kVEXpe3DOGbAa2JHvyJjNmHhHvvjibRy7fg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/aop4.jpg)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/aop6.jpg)
 
 现在让这个PlaceOrderCommand 能够打印日志，进行性能统计
 Command cmd = new LoggerDecorator(
@@ -82,7 +83,7 @@ cmd.execute();
 
 最好把日志/安全/事务这样的代码和业务代码完全隔离开来，因为他们的关注点和业务代码的关注点完全不同 ，他们之间应该是正交的，他们之间的关系应该是这样的：
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULZa5xYnbCfBfOJSbTaBouH41wpaX8Q1uzbCCmT92GvcHCcUpX81YgeP1UqORm0rAKaeSU9eQAakQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/aop7.jpg)
 
 如果把这个业务功能看成一层层面包的话， 这些日志/安全/事务 像不像一个个“切面”(Aspect) ？
 
@@ -94,7 +95,7 @@ cmd.execute();
 
 以一个事务类为例：
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULZa5xYnbCfBfOJSbTaBouHE5ZBsjKibDxMONJEXOMDzp5OEgLIoUcibRZDicp0KQ8geUEwaEjKyj7Ww/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/aop8.jpg)
 
 我们想达到的目的只这样的： 对于com.coderising这个包中所有类的execute方法， 在方法调用之前，需要执行Transaction.beginTx()方法， 在调用之后， 需要执行Transaction.commitTx()方法。
 
@@ -108,7 +109,7 @@ cmd.execute();
 
 当然，想描述这些规则， xml依然是不二之选：
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULZa5xYnbCfBfOJSbTaBouH583lia6vRhPRJXzHCZXGicKF0Mk5vqxTdlYLlWq1JJicrDdsKD3SWMMKA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/aop9.jpg)
 
 注意：现在Transaction这个类和业务类在源代码层次上没有一点关系，完全隔离了。
 

@@ -37,13 +37,13 @@ Fruit f3 = ......
 
 很自然的，类似下面的代码就会出现：
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULBhfFyXnPmY8sanSNqJppttkZqJtUXOP2WKPIia4c1EHiagbkgzjtXchwPexG9pHbzmgH4CgZQ7TlQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/spring1.jpg)
 
 这样的代码如果散落在各处，维护起来将会痛苦不堪， 例如你新加一个水果的类型Orange, 那得找到系统中所有的这些创建Fruit的地方，进行修改， 这绝对是一场噩梦。
  
 解决办法也很简单，前辈们早就总结好了：工厂模式 
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULBhfFyXnPmY8sanSNqJpptib1Fl8Sa7tJHWJOk3EQhUicrjVQkwXt0f3iarwdWLgry0yaibyFTGK0ciaA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/spring2.jpg)
 
 工厂模式，以及其他模式像抽象工厂， Builder模式提供的都是创建对象的方法。
 
@@ -57,7 +57,7 @@ Fruit f3 = ......
 
 一个订单处理类，它会被定时调用：查询数据库中订单的处理情况，必要时给下订单的用户发信。
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULBhfFyXnPmY8sanSNqJpptUSlTfGeYPnQKfZcuJ5vLQwNXNtR2NWaSESj3YTlnGF1kGOFarqZ95Q/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/spring3.jpg)
 
 看起来也没什么难度， 需要注意的是很多类一起协作了， 尤其是OrderProcessor , 它依赖于
 OrderService 和 EmailService这两个服务，它获取依赖的方式就是通过单例方法。
@@ -72,7 +72,7 @@ OrderService 和 EmailService这两个服务，它获取依赖的方式就是通
 
 想克服这些障碍，一个可行的办法就是不在方法中直接调用OrderService和EmailService的getInstance()方法， 而是把他们通过setter方法传进来。
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULBhfFyXnPmY8sanSNqJpptdBVOVk09DKxnff47KlXlibaOCiaqlWSib3Wen2zN05hN6wJt5XaBxGTUw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/spring4.jpg)
 
 通过这种方式，你的单元测试就可以构造一个假的OrderService 和假的EmailService 了。
 
@@ -82,7 +82,7 @@ MockEmailService 也不会真的发邮件， 而是把代码中试图发的邮�
 
 你的测试代码可能是这样的：
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULBhfFyXnPmY8sanSNqJppt0HtCINDsPUEDWoz0dDIWseE49pFMjkLict3N4JABs9CTgLicQyGLbfvQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/spring5.jpg)
 
 当然， 有经验的你马上就会意识到：需要把OrderService 和 EmailService 变成 接口或者抽象类， 这样才可以把Mock对象传进来。 
 
@@ -97,7 +97,7 @@ MockEmailService 也不会真的发邮件， 而是把代码中试图发的邮�
 
 既然能把冒牌货注入进去，那毫无疑问肯定也能把一个正经的类安插进去，因为setter 方法接受的是接口，而不是具体类。
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULBhfFyXnPmY8sanSNqJpptbMJLeUGwPniawtrZg1Ut1UyNLJdj0HLlTftibTWnn25Q89iblLhwWjWYQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/spring6.jpg)
 
 用这种方式来处理对象之间的依赖，会强迫你对接口编程，好处显而易见。 
 
@@ -108,7 +108,7 @@ MockEmailService 也不会真的发邮件， 而是把代码中试图发的邮�
 
 肯定可以，在Java 世界里，如果想描述各种逻辑关系，XML是不二之选：
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULBhfFyXnPmY8sanSNqJpptW3AXy6Qjjw3cP1hTiaLHHF06ojcbhxDYddGabhYjGh0B3mGv1ASKBqw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/spring7.jpg)
 
 这个xml 挺容易理解的，但是仅仅有它还不够，还缺一个解析器（假设叫做XmlAppContext）来解析，处理这个文件，基本过程是：
 
@@ -130,7 +130,7 @@ op.process();
 
 其实Spring的处理方式和上面说的非常类似，当然Spring 处理了更多的细节，例如不仅仅是setter方法注入， 还可以构造函数注入，init 方法，destroy方法等等，基本思想是一致的。
 
-![](http://mmbiz.qpic.cn/mmbiz/KyXfCrME6ULBhfFyXnPmY8sanSNqJppt9fcU8bxJwTh3zLDfAEFcTWBfmxEOCszBia5rWzkOTvkr7HGibJaOMffQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/spring8.jpg)
 
 既然对象的创建过程和装配过程都是Spring做的，那Spring 在这个过程中就可以玩很多把戏了， 比如对你的业务类做点字节码级别的增强，搞点AOP什么的，这都不在话下了。 
 

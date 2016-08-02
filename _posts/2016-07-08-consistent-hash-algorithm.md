@@ -45,7 +45,7 @@ O(1) < O(log2N) < O(n) < O(N * logN) < O(N^2) < O(N^3) < 2^N < 3^N < N!
 
 但是如果考虑到之前的排序，我在网上找了张图，提供了各种排序算法的时间复杂度：
 
-![排序算法复杂度](http://mmbiz.qpic.cn/mmbiz/eZzl4LXykQysaB4Qialvt1cNI5WIAp1D4WfCIOarhhLOoYxXoEfFOayaYcmEXfLQbetdibFctgvAHxjCOZWSzNWg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![排序算法复杂度](http://jbcdn2.b0.upaiyun.com/2016/03/571ced55f98a690865562a6c2e199963.jpg)
 
 **2、解决方案二：遍历+List**
 
@@ -233,7 +233,7 @@ public class ConsistentHashWithoutVN {
 
 至于一个物理节点应该拆分为多少虚拟节点，下面可以先看一张图：
 
-![](http://mmbiz.qpic.cn/mmbiz/eZzl4LXykQysaB4Qialvt1cNI5WIAp1D4lnHkfextuuaiaZPuov2O9eBY3I4gjyxPp6PbZUgpNSciaicqRMBy1aia4Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+![](http://jbcdn2.b0.upaiyun.com/2016/03/ac5a0b944d7e9a3be41cae76f3169387.png)
 
 横轴表示需要为每台服务器扩展的虚拟节点倍数，纵轴表示的是实际物理服务器数。可以看出，物理服务器很少，需要更大的虚拟节点；反之物理服务器比较多，虚拟节点就可以少一些。比如有10台物理服务器，那么差不多需要为每台服务器增加100~200个虚拟节点才可以达到真正的负载均衡。
 
