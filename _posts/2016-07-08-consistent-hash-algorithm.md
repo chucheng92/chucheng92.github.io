@@ -7,6 +7,8 @@ category: 技术
 
 ## 一致性Hash算法
 
+![](http://7xlkoc.com1.z0.glb.clouddn.com/hash2.jpg)
+
 关于一致性Hash算法，在我之前的博文中已经有多次提到了，MemCache超详细解读一文中”一致性Hash算法”部分，对于为什么要使用一致性Hash算法、一致性Hash算法的算法原理做了详细的解读。
 
 算法的具体原理这里再次贴上：
@@ -233,7 +235,7 @@ public class ConsistentHashWithoutVN {
 
 至于一个物理节点应该拆分为多少虚拟节点，下面可以先看一张图：
 
-![](http://jbcdn2.b0.upaiyun.com/2016/03/ac5a0b944d7e9a3be41cae76f3169387.png)
+![](http://7xlkoc.com1.z0.glb.clouddn.com/hash1.png)
 
 横轴表示需要为每台服务器扩展的虚拟节点倍数，纵轴表示的是实际物理服务器数。可以看出，物理服务器很少，需要更大的虚拟节点；反之物理服务器比较多，虚拟节点就可以少一些。比如有10台物理服务器，那么差不多需要为每台服务器增加100~200个虚拟节点才可以达到真正的负载均衡。
 

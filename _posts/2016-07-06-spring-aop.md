@@ -58,6 +58,7 @@ cmd.execute();
 如果利用装饰者模式， 针对上面的问题，可以带来更大的灵活性：
 
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/aop4.jpg)
+
 ![](http://7xlkoc.com1.z0.glb.clouddn.com/aop6.jpg)
 
 现在让这个PlaceOrderCommand 能够打印日志，进行性能统计
