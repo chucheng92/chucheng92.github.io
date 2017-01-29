@@ -5,7 +5,7 @@ tags: 随笔
 category: 随笔
 ---
 
-![](http://tinymood.com/assets/blogimg/WechatIMG4.jpeg)
+![](http://tinymood.com/assets/img/blogimg/WechatIMG4.jpeg)
 
 ​今日封面图：杭州茅家埠（自拍直出）
 
