@@ -2,7 +2,7 @@
 layout: post
 title: 你若懂我，该有多好 - 莫言
 tags: 莫言
-category: 诗
+category: 爱情
 date: 2015-09-14 19:31:20
 ---
 
