@@ -3,7 +3,7 @@ layout: post
 title: 技术修行之深入浅出Hadoop集群搭建
 tags: 原创 技术
 category: 技术
----	
+--- 
 
 搭建此环境主要用来跑实验和论文相关，因此我们的操作直接在root用户下，不可用于生产环境。且下文命令、文件均特指Ubuntu14.04 Linux发行版操作系统下。
 
@@ -30,21 +30,25 @@ Hadoop-1.1.2.tar.gz
 
 ```
 方法：ufw disable 
-EXT: ufw命令ufw disable | enable | status
+EXT：ufw命令ufw disable | enable | status
 ```
 
 3、修改ip
-设置虚拟机网络方式为桥接模式
-设置静态IP
+
+3.1 设置虚拟机网络方式为桥接模式
+
+3.2 设置静态IP
+
 方法：
+
 ```sudo vi /etc/network/interfaces（针对Ubuntu发行版）```
 
 注：Ubuntu虚拟机的gateway网关，netmask子网掩码设置与主机
 一样，IP地址address设置为与主机同一网段。原因参见下文桥接模式。
 
 4、网卡设置生效
-方法：
-```sudo /etc/init.d/networking restart```
+
+方法：```sudo /etc/init.d/networking restart```
 
 5、修改hostname以及绑定
 
@@ -54,14 +58,18 @@ EXT: ufw命令ufw disable | enable | status
 ```
 
 6、配置SSH免密登录
+
 6.1 Ubuntu虚拟机安装openssh-server（确保SSH服务启动）
+
 6.2 Ubuntu虚拟机修改SSH配置文件/etc/ssh/sshd_config将
  PermitRootLogin without-password改为yes（允许root用户SSH连接）
 ![](https://github.com/Lemonjing/resources/blob/master/pics/%E5%9B%BE%E7%89%872.png)
     
 6.3设置免密
 执行命令ssh-keygen –t rsa产生密钥，位于目录~/.ssh/
-```cp id_rsa.pub authorized_keys```
+
+然后```cp id_rsa.pub authorized_keys```
+
 验证 ssh localhost
 
 7、安装JDK
@@ -71,19 +79,20 @@ EXT: ufw命令ufw disable | enable | status
 
 8.1 配置HADOOP_HOME环境变量
 
-8.2 修改hadoop的4个配置文件 
-位于$HADOOP_HOME/conf下
-		
+8.2 修改hadoop的4个配置文件 位于$HADOOP_HOME/conf下
+        
 1、hadoop-env.sh
+
 ```export JAVA_HOME=/usr/local/jdk1.6.0_24```
 
 2、core-site.xml
-```
+
+```sh
 <configuration>
     <property>
         <name>fs.default.name</name>
         <value>hdfs://hadoop:9000</value>
-   		<description>改为自己的主机名</description>
+        <description>改为自己的主机名</description>
     </property>
     <property>
         <name>hadoop.tmp.dir</name>
@@ -94,11 +103,11 @@ EXT: ufw命令ufw disable | enable | status
 
 3、hdfs-site.xml
 
-```
+```sh
 <configuration>
     <property>
         <name>dfs.replication</name>
-       	<value>1</value>
+        <value>1</value>
     </property>
     <property>
         <name>dfs.permissions</name>
@@ -109,33 +118,40 @@ EXT: ufw命令ufw disable | enable | status
 
 4、mapred-site.xml
 
-```
+```sh
 <configuration>
     <property>
         <name>mapred.job.tracker</name>
         <value>hadoop:9001</value>
-		<description>改为自己的主机名</description>
+        <description>改为自己的主机名</description>
     </property>
 </configuration>
 ```
 
 8.3 Hadoop NameNode格式化
+
 命令hadoop namenode -format
 
 8.4 启动与验证
-	start-all.sh 
-jps（Hadoop的5个进程）
+
+启动：start-all.sh 
+
+验证：jps（Hadoop的5个进程）
+
 ![](https://github.com/Lemonjing/resources/blob/master/pics/%E5%9B%BE%E7%89%87%201.png)
 
 9、其他问题：
+
 9.1、NameNode界面: 浏览器查看hadoop:50070
 
 9.2、Map/Reduce界面: 浏览器查看hadoop:50030
 
 9.3、多次格式化hadoop错误？
+
 解决方法：删除/usr/local/hadoop/tmp文件夹，重新格式化
 
 9.4解决```$HADOOP_HOME is deprecated```的warning
+
 方法：令$HADOOP_HOME_WARN_SUPPRESS=0
 
 至此，hadoop的伪分布式搭建完毕，后续带来完全分布式的集群搭建。
