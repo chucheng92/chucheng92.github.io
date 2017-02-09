@@ -61,6 +61,5 @@ date: 2015-09-13 17:56:10
 _夏苏末_
 
 _写字的吃货，懒散爱自由，相信梦想，相信爱，喜欢从细微之处发现生活之美，擅长用文艺的腔调晾晒生活。已出版《将来的你，会感谢现在不放弃的自己》。公众号：夏苏末_
-![qrcode](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2015/09/2015091014285198.jpg)
 
---夏苏末
+<center>![qrcode](http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg)</center>

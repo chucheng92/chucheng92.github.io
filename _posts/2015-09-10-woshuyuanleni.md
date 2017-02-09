@@ -6,12 +6,12 @@ category: 爱情
 date: 2015-09-10 21:22:04
 ---
 
-**收录：2015-04-23小情绪公众号 编辑：Saber**
 感情的事很奇怪
 你很投入的时候，对方很抽离
 你很抽离的时候，对方又偏偏很投入
 
 ![img](http://7xlkoc.com1.z0.glb.clouddn.com/640.jpg)
+
 其实每次看到你心情不好的时候
 我问你怎么了 你说没事的时候
 我都会觉得 我们像一对陌生人
@@ -22,6 +22,7 @@ date: 2015-09-10 21:22:04
 瞬间没了说下去的心情
 
 ![img](http://7xlkoc.com1.z0.glb.clouddn.com/630.jpg)
+
 讨厌我就直说吧 在心里藏着掖着多难受
 别因为不好意思翻脸就对我强笑欢颜
 我宁可和你大吵一架甚至打起来
@@ -33,6 +34,7 @@ date: 2015-09-10 21:22:04
 你用完了吗？
 
 ![img](http://7xlkoc.com1.z0.glb.clouddn.com/6410.jpg)
+
 心累到一定的程度
 连生气和计较的力气都没有了
 
@@ -42,9 +44,10 @@ date: 2015-09-10 21:22:04
 很多事情，不是你想得那样简单、顺理成章
 
 ![img](http://7xlkoc.com1.z0.glb.clouddn.com/64330.jpg)
+
 如果有一天我突然疏远了你
 不要想我们之间怎么了
 你没有错 我只是突然犯病了
 过一阵子就好
 
-![img](http://7xlkoc.com1.z0.glb.clouddn.com/qrcode.jpg)
+![img](http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg)

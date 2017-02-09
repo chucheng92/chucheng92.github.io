@@ -81,6 +81,6 @@ description: 爱情
 
 特立独行的猫，我喜欢你的文字！
 
-![qrcode](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2015/09/2015091014285198.jpg)
+![qrcode](http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg)
 
 --特立独行的猫
