@@ -48,7 +48,9 @@ AnnotatedElement 接口是所有程序元素（Class、Method和Constructor）�
 public @interface FruitName {
     String value() default "";
 }
+```
 
+```
 /**
  * 水果颜色注解
  * @author peida
@@ -72,7 +74,9 @@ public @interface FruitColor {
     Color fruitColor() default Color.GREEN;
 
 }
+```
 
+```
 /**
  * 水果供应者注解
  * @author peida
@@ -100,7 +104,9 @@ public @interface FruitProvider {
      */
     public String address() default "";
 }
+```
 
+```
 /***********注解使用***************/
 
 public class Apple {
@@ -141,7 +147,9 @@ public class Apple {
         System.out.println("水果的名字是：苹果");
     }
 }
+```
 
+```
 /***********注解处理器***************/
 
 public class FruitInfoUtil {
@@ -169,7 +177,9 @@ public class FruitInfoUtil {
         }
     }
 }
+```
 
+```
 /***********输出结果***************/
 public class FruitRun {
 
@@ -190,7 +200,6 @@ public class FruitRun {
 供应商编号：1 供应商名称：陕西红富士集团
 供应商地址：陕西省西安市延安路89号红富士大厦
 ```
-
 
 **Java注解的基础知识点导图**
 
