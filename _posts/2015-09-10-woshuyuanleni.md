@@ -50,8 +50,6 @@ date: 2015-09-10 21:22:04
 你没有错 我只是突然犯病了
 过一阵子就好
 
-![img](http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg)
-
 <div align="center">
 <img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
 </div>

@@ -6,7 +6,7 @@ category: 爱情
 date: 2015-09-13 19:26:25
 ---
 
-<center>前世，
+前世，
 
 我为青莲，你为梵音，
 
@@ -130,11 +130,15 @@ date: 2015-09-13 19:26:25
 
 这，何尝不是一种深深的缘？
 
-......</center>
+......
 
 --仓央嘉措
 
 <div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。
 <img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
 </div>
 
