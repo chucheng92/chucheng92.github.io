@@ -157,3 +157,9 @@ servers标签中加入
 至此大功告成 启动tomcat eclipse中执行[v_error]tomcat7:deploy或redeploy命令[/v_error]，一键部署到tomcat7.打开浏览器，哇塞，熟悉的helloworld，简直棒！
 
 ![102315_1232_Eclipsemave7.png](http://112.74.15.218/wp-content/uploads/2015/10/102315_1232_Eclipsemave7.png)
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

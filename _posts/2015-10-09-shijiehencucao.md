@@ -42,3 +42,9 @@ date: 2015-10-09 15:14:41
 碰巧发现彼此有同样的目的地，于是有勇气并肩一起，散步淋雨。
 
 那一路多开心，因为舍不得再见，所以宁愿人间的风雨别停，天别晴。
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。
