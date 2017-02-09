@@ -14,6 +14,6 @@ date: 2015-09-23 23:08:27
 
 动画以一个少年为故事轴心而展开连续3个独立故事的动画短篇，时代背景是从1990年代至现代的日本，通过少年的人生展现东京以及其他地区的变迁。 第一话《樱花抄》描述贵树与明里年幼时恋爱的心情，以及他们重逢的一天，第二话《宇航员》描述以对进入高中就读的贵树怀有好感的澄田花苗的视角来展现贵树与明里分别后的生活，第三话《秒速5厘米》则刻画了贵树和明里长大后内心的种种彷徨。
 
-<iframe style="width: 800px; height: 500px;" src="http://static.hdslb.com/miniloader.swf?aid=2938460&amp;page=1" width="300" height="150" frameborder="no" scrolling="no"></iframe>
+<iframe src="www.bilibili.com/html/player.html?aid=2938460&page=1" scrolling="no" border="0" frameborder="no" framespacing="0"></iframe>
 
 ——秒速五厘米
