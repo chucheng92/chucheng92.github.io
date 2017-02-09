@@ -42,7 +42,11 @@ date: 2015-08-05 21:03:05
 
 我只需要雨滴溅起一瞬的美丽
 
-* * *
-
 _歌词来源：厦门大学《厦至45.8》微电影
 整理：陶柠檬 微博@不能卖萌心塞塞_
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

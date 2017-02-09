@@ -44,6 +44,8 @@ date: 2015-09-13 18:15:50
 
 爱情，本就是件宁缺勿滥的事，急不得。有爱情，便全心对待，没有爱情，也一个人惬意。人可以做配角，但一定要懂得做配角时的主角。
 
-![qrcode](http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg)
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
 
 > 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

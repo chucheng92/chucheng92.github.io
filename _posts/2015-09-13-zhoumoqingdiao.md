@@ -23,6 +23,8 @@ date: 2015-09-13 19:17:25
 我会继续我的思维，为了突破现有的生活。我想我会成功，因为，我愿意，为之，付出努力。
 I have a dream，I need some time to prepare it. 
 
-![qrcode](http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg)
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
 
 > 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

@@ -200,3 +200,9 @@ MMGirl mmg1=(MMGirl)g2; //不安全的向下转型,编译无错但会运行会�
 Exception in thread "main"java.lang.ClassCastException: com.wensefu.other1.Girl
 atcom.wensefu.other1.Main.main(Girl.java:36)
 如代码所示，可以通过instanceof来防止出现异常。
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

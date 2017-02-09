@@ -81,6 +81,10 @@ description: 爱情
 
 特立独行的猫，我喜欢你的文字！
 
-![qrcode](http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg)
-
 --特立独行的猫
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

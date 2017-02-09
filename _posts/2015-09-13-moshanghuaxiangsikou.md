@@ -134,6 +134,8 @@ date: 2015-09-13 19:26:25
 
 --仓央嘉措
 
-![qrcode](http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg)
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
 
 > 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

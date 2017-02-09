@@ -56,7 +56,11 @@ date: 2015-09-13 17:47:51
 
 <center>- END -</center>
 
-转自深夜食堂
-
 _七微_
 _女，作家。梦想环游世界，将一切美景付诸笔端与君欢。已出版长篇小说《南风知我意1、2》、《南风过境》、《莫失莫忘》、《悲歌迷藏》 ，个人文集《朝朝暮暮》。微博@七微VV，公众号：qiweivv2013_
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。
