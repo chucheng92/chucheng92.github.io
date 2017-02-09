@@ -141,6 +141,7 @@ CSMA/CD协议(Carrier Sense Multiple Access with Collision Detection)：载波�
 **3.MAC帧格式（以太网V2）**
 
 ![net3](http://7xlkoc.com1.z0.glb.clouddn.com/2016022913470267.jpg)
+
 4.VLAN
 
 局域网网段构成的与物理位置无关的逻辑组。克服了广播风暴

@@ -63,7 +63,7 @@ EXT：ufw命令ufw disable | enable | status
 
 6.2 Ubuntu虚拟机修改SSH配置文件/etc/ssh/sshd_config将PermitRootLogin without-password改为yes（允许root用户SSH连接）
 
-![](https://github.com/Lemonjing/resources/blob/master/pics/%E5%9B%BE%E7%89%872.png)
+![](http://tinymood.com/assets/img/blogimg/shaonian2.png)
     
 6.3设置免密
 执行命令ssh-keygen –t rsa产生密钥，位于目录~/.ssh/
@@ -138,7 +138,7 @@ EXT：ufw命令ufw disable | enable | status
 
 验证：jps（Hadoop的5个进程）
 
-![](https://github.com/Lemonjing/resources/blob/master/pics/%E5%9B%BE%E7%89%87%201.png)
+![](http://tinymood.com/assets/img/blogimg/shaonian1.png)
 
 9、其他问题：
 
