@@ -183,18 +183,8 @@ public class TestReadObject  {
 
 可知Student中的age属性被标注为transient后，在序列化对象时，age属性就没有被序列化了; Course中的name属性被static后，Course的name静态属性就没有被序列化;虽然是序列化Student对象，但是Student所引用的Course对象也被初始化了。 
 
-**我的其他项目**
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
 
-- [TinyMooc](https://github.com/Lemonjing/tinymooc)
-- [TinyCoding](https://github.com/Lemonjing/tinycoding)
-- [JavaSE工程](https://github.com/Lemonjing/myjavase)
-- [Leetcode题解](https://github.com/Lemonjing/leetcode)
-
-**联系我**
-- WebSite:http://www.tinymood.com
-- Mail: 932191671@qq.com
-- Linux交流群: 257265338
-- 邂逅厦大交流群:103949230
-
-作者 微博@Campanulaceae 
- 2015 年 11月 15日
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

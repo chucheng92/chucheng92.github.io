@@ -110,3 +110,9 @@ date: 2015-12-25 20:21:23
 [![3cf17a0461345a59cf9a3ea349c87a85.jpg](http://cdn2.myhloli.com/images/2015/12/08/3cf17a0461345a59cf9a3ea349c87a85.jpg)](http://cdn2.myhloli.com/images/2015/12/08/3cf17a0461345a59cf9a3ea349c87a85.jpg)
 
 更多好图，敬请期待
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

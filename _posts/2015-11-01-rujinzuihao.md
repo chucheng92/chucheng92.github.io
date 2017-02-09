@@ -53,3 +53,9 @@ date: 2015-11-01 12:56:57
 _ 愿爱在当下，不提来日方长。_
 
 _愿现世安稳，默赞最好如今。_
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

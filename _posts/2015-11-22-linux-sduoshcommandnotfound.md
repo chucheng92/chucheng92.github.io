@@ -38,3 +38,9 @@ echo $PTAH
 ```
 
 输出发现没有我们设置的shell路径了,恍然大悟,我们已经切换到了root账号下面,设置也已经变了.这样的话我们只要先进入预先的目录然后在执行,ok,成功.
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。
