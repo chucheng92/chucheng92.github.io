@@ -358,3 +358,9 @@ public class GenericTest {
 对于泛型，最主要的还是需要理解其背后的思想和目的。
 
 注：本文转载于 http://www.cnblogs.com/lwbqqyumidi/p/3837629.html
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

@@ -168,3 +168,9 @@ public enum EasySingleton{
 [How to create thread safe Singleton in Java](http://javarevisited.blogspot.com/2012/12/how-to-create-thread-safe-singleton-in-java-example.html)
 
 [10 Singleton Pattern Interview questions in Java](http://javarevisited.blogspot.com/2011/03/10-interview-questions-on-singleton.html)
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

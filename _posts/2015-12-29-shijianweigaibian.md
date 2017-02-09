@@ -26,4 +26,8 @@ date: 2015-12-29 20:42:43
 <span style="color: #00ccff;">原来忘记一个人是那么简单；原来曾经那么爱你的我现在也可以刀枪不入，百毒不侵；原来我也可以那么平静，却不是因为不爱了，因为要放手了，要放弃了。即使你让我痛彻心扉，我还是怀念我们曾经的时光；怀念我们的无话不说；怀念在美好的十五岁爱过你。从此以后，各自安好。</span>
 <span style="color: #00ccff;"> ——后记</span>
 
-转载至公众号 一首歌曲一段往事
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

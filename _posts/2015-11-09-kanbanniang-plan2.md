@@ -8,10 +8,11 @@ date: 2015-11-09 15:12:49
 
 **转载自萝莉社www.myhloli.com**
 
-![](http://7xlkoc.com1.z0.glb.clouddn.com/hitokoto.jpg "茶馆、岛、慵懒的猫...都是美好的时光...")
+![](http://7xlkoc.com1.z0.glb.clouddn.com/hitokoto.jpg)
 
 浮动小人这个小挂件，可以说叫博客宠物，时间久了，就越来越喜欢，每次吐槽都是同一句话，即使再喜欢，也终究会腻的。
 从lwl的博客看到一款有趣的api-一言api，感觉很有意思，于是想着怎么把一言的api加到小人无聊的吐槽中去。<span style="color: #3366ff;">效果见本站浮动小人，可以播报天气哦~</span>
+
 **[一言api介绍](http://hitokoto.us/api.html)**
 
 ## 第一次尝试
@@ -19,9 +20,13 @@ date: 2015-11-09 15:12:49
 博主对代码真的不太懂，找了蛋炒饭前辈帮忙搞代码。蛋炒饭前辈的方案是再footer.php中加入代码，从api中获取一句话保存在div中。
 然后再在浮动小人的js中将这个div调取并输出。
 实现代码如下
-```java<script src="http://api.lwl12.com/hitokoto/?encode=js&amp;charset=utf-8" type="text/javascript"></script>```
+
+```java<script src="http://api.lwl12.com/hitokoto/?encode=js&amp;charset=utf-8" type="text/javascript"></script>
+```
+
 上面的代码放在footer.php中，
 在浮动小人说话的地方加入
+
 ```java    msgs = [$("#lwlhitokoto").text().replace("lwlhitokoto()","")];
 ```
 即可输出一句话。
@@ -58,7 +63,10 @@ date: 2015-11-09 15:12:49
 测试地址见 http://api.myhloli.com/hitokoto/
 
 输出只要将之前的msgs[]更改为
-```javamsgs = ["<iframe id="\" src="\" width="5" height="5" frameborder="\" scrolling="\"></iframe>"];```
+
+```javamsgs = ["<iframe id="\" src="\" width="5" height="5" frameborder="\" scrolling="\"></iframe>"];
+```
+
 即可
 
 因为字号调小了，所以在浮动小人上看起来效果还过得去，这一版也是我感到比较满意的一个版本。
@@ -75,7 +83,9 @@ date: 2015-11-09 15:12:49
 
 <del datetime="2015-11-09T07:12:12+00:00">15号晚上的时候找lwl要源码准备修改一下，看看能不能实现多条语句保存或者更改字号之类的功能，可是悲剧的被拒绝了TAT</del>
 LWL迷途知返，将代码开源了，可喜可贺 ：）
+
 http://blog.lwl12.com/read/hitokoto-api.html
+
 我感觉我就是个悲剧，明明就不会写代码，还想做功能，简直就是痴人说梦。
 
 好在皇天不负有心人，晚上闲逛一言官方api站的时候，在[引用排行榜](http://hitokoto.us/apiref.html)中发现了 哞菇牛 的番萌 http://fmoe.cn/
