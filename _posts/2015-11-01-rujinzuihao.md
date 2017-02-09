@@ -6,13 +6,15 @@ category: 随笔
 date: 2015-11-01 12:56:57
 ---
 
-<center>前言</center><center>如今最好，别说来日方长，未来那么诱惑，叫人怎能忍住遐想。</center>文/愿你不孤独 编辑/Saber
+文/愿你不孤独 编辑/Saber
+
+如今最好，别说来日方长，未来那么诱惑，叫人怎能忍住遐想。-前言
 
 我一直都对未来充满了期待，仿佛就像是飞上天空的热气球，幻想着可以飞过高山，感受深入骨髓的冰冷；可以越过天空，触摸寂蓝壮阔的天际；可以越过时间，留在最美好的现在。
 
 爱在当下，何来后来。
 
-<embed height="500" width="800" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://share.acg.tv/flash.swf" flashvars="aid=2710356&page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed>
+<embed height="500" width="800" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://share.acg.tv/flash.swf" flashvars="aid=2710356&page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"/>
 
 这是她曾经最爱的一句话，她把这句话的八个字，一个一个的，放入了细碎漫长的生活中，是的，她是这样做的，所以，她离开了。
 
@@ -50,9 +52,9 @@ date: 2015-11-01 12:56:57
 
 岁月如歌，梦幻泡影。等一切尘埃归去，还一个真实的自己。
 
-_ 愿爱在当下，不提来日方长。_
+愿爱在当下，不提来日方长。
 
-_愿现世安稳，默赞最好如今。_
+愿现世安稳，默赞最好如今。
 
 <div align="center">
 <img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
