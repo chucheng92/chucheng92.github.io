@@ -136,8 +136,9 @@ Spring采用的就是(1) +(2) 的方式，限于篇幅，这里不再展开各�
 
 - 邮箱: xmusaber@163.com
 - QQ: 932191671
-- [网易云音乐](http://music.163.com/#/user/home?id=63589002)
-- [微博](http://weibo.com/u/1662536394)
-- [片刻](http://pianke.me/profile/1924980/)
-- [知乎](https://www.zhihu.com/people/tao-xiao-xiao-99)
-- [牛客](http://www.nowcoder.com/profile/213475)
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

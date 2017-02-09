@@ -10,14 +10,6 @@ category: 技术
 一、Session Replication 方式管理 (即session复制)
 ------------------------------------------------
 
-### Session Replication 方式管理 (即session复制)
-
-## Session Replication 方式管理 (即session复制)
-
-------------------------------------------------
-一、Session Replication 方式管理 (即session复制)
-------------------------------------------------
-
 简介：将一台机器上的Session数据广播复制到集群中其余机器上
 
 使用场景：机器较少，网络流量较小
@@ -52,3 +44,9 @@ category: 技术
 
 - 邮箱: xmusaber@163.com
 - QQ: 932191671
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。
