@@ -28,6 +28,7 @@ PARAMETER:用于描述参数
 TYPE:用于描述类、接口(包括注解类型) 或enum声明
 
 使用事例
+
 ```java
 @Target(ElementType.TYPE)
 public @interface Table {
@@ -58,6 +59,7 @@ RUNTIME:在运行时有效（即运行时保留）
 Retention meta-annotation类型有唯一的value作为成员，它的取值来自java.lang.annotation.RetentionPolicy的枚举类型值。
 
 使用事例
+
 ```java
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
@@ -68,12 +70,14 @@ public @interface Column {
     public boolean defaultDBValue() default false;
 }
 ```
+
 Column注解的的RetentionPolicy的属性值是RUTIME,这样注解处理器可以通过反射，获取到该注解的属性值，从而去做一些运行时的逻辑处理
 
 3.@Documented注解　
 @Documented用于描述其它类型的annotation应该被作为被标注的程序成员的公共API，因此可以被例如javadoc此类的工具文档化。Documented是一个标记注解，没有成员。
 
 使用事例
+
 ```java
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
@@ -85,6 +89,7 @@ public @interface Column {
     public boolean defaultDBValue() default false;
 }
 ```
+
 4.@Inherited注解
 @Inherited元注解是一个标记注解，@Inherited阐述了某个被标注的类型是被继承的。如果一个使用了@Inherited修饰的annotation类型被用于一个class，则这个annotation将被用于该class的子类。
 
@@ -93,6 +98,7 @@ public @interface Column {
 当@Inherited annotation类型标注的annotation的Retention是RetentionPolicy.RUNTIME，则反射API增强了这种继承性。如果我们使用java.lang.reflect去查询一个@Inherited annotation类型的annotation时，反射代码检查将展开工作：检查class和其父类，直到发现指定的annotation类型被发现，或者到达类继承结构的顶层。
 
 使用事例
+
 ```java
 /**
  * 
