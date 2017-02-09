@@ -17,8 +17,10 @@ You may assume that each input would have exactly one solution.
 Output: index1=1, index2=2**
 
 解决方法：
+
 一开始使用循环搜索，本地可以运行，OJ上显示超时，显然需要降低时间复杂度，遂采用hashmap实现O(n)复杂度的算法。
 代码如下
+
 ```java
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
