@@ -317,7 +317,7 @@ servlet 同 filter类似，此处不再赘述。
 17、安全角色：security-role元素给出安全角色的一个列表，这些角色将出现在servlet元素内的security-role-ref元素的role-name子元素中。分别地声明角色可使高级IDE处理安全信息更为容易。
 
 ```java           
-<security-rol  
+<security-role>  
      <role-name>tomcat</role-name>    
 </security-role>
 ```
