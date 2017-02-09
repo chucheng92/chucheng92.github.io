@@ -6,9 +6,7 @@ category: 爱情
 date: 2015-09-14 19:58:31
 ---
 
-<center>收录 2015-05-11 作者：鳕落红炉 小情绪</center>
-
-<iframe style="width: 800px; height: 500px;" src="http://static.hdslb.com/miniloader.swf?aid=1329640&amp;page=1" width="300" height="150" frameborder="no" scrolling="no"></iframe>
+作者：鳕落红炉
 
 岁月如风，匆匆而过，搁浅了多少爱恨情仇，模糊了多少美丽风景，只是有一种爱，却与时光同行，与梦相约，驱逐了薄凉，安暖了心扉，凝眸深处，陪伴在风轻云淡的恬静里，丝丝情怀，游荡在心底，甜蜜且温馨。生命中的那份遇见，痴守，早已融入了生命，浸染了灵魂，那些暖覆盖了季节的萧条，温润了流年，填平了寂寞。
 

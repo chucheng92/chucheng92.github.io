@@ -132,6 +132,8 @@ date: 2015-09-13 19:26:25
 
 ......</center>
 
-![imgdes](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2015/09/20150913095917100.jpg)
-
 --仓央嘉措
+
+![qrcode](http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg)
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。
