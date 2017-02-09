@@ -130,4 +130,10 @@ data.txt
 600 5 0 20
 100 10 20 0
 ```
-![](http://7xlkoc.com1.z0.glb.clouddn.com/tracebackres.png "茶馆、岛、慵懒的猫...都是美好的时光...")
+![](http://7xlkoc.com1.z0.glb.clouddn.com/tracebackres.png)
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

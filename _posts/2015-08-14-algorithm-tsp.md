@@ -191,8 +191,8 @@ int main()
 
 需要file2.txt的可以给我回复。
 
-纵使寂寞开成海 我会一直在
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
 
-即便风景都尘埃 我会一直爱
-
-作者：陶柠檬 微博@不能卖萌心塞塞
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。
