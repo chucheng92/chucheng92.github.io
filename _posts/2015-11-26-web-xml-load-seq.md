@@ -143,55 +143,58 @@ servlet 同 filter类似，此处不再赘述。
 ```
 
 7、Servlet配置    
-   基本配置
 
-   ```java       
-   <servlet>    
-      <servlet-name>snoop</servlet-name>    
-      <servlet-class>SnoopServlet</servlet-class>    
-   </servlet>    
-   <servlet-mapping>    
-      <servlet-name>snoop</servlet-name>    
-      <url-pattern>/snoop</url-pattern>    
-   </servlet-mapping>
-   ```
+基本配置
 
-   高级配置
+```java       
+<servlet>    
+  <servlet-name>snoop</servlet-name>    
+  <servlet-class>SnoopServlet</servlet-class>    
+</servlet>    
+   
+<servlet-mapping>    
+  <servlet-name>snoop</servlet-name>    
+  <url-pattern>/snoop</url-pattern>
+</servlet-mapping>     
+```
 
-   ```java       
-   <servlet>    
-      <servlet-name>snoop</servlet-name>    
-      <servlet-class>SnoopServlet</servlet-class>    
-      <init-param>    
-         <param-name>foo</param-name>    
-         <param-value>bar</param-value>    
-      </init-param>    
-      <run-as>    
-         <description>Security role for anonymous access</description>    
-         <role-name>tomcat</role-name>    
-      </run-as>    
-   </servlet>    
-   <servlet-mapping>    
-      <servlet-name>snoop</servlet-name>    
-      <url-pattern>/snoop</url-pattern>    
-   </servlet-mapping>
-   ```
+高级配置
 
-   元素说明
+```java       
+<servlet>    
+  <servlet-name>snoop</servlet-name>    
+  <servlet-class>SnoopServlet</servlet-class>    
+    <init-param>    
+      <param-name>foo</param-name>    
+      <param-value>bar</param-value>    
+    </init-param>    
+    <run-as>    
+      <description>Security role for anonymous access</description>    
+      <role-name>tomcat</role-name>    
+    </run-as>    
+</servlet>    
 
-   ```java       
-     <servlet></servlet> 用来声明一个servlet的数据，主要有以下子元素：    
-     <servlet-name></servlet-name> 指定servlet的名称    
-     <servlet-class></servlet-class> 指定servlet的类名称    
-     <jsp-file></jsp-file> 指定web站台中的某个JSP网页的完整路径    
-     <init-param></init-param> 用来定义参数，可有多个init-param。在servlet类中通过getInitParamenter(String name)方法访问初始化参数    
-     <load-on-startup></load-on-startup>指定当Web应用启动时，装载Servlet的次序。    
-                                 当值为正数或零时：Servlet容器先加载数值小的servlet，再依次加载其他数值大的servlet.    
-                                 当值为负或未定义：Servlet容器将在Web客户首次访问这个servlet时加载它    
-     <servlet-mapping></servlet-mapping> 用来定义servlet所对应的URL，包含两个子元素    
-       <servlet-name></servlet-name> 指定servlet的名称    
-       <url-pattern></url-pattern> 指定servlet所对应的URL
-    ```
+<servlet-mapping>    
+  <servlet-name>snoop</servlet-name>    
+  <url-pattern>/snoop</url-pattern>    
+</servlet-mapping>
+```
+
+元素说明
+
+```java       
+<servlet></servlet> 用来声明一个servlet的数据，主要有以下子元素：    
+<servlet-name></servlet-name> 指定servlet的名称    
+<servlet-class></servlet-class> 指定servlet的类名称    
+<jsp-file></jsp-file> 指定web站台中的某个JSP网页的完整路径    
+<init-param></init-param> 用来定义参数，可有多个init-param。在servlet类中通过getInitParamenter(String name)方法访问初始化参数    
+<load-on-startup></load-on-startup>
+指定当Web应用启动时，装载Servlet的次序。
+当值为正数或零时：Servlet容器先加载数值小的servlet，再依次加载其他数值大的servlet.当值为负或未定义：Servlet容器将在Web客户首次访问这个servlet时加载它    
+<servlet-mapping></servlet-mapping> 用来定义servlet所对应的URL，包含两个子元素    
+<servlet-name></servlet-name> 指定servlet的名称    
+<url-pattern></url-pattern> 指定servlet所对应的URL
+```
 
 8、会话超时配置（单位为分钟）
 
@@ -255,11 +258,11 @@ servlet 同 filter类似，此处不再赘述。
 
 13、资源管理对象配置
 
-   ```java   
+```java   
    <resource-env-ref>    
        <resource-env-ref-name>jms/StockQueue</resource-env-ref-name>    
    </resource-env-ref>
-   ```
+```
 
 14、资源工厂配置
 
@@ -311,8 +314,7 @@ servlet 同 filter类似，此处不再赘述。
    </login-config>
 ```
 
-17、安全角色：security-role元素给出安全角色的一个列表，这些角色将出现在servlet元素内的security-role-ref元素的role-name子元素中。    
-    分别地声明角色可使高级IDE处理安全信息更为容易。
+17、安全角色：security-role元素给出安全角色的一个列表，这些角色将出现在servlet元素内的security-role-ref元素的role-name子元素中。分别地声明角色可使高级IDE处理安全信息更为容易。
 
 ```java           
 <security-rol  
