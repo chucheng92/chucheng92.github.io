@@ -434,3 +434,9 @@ public void execute(Runnable command) {
 4、核心线程数，看应用，如果是任务，一天跑一次，设置为0，合适，因为跑完就停掉了，如果是常用线程池，看任务量，是保留一个核心还是几个核心线程数。
  
 5、如果要获取任务执行结果，用CompletionService，但是注意，获取任务的结果的要重新开一个线程获取，如果在主线程获取，就要等任务都提交后才获取，就会阻塞大量任务结果，队列过大OOM，所以最好异步开个线程获取结果。
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

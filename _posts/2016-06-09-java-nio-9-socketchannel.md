@@ -90,3 +90,9 @@ while(! socketChannel.finishConnect() ){
 非阻塞模式与选择器搭配会工作的更好，通过将一或多个SocketChannel注册到Selector，可以询问选择器哪个通道已经准备好了读取，写入等。Selector与SocketChannel的搭配使用会在后面详讲。
 
 Next: [Java-NIO-10-ServerSocketChannel](http://tinymood.com/2016/06/09/java-nio-10-serversocketchannel.html)
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

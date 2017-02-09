@@ -63,3 +63,9 @@ The issue with SocketChannel is also present with the `transferTo()` method. The
 上面所说的关于SocketChannel的问题在transferTo()方法中同样存在。SocketChannel会一直传输数据直到目标buffer被填满。
 
 Next: [Java-NIO-7-Selector](http://tinymood.com/2016/06/09/java-nio-7-selector.html)
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

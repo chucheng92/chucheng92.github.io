@@ -128,3 +128,9 @@ NIO可让您只使用一个（或几个）单线程管理多个通道（网络�
 ![](http://tutorials.jenkov.com/images/java-nio/nio-vs-io-4.png)
 
 完
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。
