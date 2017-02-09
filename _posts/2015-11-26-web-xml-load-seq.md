@@ -9,7 +9,8 @@ description: JavaWeb
 
 <font color="red"><center>本文部分内容转载于网络，站长已阅读并测试，保证其正确性。Update:2015-11-4</center></font>
 
-<span style="color:red;">**一 步骤**</span>
+**一 步骤**
+
 1、启动一个WEB项目的时候，WEB容器会去读取它的配置文件web.xml，读取```java<context-param></context-param>和<listener></listener>```两个结点。
 
 2、紧急着，容创建一个ServletContext（servlet上下文），这个web项目的所有部分都将共享这个上下文。
@@ -18,7 +19,8 @@ description: JavaWeb
 
 4、容器创建```java<listener></listener>```中的类实例，创建监听器。
 
-<span style="color:red;">**二 Load-on-startup**</span>
+**二 Load-on-startup**
+
 Load-on-startup元素在web应用启动的时候指定了servlet被加载的顺序，它的值必须是一个整数。如果它的值是一个负整数或是这个元素不存在，那么容器会在该servlet被调用的时候，加载这个servlet。如果值是正整数或零，容器在配置的时候就加载并初始化这个servlet，容器必须保证值小的先被加载。如果值相等，容器可以自动选择先加载谁。
 
 在servlet的配置当中，#load-on-startup5#load-on-startup#的含义是
@@ -31,19 +33,22 @@ Load-on-startup元素在web应用启动的时候指定了servlet被加载的顺�
 
 正数的值越小，启动该servlet的优先级越高
 
-<span style="color:red;">**三 加载顺序**</span>
+**三 加载顺序**
+
 在项目中总会遇到一些关于加载的优先级问题，近期也同样遇到过类似的，所以自己查找资料总结了下，下面有些是转载其他人的，毕竟人家写的不错，自己也就不重复造轮子了，只是略加点了自己的修饰。
 
-<center>**转载地址：http://www.cnblogs.com/JesseV/archive/2009/11/17/1605015.html**</center>
+**转载地址：http://www.cnblogs.com/JesseV/archive/2009/11/17/1605015.html**
+
 首先可以肯定的是，加载顺序与它们在 web.xml 文件中的先后顺序无关。即不会因为 filter 写在 listener的前面而会先加载 filter。最终得出的结论是：ServletContext-&gt; listener -&gt;filter -&gt; servlet
 同时还存在着这样一种配置节：context-param，它用于向 ServletContext提供键值对，即应用程序上下文信息。我们的 listener, filter 等在初始化时会用到这些上下文中的信息，那么context-param 配置节是不是应该写在 listener 配置节前呢？实际上 context-param配置节可写在任意位置，因此真正的加载顺序为：context-param -&gt; listener-&gt; filter -&gt; servlet
 对于某类配置节而言，与它们出现的顺序是有关的。以filter 为例，web.xml 中当然可以定义多个 filter，与 filter 相关的一个配置节是filter-mapping，这里一定要注意，对于拥有相同 filter-name 的 filter 和 filter-mapping配置节而言，filter-mapping 必须出现在 filter 之后，否则当解析到 filter-mapping 时，它所对应的filter-name 还未定义。web 容器启动时初始化每个 filter 时，是按照 filter配置节出现的顺序来初始化的，当请求资源匹配多个 filter-mapping 时，filter 拦截资源是按照filter-mapping 配置节出现的顺序来依次调用 doFilter() 方法的。
 servlet 同 filter类似，此处不再赘述。
 由此，可以看出，web.xml 的加载顺序是：<span style="color: #800000;">**ServletContext-&gt; context-param -&gt;listener -&gt; filter -&gt; servlet**</span>，而同个类型之间的实际程序调用的时候的顺序是根据对应的 mapping 的顺序进行调用的。
 
-web.xml文件详解
-========================================================================
+**四 web.xml文件详解**
+
 <span style="color:red;">**Web.xml常用元素**</span>
+
 ```java        
 <web-app>    
 <display-name></display-name>定义了WEB应用的名字    
@@ -74,13 +79,14 @@ web.xml文件详解
                    的role-name子元素中。分别地声明角色可使高级IDE处理安全信息更为容易。    
 <env-entry></env-entry>声明Web应用的环境项。    
 <ejb-ref></ejb-ref>声明一个EJB的主目录的引用。    
-< ejb-local-ref></ ejb-local-ref>声明一个EJB的本地主目录的应用。    
+<ejb-local-ref></ejb-local-ref>声明一个EJB的本地主目录的应用。    
 </web-app>    
 ```
 
 <span style="color:red;">**相应元素配置**</span>   
 
 1、Web应用图标：指出IDE和GUI工具用来表示Web应用的大图标和小图标
+
 ```java       
 <icon>    
 <small-icon>/images/app_small.gif</small-icon>    
@@ -88,17 +94,20 @@ web.xml文件详解
 </icon>
 ```
 
-2、Web 应用名称：提供GUI工具可能会用来标记这个特定的Web应用的一个名称    
+2、Web 应用名称：提供GUI工具可能会用来标记这个特定的Web应用的一个名称
+
 ```java
 <display-name>Tomcat Example</display-name>
 ```
 
-3、Web 应用描述： 给出于此相关的说明性文本    
+3、Web 应用描述： 给出于此相关的说明性文本
+
 ```java   
 <disciption>Tomcat Example servlets and JSP pages.</disciption>
 ```
 
-4、上下文参数：声明应用范围内的初始化参数。    
+4、上下文参数：声明应用范围内的初始化参数。
+
 ```java   
 <context-param>    
     <param-name>ContextParameter</para-name>    
@@ -109,6 +118,7 @@ web.xml文件详解
 在servlet里面可以通过getServletContext().getInitParameter("context/param")得到    
 
 5、过滤器配置：将一个名字与一个实现javaxs.servlet.Filter接口的类相关联。
+
 ```java       
 <filter>    
         <filter-name>setCharacterEncoding</filter-name>    
@@ -125,6 +135,7 @@ web.xml文件详解
 ```
 
 6、监听器配置
+
 ```java       
 <listener>    
       <listerner-class>listener.SessionListener</listener-class>    
@@ -133,6 +144,7 @@ web.xml文件详解
 
 7、Servlet配置    
    基本配置
+
    ```java       
    <servlet>    
       <servlet-name>snoop</servlet-name>    
@@ -142,8 +154,10 @@ web.xml文件详解
       <servlet-name>snoop</servlet-name>    
       <url-pattern>/snoop</url-pattern>    
    </servlet-mapping>
-   ```    
+   ```
+
    高级配置
+
    ```java       
    <servlet>    
       <servlet-name>snoop</servlet-name>    
@@ -164,6 +178,7 @@ web.xml文件详解
    ```
 
    元素说明
+
    ```java       
      <servlet></servlet> 用来声明一个servlet的数据，主要有以下子元素：    
      <servlet-name></servlet-name> 指定servlet的名称    
@@ -179,6 +194,7 @@ web.xml文件详解
     ```
 
 8、会话超时配置（单位为分钟）
+
 ```java       
    <session-config>    
       <session-timeout>120</session-timeout>    
@@ -186,6 +202,7 @@ web.xml文件详解
 ```
 
 9、MIME类型配置
+
 ```java       
    <mime-mapping>    
       <extension>htm</extension>    
@@ -194,6 +211,7 @@ web.xml文件详解
 ```
 
 10、指定欢迎文件页配置
+
 ```java       
    <welcome-file-list>    
       <welcome-file>index.jsp</welcome-file>    
@@ -202,7 +220,8 @@ web.xml文件详解
    </welcome-file-list>
 ```
 
-<span style="color:red;">**11、配置错误页面**</span>
+11、配置错误页面
+
 ```java       
 //一、 通过错误码来配置error-page    
    <error-page>    
@@ -218,7 +237,8 @@ web.xml文件详解
 //上面配置了当系统发生java.lang.NullException（即空指针异常）时，跳转到错误处理页面error.jsp
 ```
 
-<span style="color:red;"><strong>12、TLD配置<strong></span>
+12、TLD配置
+
 ```java       
    <taglib>    
        <taglib-uri>http://jakarta.apache.org/tomcat/debug-taglib</taglib-uri>    
@@ -233,7 +253,8 @@ web.xml文件详解
    </jsp-config>
 ```
 
-13、资源管理对象配置    
+13、资源管理对象配置
+
    ```java   
    <resource-env-ref>    
        <resource-env-ref-name>jms/StockQueue</resource-env-ref-name>    
@@ -241,6 +262,7 @@ web.xml文件详解
    ```
 
 14、资源工厂配置
+
 ```java       
    <resource-ref>    
        <res-ref-name>mail/Session</res-ref-name>    
@@ -257,6 +279,7 @@ web.xml文件详解
 ```
 
 15、安全限制配置
+
 ```java       
    <security-constraint>    
       <display-name>Example Security Constraint</display-name>    
@@ -276,6 +299,7 @@ web.xml文件详解
 ```
 
 16、登陆验证配置
+
 ```java       
    <login-config>    
      <auth-method>FORM</auth-method>    
@@ -289,13 +313,15 @@ web.xml文件详解
 
 17、安全角色：security-role元素给出安全角色的一个列表，这些角色将出现在servlet元素内的security-role-ref元素的role-name子元素中。    
     分别地声明角色可使高级IDE处理安全信息更为容易。
+
 ```java           
-<security-role>    
+<security-rol  
      <role-name>tomcat</role-name>    
 </security-role>
 ```
 
 18、Web环境参数：env-entry元素声明Web应用的环境项
+
 ```java       
 <env-entry>    
      <env-entry-name>minExemptions</env-entry-name>    
@@ -305,6 +331,7 @@ web.xml文件详解
 ```
 
 19、EJB 声明
+
 ```java       
 <ejb-ref>    
      <description>Example EJB reference</decription>    
@@ -316,6 +343,7 @@ web.xml文件详解
 ```
 
 20、本地EJB声明
+
 ```java       
 <ejb-local-ref>    
      <description>Example Loacal EJB reference</decription>    
@@ -327,6 +355,7 @@ web.xml文件详解
 ```
 
 21、配置DWR
+
 ```java       
 <servlet>    
       <servlet-name>dwr-invoker</servlet-name>    
@@ -339,6 +368,7 @@ web.xml文件详解
 ```
 
 22、配置Struts
+
 ```java       
     <display-name>Struts Blank Application</display-name>    
     <servlet>    
@@ -396,6 +426,7 @@ web.xml文件详解
 ```
 
 23、配置Spring（基本上都是在Struts中配置的）    
+
 ```java   
    <!-- 指定spring配置文件位置 -->    
    <context-param>    
