@@ -8,11 +8,10 @@ date: 2015-12-23 21:29:22
 
 <font color="red"><center>本文内容部分转载于网络，站长已阅读并测试，保证其正确性。Update:2015-11-4</center></font>
 
-**全文托管于GitHub，点击查看
+全文托管于GitHub，点击查看[全文阅读](href=https://github.com/Lemonjing/TinyMood/blob/master/技术文章/Java序列化.md)
 
-[全文阅读](href=https://github.com/Lemonjing/TinyMood/blob/master/技术文章/Java序列化.md)
+对于一个存在Java虚拟机中的对象来说，其内部的状态只是保存在内存中。JVM退出之后，内存资源也就被释放，Java对象的内部状态也就丢失了。而在很多情况下，对象内部状态是需要被持久化的，将运行中的对象状态保存下来(最直接的方式就是保存到文件系统中)，在需要的时候可以还原，即使是在Java虚拟机退出的情况下。
 
-对于一个存在Java虚拟机中的对象来说，其内部的状态只是保存在内存中。JVM退出之后，内存资源也就被释放，Java对象的内部状态也就丢失了。而在很多情况下，对象内部状态是需要被持久化的，将运行中的对象状态保存下来(最直接的方式就是保存到文件系统中)，在需要的时候可以还原，即使是在Java虚拟机退出的情况下。 
 对象序列化机制是Java内建的一种对象持久化方式，可以很容易实现在JVM中的活动对象与字节数组(流)之间进行转换，使Java对象可以被存储，可以被网络传输，在网络的一端将对象序列化成字节流，经过网络传输到网络的另一端，可以从字节流重新还原为Java虚拟机中的运行状态中的对象。 
 
 ## 1.相关的接口
@@ -28,7 +27,7 @@ ObjectInputStream(InputStream in);
     Object readObject();//从指定的流中读取还原对象信息 
 ```
 
-只能使用readObject()|writeObject()方法对对象进行读写操作。除对象之外，Java中的基本类型和数组也可以被序列化,对于基本类型，可以使用readInt(),writeInt(), readDouble(),writeDouble()等类似的接口进行读写。 
+只能使用readObject()或writeObject()方法对对象进行读写操作。除对象之外，Java中的基本类型和数组也可以被序列化,对于基本类型，可以使用readInt(),writeInt(),readDouble(),writeDouble()等类似的接口进行读写。 
 
 ## 2.Serializable接口
 
@@ -173,7 +172,7 @@ public class TestReadObject  {
 }  
 ```
 
-**输出: **
+**输出:**
 
 [TestWriteObject]
 
