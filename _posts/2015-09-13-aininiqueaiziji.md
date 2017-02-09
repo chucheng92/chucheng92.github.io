@@ -62,5 +62,6 @@ by 夏苏末
 
 写字的吃货，懒散爱自由，相信梦想，相信爱，喜欢从细微之处发现生活之美，擅长用文艺的腔调晾晒生活。已出版《将来的你，会感谢现在不放弃的自己》。公众号：夏苏末
 
-<img width="150" height="150" src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg"/>
 ![qrcode](http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg)
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。
