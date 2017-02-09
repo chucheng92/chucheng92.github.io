@@ -1,11 +1,9 @@
 ---
-
 layout: post
 title: 武林外传 百看不厌
 category: 随笔
 tags: 随笔
 description:  
-
 ---
 
 > 武林外传 百看不厌 转眼已是十年
@@ -23,3 +21,9 @@ description:
 佟湘玉，她一直很乐观。老白呢，一直很低调。大嘴呢，当然是蕙兰了，我佩服他的勇气。秀才就是很怕老婆，这个最让人羡慕了。小郭，好爽。
 
 也许我永远不能把他们身上的这些特质都据为己有，但是我会一直默默的喜欢他们。武林外传，我喜欢。百看不厌。
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

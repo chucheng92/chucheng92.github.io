@@ -70,3 +70,9 @@ date: 2016-01-12 21:02:54
 图片｜澳大利亚 Pink Lake
 摄影｜N74photography Mr.Cheese
 ```
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

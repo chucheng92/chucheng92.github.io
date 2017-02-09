@@ -22,7 +22,7 @@ category: 随笔
 
 其实，只要曾经相遇过了，那便已是无悔的人生。
 
-爱像essay水墨青花，何惧刹那芳华。
+爱像水墨青花，何惧刹那芳华。
 
 <div align="center">
 <img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />

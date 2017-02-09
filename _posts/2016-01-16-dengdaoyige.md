@@ -19,4 +19,8 @@ description: 我只是想等到一个温暖的人
 <span style="color: #00ccff;"> 小小的要求</span>
 <span style="color: #00ccff;"> 或许又是最难的要求</span></center>
 
-－－Saber酱于1-8日夜夜夜的夜
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。

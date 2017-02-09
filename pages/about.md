@@ -110,7 +110,7 @@ permalink: /pages/about.html
 				微博：
 			</td> 
 			<td>
-				<a href="{{ site.author.weibo }}" target="_blank">_NoThankYou</a>
+				<a href="{{ site.author.weibo }}" target="_blank">风屿alter</a>
 			</td> 
 		</tr>
 
@@ -119,7 +119,7 @@ permalink: /pages/about.html
 				知乎：
 			</td> 
 			<td>
-				<a href="{{ site.author.zhihu }}" target="_blank">陶哓然</a>
+				<a href="{{ site.author.zhihu }}" target="_blank">拾忆旧少年</a>
 			</td> 
 		</tr>
 	</table>

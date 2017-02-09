@@ -6,8 +6,6 @@ category: 爱情
 date: 2016-01-16 15:19:14
 ---
 
-**此文章为原创作品，未经许可，请勿转载**
-
 ## 1
 
 电视剧《青瓷》曾热播了一阵子，看电视时，我断断续续看了几集，在网上又看了第一集和最后一集，感觉演员不错，剧情不错。好友家又恰好有《青瓷》这本书，据说电视剧和书有太多不同，便拿了回家，利用闲暇时候，或粗略或细致地把书看完了。
@@ -69,8 +67,11 @@ date: 2016-01-16 15:19:14
 <span style="color: #00ccff"> 是真的——</span>
 <span style="color: #00ccff"> 醉了</span>
 </div>
-**作者：一颗小柠檬，艺术系逗比妹子**
-&nbsp;
-![qrcode](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2015/09/2015091014285198.jpg)
 
-<span style="color: #00ccff">✪ 感谢时光，不偏不倚，躲过了风口浪尖，让我恰好遇见你。</span>
+**作者：一颗小柠檬，艺术系逗比妹子**
+
+<div align="center">
+<img src="http://7xlkoc.com1.z0.glb.clouddn.com/qrcodenew.jpg" width="400" height="320" />
+</div>
+
+> 本文系本人个人公众号「梦回少年」原创发布，扫一扫加关注。
