@@ -7,8 +7,6 @@ date: 2016-01-16 09:45:03
 description: 我只是想等到一个温暖的人
 ---
 
-![u=2568299814,2994458694&amp;fm=21&amp;gp=0](http://7xlkoc.com1.z0.glb.clouddn.com/wp-content/uploads/2016/01/2016010816333980.jpg)
-
 <center><span style="color: #00ccff;">也许，我只是想等到一个可以温暖自己的人</span>
 <span style="color: #00ccff;"> 什么事都想告诉她</span>
 <span style="color: #00ccff;"> 伤心或是难过</span>
