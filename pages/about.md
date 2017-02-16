@@ -92,7 +92,7 @@ permalink: /pages/about.html
 				Email：
 			</td>  
 			<td>
-				<A href="mailto:initialran@gmail.com ">initialran@gmail.com</A>			
+				<A href="mailto:xmusaber@163.com">xmusaber@163.com</A>
 			</td>
 		</tr>
 
