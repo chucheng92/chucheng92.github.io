@@ -5,7 +5,7 @@ tags: Java
 category: 技术
 ---
 
-> 原文出处： [jtraining](http://www.jtraining.com/component/content/article/35-jtraining-blog/98.html)   译文出处：[Lixiang](http://www.leexiang.com/cache-algorithm) 更新:[Saber](http://tinymood.com/2016/06/16/cache-and-cache-algorithm.html)
+> 原文出处： [jtraining](http://www.jtraining.com/component/content/article/35-jtraining-blog/98.html)   译文出处：[Lixiang](http://www.leexiang.com/cache-algorithm) 更新:[Saber](http://taoxiaoran.top/2016/06/16/cache-and-cache-algorithm.html)
 
 **引言**
 
