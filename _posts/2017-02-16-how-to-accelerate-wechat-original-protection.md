@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 如何加速你的原创保护申请
+title: 如何加速你的微信原创保护申请
 tags: 原创 微信 技术
 category: 技术
 ---
