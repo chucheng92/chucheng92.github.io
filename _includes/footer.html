@@ -101,10 +101,11 @@ span_dt_dt.innerHTML="本站已萌萌哒运行"+daysold+"天"+hrsold+"小时"+mi
   <script type="text/javascript" src="/assets/js/fancybox/jquery.mousewheel-3.0.6.pack.js"></script>
   <script type="text/javascript" src="/assets/js/main.js"></script>
   <link rel="stylesheet" href="{{ "/assets/css/duoshuo.css" | prepend: site.baseurl }}"> 
-  <!-- jekyII search-->
-  <div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+  
+<!-- jekyII search-->
+<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
       opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
-    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 60px" placeholder="Tittle Date Tags" >
+    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 日期 标签" >
 
     <div style="position: fixed; top: 16px; right: 16px;">
         <img src="/search/img/cb-close.png"  id="cb-close-btn"/>
@@ -115,12 +116,16 @@ span_dt_dt.innerHTML="本站已萌萌哒运行"+daysold+"天"+hrsold+"小时"+mi
     <img src="/search/img/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/>
 </div>
 
-<link rel="stylesheet" href="/search/css/cb-search.css">
+<link rel="stylesheet" href="{{ "/search/css/cb-search.css" | prepend: site.baseurl }}">
 
-<!-- jQuery -->
-<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+<script src="{{ "/search/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/search/js/cb-search.js" | prepend: site.baseurl }}"></script>
+<!-- jekyII search end -->
 
-<script src="/search/js/bootstrap3-typeahead.min.js"></script>
-<script src="/search/js/cb-search.js"></script> 
-  <!-- -->
 </footer>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
