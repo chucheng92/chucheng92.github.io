@@ -6,8 +6,9 @@ category: 随笔
 ---
 
 <div align="center">
-<img src="/assets/img/blogimg/hope2.jpg"  width="400" height="320"/>
+<img src="/assets/img/blogimg/hope2.jpg"  width="900" height="500"/>
 </div>
+
 
 每一年新年，我们总会许下新年的美好愿望。愿望包含了我们对于自己学业、工作、家庭、爱情等等美好的愿景。
 
