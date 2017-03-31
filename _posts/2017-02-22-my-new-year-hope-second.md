@@ -5,10 +5,6 @@ tags: 原创 随笔
 category: 随笔
 ---
 
-<div align="center">
-<img src="/assets/img/blogimg/hope2.jpg"  width="900" height="500"/>
-</div>
-
 
 每一年新年，我们总会许下新年的美好愿望。愿望包含了我们对于自己学业、工作、家庭、爱情等等美好的愿景。
 
@@ -18,8 +14,11 @@ category: 随笔
 
 但愿我们都能成为积极、具有正能量的人，成为你想要的那个自己。而少年我，则先抛砖引玉，希望与你们一起同行，一起进步。世界上最美好的事情，莫过于梦想实现了。
 
-
 下文给出了新年伊始的计划以及这一段时间按计划坚持去做的。同时给出了具体有效的花费时间以作考量。抛砖引玉~
+
+<div align="center">
+<img src="/assets/img/blogimg/hope2.jpg"  width="900" height="500"/>
+</div>
 
 ### 1/更加丰富的现实生活
 
