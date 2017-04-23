@@ -17,7 +17,7 @@ category: 随笔
 下文给出了新年伊始的计划以及这一段时间按计划坚持去做的。同时给出了具体有效的花费时间以作考量。抛砖引玉~
 
 <div align="center">
-<img src="/assets/img/blogimg/hope2.jpg"  width="900" height="500"/>
+<img src="/assets/img/blogimg/hope2.jpg"  width="600" height="320"/>
 </div>
 
 ### 1/更加丰富的现实生活
