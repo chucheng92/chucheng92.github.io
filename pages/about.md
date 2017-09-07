@@ -20,40 +20,6 @@ permalink: /pages/about.html
 	<br>
     <div class="skills">
    	<div id="main" style="height:400px"></div>
-
-
-
-    <!--
-        <div class="skillbar clearfix" data-percent="80%">
-            <div class="skillbar-title"><span>Java</span></div>
-            <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">80%</div>
-        </div>
-
-        <div class="skillbar clearfix" data-percent="60%">
-            <div class="skillbar-title"><span>C++</span></div>
-            <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">60%</div>
-        </div>
-		
-        <div class="skillbar clearfix" data-percent="60%">
-            <div class="skillbar-title"><span>java script</span></div>
-            <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">60%</div>
-        </div>
-
-        <div class="skillbar clearfix" data-percent="60%">
-            <div class="skillbar-title"><span>HTML</span></div>
-            <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">60%</div>
-        </div>
-		
-		<div class="skillbar clearfix" data-percent="60%">
-            <div class="skillbar-title"><span>CSS</span></div>
-            <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">60%</div>
-        </div>
-		-->
     </div>	
 
 	
