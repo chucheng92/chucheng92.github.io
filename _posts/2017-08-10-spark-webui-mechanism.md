@@ -8,20 +8,21 @@ category: 技术
 Spark应用运行时的详细进度信息，性能指标等数据和信息对于我们分析Spark应用是十分重要的。而Spark的WebUI便是观测应用、作业运行情况的一个很重要的窗口。本文主要从源码层面分析下Spark WebUI原理和工作方式。并从Job信息的一个切面阐述WebUI数据获取和更新的过程。
 
 目录：
-* [Spark WebUI页面](#Spark WebUI页面)
-* [Spark WebUI流程图](#Spark WebUI流程图 )
-* [Spark WebUI流程源码级细述](#Spark WebUI流程源码级细述)
-* [Spark WebUI数据获取和更新原理](#Spark WebUI数据获取和更新原理)
 
-## Spark WebUI页面
+* [Spark WebUI页面](#SparkWebUI页面)
+* [Spark WebUI流程图](#SparkWebUI流程图)
+* [Spark WebUI流程源码级细述](#SparkWebUI流程源码级细述)
+* [Spark WebUI数据获取和更新原理](#SparkWebUI数据获取和更新原理)
 
-![]()
+## SparkWebUI页面
 
-## Spark WebUI流程图
+![](http://rannn.cc/assets/img/tech/sparkui.png)
 
-![]() 
+## SparkWebUI流程图
 
-## Spark WebUI流程源码级细述
+![](http://rannn.cc/assets/img/tech/procedure.png)
+
+## SparkWebUI流程源码级细述
 
 Step1、SparkContext初始化时构建SparkUI
 
@@ -67,7 +68,7 @@ appName, basePath, startTime)
 
 上述的几个监听对象分别与UI上的
 
-![]()
+![](http://rannn.cc/assets/img/tech/sparkbanner.png)
 
 这几个Tab项的是对应的，具体是：
 
@@ -81,7 +82,8 @@ appName, basePath, startTime)
 Step3、执行SparkUI的initialize初始化方法
 
 当实例化SparkUI的过程中会执行初始化方法，绑定如下的tab项对应的对象数据以及注册页面处理句柄
-![]()
+
+![](http://rannn.cc/assets/img/tech/sparkbanner.png)
 
 即
 
@@ -123,7 +125,7 @@ serverInfo = Some(startJettyServer(host, port, sslOptions, handlers, conf, name)
 Step5、接收UI请求，数据呈现
 当发起Spark WebUI的数据请求时，Spark引擎会进行Tab和Page数据的渲染然后返回给用户。
 
-## Spark WebUI数据获取和更新原理
+## SparkWebUI数据获取和更新原理
 
 因为Spark WebUI上的不同Tab项的数据实际上来源于不同的监听器对象，所以这边抛砖引玉，以JobProgressListener来说明。JobProgressListener中封装了Job和Stage运行状况以及运行进度等全部作业信息。
  
