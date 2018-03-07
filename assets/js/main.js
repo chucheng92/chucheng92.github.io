@@ -45,8 +45,6 @@ $(document).ready(function() {
 
         pajx_loadDuoshuo(); //pjax加载完成之后调用重载多说函数
 
-        pajx_loadGitment();
-
         $(".pjax_loading").css("display", "none");
 
         $('.bookpiclist .bookpic').hover(
@@ -94,20 +92,6 @@ function pajx_loadDuoshuo() {
         $(dus).html(el);
     }
 
-}
-
-function pajx_loadGitment() {
-	alert("call pajx_loadGitment")
-    var gitment = new Gitment({
-        id: window.location.pathname, // 可选。默认为 location.href
-        owner: '{{site.author.github_username}}',
-        repo: '{{site.author.github_page}}',
-        oauth: {
-            client_id: 'd434df4970edfd9beba6',
-            client_secret: '72e0e4bc8d7dd8f6abb250576aa1f1b6e6f67c1b',
-        },
-    })
-    gitment.render('container')
 }
 
 function pjax_loadChart() {
